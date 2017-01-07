@@ -33,7 +33,7 @@ With this plan in mind I tried to think up a quick way to calculate the maximum 
 
 I started by having Mathematica generate the first 101 values from the example given in the problem by using a=1 and b=41.
 
-ProjectEuler-Mathematica01
+[![Mathematica](https://hebr3.github.io/img/ProjectEuler-Mathematica01.png)](https://google.com)
 
 I then used PrimeQ to test whether each value was prime.
 
