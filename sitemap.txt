@@ -1,6 +1,5 @@
 http://www.example.com/blog/20-project-update/
-http://www.example.com/blog/2012/01/01/a-2012-blog-post/
+http://www.example.com/blog/20-project-projecteuler-27/
 http://www.example.com/blog/scribble-post/
 http://www.example.com/blog/20-project/
-http://www.example.com/blog/20-project-projecteuler-27/
 http://www.example.com/About.html
