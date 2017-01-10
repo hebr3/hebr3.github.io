@@ -31,6 +31,7 @@ show-tag-counts? = true
 # Optional: Default is "/{year}/{month}/{title}.html".
 # Here's an example of the Jekyll "pretty" style:
 #permalink = /blog/{year}/{month}/{day}/{title}/index.html
+
 permalink = /blog/{filename}/index.html
 # There is also {filename}, which is the `this-part` portion of
 # your post's YYYY-MM-DD-this-part.md file name. This is in case
@@ -54,11 +55,11 @@ max-feed-items = 20
 
 # Decorate feed URIs with Google Analytics query parameters like
 # utm_source ?
-decorate-feed-uris? = true
+decorate-feed-uris? = false #<--
 
 # Insert in each feed item an image bug whose URI is decorated with
 # Google Analytics query parameters like utm_source ?
-feed-image-bugs? = true
+feed-image-bugs? = false #<--
 
 # Replace links to tweets with embedded tweets?
 # In Markdown, must be auto-links alone in a pargraph (blank lines
@@ -66,11 +67,11 @@ feed-image-bugs? = true
 #
 # <https://twitter.com/racketlang/status/332176422003163138>
 #
-auto-embed-tweets? = true
+auto-embed-tweets? = false #<--
 
 # When embedding tweets that are replies, show the parent tweet along
 # with the reply?
-embed-tweet-parents? = true
+embed-tweet-parents? = flase #<--
 
 # Try to automatically link symbols in Markdown ```racket fenced code
 # blocks, to Racket documentation?

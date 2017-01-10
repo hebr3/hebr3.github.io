@@ -17,8 +17,6 @@ Euler discovered the remarkable quadratic formula:
 
      @math{n^2 + n + 41}
 
-<!-- more -->
-
 It turns out that the formula will produce @math{40} primes for the consecutive values @math{n = 0} to @math{39}. However, when @math{n = 40, 40^2 + 40 + 41 = 40(40 + 1) + 41} is divisible by @math{41}, and certainly when @math{n = 41, 41^2 + 41 + 41} is clearly divisible by @math{41}.
 
 The incredible formula @math{n^2 − 79n + 1601} was discovered, which produces @math{80} primes for the consecutive values @math{n = 0} to @math{79}. The product of the coefficients, @math{−79} and @math{1,601}, is @math{−126,479}.
