@@ -68,7 +68,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0;
 }
 mark {
@@ -1082,12 +1082,12 @@ th {
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 25px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;

@@ -4,9 +4,73 @@
   <title>Henry Brooks: Posts tagged '20% Project'</title>
   <description>Henry Brooks: Posts tagged '20% Project'</description>
   <link>http://www.example.com/tags/20-Project.html</link>
-  <lastBuildDate>Sun, 12 Apr 2015 01:00:00 UT</lastBuildDate>
-  <pubDate>Sun, 12 Apr 2015 01:00:00 UT</pubDate>
+  <lastBuildDate>Mon, 13 Apr 2015 03:00:00 UT</lastBuildDate>
+  <pubDate>Mon, 13 Apr 2015 03:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>20% Project - Witch of Agnesi</title>
+   <link>http://www.example.com/blog/20-project-witch-of-agnesi/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-20-project-witch-of-agnesi</guid>
+   <pubDate>Mon, 13 Apr 2015 03:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;I was helping a student in AVID with calculus homework when I confronted with the following problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witcha.png" alt="" height="65" width="149" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked on it for probably 3 minutes before I called it and asked WolframAlpha for help. The response&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchb.png" alt="" height="239" width="954" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I saw the arctan I remembered that this was a trig identity listed in the back of the book and that you needed to be memorize it. In the 2 years since Calc 3 I haven&amp;rsquo;t used it so I forgot this one.&lt;/p&gt;
+
+&lt;p&gt;Since I have more mathematical knowledge at my disposile now than I did in during Calc 3 I thought I would dig around for a bit and try to remember why this specific identity related to the unit circle.&lt;/p&gt;
+
+&lt;p&gt;What I found was the &lt;a href="https://en.wikipedia.org/wiki/Witch_of_Agnesi"&gt;Witch of Angensi&lt;/a&gt;. Having seen the curve and animation on the wiki page, I decided to try and recreate the model shown on wikipedia with Desmos.&lt;/p&gt;
+
+&lt;p&gt;In the end I was able to create a decent model of the Witch of Angensi and I thought I would share the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchc.png" alt="" height="536" width="1100" /&gt;&lt;/p&gt;
+
+&lt;p&gt;To start with I created the fixed lines and curves.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchd.png" alt="" height="197" width="709" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next I created a variable t that would trace the function as it went from negative infinity to positive infinity. I also created a dashed vertical bar that would go along with the move.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witche.png" alt="" height="267" width="691" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next I had to create a line from the origin to the boundary of y=1. I used the point-slope formula for this equation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchf.png" alt="" height="291" width="674" /&gt;&lt;/p&gt;
+
+&lt;p&gt;To have the line only extend from the origin to the point (t,1) I have to add bounds to the equation using { } brackets.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchg.png" alt="" height="235" width="692" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next I had to write an equation for the point of intersection between the circle and the line.&lt;/p&gt;
+
+&lt;p&gt;This was actually harder than I thought it would be so I decided to start with a point on the circle and then fill in the rest.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style="font-weight: bold"&gt;So Starting over again&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;We begin by creating an equation for the point on the circle as it moves from -pi to pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchh.png" alt="" height="318" width="890" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we again use the point slope formula to create an equation from the origin to the point on the circle and we create second equation for the line that extends from the circle to the boundary at y=1.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchi.png" alt="" height="484" width="964" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the x_2 we found in the last step we can create the other lines for the triangle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchj.png" alt="" height="437" width="1100" /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can now hit play on t and have a nicely animated version of the Witch of Agnesi.&lt;/p&gt;
+
+&lt;p&gt;If you want to expand your knowledge you can extend this model to include different values for the radius like I did in my example at the beginning of this post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchk.gif" alt="" height="288" width="604" /&gt;&lt;/p&gt;</description></item>
   <item>
    <title>20% Project - ProjectEuler #27</title>
    <link>http://www.example.com/blog/20-project-projecteuler-27/?utm_source=20-Project&amp;utm_medium=RSS</link>
@@ -286,6 +350,81 @@ code:&lt;/p&gt;
  &lt;pre&gt;&lt;code&gt;function foo() {
   return 7;
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item>
+  <item>
+   <title>20% Project - ProjectEuler #29</title>
+   <link>http://www.example.com/blog/20-project-projecteuler-29/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-20-project-projecteuler-29</guid>
+   <pubDate>Sun, 12 Apr 2015 01:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29a.png" alt="" height="236" width="911" /&gt;&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href="https://projecteuler.net/problem=29"&gt;Project Euler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Like the last problem I find it&amp;rsquo;s informative to start out with an inelegant solution and try to find an elegant one at the end.&lt;/p&gt;
+
+&lt;p&gt;We start by generating an array of the form &lt;span style="font-style: italic"&gt;a&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;b&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; from &lt;span style="font-weight: bold"&gt;a&lt;/span&gt; = &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; to &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-weight: bold"&gt;b&lt;/span&gt; = &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; to &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29b.png" alt="" height="674" width="967" /&gt;&lt;/p&gt;
+
+&lt;p&gt;As expected that got gigantic quickly, however we don&amp;rsquo;t need to look at all of the data to work with it.&lt;/p&gt;
+
+&lt;p&gt;We can use &lt;span style="font-weight: bold"&gt;Flatten&lt;/span&gt; to compress the &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; array into a single vector &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; elements long.
+We then use &lt;span style="font-weight: bold"&gt;DeleteDuplicates&lt;/span&gt; to remove all of the duplicated elements from the vector.
+And finish with &lt;span style="font-weight: bold"&gt;Length&lt;/span&gt; to find the total number of elements left over.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29c.png" alt="" height="50" width="972" /&gt;&lt;/p&gt;
+
+&lt;p&gt;And technically we are done. &lt;span style="font-weight: bold"&gt;The answer to this ProjectEular problem is &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;,&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;However I think that it&amp;rsquo;s worth our time to consider why their are only &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; repeated numbers in this list.&lt;/p&gt;
+
+&lt;p&gt;First lets try to account for all of the numbers that are unique.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt; prime numbers less than &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; and each of these numbers will generate &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; non-duplicated numbers since they will have only one number as their factor. So we have to have at least &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;=&lt;/span&gt;2&lt;span style="font-style: italic"&gt;,&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt; unique numbers just from the primes under &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;However thinking about it we can also remove the numbers that are composed of primes like &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;. Observe that since &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;=&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt; that &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;=&lt;/span&gt;(&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;)&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;=&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;, and so on.&lt;/p&gt;
+
+&lt;p&gt;We could try to find the possible permutations of the &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt; primes however, there are &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; ways that we can combine two pairs of primes and calculating which combinations have values less than &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; is rather time consuming.&lt;/p&gt;
+
+&lt;p&gt;Instead lets consider what numbers we know are going to show up more than once in the table?&lt;/p&gt;
+
+&lt;p&gt;Any number that is a power of a lower number of the list will definitely be a repeated.&lt;/p&gt;
+
+&lt;p&gt;The higher powers of &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; will show up in the powers of &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;, &lt;/span&gt;8&lt;span style="font-style: italic"&gt;, &lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;, &lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;,&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below I have generated a truncated list for the &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;,&lt;/span&gt;4&lt;span style="font-style: italic"&gt;,&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; table. We can see that the &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt; table repeats every second value on the &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; table and that the &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; table repeats the 3rd value. This corresponds to &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;=&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;=&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29d.png" alt="" height="135" width="722" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I created the following two tables in &lt;a href="https://en.wikipedia.org/wiki/LaTeX"&gt;LaTeX&lt;/a&gt; to highlight how the powers of &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; repeat at specific intervals in the &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; power tables. A similar pattern will occur for the powers of &lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;, &lt;/span&gt;5&lt;span style="font-style: italic"&gt;,&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Similarly the power table for &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt; will be repeated in the power table for &lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; in the power table for &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following Matrix and ArrayPlot were generated in Mathematica to show the repeated numbers in the table given above. Observe that &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; occurs the most often in this table and is represented in black in the &lt;span style="font-weight: bold"&gt;ArrayPlot&lt;/span&gt; to signify that it is a larger value.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29e.png" alt="" height="460" width="478" /&gt;
+&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29f.png" alt="" height="345" width="670" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Expanding the array to include all of the numbers we originally calculated we get the following &lt;span style="font-weight: bold"&gt;ArrayPlot&lt;/span&gt;. Here we see that most of the values that will have repeats are clustered around the top of the array corresponding to a values between &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29g.png" alt="" height="643" width="641" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The dark band that shows up around the &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;/&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt; mark on the array corresponds to the powers of &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;.  As you can see by the following table the values in the &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; power table show up repeatedly throughout the array.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29h.png" alt="" height="127" width="282" /&gt;&lt;/p&gt;
+
+&lt;p&gt;For reference the number that shows up the most often in the table is &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;,&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;,&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;,&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;,&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt; or &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;. Which makes sense when you remember that &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; has &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt; divisors and would thus it will show up in the power table of &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;, &lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;, &lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;, &lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;, &lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;, &lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also you should notice that in a number of rows the values are high for half of the row and then drop down to 1 for the rest of the array. As an example the power table for &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; is at the bottom of the array window. Note that the first &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; values of this table occur in the &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; power table.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-29/ProjectEuler29i.png" alt="" height="69" width="327" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s not until &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt; that we get the first value that doesn&amp;rsquo;t show up in &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; power table.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style="font-weight: bold"&gt;Conclusion&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn&amp;rsquo;t ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.&lt;/p&gt;</description></item>
   <item>
    <title>20% Project Update</title>
    <link>http://www.example.com/blog/20-project-update/?utm_source=20-Project&amp;utm_medium=RSS</link>

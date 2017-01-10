@@ -1,5 +1,7 @@
+http://www.example.com/blog/20-project-witch-of-agnesi/
 http://www.example.com/blog/20-project-update/
 http://www.example.com/blog/20-project-projecteuler-27/
 http://www.example.com/blog/scribble-post/
 http://www.example.com/blog/20-project/
+http://www.example.com/blog/20-project-projecteuler-29/
 http://www.example.com/About.html

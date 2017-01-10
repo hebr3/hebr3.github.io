@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>20% Project - Witch of Agnesi</title>
+    <meta name="description" content="I was helping a student in AVID with calculus homework when I confronted with the following problem.    I worked on it for probably 3 minutes before I called it and asked WolframAlpha for help. The response...">
+    <meta name="author"      content="Henry Brooks">
+    <meta name="keywords"    content="20% Project">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/blog/20-project-witch-of-agnesi/">
+    <link rel="next" href="/blog/20-project-projecteuler-27/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Henry Brooks</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/20-Project.html">20% Project</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+          <article>
+  <header>
+    <h1>20% Project - Witch of Agnesi</h1>
+    <p class='date-and-tags'>
+<time datetime="2015-04-12" pubdate="true">2015-04-12</time> :: <span class="tags"><a href="/tags/20-Project.html">20% Project</a></span></p>
+  </header>
+
+<p>I was helping a student in AVID with calculus homework when I confronted with the following problem.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witcha.png" alt="" height="65" width="149" /></p>
+
+<p>I worked on it for probably 3 minutes before I called it and asked WolframAlpha for help. The response</p>
+<!--more-->
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchb.png" alt="" height="239" width="954" /></p>
+
+<p>Once I saw the arctan I remembered that this was a trig identity listed in the back of the book and that you needed to be memorize it. In the 2 years since Calc 3 I haven&rsquo;t used it so I forgot this one.</p>
+
+<p>Since I have more mathematical knowledge at my disposile now than I did in during Calc 3 I thought I would dig around for a bit and try to remember why this specific identity related to the unit circle.</p>
+
+<p>What I found was the <a href="https://en.wikipedia.org/wiki/Witch_of_Agnesi">Witch of Angensi</a>. Having seen the curve and animation on the wiki page, I decided to try and recreate the model shown on wikipedia with Desmos.</p>
+
+<p>In the end I was able to create a decent model of the Witch of Angensi and I thought I would share the process.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchc.png" alt="" height="536" width="1100" /></p>
+
+<p>To start with I created the fixed lines and curves.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchd.png" alt="" height="197" width="709" /></p>
+
+<p>Next I created a variable t that would trace the function as it went from negative infinity to positive infinity. I also created a dashed vertical bar that would go along with the move.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witche.png" alt="" height="267" width="691" /></p>
+
+<p>Next I had to create a line from the origin to the boundary of y=1. I used the point-slope formula for this equation.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchf.png" alt="" height="291" width="674" /></p>
+
+<p>To have the line only extend from the origin to the point (t,1) I have to add bounds to the equation using { } brackets.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchg.png" alt="" height="235" width="692" /></p>
+
+<p>Next I had to write an equation for the point of intersection between the circle and the line.</p>
+
+<p>This was actually harder than I thought it would be so I decided to start with a point on the circle and then fill in the rest.</p>
+
+<p><span style="font-weight: bold">So Starting over again</span>.</p>
+
+<p>We begin by creating an equation for the point on the circle as it moves from -pi to pi.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchh.png" alt="" height="318" width="890" /></p>
+
+<p>Next we again use the point slope formula to create an equation from the origin to the point on the circle and we create second equation for the line that extends from the circle to the boundary at y=1.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchi.png" alt="" height="484" width="964" /></p>
+
+<p>Using the x_2 we found in the last step we can create the other lines for the triangle.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchj.png" alt="" height="437" width="1100" /></p>
+
+<p>You can now hit play on t and have a nicely animated version of the Witch of Agnesi.</p>
+
+<p>If you want to expand your knowledge you can extend this model to include different values for the radius like I did in my example at the beginning of this post.</p>
+
+<p><img src="/img/posts/2015-04-12-20-project-witch-of-agnesi/witchk.gif" alt="" height="288" width="604" /></p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.example.com/blog/20-project-witch-of-agnesi/"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://www.example.com/blog/20-project-witch-of-agnesi/"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/20-project-projecteuler-27/"><em>20% Project - ProjectEuler #27</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/racketlang"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow RacketLang"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
