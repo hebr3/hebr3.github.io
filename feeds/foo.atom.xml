@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
- <title type="text">My Awesome Blog: Posts tagged 'foo'</title>
+ <title type="text">Henry Brooks: Posts tagged 'foo'</title>
  <link rel="self" href="http://www.example.com/feeds/foo.atom.xml" />
  <link href="http://www.example.com/tags/foo.html" />
  <id>urn:http-www-example-com:-tags-foo-html</id>
@@ -12,7 +12,7 @@
   <published>2012-01-01T08:00:00Z</published>
   <updated>2012-01-01T08:00:00Z</updated>
   <author>
-   <name>The Unknown Author</name></author>
+   <name>Henry Brooks</name></author>
   <content type="html">
 &lt;p&gt;Here is an example blog post.&lt;/p&gt;
 
@@ -22,13 +22,6 @@
 &lt;!-- more--&gt;
 
 &lt;p&gt;Here&amp;rsquo;s some &lt;a href="http://bullshitipsum.com/?paragraphs=2"&gt;Bullshit Ipsum&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;test test&lt;/p&gt;
-
-&lt;div class="figure"&gt;&lt;img src="192.168.1.74:3000/blog/img/ProjectEular-27-Mathematica01.png" alt="alt text" title="Mathematica" /&gt;
- &lt;p class="caption"&gt;alt text&lt;/p&gt;&lt;/div&gt;
-
-&lt;p&gt;new test&lt;/p&gt;
 
 &lt;p&gt;Addelivery integrate ecologies e-markets standards-compliant utilize technologies aggregate addelivery viral&amp;mdash;communities dynamic functionalities. Mindshare engineer viral A-list: cross-platform remix engage social cross-media social innovate distributed matrix experiences monetize utilize innovative. Action-items transition recontextualize sexy Cluetrain envisioneer, &amp;ldquo;vortals communities evolve technologies sexy methodologies.&amp;rdquo; Enhance grow compelling iterate architect matrix plug-and-play reinvent scale, distributed incentivize, extend.&lt;/p&gt;
 

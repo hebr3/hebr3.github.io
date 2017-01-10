@@ -1,132 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <rss version="2.0">
  <channel>
-  <title>My Awesome Blog: Posts tagged '20% Project'</title>
-  <description>My Awesome Blog: Posts tagged '20% Project'</description>
+  <title>Henry Brooks: Posts tagged '20% Project'</title>
+  <description>Henry Brooks: Posts tagged '20% Project'</description>
   <link>http://www.example.com/tags/20-Project.html</link>
-  <lastBuildDate>Sun, 12 Apr 2015 01:53:16 UT</lastBuildDate>
-  <pubDate>Sun, 12 Apr 2015 01:53:16 UT</pubDate>
+  <lastBuildDate>Sun, 12 Apr 2015 01:00:00 UT</lastBuildDate>
+  <pubDate>Sun, 12 Apr 2015 01:00:00 UT</pubDate>
   <ttl>1800</ttl>
   <item>
-   <title>20% Project update</title>
-   <link>http://www.example.com/blog/2015/04/11/20-project-update/?utm_source=20-Project&amp;utm_medium=RSS</link>
-   <guid>urn:http-www-example-com:-blog-2015-04-11-20-project-update</guid>
-   <pubDate>Sun, 12 Apr 2015 01:53:16 UT</pubDate>
+   <title>scribble post</title>
+   <link>http://www.example.com/blog/scribble-post/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-scribble-post</guid>
+   <pubDate>Sun, 12 Apr 2015 01:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;The source of this post is Scribble format (not Markdown).&lt;/p&gt;
+
+&lt;p&gt;Here is some intro text, above "the jump".&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;Here&amp;rsquo;s some &lt;a href="http://bullshitipsum.com/?paragraphs=2"&gt;Bullshit Ipsum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Addelivery &amp;amp; integrate ecologies e-markets standards-compliant utilize
+technologies aggregate addelivery viral&amp;ndash;communities dynamic
+functionalities. Mindshare engineer viral A-list: cross-platform remix
+engage social cross-media social innovate distributed matrix
+experiences monetize utilize innovative. Action-items transition
+recontextualize sexy Cluetrain envisioneer, "vortals communities
+evolve technologies sexy methodologies." Enhance grow compelling
+iterate architect matrix plug-and-play reinvent scale, distributed
+incentivize, extend.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._.A_.Section)"&gt;&lt;/a&gt;A Section&lt;/h1&gt;
+
+&lt;p&gt;I am some text.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a name="(part._.A_.Sub.Section)"&gt;&lt;/a&gt;A SubSection&lt;/h2&gt;
+
+&lt;p&gt;A &lt;span class="RktSym"&gt;codeblock&lt;/span&gt; uses curly braces and &lt;span style="font-style: italic"&gt;does&lt;/span&gt; retain
+comments:&lt;/p&gt;
+
+&lt;div class="SCodeFlow"&gt;
+ &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktCmt"&gt;;;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;Finds&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;Racket&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;sources&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;in&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;all&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktCmt"&gt;subdirs&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%29%29"&gt;for&lt;/a&gt;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-directory%29%29"&gt;in-directory&lt;/a&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/when_unless.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._when%29%29"&gt;when&lt;/a&gt;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/regexp.html#%28def._%28%28quote._~23~25kernel%29._regexp-match~3f%29%29"&gt;regexp-match?&lt;/a&gt;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktVal"&gt;#rx"[.]rkt$"&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/Writing.html#%28def._%28%28quote._~23~25kernel%29._printf%29%29"&gt;printf&lt;/a&gt;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktVal"&gt;"source&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;file:&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;~a\n"&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;foo&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;#:bar&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktSym"&gt;bar&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;span class="RktVal"&gt;#t&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktMeta"&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;p&gt;A &lt;span class="RktSym"&gt;racketblock&lt;/span&gt; uses square brackets and does &lt;span style="font-style: italic"&gt;not&lt;/span&gt;
+retain comments:&lt;/p&gt;
+
+&lt;div class="SCodeFlow"&gt;
+ &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%29%29"&gt;for&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-directory%29%29"&gt;in-directory&lt;/a&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/when_unless.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._when%29%29"&gt;when&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/regexp.html#%28def._%28%28quote._~23~25kernel%29._regexp-match~3f%29%29"&gt;regexp-match?&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;#rx"[.]rkt$"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/Writing.html#%28def._%28%28quote._~23~25kernel%29._printf%29%29"&gt;printf&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"source file: ~a\n"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;path&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;foo&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:bar&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;bar&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;#t&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is a &lt;span class="RktSym"&gt;interaction&lt;/span&gt;:&lt;/p&gt;
+
+&lt;div class="SCodeFlow"&gt;
+ &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;:&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;my-sqr&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;Real&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/function-contracts.html#%28form._%28%28lib._racket%2Fcontract%2Fbase..rkt%29._-~3e%29%29"&gt;&lt;span class="nobreak"&gt;-&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;Real&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;my-sqr&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;x&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._%2A%29%29"&gt;*&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;x&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;x&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;my-sqr&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;42&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="RktOut"&gt;- : Real&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="RktRes"&gt;1764&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a fancier one:&lt;/p&gt;
+
+&lt;div class="SCodeFlow"&gt;
+ &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29"&gt;require&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;slideshow/pict&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;rainbow-colors&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;'&lt;/span&gt;&lt;span class="RktVal"&gt;(&lt;/span&gt;&lt;span class="RktVal"&gt;"red"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"orange"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"yellow"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"green"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"blue"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"purple"&lt;/span&gt;&lt;span class="RktVal"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29"&gt;for/list&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;c&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;rainbow-colors&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;colorize&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;filled-rounded-rectangle&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;20&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;20&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;c&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="RktRes"&gt;'(&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_2.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_3.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_4.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_5.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_6.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /&gt;&lt;span class="RktRes"&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29"&gt;for/list&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;c&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;rainbow-colors&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;dir&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-cycle%29%29"&gt;in-cycle&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;'&lt;/span&gt;&lt;span class="RktVal"&gt;(&lt;/span&gt;&lt;span class="RktVal"&gt;right&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;left&lt;/span&gt;&lt;span class="RktVal"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;standard-fish&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;25&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;25&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;c&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:direction&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;dir&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="RktRes"&gt;'(&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_7.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_8.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_9.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_10.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_11.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_12.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /&gt;&lt;span class="RktRes"&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;table cellpadding="0" cellspacing="0" class="RktBlk"&gt;
+      &lt;tbody&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;cc-superimpose&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;cc-superimpose&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;cloud&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;100&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;80&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"lightblue"&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;cloud&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;90&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;70&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"white"&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;hc-append&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;10&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;standard-fish&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;30&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;30&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"red"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:direction&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;'&lt;/span&gt;&lt;span class="RktVal"&gt;right&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;standard-fish&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;25&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;20&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"blue"&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:direction&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;'&lt;/span&gt;&lt;span class="RktVal"&gt;left&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;img src="/img/posts/2017-01-09-scribble-post/pict_13.png" alt="image" height="86" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="106" /&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of using Pygments to syntax highlight non-Racket
+code:&lt;/p&gt;
+
+&lt;div class="brush: js"&gt;
+ &lt;pre&gt;&lt;code&gt;function foo() {
+  return 7;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item>
+  <item>
+   <title>20% Project - ProjectEuler #27</title>
+   <link>http://www.example.com/blog/20-project-projecteuler-27/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-20-project-projecteuler-27</guid>
+   <pubDate>Sun, 12 Apr 2015 01:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Euler discovered the remarkable quadratic formula:&lt;/p&gt;
 
-&lt;p&gt;n² + n + 41&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-style: italic"&gt;n&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt; + n + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;It turns out that the formula will produce 40 primes for the consecutive values n = 0 to 39. However, when n = 40, 402 + 40 + 41 = 40(40 + 1) + 41 is divisible by 41, and certainly when n = 41, 41² + 41 + 41 is clearly divisible by 41.&lt;/p&gt;
+&lt;p&gt;It turns out that the formula will produce &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; primes for the consecutive values &lt;span style="font-style: italic"&gt;n = &lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; to &lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;. However, when &lt;span style="font-style: italic"&gt;n = &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;, &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt; + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt; + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt; = &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;(&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt; + &lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;)&lt;span style="font-style: italic"&gt; + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; is divisible by &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;, and certainly when &lt;span style="font-style: italic"&gt;n = &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;, &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt; + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt; + &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; is clearly divisible by &lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
 
-&lt;p&gt;The incredible formula n² − 79n + 1601 was discovered, which produces 80 primes for the consecutive values n = 0 to 79. The product of the coefficients, −79 and 1601, is −126479.&lt;/p&gt;
+&lt;p&gt;The incredible formula &lt;span style="font-style: italic"&gt;n&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt; &amp;#8722; &lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;n + &lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; was discovered, which produces &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; primes for the consecutive values &lt;span style="font-style: italic"&gt;n = &lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; to &lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;. The product of the coefficients, &lt;span style="font-style: italic"&gt;&amp;#8722;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;, is &lt;span style="font-style: italic"&gt;&amp;#8722;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;,&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;Considering quadratics of the form:&lt;/p&gt;
 
-&lt;p&gt;n² + an + b, where |a| &amp;lt; 1000 and |b| &amp;lt; 1000&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-style: italic"&gt;n&lt;/span&gt;&lt;span style="vertical-align: super; font-size: 80%"&gt;&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-style: italic"&gt; + an + b&lt;/span&gt;, where &lt;span style="font-style: italic"&gt;|a| &amp;lt; &lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;|b| &amp;lt; &lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;where |n| is the modulus/absolute value of n e.g. |11| = 11 and |−4| = 4&lt;/p&gt;
+&lt;p&gt;where &lt;span style="font-style: italic"&gt;|n|&lt;/span&gt; is the modulus/absolute value of &lt;span style="font-style: italic"&gt;n&lt;/span&gt;
+     e.g. &lt;span style="font-style: italic"&gt;|&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;| = &lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;|&amp;#8722;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;| = &lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0.&lt;/p&gt;
 
-&lt;p&gt;From Project Euler&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;p&gt;&lt;a href="https://projecteuler.net/problem=27"&gt;Project Euler&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Initially I planned to tackle this problem from a strictly brute force perspective. I have found that working on a simple solution to a problem usually gives me insights to more elegant solutions.&lt;/p&gt;
 
 &lt;p&gt;Therefore I figured that the most straight forward and inelegant method was to produce a 1999 by 1999 array with individual elements of the array corresponding to the maximum number of consecutive primes generated by that combination of a and b.&lt;/p&gt;
 
-&lt;p&gt;Thus the initial element of the array in position |1,1| would be the maximum number of consecutive primes generated by n² + (&amp;ndash;999)n + (&amp;ndash;999), and the final position of |1999,1999| would be n² + (999)n + (999).&lt;/p&gt;
+&lt;p&gt;Thus the initial element of the array in position |1,1| would be the maximum number of consecutive primes generated by n2 + (-999)n + (-999), and the final position of |1999,1999| would be n2 + (999)n + (999).&lt;/p&gt;
 
-&lt;p&gt;With this plan in mind I tried to think up a quick way to calculate the maximum number of consecutive primes for a given a and b.&lt;/p&gt;
+&lt;p&gt;With this plan in mind I tried to think up a quick way to calculate the maximum number of consecutive primes for a given &lt;span style="font-weight: bold"&gt;a&lt;/span&gt; and &lt;span style="font-weight: bold"&gt;b&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;I started by having Mathematica generate the first 101 values from the example given in the problem by using a=1 and b=41.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica01&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27a.png" alt="" height="215" width="735" /&gt;&lt;/p&gt;
 
-&lt;p&gt;I then used PrimeQ to test whether each value was prime.&lt;/p&gt;
+&lt;p&gt;I then used &lt;span style="font-weight: bold"&gt;PrimeQ&lt;/span&gt; to test whether each value was prime.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica02&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27b.png" alt="" height="232" width="726" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Then used Boole to convert these true false values to 0&amp;rsquo;s and 1&amp;rsquo;s.&lt;/p&gt;
+&lt;p&gt;Then used &lt;span style="font-weight: bold"&gt;Boole&lt;/span&gt; to convert these true false values to 0&amp;rsquo;s and 1&amp;rsquo;s.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica03&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27c.png" alt="" height="153" width="728" /&gt;&lt;/p&gt;
 
-&lt;p&gt;And finally FirstPosition to find the first false in the list.&lt;/p&gt;
+&lt;p&gt;And finally &lt;span style="font-weight: bold"&gt;FirstPosition&lt;/span&gt; to find the first false in the list.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica04&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27d.png" alt="" height="90" width="731" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Note that the answer of 41 corresponds to the 39 primes listed in the example since this method doesn&amp;rsquo;t count the primes from 0&amp;ndash;39 but from 1&amp;ndash;40 and it found a non-Prime number in position 41.&lt;/p&gt;
+&lt;p&gt;Note that the answer of 41 corresponds to the 39 primes listed in the example since this method doesn&amp;rsquo;t count the primes from 0-39 but from 1-40 and it found a non-Prime number in position 41.&lt;/p&gt;
 
-&lt;p&gt;So&amp;hellip;&lt;/p&gt;
+&lt;p&gt;So...&lt;/p&gt;
 
-&lt;p&gt;This method is horribly inelegant, however it also does work so it&amp;rsquo;s time to see if I can use this method to generate the 1999 by 1999 array I initially planned for.&lt;/p&gt;
+&lt;p&gt;This method is horribly inelegant, however it does work so it&amp;rsquo;s time to see if I can use this method to generate the &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; by &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; array I initially planned for.&lt;/p&gt;
 
-&lt;p&gt;I begin by trying a smaller array and seeing if my method works.&lt;/p&gt;
+&lt;p&gt;I begin by trying my method on a smaller array and seeing if it would work at all.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica05&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27e.png" alt="" height="174" width="1031" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Note that this entry should be much larger as it displays a 51 by 51 array of values.&lt;/p&gt;
+&lt;p&gt;Note that this entry should be much larger as it displays a &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; array of values.&lt;/p&gt;
 
-&lt;p&gt;To find the maximum element of this array I then use the Position and Max commands. Position gives the location in an array of a specified value, and Max gives the largest element of the array.&lt;/p&gt;
+&lt;p&gt;To find the maximum element of this array I then use the &lt;span style="font-weight: bold"&gt;Position&lt;/span&gt; and &lt;span style="font-weight: bold"&gt;Max&lt;/span&gt; commands. &lt;span style="font-weight: bold"&gt;Position&lt;/span&gt; gives the location in an array of a specified value, and &lt;span style="font-weight: bold"&gt;Max&lt;/span&gt; gives the largest element of the array.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica06&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27f.png" alt="" height="23" width="1023" /&gt;
+&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27g.png" alt="" height="49" width="1021" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Since we are counting up from 0 we have now found that the Maximum number of consecutive primes is generated with a=1 and b=41 which matches the example.&lt;/p&gt;
+&lt;p&gt;Since we are counting up from 0 we have now found that the Maximum number of consecutive primes is generated with &lt;span style="font-weight: bold"&gt;a&lt;/span&gt;=1 and &lt;span style="font-weight: bold"&gt;b&lt;/span&gt;=41 which matches the example.&lt;/p&gt;
 
-&lt;p&gt;One area of concern going forward is that it takes 0.655204 secs for Mathematica to create the 51 by 51 array I used above. Since a 1999 by 1999 array is nearly 1600% larger than a 50 by 50 array that means that generating a 1999 by 1999 array should take at least 17 minutes and 28.33 second. Most likely longer considering that the edges of the array will be dealing with a and b values greater than 900.&lt;/p&gt;
+&lt;p&gt;One area of concern going forward is that it takes &lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;.&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;,&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt; secs for Mathematica to create the &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; array I used above. Since a &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; array is almost &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;,&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;%&lt;/span&gt; larger than a &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; array, that means that generating a &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; array should take at least &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt; minutes and &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;.&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt; second. Most likely longer considering that the edges of the array will be dealing with &lt;span style="font-weight: bold"&gt;a&lt;/span&gt; and &lt;span style="font-weight: bold"&gt;b&lt;/span&gt; values greater than &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;Still I have free time and I&amp;rsquo;m not paying for processing time so we might as well go forward and see how long it takes.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica07&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27h.png" alt="" height="687" width="1031" /&gt;&lt;/p&gt;
 
-&lt;p&gt;So 21 minutes and 14 seconds later we have our array and can try to find the Maximum number of consecutive primes.&lt;/p&gt;
+&lt;p&gt;So &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; minutes and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt; seconds later we have our array and can try to find the Maximum number of consecutive primes.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica08&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27i.png" alt="" height="57" width="1024" /&gt;&lt;/p&gt;
 
-&lt;p&gt;And we have a max at |939,1971|, so 939&amp;ndash;1000=&amp;ndash;61 and 1971&amp;ndash;1000=971 are are a and b values.&lt;/p&gt;
+&lt;p&gt;And we have a max at &lt;span style="font-style: italic"&gt;|&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;,&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;|&lt;/span&gt;, so &lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;-&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;=-&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;-&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;=&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; are are &lt;span style="font-weight: bold"&gt;a&lt;/span&gt; and &lt;span style="font-weight: bold"&gt;b&lt;/span&gt; values.&lt;/p&gt;
 
-&lt;p&gt;a*b=&amp;ndash;61*971=&amp;ndash;59231&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-style: italic"&gt;a*b=-&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;*&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;=-&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;And we thus have our answer for Problem 27.&lt;/p&gt;
 
-&lt;p&gt;Now how could we have improved this process.&lt;/p&gt;
+&lt;p&gt;Now we can focus on improving this process.&lt;/p&gt;
 
-&lt;p&gt;We could start by recognizing that b has to be a prime number. It was only after I had finished this problem that I realized that since n starts at 0 the first element will always be 0*0 + a*0 + b. Since there are 168 primes less than 1000 that means I only needed 168 rows instead of 1999.&lt;/p&gt;
+&lt;p&gt;We could start by recognizing that &lt;span style="font-weight: bold"&gt;b&lt;/span&gt; has to be a prime number. It was only after I had finished this problem that I realized that since n starts at 0 the first element will always be 0*0 + a*0 + b. Since there are 168 primes less than 1000 that means I only needed 168 rows instead of 1999.&lt;/p&gt;
 
-&lt;p&gt;A 1999 by 168 array is 8.4% the size of a 1999 by 1999 array and only took Mathematica 1 minute and 56 seconds to calculate.&lt;/p&gt;
+&lt;p&gt;A &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; array is &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;.&lt;/span&gt;4&lt;span style="font-style: italic"&gt;%&lt;/span&gt; the size of a &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; array and only took Mathematica &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; minute and &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt; seconds to calculate.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica09&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27j.png" alt="" height="702" width="1025" /&gt;&lt;/p&gt;
 
-&lt;p&gt;A larger time sink is that I am actually calculating out the first 100 n values for every combination of a and b tested. Thus even if the second value calculated is non-Prime I still waste time evaluating the next 98 values.&lt;/p&gt;
+&lt;p&gt;A larger time sink is that I am actually calculating out the first &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt; n&lt;/span&gt; values for every combination of &lt;span style="font-weight: bold"&gt;a&lt;/span&gt; and&lt;span style="font-weight: bold"&gt;b&lt;/span&gt;tested. Thus even if the second value calculated is non-Prime I still waste time evaluating the next 98 values.&lt;/p&gt;
 
-&lt;p&gt;Using the following code I can just check if the n values are prime and stop when a non-Prime is found.&lt;/p&gt;
+&lt;p&gt;Using the following code I can just check if the &lt;span style="font-style: italic"&gt;n&lt;/span&gt; values are prime and stop when a non-Prime is found.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica10&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27k.png" alt="" height="90" width="1022" /&gt;&lt;/p&gt;
 
-&lt;p&gt;To better understand how much time this saves, I calculated a 50 by 50 array using the old method and the new method and had Mathematica generate an ArrayPlot to save space.&lt;/p&gt;
+&lt;p&gt;To better understand how much time this saves, I calculated a &lt;span style="font-style: italic"&gt;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;5&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; array using the old method and the new method and had Mathematica generate an &lt;span style="font-weight: bold"&gt;ArrayPlot&lt;/span&gt; to save space.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica11&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27l.png" alt="" height="449" width="1024" /&gt;&lt;/p&gt;
 
-&lt;p&gt;The second method took 6.1% of the time taken by the first method.&lt;/p&gt;
+&lt;p&gt;The second method took &lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;.&lt;/span&gt;1&lt;span style="font-style: italic"&gt;%&lt;/span&gt; of the time taken by the first method.&lt;/p&gt;
 
-&lt;p&gt;Using both methods together the entire process of generating the 1999 by 168 array takes 10 seconds.&lt;/p&gt;
+&lt;p&gt;Using both methods together the entire process of generating the &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt; array takes &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; seconds.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica12&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27m.png" alt="" height="686" width="1032" /&gt;&lt;/p&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t looked into it, but I suspect that I could similarly shave a couple of seconds off of the total running time by finding some trick for picking a values.&lt;/p&gt;
 
 &lt;p&gt;Conclusion&lt;/p&gt;
 
-&lt;p&gt;I started by creating a rather inelegant method for finding the number of consecutive primes generated on a 1999 by 1999 matrix. This method took 21 minutes and 14 seconds.&lt;/p&gt;
+&lt;p&gt;I started by creating a rather inelegant method for finding the number of consecutive primes generated on a &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&amp;#215;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt;9&lt;span style="font-style: italic"&gt;&lt;/span&gt; matrix. This method took &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt; minutes and &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;4&lt;span style="font-style: italic"&gt;&lt;/span&gt; seconds.&lt;/p&gt;
 
-&lt;p&gt;I next examined the problem more closely and found areas that could be refined so that I found that same solution in 10 seconds.&lt;/p&gt;
+&lt;p&gt;I next examined the problem more closely and found areas that could be refined so that I found that same solution in &lt;span style="font-style: italic"&gt;&lt;/span&gt;1&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; seconds.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m confident that the majority of the improvement in performance came from optimizing the operation that found the number of consecutive primes.&lt;/p&gt;
 
-&lt;p&gt;ProjectEuler-Mathematica13&lt;/p&gt;
+&lt;p&gt;&lt;img src="/img/posts/2015-04-11-20-project-projecteuler-27/ProjectEuler27n.png" alt="" height="50" width="1024" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Using the above code I found that 280607 times the second number tested was non-Prime. Since there are only 336000 entries in the array that means that 83.5% of the time while generating the original array I could have stopped after calculating the second value.&lt;/p&gt;
+&lt;p&gt;Using the above code I found that &lt;span style="font-style: italic"&gt;&lt;/span&gt;2&lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;,&lt;/span&gt;6&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;7&lt;span style="font-style: italic"&gt;&lt;/span&gt; times the second number tested was non-Prime. Since there are only &lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;&lt;/span&gt;6&lt;span style="font-style: italic"&gt;,&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt;0&lt;span style="font-style: italic"&gt;&lt;/span&gt; entries in the array that means that &lt;span style="font-style: italic"&gt;&lt;/span&gt;8&lt;span style="font-style: italic"&gt;&lt;/span&gt;3&lt;span style="font-style: italic"&gt;.&lt;/span&gt;5&lt;span style="font-style: italic"&gt;%&lt;/span&gt; of the time while generating the original array I could have stopped after calculating the second value.&lt;/p&gt;
 
-&lt;p&gt;This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.&lt;/p&gt;</description></item>
+  <item>
+   <title>20% Project Update</title>
+   <link>http://www.example.com/blog/20-project-update/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-20-project-update</guid>
+   <pubDate>Sat, 21 Feb 2015 02:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;Considering Prof. Heil&amp;rsquo;s email I have complied a list of the criteria for my 20% Project.&lt;/p&gt;
+
+&lt;p&gt;For my 20% Project I&amp;rsquo;m going to be learning to write code in Mathematica to find solutions for the problems posted on Project Euler.&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;h1&gt;&lt;a name="(part._1_.What_are_you_going_to_learn__what_is_your__learning_target___)"&gt;&lt;/a&gt;1 What are you going to learn (what is your "learning target")?&lt;/h1&gt;
+
+&lt;p&gt;For my 20% Project I&amp;rsquo;m going to be expanding my knowledge of coding by learning to write code for Mathematica. As a student at CSUSM I currently have access to Mathematica through cougarapps and I feel that I would be remiss to not give it a try while I still can. I also think that Mathematica might be a better fit for some of the mathematical problems that are in the Project Euler database.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._2_.How_are_you_planning_on_learning_it___part_of_this_learning_must_take_place_online_)"&gt;&lt;/a&gt;2 How are you planning on learning it? (part of this learning must take place online)&lt;/h1&gt;
+
+&lt;p&gt;I plan to learn this through online video instructions, tutorials, and the documentation provided inside of Mathematica.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._3_.List_your_10_authentic_questions_for_inquiry_____you_only_need_the_questions__.The_answers_will_come_at_the_end_of_the_project_)"&gt;&lt;/a&gt;3 List your 10 authentic questions for inquiry. . .you only need the questions. The answers will come at the end of the project)&lt;/h1&gt;
+
+&lt;p&gt;Does Mathematica have enough built in tools to do this task?
+Does my knowledge of C++ transfer to Mathematica?
+How long will it take to get competent with Mathematica?
+How difficult is it to create functional algorithms in Mathematica?
+Are there coding considerations I should be aware of when working with Mathematica?
+How difficult of a task have I set for myself?
+Are there classes of problems that are more difficult with Mathematica?
+Can these problems be adjusted for use in the classroom?
+What mathematical fields are covered by this project?
+How much does Mathematica cost if I decide to keep using it after this project?&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._4_.What_will_a_successful_outcome_look_like__what_is_your__success_criteria___)"&gt;&lt;/a&gt;4 What will a successful outcome look like (what is your "success criteria")?&lt;/h1&gt;
+
+&lt;p&gt;I would consider success for this project to be the completion of at least the first 50 problems on the site.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._5__.Most_importantly__.Is_there_an_aspect_of_play_and_or_making_in_your_project__.Is_there_an_opportunity_for_failure__.It_is_important_that_you_avoid_pure_knowledge_pursuits_for_this_project_)"&gt;&lt;/a&gt;5 (Most importantly) Is there an aspect of play and/or making in your project. Is there an opportunity for failure? It is important that you avoid pure knowledge pursuits for this project.&lt;/h1&gt;
+
+&lt;p&gt;I enjoy completing logic puzzles like Sudoku and I have previously been working on some of these problems on this site for fun in my spare time. So I think that this project has an element of play for me.&lt;/p&gt;
+
+&lt;p&gt;I get satisfaction out of solving problems that are difficult, also I like reading over the different methods used by other people after I have completed a problem.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not sure how much opportunity for failure is presented by this project. I know that even if I don&amp;rsquo;t finish 50 problems by the end of this course I will eventually finish them. However I would like to reach this goal if I could, even if it&amp;rsquo;s just as a personal pride thing.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a name="(part._6_.Which_tool_are_you_going_to_be_using_for_research___.I_know_there_was_a_request_for_more_clarification_on_tools__.We_can_do_this_.Monday_)"&gt;&lt;/a&gt;6 Which tool are you going to be using for research? (I know there was a request for more clarification on tools. We can do this Monday)&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to be using the internet for most of my research on this project.&lt;/p&gt;
+
+&lt;p&gt;While I know some Professors and Computer Science majors at the University who I could talk to about coding these types of problems, I&amp;rsquo;m rarely on campus this semester so it would be difficult to stop by and ask them for assistance.&lt;/p&gt;</description></item>
+  <item>
+   <title>20% Project</title>
+   <link>http://www.example.com/blog/20-project/?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-20-project</guid>
+   <pubDate>Tue, 17 Feb 2015 01:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C+ during college and I want to expand that knowledge.&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been able to solve around 10 of the problems on &lt;a href="https://projecteuler.net/"&gt;Project Euler&lt;/a&gt; using the coding skills that I already know and some Combinatoric trick however, I have come to recognize that to move any further I am going to need to learn how to actually write complex computer code utilizing arrays and date structures. I haven&amp;rsquo;t settled on a specific language to learn for this project, however I would like to finish the first 100 problems on the site by the end of the semester.&lt;/p&gt;
+
+&lt;p&gt;I find that many of the problems I have already solved have a range of possilble solutions ranging from brute force to elegent mathematic proofs. I feel that going through these problems will give me a greater appreciation for the diverse methods students use to solve mathematical problems in my class. Understanding that a problem can have more than one valid solution and being able to articulate how different solution methods can arrive at the same answer is an important skill that we need as teachers. Hopefully this project will assist me in recognizing and articulating that to students.&lt;/p&gt;</description></item></channel></rss>
