@@ -21,7 +21,7 @@ We start by generating an array of the form @math{a^b} from @bold{a} = @math{2} 
 
 As expected that got gigantic quickly, however we don't need to look at all of the data to work with it.
 
-We can use @bold{Flatten} to compress the @math{99×99} array into a single vector @math{9801} elements long.
+We can use @bold{Flatten} to compress the @math{99×99} array into a single vector @math{9,801} elements long.
 We then use @bold{DeleteDuplicates} to remove all of the duplicated elements from the vector.
 And finish with @bold{Length} to find the total number of elements left over.
 

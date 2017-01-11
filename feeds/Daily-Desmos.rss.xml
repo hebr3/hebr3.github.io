@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>Henry Brooks: Posts tagged 'Daily Desmos'</title>
+  <description>Henry Brooks: Posts tagged 'Daily Desmos'</description>
+  <link>http://www.example.com/tags/Daily-Desmos.html</link>
+  <lastBuildDate>Tue, 28 Apr 2015 01:00:00 UT</lastBuildDate>
+  <pubDate>Tue, 28 Apr 2015 01:00:00 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Daily Desmos 24Apr</title>
+   <link>http://www.example.com/blog/daily-desmos-24apr/?utm_source=Daily-Desmos&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-daily-desmos-24apr</guid>
+   <pubDate>Tue, 28 Apr 2015 01:00:00 UT</pubDate>
+   <description>
+&lt;p&gt;&lt;img src="/img/posts/2017-01-10-daily-desmos-24apr/dd-24apr-a.gif" alt="" height="307" width="356" /&gt;
+&lt;img src="/img/posts/2017-01-10-daily-desmos-24apr/dd-24apr-b.gif" alt="" height="216" width="345" /&gt;&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href="http://dailydesmos.com/2015/04/24/warping-ellipse-1-advanced/"&gt;Daily Desmos&lt;/a&gt; posted this challenge on the 24th of April.&lt;/p&gt;
+
+&lt;p&gt;Not an exact copy, but I feel that I touched on the important requirements. I&amp;rsquo;m still trying to figure out a good way to replicate the repeating nature of the example.&lt;/p&gt;
+
+&lt;p&gt;You can see my solution &lt;a href="https://www.desmos.com/calculator/g3njuaox3d"&gt;here&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
