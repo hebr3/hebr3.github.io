@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CS211-Lab1-Program1 in Racket</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>CS211-Lab1-Program1 in Racket</h1>
+                <p>Scribbled <a href="/posts\cs211-lab1-program1.html" class="permlink"><time datetime="2017-01-25">Wednesday, January 25th, 2017</time></a>
+
+                &middot;&nbsp;<a class="pdf" href="cs211-lab1-program1.pdf">PDF</a>&nbsp;
+                &middot;&nbsp;<a href="/posts\cs211-lab1-program1.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
+                <ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html# Racket"># Racket</a></li><li><a href="/topics.html# C++"># C++</a></li></ul>
+            </header>
+
+<p>I’m currently taking <a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf">CS211</a> at <a href="https://www.csusm.edu/">CSUSM</a> and I thought it would be interesting to try re-writing the labs in <a href="https://racket-lang.org">Racket</a> after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.</p><h2>Program 1</h2><p>Your favorite shoe store is having a sale–all pairs of shoes are 35% off! Write a program that reads shoe prices in stock at the local store from an input file, shoe.txt. Each row in the file contains a shoe serial number and price. Calculate the sale price of every pair of shoes, and what the final cost of the shoes is when the sales tax is applied to the discounted price. The calculated data must be saved in an output file, shoeSale.txt.</p><p>You MUST use a named constant for both the tax rate (8.5%) and discount rate (35%). Since the results displayed are monetary values, your output must be displayed with two decimal places of precision. Be sure decimals “line up” when you output the information.</p><div class="listing-filename">&#128196; shoe.txt</div><pre class="code">234019 75.00
+234490 124.99
+347269 50.00
+239801 149.99
+487241 99.99
+982111 175.00</pre><div class="listing-filename">&#128196; shoeSale.txt</div><pre class="code">234019 52.89
+234490 88.15
+347269 35.26
+239801 105.78
+487241 70.51
+982111 123.41</pre><div class="listing-filename">&#128196; Lab1_Program1.cpp</div><pre class="code">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+// init constants
+const double TAX_RATE = 0.085;
+const double DISCOUNT_RATE = 0.35;
+
+int main () {
+  // initialize files
+  ifstream inputFile;
+  inputFile.open("shoe.txt");
+
+  ofstream outputFile;
+  outputFile.open("shoeSales.txt");
+
+  // init variables
+  int serialNumber;
+  double price,
+         discount,
+         discountedPrice,
+         saleTax,
+         final;
+
+  if (inputFile.is_open()) {
+    while (inputFile.good()) {
+      // Pull info off file
+      inputFile &gt;&gt; serialNumber &gt;&gt; price;
+
+      // Convert price to final price
+      discount = price * DISCOUNT_RATE;
+      discountedPrice = price - discount;
+      saleTax = discountedPrice * TAX_RATE;
+      final = discountedPrice + saleTax;
+
+      // Output final serialNumber and price to file
+      outputFile &lt;&lt; serialNumber
+                 &lt;&lt; setw(8) &lt;&lt; setprecision(2)
+                 &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; right
+                 &lt;&lt; final &lt;&lt; endl;
+    }
+
+    // Close the file
+    outputFile.close();
+  }
+  else {
+    cout &lt;&lt; "Unable to open file";
+  }
+
+  return 0;
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+
+(define TAX_RATE 0.085)
+(define DISCOUNT_RATE 0.35)
+
+(define inputFile (open-input-file "shoe.txt"))
+(define outputFile
+  (open-output-file "shoeSales.txt"
+                    #:exists 'replace))</pre>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

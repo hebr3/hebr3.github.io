@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CS211-Lab2 in Racket</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>CS211-Lab2 in Racket</h1>
+                <p>Scribbled <a href="/posts\cs211-lab2.html" class="permlink"><time datetime="2017-02-03">Friday, February 3rd, 2017</time></a>
+
+                &middot;&nbsp;<a class="pdf" href="cs211-lab2.pdf">PDF</a>&nbsp;
+                &middot;&nbsp;<a href="/posts\cs211-lab2.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
+                <ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html# Racket"># Racket</a></li><li><a href="/topics.html# C++"># C++</a></li></ul>
+            </header>
+
+<p>The purpose of this lab is to practice working with vectors.</p><p>Write a program that reads an unknown number of integers from a data file called “data.txt” into a vector of integers named V. V is initially empty and grows as the user reads data from file.</p><p>Once done copying data into vector V, you need to print the contents of V and perform some other tasks on the vector as described below.</p><p>Your program should do the following:</p><p>Create an empty vector of integers V.<br/>Read the integers from data.txt into V.<br/>Ask the user to input a key. Then search for the key in vector V and inform the user about the existence (true / false) of the key in V.<br/>Print the contents of V.</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">5 6 12 87 100 28 35 66 77 29</pre><div class="listing-filename">&#128196; ./a.out &gt; output.txt input=&gt;12</div><pre class="code">
+Please enter a key to search for in data3.txt: 5
+6
+12 &lt;--
+87
+100
+28
+35
+66
+77
+29
+
+The key was found
+</pre><div class="listing-filename">&#128196; Lab1_Program3.cpp</div><pre class="code">#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main()
+{
+  // Initialized empty vector
+  vector&lt;int&gt; V;
+
+  // Initialized holding variable
+  int holding;
+
+  // Initialized inputFile
+  ifstream inputFile;
+  inputFile.open("data.txt");
+
+  // Load first element of inputFile into holding
+  inputFile &gt;&gt; holding;
+
+  // While inputFile is sending results
+  while (inputFile) {
+    V.push_back(holding);
+    inputFile &gt;&gt; holding;
+  }
+
+  // Close inputfile
+  inputFile.close();
+
+
+  cout &lt;&lt; endl
+       &lt;&lt;"Please enter a key to search for in data3.txt: ";
+
+  // Initialize key and search flag
+  int key;
+  bool found = false;
+
+  // Get user input
+  cin &gt;&gt; key;
+
+  // Check all values in vector
+  for (int val : V) {
+    cout &lt;&lt; val;
+    if (val == key) {
+      cout &lt;&lt; " &lt;--" &lt;&lt; endl;
+      found = true;
+    } else {
+      cout &lt;&lt; endl;
+    }
+  }
+
+  cout &lt;&lt; endl;
+
+  // If the found flag is true output positive result
+  if (found) {
+    cout &lt;&lt; "The key was found" &lt;&lt; endl &lt;&lt; endl;
+  } else {
+    cout &lt;&lt; "The key was not found" &lt;&lt; endl;
+  }
+
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+</pre>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
