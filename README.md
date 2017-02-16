@@ -1,3 +1,3 @@
 # hebr3.github.io
 
-Experimenting with github pages and static blogging using [frog](https://github.com/greghendershott/frog) and [pollen](https://github.com/mbutterick/pollen) in [racket](http://racket-lang.org/).
+I am testing out [Pollen](https://docs.racket-lang.org/pollen/index.html) and [Racket](https://racket-lang.org/) for use in generating a static blog.
