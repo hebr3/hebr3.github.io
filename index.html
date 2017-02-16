@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Henry Brooks</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li class="current-section"><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article><header>
+<h1><a href="posts/cs211-lab2.html">CS211-Lab2 in Racket</a></h1>
+<p>Scribbled <a class="permlink" href="posts/cs211-lab2.html"><time datetime="2017-02-03">Friday, February 3rd, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab2.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab2.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>The purpose of this lab is to practice working with vectors.</p><p>Write a program that reads an unknown number of integers from a data file called “data.txt” into a vector of integers named V. V is initially empty and grows as the user reads data from file.</p><p>Once done copying data into vector V, you need to print the contents of V and perform some other tasks on the vector as described below.</p><p>Your program should do the following:</p><p>Create an empty vector of integers V.<br/>Read the integers from data.txt into V.<br/>Ask the user to input a key. Then search for the key in vector V and inform the user about the existence (true / false) of the key in V.<br/>Print the contents of V.</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">5 6 12 87 100 28 35 66 77 29</pre><div class="listing-filename">&#128196; ./a.out &gt; output.txt input=&gt;12</div><pre class="code">
+Please enter a key to search for in data3.txt: 5
+6
+12 &lt;--
+87
+100
+28
+35
+66
+77
+29
+
+The key was found
+</pre><div class="listing-filename">&#128196; Lab1_Program3.cpp</div><pre class="code">#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main()
+{
+  // Initialized empty vector
+  vector&lt;int&gt; V;
+
+  // Initialized holding variable
+  int holding;
+
+  // Initialized inputFile
+  ifstream inputFile;
+  inputFile.open("data.txt");
+
+  // Load first element of inputFile into holding
+  inputFile &gt;&gt; holding;
+
+  // While inputFile is sending results
+  while (inputFile) {
+    V.push_back(holding);
+    inputFile &gt;&gt; holding;
+  }
+
+  // Close inputfile
+  inputFile.close();
+
+
+  cout &lt;&lt; endl
+       &lt;&lt;"Please enter a key to search for in data3.txt: ";
+
+  // Initialize key and search flag
+  int key;
+  bool found = false;
+
+  // Get user input
+  cin &gt;&gt; key;
+
+  // Check all values in vector
+  for (int val : V) {
+    cout &lt;&lt; val;
+    if (val == key) {
+      cout &lt;&lt; " &lt;--" &lt;&lt; endl;
+      found = true;
+    } else {
+      cout &lt;&lt; endl;
+    }
+  }
+
+  cout &lt;&lt; endl;
+
+  // If the found flag is true output positive result
+  if (found) {
+    cout &lt;&lt; "The key was found" &lt;&lt; endl &lt;&lt; endl;
+  } else {
+    cout &lt;&lt; "The key was not found" &lt;&lt; endl;
+  }
+
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+</pre></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/cs211-lab1-program3.html">CS211-Lab1-Program3 in Racket</a></h1>
+<p>Scribbled <a class="permlink" href="posts/cs211-lab1-program3.html"><time datetime="2017-01-30">Monday, January 30th, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab1-program3.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab1-program3.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<h2>Program 3</h2><p>Write a program with several functions that perform the following tasks:</p><p>a. Read the following 10 integer numbers from the file data.txt into array A.<br/>     10 15 27 89 90 95 27 13 99 33<br/> Call function ReadArray that reads numbers from the file data.txt into an array.</p><p>b. Copy array A into array B in reverse order.<br/>Call function ReverseArray that copies an array into another array in reverse order</p><p>c. Print the elements of Array A and B.<br/>Call function PrintArray that prints the elements of an array of any size</p><p>d. Find the number of elements in array A that are &gt;= 80 and &lt;=100.<br/>Call function FindRange that finds and returns the number of elements in an array of any size that are within a certain range (min, max)</p><p>e. Find the index of the elements in array A that are divisible by 5.<br/>Call function FindDiv that finds and returns the number of the elements in array that are divisible by 5</p><p>f. Find average in array A.<br/>Call function ArrayAvg that finds and returns the average of elements in an array of any size</p><p>g. Find the minimum number in array A.<br/>Call function ArrayMin that finds and returns the minimum number in an array of any size</p><p>h. Ask the user to input a key. Then search for the key in array A and inform the user about the existence (true / false) of the key in array.<br/>Call function KeySearch that searches for a key in an array of any size and returns true/false as result</p><p>NOTES:<br/>- If a function is supposed to return a value, print that value in main not inside the function.<br/>- Any parameter that is not supposed to be changed inside a function must be declared as a constant parameter.</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">10 15 27 89 90 95 27 13 99 33</pre><div class="listing-filename">&#128196; ./a.out &gt; output.txt</div><pre class="code">10 15 27 89 90 95 27 13 99 33
+
+33 99 13 27 95 90 89 27 15 10
+
+There are 4 values in arrayA between 80 and 100.
+
+There are elements divisible by 5 at positions 1, 2, 5, 6, 4
+
+The average of the array is 49.8
+
+The minimum element of the array is 10
+
+Enter an integer value to search for: True</pre><div class="listing-filename">&#128196; Lab1_Program3.cpp</div><pre class="code">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// Function prototypes *************************************************
+int fileSize();                        // aux
+void ReadArray(int [], int);            // a
+void ReverseArray(int [], int [], int); // b
+void PrintArray(int [], int);           // c
+int FindRange(int, int, int []);        // d
+int FindDiv(int, int []);               // e
+double ArrayAvg(int []);                // f
+int ArrayMin(int []);                   // g
+bool KeySearch(int, int []);            // h
+
+int main () {
+  // find length of the input
+  int SIZE = fileSize();
+
+  // initialize array A and B
+  int arrayA[SIZE];
+  int arrayB[SIZE];
+
+  // a. Read data from data2.txt to arrayA
+  ReadArray(arrayA, SIZE);
+
+  // b. Copy arrayA into arrayB in reverse order
+  ReverseArray(arrayA, arrayB, SIZE);
+
+  // c. Print arrayA and arrayB
+  PrintArray(arrayA, SIZE);
+  PrintArray(arrayB, SIZE);
+
+  // d. Find the number of elements in array between 80 and 100
+  cout &lt;&lt; "There are "
+       &lt;&lt; FindRange(80, 100, arrayA)
+       &lt;&lt; " values in arrayA between "
+       &lt;&lt; 80
+       &lt;&lt; " and "
+       &lt;&lt; 100 &lt;&lt; "."
+       &lt;&lt; endl &lt;&lt;endl;
+
+  // e. Find the number of elements divisible by 5
+  cout &lt;&lt; "There are elements divisible by 5 at positions ";
+  cout &lt;&lt; FindDiv(5, arrayA)
+       &lt;&lt; endl &lt;&lt; endl;
+
+  // f. Find the average of the array
+  cout &lt;&lt; "The average of the array is "
+       &lt;&lt; ArrayAvg(arrayA)
+       &lt;&lt; endl &lt;&lt; endl;
+
+  // g. Find the minimum element of the array
+  cout &lt;&lt; "The minimum element of the array is "
+       &lt;&lt; ArrayMin(arrayA)
+       &lt;&lt; endl &lt;&lt; endl;
+
+  // h. Search for an element in an array
+  int num;
+  cout &lt;&lt; "Enter an integer value to search for: ";
+  cin &gt;&gt; num;
+  cout &lt;&lt; (KeySearch(num, arrayA) ? "True" : "False")
+       &lt;&lt; endl &lt;&lt; endl;
+
+  return 0;
+}
+
+//Function definitions *************************************************
+
+int fileSize() {
+  int count = 0;
+  int temp = 0;
+  ifstream inputFile;
+  inputFile.open("data2.txt");
+  while (inputFile &gt;&gt; temp)
+    count++;
+  inputFile.close();
+  return count;
+}
+
+void ReadArray(int arr[], int size) {
+  // initialize ifstream to read file
+  ifstream inputFile;
+  inputFile.open("data2.txt");
+
+  if (inputFile.is_open()) { // Only do these if file is open
+    // Pull data off data2.txt and place in arr
+    for (int i = 0; i &lt; size; i++) {
+      inputFile &gt;&gt; arr[i];
+    }
+  }
+
+  // Close the file
+  inputFile.close();
+}
+
+void ReverseArray(int arrayA[], int arrayB[], int size) {
+  for(int i = 0; i &lt; size; i++) {
+    arrayB[i] = arrayA[9 - i];
+  }
+}
+
+void PrintArray(int arr[], int size) {
+  for (int i = 0; i &lt; size; i++) {
+    cout &lt;&lt; arr[i] &lt;&lt; " ";
+  }
+  cout &lt;&lt; endl &lt;&lt; endl;
+}
+
+int FindRange(int first, int second, int arr[10]) {
+  int count = 0;
+  for(int i = 0; i &lt; 10; i++) {
+    if(arr[i] &gt; first) {
+      if(arr[i] &lt; second) {
+        count += 1;
+      }
+    }
+  }
+  return count;
+}
+
+int FindDiv(int num, int arr[10]) {
+  int count = 0;
+  for (int i = 0; i &lt; 10; i++) {
+    if (arr[i] % num == 0) {
+      cout &lt;&lt; i+1 &lt;&lt; ", ";
+      count += 1;
+    }
+  }
+  return count;
+}
+
+double ArrayAvg(int arr[10]) {
+  int sum = 0;
+  for(int i = 0; i &lt; 10; i++) {
+    sum += arr[i];
+  }
+  return sum / 10.0;
+}
+
+int ArrayMin(int arr[10]) {
+  int min = arr[0];
+  for(int i = 1; i &lt; 10; i++) {
+    if(arr[i] &lt; min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+
+bool KeySearch(int num, int arr[10]) {
+  for(int i = 0; i &lt; 10; i++) {
+    if(arr[i] == num) {
+      return true;
+    }
+  }
+  return false;
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+</pre></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/cs211-lab1-program2.html">CS211-Lab1-Program2 in Racket</a></h1>
+<p>Scribbled <a class="permlink" href="posts/cs211-lab1-program2.html"><time datetime="2017-01-27">Friday, January 27th, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab1-program2.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab1-program2.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<h2>Program 2</h2><p>Write a program that reads test scores of students in a programming class from an input file, data.txt, and calculates the minimum, maximum, average test score for each student as well as the overall average score for the class. Each row of the file contains student name (no spaces), and 3 scores for test 1, test 2, and test 3, respectively.</p><p>Your main program should:<br/>- open the file and check for successful open,<br/>- then start reading one line at a time until EOF. For each line read, pass the grades for the three tests to a function called ProcessARow that calculates the minimum, maximum and average of the three grades. The results (minimum, maximum, and average) should be returned to the main program and the main program prints them on the screen in a table format.<br/>NOTE: minimum, maximum, average need to be sent by reference<br/>- Call the function, ProcessOverall, that calculates the overall average of all grades.<br/>NOTE: parameters must be sent by value</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">Bob     78   92   88
+Sue     89   94   78
+Fred   100   80   92
+George  90   90   85
+Mary    95   70   99
+Jane   100   92   87</pre><div class="listing-filename">&#128196; output</div><pre class="code">Name           Average Score
+------------------------------
+Bob                86.00
+Sue                87.00
+Fred               90.66
+George             90.00
+Mary               88.33
+Jane               93.00
+------------------------------
+Overall Average:   89.16</pre><div class="listing-filename">&#128196; Lab1_Program1.cpp</div><pre class="code">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iomanip&gt;
+#include &lt;string&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+void ProcessARow(int, int, int, double&amp;, int&amp;, int&amp;);
+double ProcessOverall(double);
+
+int main () {
+  // initialize file
+  ifstream inputFile;
+  inputFile.open("data.txt");
+
+  // init variables
+  int first, second, third, minimum, maximum;
+  double average,
+         total = 0;
+  string name;
+
+  if (inputFile.is_open()) {
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Name                Avg    Min    Max" &lt;&lt; endl;
+    cout &lt;&lt; "-------------------------------------" &lt;&lt; endl;
+
+    while (inputFile.good()) {
+      // Pull info off file
+      inputFile &gt;&gt; name &gt;&gt; first &gt;&gt; second &gt;&gt; third;
+
+      // Send values to ProcessARow
+      ProcessARow(first, second, third, average, minimum, maximum);
+
+      // Add average to total
+      total += average;
+
+      // Output average for student
+      cout &lt;&lt; setw(18) &lt;&lt; left &lt;&lt; name
+           &lt;&lt; setprecision(2) &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; right
+           &lt;&lt; average &lt;&lt; "     "
+           &lt;&lt; minimum &lt;&lt; "    "
+           &lt;&lt; setw(3) &lt;&lt; right &lt;&lt; maximum &lt;&lt; endl;
+
+    }
+
+    // Close the file
+    inputFile.close();
+
+    cout &lt;&lt; "-------------------------------------" &lt;&lt; endl;
+    cout &lt;&lt; "Overall Average:  " &lt;&lt; ProcessOverall(total) &lt;&lt; endl &lt;&lt; endl;
+
+  }
+  else {
+    cout &lt;&lt; "Unable to open file";
+  }
+
+  return 0;
+}
+
+void ProcessARow(int first, int second, int third, double&amp; avg, int&amp; minimum, int&amp; maximum) {
+  int sum;
+  sum = first + second + third;
+  avg = sum / 3.0;
+  maximum = max(max(first, second), third);
+  minimum = min(min(first, second), third);
+}
+
+double ProcessOverall(double avgs) {
+  return avgs / 6.0;
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+</pre></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/cs211-lab1-program1.html">CS211-Lab1-Program1 in Racket</a></h1>
+<p>Scribbled <a class="permlink" href="posts/cs211-lab1-program1.html"><time datetime="2017-01-25">Wednesday, January 25th, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab1-program1.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab1-program1.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>I’m currently taking <a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf">CS211</a> at <a href="https://www.csusm.edu/">CSUSM</a> and I thought it would be interesting to try re-writing the labs in <a href="https://racket-lang.org">Racket</a> after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.</p><h2>Program 1</h2><p>Your favorite shoe store is having a sale–all pairs of shoes are 35% off! Write a program that reads shoe prices in stock at the local store from an input file, shoe.txt. Each row in the file contains a shoe serial number and price. Calculate the sale price of every pair of shoes, and what the final cost of the shoes is when the sales tax is applied to the discounted price. The calculated data must be saved in an output file, shoeSale.txt.</p><p>You MUST use a named constant for both the tax rate (8.5%) and discount rate (35%). Since the results displayed are monetary values, your output must be displayed with two decimal places of precision. Be sure decimals “line up” when you output the information.</p><div class="listing-filename">&#128196; shoe.txt</div><pre class="code">234019 75.00
+234490 124.99
+347269 50.00
+239801 149.99
+487241 99.99
+982111 175.00</pre><div class="listing-filename">&#128196; shoeSale.txt</div><pre class="code">234019 52.89
+234490 88.15
+347269 35.26
+239801 105.78
+487241 70.51
+982111 123.41</pre><div class="listing-filename">&#128196; Lab1_Program1.cpp</div><pre class="code">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+// init constants
+const double TAX_RATE = 0.085;
+const double DISCOUNT_RATE = 0.35;
+
+int main () {
+  // initialize files
+  ifstream inputFile;
+  inputFile.open("shoe.txt");
+
+  ofstream outputFile;
+  outputFile.open("shoeSales.txt");
+
+  // init variables
+  int serialNumber;
+  double price,
+         discount,
+         discountedPrice,
+         saleTax,
+         final;
+
+  if (inputFile.is_open()) {
+    while (inputFile.good()) {
+      // Pull info off file
+      inputFile &gt;&gt; serialNumber &gt;&gt; price;
+
+      // Convert price to final price
+      discount = price * DISCOUNT_RATE;
+      discountedPrice = price - discount;
+      saleTax = discountedPrice * TAX_RATE;
+      final = discountedPrice + saleTax;
+
+      // Output final serialNumber and price to file
+      outputFile &lt;&lt; serialNumber
+                 &lt;&lt; setw(8) &lt;&lt; setprecision(2)
+                 &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; right
+                 &lt;&lt; final &lt;&lt; endl;
+    }
+
+    // Close the file
+    outputFile.close();
+  }
+  else {
+    cout &lt;&lt; "Unable to open file";
+  }
+
+  return 0;
+}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
+
+(define TAX_RATE 0.085)
+(define DISCOUNT_RATE 0.35)
+
+(define inputFile (open-input-file "shoe.txt"))
+(define outputFile
+  (open-output-file "shoeSales.txt"
+                    #:exists 'replace))</pre></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/daily-desmos-24apr.html">Daily Desmos - 24 April</a></h1>
+<p>Scribbled <a class="permlink" href="posts/daily-desmos-24apr.html"><time datetime="2015-04-24">Friday, April 24th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/daily-desmos-24apr.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/daily-desmos-24apr.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<figure><img src="/posts/img/dd-24apr-a.gif" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/dd-24apr-b.gif" alt=""/><figcaption></figcaption></figure><p><a href="http://dailydesmos.com/2015/04/24/warping-ellipse-1-advanced/">Daily Desmos</a> posted this challenge on the 24th of April.</p><p>Not an exact copy, but I feel that I touched on the important requirements. I’m still trying to figure out a good way to replicate the repeating nature of the example.</p><p>You can see my solution <a href="https://www.desmos.com/calculator/g3njuaox3d">here</a></p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/20-project-project-euler-40-44-and-47.html">20% Project - ProjectEuler #40, 44, and 47</a></h1>
+<p>Scribbled <a class="permlink" href="posts/20-project-project-euler-40-44-and-47.html"><time datetime="2015-04-15">Wednesday, April 15th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-project-euler-40-44-and-47.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-project-euler-40-44-and-47.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<figure><img src="/posts/img/ProjectEuler29a.png" alt=""/><figcaption></figcaption></figure><p><a href="https://projecteuler.net/problem=29">Project Euler</a></p><p>Like the last problem I find it’s informative to start out with an inelegant solution and try to find an elegant one at the end.</p><p>We start by generating an array of the form <mathjax>$a^b$</mathjax> from <b>a</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax> and <b>b</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29b.png" alt=""/><figcaption></figcaption></figure><p><b>Problem 47</b></p><p>The first two consective numbers to have two distince prime factors are:</p><p><mathjax>$14=2×7$</mathjax><br/><mathjax>$15=3×5$</mathjax></p><p>The first three consective numbers to have three distinct prime factors are:</p><p><mathjax>$644=2^2×7×23$</mathjax><br/><mathjax>$644=2^2×7×23$</mathjax><br/><mathjax>$644=2^2×7×23$</mathjax></p><p>Find the first four consective numbers to have four distinct prime factors. What is the first of these numbers?</p><div class="listing-filename">&#128196; Mathematica</div><pre class="code">prob47 = Flatten[Table[Length[FactorInteger[n]], {n, 1, 200000}]];
+prob47b = Table[Sum[prob47[[a + i]], {i,0,3}], {a, 1, 199997}];
+Position[prob47b, 16]</pre><p>=====================</p><p><b>Problem 44</b></p><p>Pentagonal numbers are generated by the formula, <mathjax>$P_n=n(3n-1)/2$</mathjax>. The first ten pentagonal numbers are:</p><p><mathjax>$1, 5, 12, 22, 35, 51, 70, 92, 117, 145,$</mathjax> ...</p><p>It can be seen that <mathjax>$P_4 + P_7 = 22 + 70 = 92 = P_8$</mathjax>. However, their difference, 70 - 22 = 48, is not pentagonal.</p><p>Find the pair of pentagonal numbers, <mathjax>$P_j$</mathjax> and <mathjax>$P_k$</mathjax>, for which their sum and difference are pentagonal and <mathjax>$D = |P_k - P_j|$</mathjax> is minimised; what is the value of D?</p><div class="listing-filename">&#128196; Mathematica</div><pre class="code">prob44a = Table[m×(m + 1)/2, {m, 1, 100000}];
+prob44b = Table[n×(3×n-1)/2, {n, 1, 100000}];
+prob44c = Table[o×(2×o-1), {o, 1, 100000}];
+Intersection[prob44a, prob44b, prob44c]</pre><p>=====================</p><p><b>Problem 40</b></p><p>An irrational decimal fraction is created by concatenating the positive integers:</p><p><mathjax>$\large{0.123456789101}\huge{1}\large{12131415161718192021...}$</mathjax></p><p>It can be seen that the <mathjax>$12^{th}$</mathjax> digit of the fractional part is 1.</p><p>If <mathjax>$d_n$</mathjax> represents the n<sup>th</sup> digit of the fractional part, find the value of the following expression.</p><p><mathjax>$d_1 × d_{10} × d_{100} × d_{1000} × d_{10000} × d_{100000} × d_{1000000}$</mathjax></p><div class="listing-filename">&#128196; Mathematica</div><pre class="code">prob40 = Flatten[IntegerDigits[Table[n, {n, 1, 200000}]]];
+Product[prob40[[10^a]], {a, 0, 6}]</pre></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/20-project-project-euler-27.html">20% Project - ProjectEuler #27</a></h1>
+<p>Scribbled <a class="permlink" href="posts/20-project-project-euler-27.html"><time datetime="2015-04-11">Saturday, April 11th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-project-euler-27.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-project-euler-27.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>Euler discovered the remarkable quadratic formula:</p><p><mathjax>$n^2 + n + 41$</mathjax></p><p>It turns out that the formula will produce <mathjax>$40$</mathjax> primes for the consecutive values <mathjax>$n = 0$</mathjax> to <mathjax>$39$</mathjax>. However, when <mathjax>$n = 40$</mathjax>, <mathjax>$40^2 + 40 + 41 = 40(40 + 1) + 41$</mathjax> is divisible by <mathjax>$41$</mathjax>, and certainly when <mathjax>$n = 41, 41^2 + 41 + 41$</mathjax> is clearly divisible by <mathjax>$41$</mathjax>.</p><p>The incredible formula <mathjax>$n^2 − 79n + 1601$</mathjax> was discovered, which produces <mathjax>$80$</mathjax> primes for the consecutive values <mathjax>$n = 0$</mathjax> to <mathjax>$79$</mathjax>. The product of the coefficients, <mathjax>$−79$</mathjax> and <mathjax>$1,601$</mathjax>, is <mathjax>$−126,479$</mathjax>.</p><p>Considering quadratics of the form:</p><p><mathjax>$n^2 + an + b$</mathjax>, where <mathjax>$|a| &lt; 1,000$</mathjax> and <mathjax>$|b| &lt; 1,000$</mathjax> where <mathjax>$|n|$</mathjax> is the modulus/absolute value of <mathjax>$n$</mathjax> e.g. <mathjax>$|11| = 11$</mathjax> and <mathjax>$|−4| = 4$</mathjax></p><p>Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0.</p><p><a href="https://projecteuler.net/problem=27">Project Euler</a></p><p>Initially I planned to tackle this problem from a strictly brute force perspective. I have found that working on a simple solution to a problem usually gives me insights to more elegant solutions.</p><p>Therefore I figured that the most straight forward and inelegant method was to produce a 1999 by 1999 array with individual elements of the array corresponding to the maximum number of consecutive primes generated by that combination of a and b.</p><p>Thus the initial element of the array in position |1,1| would be the maximum number of consecutive primes generated by n2 + (-999)n + (-999), and the final position of |1999,1999| would be n2 + (999)n + (999).</p><p>With this plan in mind I tried to think up a quick way to calculate the maximum number of consecutive primes for a given <bold>a</bold> and <bold>b</bold>.</p><p>I started by having Mathematica generate the first 101 values from the example given in the problem by using a=1 and b=41.</p><figure><img src="/posts/img/ProjectEuler27a.png" alt=""/><figcaption></figcaption></figure><p>I then used <bold>PrimeQ</bold> to test whether each value was prime.</p><figure><img src="/posts/img/ProjectEuler27b.png" alt=""/><figcaption></figcaption></figure><p>Then used <bold>Boole</bold> to convert these true false values to 0’s and 1’s.</p><figure><img src="/posts/img/ProjectEuler27c.png" alt=""/><figcaption></figcaption></figure><p>And finally <bold>FirstPosition</bold> to find the first false in the list.</p><figure><img src="/posts/img/ProjectEuler27d.png" alt=""/><figcaption></figcaption></figure><p>Note that the answer of 41 corresponds to the 39 primes listed in the example since this method doesn’t count the primes from 0-39 but from 1-40 and it found a non-Prime number in position 41.</p><p>So...</p><p>This method is horribly inelegant, however it does work so it’s time to see if I can use this method to generate the <mathjax>$1,999$</mathjax> by <mathjax>$1999$</mathjax> array I initially planned for.</p><p>I begin by trying my method on a smaller array and seeing if it would work at all.</p><figure><img src="/posts/img/ProjectEuler27e.png" alt=""/><figcaption></figcaption></figure><p>Note that this entry should be much larger as it displays a <mathjax>$51×51$</mathjax> array of values.</p><p>To find the maximum element of this array I then use the <bold>Position</bold> and <bold>Max</bold> commands. <bold>Position</bold> gives the location in an array of a specified value, and <bold>Max</bold> gives the largest element of the array.</p><figure><img src="/posts/img/ProjectEuler27f.png" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/ProjectEuler27g.png" alt=""/><figcaption></figcaption></figure><p>Since we are counting up from 0 we have now found that the Maximum number of consecutive primes is generated with <bold>a</bold>=1 and <bold>b</bold>=41 which matches the example.</p><p>One area of concern going forward is that it takes <mathjax>$0.655,204$</mathjax> secs for Mathematica to create the <mathjax>$51×51$</mathjax> array I used above. Since a <mathjax>$1,999×1,999$</mathjax> array is almost <mathjax>$1,600%$</mathjax> larger than a <mathjax>$50×50$</mathjax> array, that means that generating a <mathjax>$1999×1999$</mathjax> array should take at least <mathjax>$17$</mathjax> minutes and <mathjax>$28.33$</mathjax> second. Most likely longer considering that the edges of the array will be dealing with <bold>a</bold> and <bold>b</bold> values greater than <mathjax>$900$</mathjax>.</p><p>Still I have free time and I’m not paying for processing time so we might as well go forward and see how long it takes.</p><figure><img src="/posts/img/ProjectEuler27h.png" alt=""/><figcaption></figcaption></figure><p>So <mathjax>$21$</mathjax> minutes and <mathjax>$14$</mathjax> seconds later we have our array and can try to find the Maximum number of consecutive primes.</p><figure><img src="/posts/img/ProjectEuler27i.png" alt=""/><figcaption></figcaption></figure><p>And we have a max at <mathjax>$|939,1971|$</mathjax>, so <mathjax>$939-1000=-61$</mathjax> and <mathjax>$1971-1000=971$</mathjax> are are <bold>a</bold> and <bold>b</bold> values.</p><p><mathjax>$a*b=-61*971=-59231$</mathjax></p><p>And we thus have our answer for Problem 27.</p><p>Now we can focus on improving this process.</p><p>We could start by recognizing that <bold>b</bold> has to be a prime number. It was only after I had finished this problem that I realized that since n starts at 0 the first element will always be 0*0 + a*0 + b. Since there are 168 primes less than 1000 that means I only needed 168 rows instead of 1999.</p><p>A <mathjax>$1999×168$</mathjax> array is <mathjax>$8.4%$</mathjax> the size of a <mathjax>$1999×1999$</mathjax> array and only took Mathematica <mathjax>$1$</mathjax> minute and <mathjax>$56$</mathjax> seconds to calculate.</p><figure><img src="/posts/img/ProjectEuler27j.png" alt=""/><figcaption></figcaption></figure><p>A larger time sink is that I am actually calculating out the first <mathjax>$100 n$</mathjax> values for every combination of <bold>a</bold> and<bold>b</bold>tested. Thus even if the second value calculated is non-Prime I still waste time evaluating the next 98 values.</p><p>Using the following code I can just check if the <mathjax>$n$</mathjax> values are prime and stop when a non-Prime is found.</p><figure><img src="/posts/img/ProjectEuler27k.png" alt=""/><figcaption></figcaption></figure><p>To better understand how much time this saves, I calculated a <mathjax>$50×50$</mathjax> array using the old method and the new method and had Mathematica generate an <bold>ArrayPlot</bold> to save space.</p><figure><img src="/posts/img/ProjectEuler27l.png" alt=""/><figcaption></figcaption></figure><p>The second method took <mathjax>$6.1%$</mathjax> of the time taken by the first method.</p><p>Using both methods together the entire process of generating the <mathjax>$1999×168$</mathjax> array takes <mathjax>$10$</mathjax> seconds.</p><figure><img src="/posts/img/ProjectEuler27m.png" alt=""/><figcaption></figcaption></figure><p>I haven’t looked into it, but I suspect that I could similarly shave a couple of seconds off of the total running time by finding some trick for picking a values.</p><p>Conclusion</p><p>I started by creating a rather inelegant method for finding the number of consecutive primes generated on a <mathjax>$1999×1999$</mathjax> matrix. This method took <mathjax>$21$</mathjax> minutes and <mathjax>$14$</mathjax> seconds.</p><p>I next examined the problem more closely and found areas that could be refined so that I found that same solution in <mathjax>$10$</mathjax> seconds.</p><p>I’m confident that the majority of the improvement in performance came from optimizing the operation that found the number of consecutive primes.</p><figure><img src="/posts/img/ProjectEuler27n.png" alt=""/><figcaption></figcaption></figure><p>Using the above code I found that <mathjax>$280,607$</mathjax> times the second number tested was non-Prime. Since there are only <mathjax>$336,000$</mathjax> entries in the array that means that <mathjax>$83.5%$</mathjax> of the time while generating the original array I could have stopped after calculating the second value.</p><p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/20-project-project-euler-29.html">20% Project - ProjectEuler #29</a></h1>
+<p>Scribbled <a class="permlink" href="posts/20-project-project-euler-29.html"><time datetime="2015-04-11">Saturday, April 11th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-project-euler-29.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-project-euler-29.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<figure><img src="/posts/img/ProjectEuler29a.png" alt=""/><figcaption></figcaption></figure><p><a href="https://projecteuler.net/problem=29">Project Euler</a></p><p>Like the last problem I find it’s informative to start out with an inelegant solution and try to find an elegant one at the end.</p><p>We start by generating an array of the form <mathjax>$a^b$</mathjax> from <b>a</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax> and <b>b</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29b.png" alt=""/><figcaption></figcaption></figure><p>As expected that got gigantic quickly, however we don’t need to look at all of the data to work with it.</p><p>We can use <b>Flatten</b> to compress the <mathjax>$99×99$</mathjax> array into a single vector <mathjax>$9,801$</mathjax> elements long.<br/>We then use <b>DeleteDuplicates</b> to remove all of the duplicated elements from the vector.<br/>And finish with <b>Length</b> to find the total number of elements left over.</p><figure><img src="/posts/img/ProjectEuler29c.png" alt=""/><figcaption></figcaption></figure><p>And technically we are done. <b>The answer to this ProjectEular problem is <mathjax>$9,183$</mathjax>.</b></p><p>However I think that it’s worth our time to consider why their are only <mathjax>$618$</mathjax> repeated numbers in this list.</p><p>First lets try to account for all of the numbers that are unique.</p><p>There are <mathjax>$25$</mathjax> prime numbers less than <mathjax>$100$</mathjax> and each of these numbers will generate <mathjax>$99$</mathjax> non-duplicated numbers since they will have only one number as their factor. So we have to have at least <mathjax>$25×99=2,475$</mathjax> unique numbers just from the primes under <mathjax>$100$</mathjax>.</p><p>However thinking about it we can also remove the numbers that are composed of primes like <mathjax>$6$</mathjax> and <mathjax>$15$</mathjax>. Observe that since <mathjax>$6=2×3$</mathjax> that <mathjax>$6^2=(2×3)^2=2^2×3^3$</mathjax>, and so on.</p><p>We could try to find the possible permutations of the <mathjax>$25$</mathjax> primes however, there are <mathjax>$2^25$</mathjax> ways that we can combine two pairs of primes and calculating which combinations have values less than <mathjax>$100$</mathjax> is rather time consuming.</p><p>Instead lets consider what numbers we know are going to show up more than once in the table?</p><p>Any number that is a power of a lower number of the list will definitely be a repeated.</p><p>The higher powers of <mathjax>$2$</mathjax> will show up in the powers of <mathjax>$4, 8, 16, 32,$</mathjax> and <mathjax>$64$</mathjax>.</p><p>Below I have generated a truncated list for the <mathjax>$2,4,$</mathjax> and <mathjax>$8$</mathjax> table. We can see that the <mathjax>$4$</mathjax> table repeats every second value on the <mathjax>$2$</mathjax> table and that the <mathjax>$8$</mathjax> table repeats the 3rd value. This corresponds to <mathjax>$4=2^2$</mathjax> and <mathjax>$8=2^3$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29d.png" alt=""/><figcaption></figcaption></figure><p>I created the following two tables in <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> to highlight how the powers of <mathjax>$2$</mathjax> repeat at specific intervals in the <mathjax>$4$</mathjax> and <mathjax>$8$</mathjax> power tables. A similar pattern will occur for the powers of <mathjax>$3, 5,$</mathjax> and <mathjax>$7$</mathjax>.</p><p>Similarly the power table for <mathjax>$6$</mathjax> will be repeated in the power table for <mathjax>$36$</mathjax> and <mathjax>$10$</mathjax> in the power table for <mathjax>$100$</mathjax>.</p><p>The following Matrix and ArrayPlot were generated in Mathematica to show the repeated numbers in the table given above. Observe that <mathjax>$2^6$</mathjax> occurs the most often in this table and is represented in black in the <b>ArrayPlot</b> to signify that it is a larger value.</p><figure><img src="/posts/img/ProjectEuler29e.png" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/ProjectEuler29f.png" alt=""/><figcaption></figcaption></figure><p>Expanding the array to include all of the numbers we originally calculated we get the following <b>ArrayPlot</b>. Here we see that most of the values that will have repeats are clustered around the top of the array corresponding to a values between <mathjax>$2$</mathjax> and <mathjax>$10$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29g.png" alt=""/><figcaption></figcaption></figure><p>The dark band that shows up around the <mathjax>$2/3$</mathjax> mark on the array corresponds to the powers of <mathjax>$2^6$</mathjax>.  As you can see by the following table the values in the <mathjax>$2^6$</mathjax> power table show up repeatedly throughout the array.</p><figure><img src="/posts/img/ProjectEuler29h.png" alt=""/><figcaption></figcaption></figure><p>For reference the number that shows up the most often in the table is <mathjax>$1,152,921,504,606,846,976$</mathjax> or <mathjax>$2^60$</mathjax>. Which makes sense when you remember that <mathjax>$60$</mathjax> has <mathjax>$12$</mathjax> divisors and would thus it will show up in the power table of <mathjax>$2^1, 2^2, 2^3, 2^4, 2^5, 2^6$</mathjax>.</p><p>Also you should notice that in a number of rows the values are high for half of the row and then drop down to 1 for the rest of the array. As an example the power table for <mathjax>$100$</mathjax> is at the bottom of the array window. Note that the first <mathjax>$50$</mathjax> values of this table occur in the <mathjax>$10$</mathjax> power table.</p><figure><img src="/posts/img/ProjectEuler29i.png" alt=""/><figcaption></figcaption></figure><p>It’s not until <mathjax>$100^51$</mathjax> that we get the first value that doesn’t show up in <mathjax>$10$</mathjax> power table.</p><p><b>Conclusion</b></p><p>This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn’t ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.</p><p>Using the above code I found that <mathjax>$280,607$</mathjax> times the second number tested was non-Prime. Since there are only <mathjax>$336,000$</mathjax> entries in the array that means that <mathjax>$83.5%$</mathjax> of the time while generating the original array I could have stopped after calculating the second value.</p><p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/20-project-update.html">20% Project Update</a></h1>
+<p>Scribbled <a class="permlink" href="posts/20-project-update.html"><time datetime="2015-02-20">Friday, February 20th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-update.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-update.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>Considering Prof. Heil’s email I have complied a list of the criteria for my 20% Project.</p><p>For my 20% Project I’m going to be learning to write code in <a href="https://www.wolfram.com/mathematica/">Mathematica</a> to find solutions for the problems posted on Project Euler.</p><h2>1 What are you going to learn (what is your “learning target”)?</h2><p>For my 20% Project I’m going to be expanding my knowledge of coding by learning to write code for Mathematica. As a student at CSUSM I currently have access to Mathematica through cougarapps and I feel that I would be remiss to not give it a try while I still can. I also think that Mathematica might be a better fit for some of the mathematical problems that are in the Project Euler database.</p><h2>2 How are you planning on learning it? (part of this learning must take place online)</h2><p>I plan to learn this through online video instructions, tutorials, and the documentation provided inside of Mathematica.</p><h2>3 List your 10 authentic questions for inquiry. . .you only need the questions. The answers will come at the end of the project)</h2><p>Does Mathematica have enough built in tools to do this task?<br/>Does my knowledge of C++ transfer to Mathematica?<br/>How long will it take to get competent with Mathematica?<br/>How difficult is it to create functional algorithms in Mathematica?<br/>Are there coding considerations I should be aware of when working with Mathematica?<br/>How difficult of a task have I set for myself?<br/>Are there classes of problems that are more difficult with Mathematica?<br/>Can these problems be adjusted for use in the classroom?<br/>What mathematical fields are covered by this project?<br/>How much does Mathematica cost if I decide to keep using it after this project?</p><h2>4 What will a successful outcome look like (what is your “success criteria”)?</h2><p>I would consider success for this project to be the completion of at least the first 50 problems on the site.</p><h2>5 (Most importantly) Is there an aspect of play and/or making in your project. Is there an opportunity for failure? It is important that you avoid pure knowledge pursuits for this project.</h2><p>I enjoy completing logic puzzles like Sudoku and I have previously been working on some of these problems on this site for fun in my spare time. So I think that this project has an element of play for me.</p><p>I get satisfaction out of solving problems that are difficult, also I like reading over the different methods used by other people after I have completed a problem.</p><p>I’m not sure how much opportunity for failure is presented by this project. I know that even if I don’t finish 50 problems by the end of this course I will eventually finish them. However I would like to reach this goal if I could, even if it’s just as a personal pride thing.</p><h2>6 Which tool are you going to be using for research? (I know there was a request for more clarification on tools. We can do this Monday)</h2><p>I’m going to be using the internet for most of my research on this project.</p><p>While I know some Professors and Computer Science majors at the University who I could talk to about coding these types of problems, I’m rarely on campus this semester so it would be difficult to stop by and ask them for assistance.</p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/20-project-csusm-credential-program.html">20% Project - CSUSM credential program</a></h1>
+<p>Scribbled <a class="permlink" href="posts/20-project-csusm-credential-program.html"><time datetime="2015-02-16">Monday, February 16th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-csusm-credential-program.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-csusm-credential-program.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.</p><p>I’ve been able to solve around 10 of the problems on <a href="https://projecteuler.net/">Project Euler</a> using the coding skills that I already know and some Combinatoric trick however, I have come to recognize that to move any further I am going to need to learn how to actually write complex computer code utilizing arrays and date structures. I haven’t settled on a specific language to learn for this project, however I would like to finish the first 100 problems on the site by the end of the semester.</p><p>I find that many of the problems I have already solved have a range of possilble solutions ranging from brute force to elegent mathematic proofs. I feel that going through these problems will give me a greater appreciation for the diverse methods students use to solve mathematical problems in my class. Understanding that a problem can have more than one valid solution and being able to articulate how different solution methods can arrive at the same answer is an important skill that we need as teachers. Hopefully this project will assist me in recognizing and articulating that to students.</p></article>
+
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on<a href="https://github.com/hebr3/hebr3.github.io"> Github</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
