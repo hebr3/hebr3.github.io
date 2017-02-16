@@ -1,7 +1,7 @@
 #lang pollen
 
 ◊(define-meta title "20% Project - ProjectEuler #29")
-◊(define-meta published "2017-02-11")
+◊(define-meta published "2015-04-11")
 ◊(define-meta topics "Teaching Credential, 20% Project, Project Euler")
 
 ◊(require scribble-math)

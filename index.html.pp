@@ -9,7 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Henry Brooks</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
-        ◊|meta-favicons|
     </head>
     <body>
         <header class="main">
