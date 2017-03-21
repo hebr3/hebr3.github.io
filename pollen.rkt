@@ -77,3 +77,24 @@
 (define (amazon product-id . contents)
   (define affiliate-id "thloya-20")
   (apply link (format "https://amzn.com/~a/?tag=~a" product-id affiliate-id) contents))
+
+(require pollen/unstable/pygments pollen/decode)
+(provide (all-defined-out) highlight)
+
+(define exclusion-mark-attr '(decode "exclude"))
+;(define (root . items)
+;  (decode `(decoded-root ,@items)
+;          #:txexpr-elements-proc detect-paragraphs 
+;          #:string-proc (compose1 smart-quotes smart-dashes)
+;          #:exclude-tags '(style script pre)
+;          #:exclude-attrs (list exclusion-mark-attr)))
+
+(define filebox-tag 'div)
+(define filebox-class "filebox")
+(define filename-tag 'div)
+(define filename-class "filename")
+(define (filebox filename . xs)
+  `(,filebox-tag ((class ,filebox-class)) (,filename-tag ((class ,filename-class) ,exclusion-mark-attr) ,(format "~a" filename)) ,@xs))
+
+(define (filebox-highlight filename lang . xs)
+  (filebox filename (apply highlight lang xs)))

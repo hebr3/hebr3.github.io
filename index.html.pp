@@ -9,6 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Henry Brooks</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
+		<script type="text/javascript" 
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		</script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">

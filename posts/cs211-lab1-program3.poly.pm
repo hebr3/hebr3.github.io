@@ -2,7 +2,7 @@
 
 ◊(define-meta title "CS211-Lab1-Program3 in Racket")
 ◊(define-meta published "2017-01-30")
-◊(define-meta topics "CS211, Racket, C++")
+◊(define-meta topics "CS211,Racket,C++")
 
 ◊section{Program 3}
 

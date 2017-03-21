@@ -12,6 +12,9 @@
                 <script type="text/x-mathjax-config">
                   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
                 </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -32,7 +35,7 @@
                 &middot;&nbsp;<a class="pdf" href="cs211-lab1-program2.pdf">PDF</a>&nbsp;
                 &middot;&nbsp;<a href="/posts\cs211-lab1-program2.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
                 <ul>
-                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html# Racket"># Racket</a></li><li><a href="/topics.html# C++"># C++</a></li></ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html#Racket">#Racket</a></li><li><a href="/topics.html#C++">#C++</a></li></ul>
             </header>
 
 <h2>Program 2</h2><p>Write a program that reads test scores of students in a programming class from an input file, data.txt, and calculates the minimum, maximum, average test score for each student as well as the overall average score for the class. Each row of the file contains student name (no spaces), and 3 scores for test 1, test 2, and test 3, respectively.</p><p>Your main program should:<br/>- open the file and check for successful open,<br/>- then start reading one line at a time until EOF. For each line read, pass the grades for the three tests to a function called ProcessARow that calculates the minimum, maximum and average of the three grades. The results (minimum, maximum, and average) should be returned to the main program and the main program prints them on the screen in a table format.<br/>NOTE: minimum, maximum, average need to be sent by reference<br/>- Call the function, ProcessOverall, that calculates the overall average of all grades.<br/>NOTE: parameters must be sent by value</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">Bob     78   92   88

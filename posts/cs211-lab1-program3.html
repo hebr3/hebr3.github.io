@@ -12,6 +12,9 @@
                 <script type="text/x-mathjax-config">
                   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
                 </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -32,7 +35,7 @@
                 &middot;&nbsp;<a class="pdf" href="cs211-lab1-program3.pdf">PDF</a>&nbsp;
                 &middot;&nbsp;<a href="/posts\cs211-lab1-program3.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
                 <ul>
-                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html# Racket"># Racket</a></li><li><a href="/topics.html# C++"># C++</a></li></ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html#Racket">#Racket</a></li><li><a href="/topics.html#C++">#C++</a></li></ul>
             </header>
 
 <h2>Program 3</h2><p>Write a program with several functions that perform the following tasks:</p><p>a. Read the following 10 integer numbers from the file data.txt into array A.<br/>     10 15 27 89 90 95 27 13 99 33<br/> Call function ReadArray that reads numbers from the file data.txt into an array.</p><p>b. Copy array A into array B in reverse order.<br/>Call function ReverseArray that copies an array into another array in reverse order</p><p>c. Print the elements of Array A and B.<br/>Call function PrintArray that prints the elements of an array of any size</p><p>d. Find the number of elements in array A that are &gt;= 80 and &lt;=100.<br/>Call function FindRange that finds and returns the number of elements in an array of any size that are within a certain range (min, max)</p><p>e. Find the index of the elements in array A that are divisible by 5.<br/>Call function FindDiv that finds and returns the number of the elements in array that are divisible by 5</p><p>f. Find average in array A.<br/>Call function ArrayAvg that finds and returns the average of elements in an array of any size</p><p>g. Find the minimum number in array A.<br/>Call function ArrayMin that finds and returns the minimum number in an array of any size</p><p>h. Ask the user to input a key. Then search for the key in array A and inform the user about the existence (true / false) of the key in array.<br/>Call function KeySearch that searches for a key in an array of any size and returns true/false as result</p><p>NOTES:<br/>- If a function is supposed to return a value, print that value in main not inside the function.<br/>- Any parameter that is not supposed to be changed inside a function must be declared as a constant parameter.</p><div class="listing-filename">&#128196; data.txt</div><pre class="code">10 15 27 89 90 95 27 13 99 33</pre><div class="listing-filename">&#128196; ./a.out &gt; output.txt</div><pre class="code">10 15 27 89 90 95 27 13 99 33

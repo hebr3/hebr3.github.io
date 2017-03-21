@@ -2,7 +2,7 @@
 
 ◊(define-meta title "20% Project Update")
 ◊(define-meta published "2015-02-20")
-◊(define-meta topics "Teaching Credential, 20% Project")
+◊(define-meta topics "Teaching Credential,20% Project")
 
 Considering Prof. Heil's email I have complied a list of the criteria for my 20% Project.  
 

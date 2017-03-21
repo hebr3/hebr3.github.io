@@ -12,6 +12,9 @@
                 <script type="text/x-mathjax-config">
                   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
                 </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -32,7 +35,7 @@
                 &middot;&nbsp;<a class="pdf" href="cs211-lab1-program1.pdf">PDF</a>&nbsp;
                 &middot;&nbsp;<a href="/posts\cs211-lab1-program1.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
                 <ul>
-                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html# Racket"># Racket</a></li><li><a href="/topics.html# C++"># C++</a></li></ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html#Racket">#Racket</a></li><li><a href="/topics.html#C++">#C++</a></li></ul>
             </header>
 
 <p>I’m currently taking <a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf">CS211</a> at <a href="https://www.csusm.edu/">CSUSM</a> and I thought it would be interesting to try re-writing the labs in <a href="https://racket-lang.org">Racket</a> after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.</p><h2>Program 1</h2><p>Your favorite shoe store is having a sale–all pairs of shoes are 35% off! Write a program that reads shoe prices in stock at the local store from an input file, shoe.txt. Each row in the file contains a shoe serial number and price. Calculate the sale price of every pair of shoes, and what the final cost of the shoes is when the sales tax is applied to the discounted price. The calculated data must be saved in an output file, shoeSale.txt.</p><p>You MUST use a named constant for both the tax rate (8.5%) and discount rate (35%). Since the results displayed are monetary values, your output must be displayed with two decimal places of precision. Be sure decimals “line up” when you output the information.</p><div class="listing-filename">&#128196; shoe.txt</div><pre class="code">234019 75.00

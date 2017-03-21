@@ -2,7 +2,7 @@
 
 ◊(define-meta title "CS211-Lab2 in Racket")
 ◊(define-meta published "2017-02-03")
-◊(define-meta topics "CS211, Racket, C++")
+◊(define-meta topics "CS211,Racket,C++")
 
 The purpose of this lab is to practice working with vectors.
 

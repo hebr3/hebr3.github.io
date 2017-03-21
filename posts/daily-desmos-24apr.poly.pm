@@ -2,7 +2,7 @@
 
 ◊(define-meta title "Daily Desmos - 24 April")
 ◊(define-meta published "2015-04-24")
-◊(define-meta topics "Daily Desmos, 20% Project")
+◊(define-meta topics "Daily Desmos,20% Project")
 
 ◊(require scribble-math)
 ◊(use-mathjax)

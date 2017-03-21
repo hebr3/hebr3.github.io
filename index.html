@@ -8,6 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Henry Brooks</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -21,6 +30,476 @@
         </header>
 
         <article><header>
+<h1><a href="posts/cs211-lab7.html">CS211-Lab7</a></h1>
+<p>Scribbled <a class="permlink" href="posts/cs211-lab7.html"><time datetime="2017-03-05">Sunday, March 5th, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab7.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab7.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>I thought I would try a different approach to completing the assignment this week. Usually I modify the example problems and templates to fit the needs of the program.</p><p>This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.</p><h2>Lab 7</h2><p>The purpose of this lab is to practice working with constants, static attributes, and friend functions.</p><p>In this lab, you will design a <em>Student</em> class which has the following private attributes:</p><ul>string name;</ul><ul>const long studentID;</ul><h2>Version 1</h2><p>I start with a constructor, setter, and getter for the required class. I test to make sure that all three are being called properly in main.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; endl;
+
+    student1.setName("steve");
+
+    cout &lt;&lt; student1.getName() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    private:
+        string name;
+    public:
+        Student();
+        string getName() const;
+        void setName();
+ };
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+Student::Student() {
+    name = "Unknown";
+}
+
+string Student::getName() const {
+    return name;
+}
+
+void Student::setName(string n) {
+    name = n;
+}</code></pre></div></div><h2>Version 2</h2><p>Since the basic skeleton of the program was running I expanded the class to include studentID, major, classification, units, and tuition. My main.cpp is also expanded to test all of the variables added to the class.</p><p>Note: I had some issues with this step. You need to remember to declare constant member values outside of the {} brackets of the constructor.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; endl;
+
+    student1.setName("steve");
+    student1.setMajor("MATH");
+    student1.setClassification("graduate");
+    student1.setUnits(8);
+    student1.setTuition(1000.50);
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; endl;
+
+    Student student2 = Student("Julia Robertson", "MATH", "undergraduate", 15);
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+ };
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+// Constructor functions
+Student::Student() {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(0) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}</code></pre></div></div><h2>Version 3</h2><p>I now add the totalNumofStudents and nextStudentID values to the class. I also add the destructor to the class sense the value it deals with has been added.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    student1.setName("steve");
+    student1.setMajor("MATH");
+    student1.setClassification("graduate");
+    student1.setUnits(8);
+    student1.setTuition(1000.50);
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    Student student2 = Student("Julia Robertson", "MATH", "undergraduate", 15);
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    student1.~Student();
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    static int totalNumofStudents;
+    static long nextStudentID;
+
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+        ~Student();
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+        int getTotalNumofStudents() const;
+        long getNextStudentID() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+};
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+int Student::totalNumofStudents = 0;
+long Student::nextStudentID = 10000;
+
+// Constructor functions
+Student::Student() : studentID(nextStudentID) {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(nextStudentID) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+Student::~Student() {
+    totalNumofStudents--;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+int Student::getTotalNumofStudents() const {
+    return totalNumofStudents;
+}
+long Student::getNextStudentID() const {
+    return nextStudentID;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}</code></pre></div></div><h2>Version 4</h2><p>Next I add the printStudent, setData, and setTuition functions to finish off the assignment.  I also clean up the files to align with the specs given in the written assignment.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void setTuition(Student &amp;stu) {
+    if (stu.classification == "graduate")
+        stu.tuition = stu.units * 1000;
+    else
+        stu.tuition = stu.units * 700;
+}
+
+int main() {
+    Student student1;
+    student1.printStudent();
+
+    Student student2 = Student("unknown", "PHYS", "graduate", 0);
+    student2.setData(); // "Julia Robertson", "MATH", "undergraduate", 15
+
+    setTuition(student2);
+    student2.printStudent();
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    static int totalNumofStudents;
+    static long nextStudentID;
+
+    friend void setTuition(Students&amp;);
+
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+        ~Student();
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+        int getTotalNumofStudents() const;
+        long getNextStudentID() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+};
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+int Student::totalNumofStudents = 0;
+long Student::nextStudentID = 10000;
+
+// Constructor functions
+Student::Student() {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(0) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+Student::~Student() {
+    totalNumofStudents--;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+int Student::getTotalNumofStudents() const {
+    return totalNumofStudents;
+}
+long Student::getNextStudentID() const {
+    return nextStudentID;
+}
+
+void Student:printStudent() const {
+    cout &lt;&lt; "Student name:   " &lt;&lt; name &lt;&lt; endl
+         &lt;&lt; "Student id:     " &lt;&lt; studentID &lt;&lt; endl
+         &lt;&lt; "Student major:  " &lt;&lt; major &lt;&lt; endl
+         &lt;&lt; "Student class:  " &lt;&lt; classification &lt;&lt; endl
+         &lt;&lt; "Student units:  " &lt;&lt; units &lt;&lt; endl
+         &lt;&lt; "Tuition:        " &lt;&lt; tuition &lt;&lt; endl;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}
+
+void Student::setData() {
+    string n, m, c; 		// Name, Major, and Classification
+    int u;			// Units
+    cout &lt;&lt; "Please enter the students name: ";
+    getline(cin, n);
+    name = n;
+    cout &lt;&lt; "Please enter the students major: ";
+    cin &gt;&gt; m;
+    major = m;
+    cout &lt;&lt; "Please enter the students classification: ";
+    cin &gt;&gt; c;
+    classification = c;
+    cout &lt;&lt; "Please enter the students units: ";
+    cin &gt;&gt; u;
+    units = u;
+}</code></pre></div></div></article>
+
+<hr/>
+
+<article><header>
 <h1><a href="posts/cs211-lab2.html">CS211-Lab2 in Racket</a></h1>
 <p>Scribbled <a class="permlink" href="posts/cs211-lab2.html"><time datetime="2017-02-03">Friday, February 3rd, 2017</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/cs211-lab2.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/cs211-lab2.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
 
@@ -451,6 +930,122 @@ int main () {
 <hr/>
 
 <article><header>
+<h1><a href="posts/project-euler-with-haskell-5-6-7.html">Project Euler problems 5, 6 and 7, with Haskell</a></h1>
+<p>Scribbled <a class="permlink" href="posts/project-euler-with-haskell-5-6-7.html"><time datetime="2015-10-17">Saturday, October 17th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/project-euler-with-haskell-5-6-7.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/project-euler-with-haskell-5-6-7.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<h2>Problem 5</h2><p>I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler5.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+
+    putStrLn "\nProblem5 - Smallest multiple of the numbers 1-20"
+    print problem5
+
+--Smallest multiple of the numbers 1-20
+problem5 = head [x | x &lt;- [1..], mod x 5 == 0, mod x 7 == 0, mod x 9 == 0, mod x 11 == 0, mod x 13 == 0, mod x 16 == 0, mod x 17 == 0,mod x 19 == 0]</code></pre></div></div><p>I was a little suprised that the program didn’t crash considering how large a number it had to count up to. I’m not sure if this says more about the Haskell langauge or modern computers. I do know that Haskell supports Integers that can be as large as the memory space of the computer allows, so I feel like this might be a win for Haskell.</p><p>Solving this without programming is mostly an exercise in taking the prime factorization of the numbers from 1 to 20 and <a href="http://www.wolframalpha.com/input/?i=232792560">combining them</a>.</p><h2>Problem 6</h2><p>Rather straight foward solution to this problem. I am still suprised by how clean the code looks in haskell compared to <code>c++</code>. There is much less <a href="https://en.wikipedia.org/wiki/Boilerplate_code">boilerplate</a> code required to get a solution printed on screen.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler6.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+    putStrLn "\nProblem6 - Sum sqaure difference for the first 100 natural numbers"
+    print problem6
+
+--Sum square difference
+problem6 = sqSum - sumSq
+
+sq x = x * x
+
+sqSum = sq (sum [1..100])
+sumSq = sum (map sq [1..100])</code></pre></div></div><h2>Problem 7</h2><p>Another really clean solution using infinite lists.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler7.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+    putStrLn "\nProblem7 - 10,001th Prime"
+    print problem7
+
+--10001th Prime
+problem7 = primes!!10000 -- index starts at 0
+
+primes = 2 : primes'
+    where isPrime (p:ps) n = p*p &gt; n || n `rem` p /= 0 &amp;&amp; isPrime ps n
+          primes' = 3 : filter (isPrime primes') [5,7..]</code></pre></div></div><p><a href="https://projecteuler.net/problem=8">Problem 8</a> from Project Euler is looking like a much more involved problem however, I’m hopeful that I will be able to get it finished this week.</p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/project-euler-with-haskell-3-4.html">Project Euler problems 3 and 4, with Haskell</a></h1>
+<p>Scribbled <a class="permlink" href="posts/project-euler-with-haskell-3-4.html"><time datetime="2015-10-10">Saturday, October 10th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/project-euler-with-haskell-3-4.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/project-euler-with-haskell-3-4.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>I have been looking into Haskell more this week and I thought I would continue on with this project for the time being.</p><h2>Problem 3</h2><p>I was finally able to use an infinite list in one of my programs. I’m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.</p><p>The code I have right now is nearly identical to the mathematical notation I would use to express this idea.</p><p>$$\textbf{S}= \left [ x \; | \; x \in Primes, x &lt; \sqrt{600,851,475,143}, \;600,851,475,143 \equiv 0 \;(\textbf{mod}\; x) \right ]$$</p><p>$$\textbf{max} \left \{ \textbf{S} \right \}$$</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler3.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+
+    putStrLn "\nProblem3 - Largest prime factor of 600851475143"
+    print problem3
+
+--Largest prime factor of 600851475143
+problem3 = last (factors 600851475143)
+
+primes = 2 : primes'
+    where isPrime (p:ps) n = p*p &gt; n || n `rem` p /= 0 &amp;&amp; isPrime ps n
+          primes' = 3 : filter (isPrime primes') [5,7..]
+
+floor_sqrt_int = floor . sqrt . fromIntegral
+
+factors :: Int -&gt; [Int]
+factors n = [x | x &lt;- (takeWhile (&lt; (floor_sqrt_int n)) primes), mod n x == 0]</code></pre></div></div><h2>Problem 4</h2><p>Unfortunately Haskell doesn’t seem to have a builtin function <a href="https://reference.wolfram.com/language/ref/IntegerDigits.html"><code>IntegerDigits</code></a> like <a href="http://www.wolfram.com/mathematica/">Mathematica</a> does.</p><p>Luckily I was able to find a decent solution for breaking an integer up into its component digits. From there the actual functions are rather straight forward.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler4.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+    putStrLn "\nProblem4 - Largest palindrome made from the product of two 3-digit numbers"
+    print problem4
+
+--Largest palindrome made from the product of two 3-digit numbers
+problem4 = maximum productList
+
+palindromeCheck :: Int -&gt; Bool
+palindromeCheck n = palindrome (digits n)
+
+palindrome :: [Int] -&gt; Bool
+palindrome n
+    | n == [] = True
+    | length n == 1 = True
+    | (head n) /= (last n) = False
+    | otherwise = (palindrome (init (tail n)))
+
+digits :: Int -&gt; [Int]
+digits n = map (\x -&gt; read [x] :: Int) (show n)
+
+productList = [x*y | x &lt;- [999, 998..100], y &lt;- [999, 998..100], (palindromeCheck (x*y))]</code></pre></div></div><p>Thinking about how I would solve a problem in Haskell is turning out to be a welcome break from teaching. Having problems that have workable solutions is a nice change.</p></article>
+
+<hr/>
+
+<article><header>
+<h1><a href="posts/project-euler-with-haskell.html">Project Euler with Haskell</a></h1>
+<p>Scribbled <a class="permlink" href="posts/project-euler-with-haskell.html"><time datetime="2015-10-03">Saturday, October 3rd, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/project-euler-with-haskell.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/project-euler-with-haskell.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
+
+<p>Teaching Algebra A has been more of a slog then I was expecting and I’ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the haskell programming language.</p><p>Looking over the Haskell syntax I see a lot of design decisions that align with my mathematic background. I feel that the list comprehensions and mapping functions for lists have a strong mathematical foundation and I think that I will be able to pick up the language quickly.</p><p>I’m going to try to work through all of the Project Euler problems I completed with Mathematic last year and see if the process is easier or at least clearer this time around.</p><h2>Problem 1</h2><p>This problem, and it’s solution, really highlight why I wanted to try my hand at learning Haskell. The list comprehension syntax I use in this solution are nearly identical to the mathematical notation I would use to discribe this problems solution mathematically. We create a set of natural numbers less than 1000 that are congruent to 0 mod 3 or 5, then we sum the elements of the set. $$\mathbf{S} = \left \{x \;|\; x \in \mathbb{N}, \; x \lt 1000, \; x \equiv 0 \; (\textbf{mod}\; 3) \vee x \equiv 0 (\textbf{mod}\; 5)\right \}$$ $$\sum x ,  x \in \mathbf{S}$$</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler1.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+    putStrLn "Problem1 - Sum of the natural numbers below 1000 that are multiplies of 3 or 5"
+    print problem1
+
+--Sum of the natural numbers below 1000 that are multiplies of 3 or 5
+problem1 = sum [x | x &lt;- [1..999], mod x 3 == 0 || mod x 5 == 0]</code></pre></div></div><p>My solution ends up using the <code>x&lt;-[1..999]</code> instead of <code>x&lt;-[1..], x &lt; 1000</code> because Haskell’s methodology doesn’t align perfectly the math notation. Specifically it keep checking numbers, even after 1000, to see if $$x \lt 1000, \; x \equiv 0 \; (\textbf{mod}\; 3) \vee x \equiv 0 (\textbf{mod}\; 5)$$ I could still make use of <a href="https://en.wikipedia.org/wiki/Lazy_evaluation#Working_with_infinite_data_structures">Haskell’s infinite list</a> <code>[1..]</code> however, I would need to add <code>sum (takeWhile (&lt;1000) [x | x &lt;-[1..], ...])</code> to only take <code>x</code> values less than 1000. This is all a result of <a href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a> and is a little more complicated than I can properly explain.</p><p>Still the solution works well and I feel that it matches how I would approach this problem from a math perspective if I was doing this problem on paper.</p><p>Caveat: I know this problem can also be solved using <a href="https://www.wolframalpha.com/input/?i=(sum+3i+from+i%3D0+to+(999%2F3))+%2B+(sum+5j+from+j%3D0+to+(999%2F5))+-+(sum+15k+from+k%3D0+to+(999%2F15))">sum’s</a> by modifing the equation for <a href="https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF#Partial_sums">partial sums</a>.</p><p>$$\sum_{i=0}^{\left\lfloor\frac{999}{3}\right\rfloor} 3i +<br/>  \sum_{j=0}^{\left\lfloor\frac{999}{5}\right\rfloor} 5j -<br/>  \sum_{k=0}^{\left\lfloor\frac{999}{15}\right\rfloor} 15k $$</p><h2>Problem 2</h2><p>I didn’t use the standard Haskell version of the Fibonacci equation for this problem.</p><div class="filebox"><div class="filename" decode="exclude"></div><div class="highlight"><pre><code>fib 0 = 1
+fib 2 = 1
+fib n = fib (n-1) + fib (n-2)</code></pre></div></div><p>This version will blow up in space and time requirements for large values of <code>n</code> and is generally less efficient.</p><p>I instead went with an <a href="https://www.ics.uci.edu/~eppstein/161/960109.html">iterative version</a> of fibonacci that takes n steps to calcuate <code>fib n</code>.</p><p>There are some other versions of Fibonacci that bring the space and time complexity down further using recurrent patterns however, I felt like this code was good enough for my purposes here.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler2.hs</div><div class="highlight"><pre><code>main :: IO ()
+main = do
+    putStrLn "ProjectEuler.net"
+
+    putStrLn "\nProblem2 - Sum of the even Fibonacci numbers less than 4,000,000"
+    print problem2
+
+--Sum of the even Fibonacci numbers less than 4,000,000
+problem2 = sum [fib x | x &lt;- [1..100], mod (fib x) 2 == 0, (fib x) &lt; 4000000]
+
+fib n = fib_iter 1 0 n
+
+fib_iter a b 0 = b
+fib_iter a b count = fib_iter (a + b) a (count - 1)</code></pre></div></div><p>While working on this problem I also found out that I could have had Haskell to generate an infinite list of fibonacci numbers using this code </p><div class="filebox"><div class="filename" decode="exclude"></div><div class="highlight"><pre><code>fibs = 0 : 1 : zipWith (+) fibs (tail fibs)</code></pre></div></div><p>I’m finding that infinite lists are one of the aspects of Haskell that are really intriguing to me. They seem to provide a bridge between mathematics and programming that I am interested in exploring further.</p></article>
+
+<hr/>
+
+<article><header>
 <h1><a href="posts/daily-desmos-24apr.html">Daily Desmos - 24 April</a></h1>
 <p>Scribbled <a class="permlink" href="posts/daily-desmos-24apr.html"><time datetime="2015-04-24">Friday, April 24th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/daily-desmos-24apr.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/daily-desmos-24apr.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
 
@@ -469,38 +1064,6 @@ prob44b = Table[n×(3×n-1)/2, {n, 1, 100000}];
 prob44c = Table[o×(2×o-1), {o, 1, 100000}];
 Intersection[prob44a, prob44b, prob44c]</pre><p>=====================</p><p><b>Problem 40</b></p><p>An irrational decimal fraction is created by concatenating the positive integers:</p><p><mathjax>$\large{0.123456789101}\huge{1}\large{12131415161718192021...}$</mathjax></p><p>It can be seen that the <mathjax>$12^{th}$</mathjax> digit of the fractional part is 1.</p><p>If <mathjax>$d_n$</mathjax> represents the n<sup>th</sup> digit of the fractional part, find the value of the following expression.</p><p><mathjax>$d_1 × d_{10} × d_{100} × d_{1000} × d_{10000} × d_{100000} × d_{1000000}$</mathjax></p><div class="listing-filename">&#128196; Mathematica</div><pre class="code">prob40 = Flatten[IntegerDigits[Table[n, {n, 1, 200000}]]];
 Product[prob40[[10^a]], {a, 0, 6}]</pre></article>
-
-<hr/>
-
-<article><header>
-<h1><a href="posts/20-project-project-euler-27.html">20% Project - ProjectEuler #27</a></h1>
-<p>Scribbled <a class="permlink" href="posts/20-project-project-euler-27.html"><time datetime="2015-04-11">Saturday, April 11th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-project-euler-27.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-project-euler-27.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
-
-<p>Euler discovered the remarkable quadratic formula:</p><p><mathjax>$n^2 + n + 41$</mathjax></p><p>It turns out that the formula will produce <mathjax>$40$</mathjax> primes for the consecutive values <mathjax>$n = 0$</mathjax> to <mathjax>$39$</mathjax>. However, when <mathjax>$n = 40$</mathjax>, <mathjax>$40^2 + 40 + 41 = 40(40 + 1) + 41$</mathjax> is divisible by <mathjax>$41$</mathjax>, and certainly when <mathjax>$n = 41, 41^2 + 41 + 41$</mathjax> is clearly divisible by <mathjax>$41$</mathjax>.</p><p>The incredible formula <mathjax>$n^2 − 79n + 1601$</mathjax> was discovered, which produces <mathjax>$80$</mathjax> primes for the consecutive values <mathjax>$n = 0$</mathjax> to <mathjax>$79$</mathjax>. The product of the coefficients, <mathjax>$−79$</mathjax> and <mathjax>$1,601$</mathjax>, is <mathjax>$−126,479$</mathjax>.</p><p>Considering quadratics of the form:</p><p><mathjax>$n^2 + an + b$</mathjax>, where <mathjax>$|a| &lt; 1,000$</mathjax> and <mathjax>$|b| &lt; 1,000$</mathjax> where <mathjax>$|n|$</mathjax> is the modulus/absolute value of <mathjax>$n$</mathjax> e.g. <mathjax>$|11| = 11$</mathjax> and <mathjax>$|−4| = 4$</mathjax></p><p>Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0.</p><p><a href="https://projecteuler.net/problem=27">Project Euler</a></p><p>Initially I planned to tackle this problem from a strictly brute force perspective. I have found that working on a simple solution to a problem usually gives me insights to more elegant solutions.</p><p>Therefore I figured that the most straight forward and inelegant method was to produce a 1999 by 1999 array with individual elements of the array corresponding to the maximum number of consecutive primes generated by that combination of a and b.</p><p>Thus the initial element of the array in position |1,1| would be the maximum number of consecutive primes generated by n2 + (-999)n + (-999), and the final position of |1999,1999| would be n2 + (999)n + (999).</p><p>With this plan in mind I tried to think up a quick way to calculate the maximum number of consecutive primes for a given <bold>a</bold> and <bold>b</bold>.</p><p>I started by having Mathematica generate the first 101 values from the example given in the problem by using a=1 and b=41.</p><figure><img src="/posts/img/ProjectEuler27a.png" alt=""/><figcaption></figcaption></figure><p>I then used <bold>PrimeQ</bold> to test whether each value was prime.</p><figure><img src="/posts/img/ProjectEuler27b.png" alt=""/><figcaption></figcaption></figure><p>Then used <bold>Boole</bold> to convert these true false values to 0’s and 1’s.</p><figure><img src="/posts/img/ProjectEuler27c.png" alt=""/><figcaption></figcaption></figure><p>And finally <bold>FirstPosition</bold> to find the first false in the list.</p><figure><img src="/posts/img/ProjectEuler27d.png" alt=""/><figcaption></figcaption></figure><p>Note that the answer of 41 corresponds to the 39 primes listed in the example since this method doesn’t count the primes from 0-39 but from 1-40 and it found a non-Prime number in position 41.</p><p>So...</p><p>This method is horribly inelegant, however it does work so it’s time to see if I can use this method to generate the <mathjax>$1,999$</mathjax> by <mathjax>$1999$</mathjax> array I initially planned for.</p><p>I begin by trying my method on a smaller array and seeing if it would work at all.</p><figure><img src="/posts/img/ProjectEuler27e.png" alt=""/><figcaption></figcaption></figure><p>Note that this entry should be much larger as it displays a <mathjax>$51×51$</mathjax> array of values.</p><p>To find the maximum element of this array I then use the <bold>Position</bold> and <bold>Max</bold> commands. <bold>Position</bold> gives the location in an array of a specified value, and <bold>Max</bold> gives the largest element of the array.</p><figure><img src="/posts/img/ProjectEuler27f.png" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/ProjectEuler27g.png" alt=""/><figcaption></figcaption></figure><p>Since we are counting up from 0 we have now found that the Maximum number of consecutive primes is generated with <bold>a</bold>=1 and <bold>b</bold>=41 which matches the example.</p><p>One area of concern going forward is that it takes <mathjax>$0.655,204$</mathjax> secs for Mathematica to create the <mathjax>$51×51$</mathjax> array I used above. Since a <mathjax>$1,999×1,999$</mathjax> array is almost <mathjax>$1,600%$</mathjax> larger than a <mathjax>$50×50$</mathjax> array, that means that generating a <mathjax>$1999×1999$</mathjax> array should take at least <mathjax>$17$</mathjax> minutes and <mathjax>$28.33$</mathjax> second. Most likely longer considering that the edges of the array will be dealing with <bold>a</bold> and <bold>b</bold> values greater than <mathjax>$900$</mathjax>.</p><p>Still I have free time and I’m not paying for processing time so we might as well go forward and see how long it takes.</p><figure><img src="/posts/img/ProjectEuler27h.png" alt=""/><figcaption></figcaption></figure><p>So <mathjax>$21$</mathjax> minutes and <mathjax>$14$</mathjax> seconds later we have our array and can try to find the Maximum number of consecutive primes.</p><figure><img src="/posts/img/ProjectEuler27i.png" alt=""/><figcaption></figcaption></figure><p>And we have a max at <mathjax>$|939,1971|$</mathjax>, so <mathjax>$939-1000=-61$</mathjax> and <mathjax>$1971-1000=971$</mathjax> are are <bold>a</bold> and <bold>b</bold> values.</p><p><mathjax>$a*b=-61*971=-59231$</mathjax></p><p>And we thus have our answer for Problem 27.</p><p>Now we can focus on improving this process.</p><p>We could start by recognizing that <bold>b</bold> has to be a prime number. It was only after I had finished this problem that I realized that since n starts at 0 the first element will always be 0*0 + a*0 + b. Since there are 168 primes less than 1000 that means I only needed 168 rows instead of 1999.</p><p>A <mathjax>$1999×168$</mathjax> array is <mathjax>$8.4%$</mathjax> the size of a <mathjax>$1999×1999$</mathjax> array and only took Mathematica <mathjax>$1$</mathjax> minute and <mathjax>$56$</mathjax> seconds to calculate.</p><figure><img src="/posts/img/ProjectEuler27j.png" alt=""/><figcaption></figcaption></figure><p>A larger time sink is that I am actually calculating out the first <mathjax>$100 n$</mathjax> values for every combination of <bold>a</bold> and<bold>b</bold>tested. Thus even if the second value calculated is non-Prime I still waste time evaluating the next 98 values.</p><p>Using the following code I can just check if the <mathjax>$n$</mathjax> values are prime and stop when a non-Prime is found.</p><figure><img src="/posts/img/ProjectEuler27k.png" alt=""/><figcaption></figcaption></figure><p>To better understand how much time this saves, I calculated a <mathjax>$50×50$</mathjax> array using the old method and the new method and had Mathematica generate an <bold>ArrayPlot</bold> to save space.</p><figure><img src="/posts/img/ProjectEuler27l.png" alt=""/><figcaption></figcaption></figure><p>The second method took <mathjax>$6.1%$</mathjax> of the time taken by the first method.</p><p>Using both methods together the entire process of generating the <mathjax>$1999×168$</mathjax> array takes <mathjax>$10$</mathjax> seconds.</p><figure><img src="/posts/img/ProjectEuler27m.png" alt=""/><figcaption></figcaption></figure><p>I haven’t looked into it, but I suspect that I could similarly shave a couple of seconds off of the total running time by finding some trick for picking a values.</p><p>Conclusion</p><p>I started by creating a rather inelegant method for finding the number of consecutive primes generated on a <mathjax>$1999×1999$</mathjax> matrix. This method took <mathjax>$21$</mathjax> minutes and <mathjax>$14$</mathjax> seconds.</p><p>I next examined the problem more closely and found areas that could be refined so that I found that same solution in <mathjax>$10$</mathjax> seconds.</p><p>I’m confident that the majority of the improvement in performance came from optimizing the operation that found the number of consecutive primes.</p><figure><img src="/posts/img/ProjectEuler27n.png" alt=""/><figcaption></figcaption></figure><p>Using the above code I found that <mathjax>$280,607$</mathjax> times the second number tested was non-Prime. Since there are only <mathjax>$336,000$</mathjax> entries in the array that means that <mathjax>$83.5%$</mathjax> of the time while generating the original array I could have stopped after calculating the second value.</p><p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p></article>
-
-<hr/>
-
-<article><header>
-<h1><a href="posts/20-project-project-euler-29.html">20% Project - ProjectEuler #29</a></h1>
-<p>Scribbled <a class="permlink" href="posts/20-project-project-euler-29.html"><time datetime="2015-04-11">Saturday, April 11th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-project-euler-29.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-project-euler-29.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
-
-<figure><img src="/posts/img/ProjectEuler29a.png" alt=""/><figcaption></figcaption></figure><p><a href="https://projecteuler.net/problem=29">Project Euler</a></p><p>Like the last problem I find it’s informative to start out with an inelegant solution and try to find an elegant one at the end.</p><p>We start by generating an array of the form <mathjax>$a^b$</mathjax> from <b>a</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax> and <b>b</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29b.png" alt=""/><figcaption></figcaption></figure><p>As expected that got gigantic quickly, however we don’t need to look at all of the data to work with it.</p><p>We can use <b>Flatten</b> to compress the <mathjax>$99×99$</mathjax> array into a single vector <mathjax>$9,801$</mathjax> elements long.<br/>We then use <b>DeleteDuplicates</b> to remove all of the duplicated elements from the vector.<br/>And finish with <b>Length</b> to find the total number of elements left over.</p><figure><img src="/posts/img/ProjectEuler29c.png" alt=""/><figcaption></figcaption></figure><p>And technically we are done. <b>The answer to this ProjectEular problem is <mathjax>$9,183$</mathjax>.</b></p><p>However I think that it’s worth our time to consider why their are only <mathjax>$618$</mathjax> repeated numbers in this list.</p><p>First lets try to account for all of the numbers that are unique.</p><p>There are <mathjax>$25$</mathjax> prime numbers less than <mathjax>$100$</mathjax> and each of these numbers will generate <mathjax>$99$</mathjax> non-duplicated numbers since they will have only one number as their factor. So we have to have at least <mathjax>$25×99=2,475$</mathjax> unique numbers just from the primes under <mathjax>$100$</mathjax>.</p><p>However thinking about it we can also remove the numbers that are composed of primes like <mathjax>$6$</mathjax> and <mathjax>$15$</mathjax>. Observe that since <mathjax>$6=2×3$</mathjax> that <mathjax>$6^2=(2×3)^2=2^2×3^3$</mathjax>, and so on.</p><p>We could try to find the possible permutations of the <mathjax>$25$</mathjax> primes however, there are <mathjax>$2^25$</mathjax> ways that we can combine two pairs of primes and calculating which combinations have values less than <mathjax>$100$</mathjax> is rather time consuming.</p><p>Instead lets consider what numbers we know are going to show up more than once in the table?</p><p>Any number that is a power of a lower number of the list will definitely be a repeated.</p><p>The higher powers of <mathjax>$2$</mathjax> will show up in the powers of <mathjax>$4, 8, 16, 32,$</mathjax> and <mathjax>$64$</mathjax>.</p><p>Below I have generated a truncated list for the <mathjax>$2,4,$</mathjax> and <mathjax>$8$</mathjax> table. We can see that the <mathjax>$4$</mathjax> table repeats every second value on the <mathjax>$2$</mathjax> table and that the <mathjax>$8$</mathjax> table repeats the 3rd value. This corresponds to <mathjax>$4=2^2$</mathjax> and <mathjax>$8=2^3$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29d.png" alt=""/><figcaption></figcaption></figure><p>I created the following two tables in <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> to highlight how the powers of <mathjax>$2$</mathjax> repeat at specific intervals in the <mathjax>$4$</mathjax> and <mathjax>$8$</mathjax> power tables. A similar pattern will occur for the powers of <mathjax>$3, 5,$</mathjax> and <mathjax>$7$</mathjax>.</p><p>Similarly the power table for <mathjax>$6$</mathjax> will be repeated in the power table for <mathjax>$36$</mathjax> and <mathjax>$10$</mathjax> in the power table for <mathjax>$100$</mathjax>.</p><p>The following Matrix and ArrayPlot were generated in Mathematica to show the repeated numbers in the table given above. Observe that <mathjax>$2^6$</mathjax> occurs the most often in this table and is represented in black in the <b>ArrayPlot</b> to signify that it is a larger value.</p><figure><img src="/posts/img/ProjectEuler29e.png" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/ProjectEuler29f.png" alt=""/><figcaption></figcaption></figure><p>Expanding the array to include all of the numbers we originally calculated we get the following <b>ArrayPlot</b>. Here we see that most of the values that will have repeats are clustered around the top of the array corresponding to a values between <mathjax>$2$</mathjax> and <mathjax>$10$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29g.png" alt=""/><figcaption></figcaption></figure><p>The dark band that shows up around the <mathjax>$2/3$</mathjax> mark on the array corresponds to the powers of <mathjax>$2^6$</mathjax>.  As you can see by the following table the values in the <mathjax>$2^6$</mathjax> power table show up repeatedly throughout the array.</p><figure><img src="/posts/img/ProjectEuler29h.png" alt=""/><figcaption></figcaption></figure><p>For reference the number that shows up the most often in the table is <mathjax>$1,152,921,504,606,846,976$</mathjax> or <mathjax>$2^60$</mathjax>. Which makes sense when you remember that <mathjax>$60$</mathjax> has <mathjax>$12$</mathjax> divisors and would thus it will show up in the power table of <mathjax>$2^1, 2^2, 2^3, 2^4, 2^5, 2^6$</mathjax>.</p><p>Also you should notice that in a number of rows the values are high for half of the row and then drop down to 1 for the rest of the array. As an example the power table for <mathjax>$100$</mathjax> is at the bottom of the array window. Note that the first <mathjax>$50$</mathjax> values of this table occur in the <mathjax>$10$</mathjax> power table.</p><figure><img src="/posts/img/ProjectEuler29i.png" alt=""/><figcaption></figcaption></figure><p>It’s not until <mathjax>$100^51$</mathjax> that we get the first value that doesn’t show up in <mathjax>$10$</mathjax> power table.</p><p><b>Conclusion</b></p><p>This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn’t ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.</p><p>Using the above code I found that <mathjax>$280,607$</mathjax> times the second number tested was non-Prime. Since there are only <mathjax>$336,000$</mathjax> entries in the array that means that <mathjax>$83.5%$</mathjax> of the time while generating the original array I could have stopped after calculating the second value.</p><p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p></article>
-
-<hr/>
-
-<article><header>
-<h1><a href="posts/20-project-update.html">20% Project Update</a></h1>
-<p>Scribbled <a class="permlink" href="posts/20-project-update.html"><time datetime="2015-02-20">Friday, February 20th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-update.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-update.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
-
-<p>Considering Prof. Heil’s email I have complied a list of the criteria for my 20% Project.</p><p>For my 20% Project I’m going to be learning to write code in <a href="https://www.wolfram.com/mathematica/">Mathematica</a> to find solutions for the problems posted on Project Euler.</p><h2>1 What are you going to learn (what is your “learning target”)?</h2><p>For my 20% Project I’m going to be expanding my knowledge of coding by learning to write code for Mathematica. As a student at CSUSM I currently have access to Mathematica through cougarapps and I feel that I would be remiss to not give it a try while I still can. I also think that Mathematica might be a better fit for some of the mathematical problems that are in the Project Euler database.</p><h2>2 How are you planning on learning it? (part of this learning must take place online)</h2><p>I plan to learn this through online video instructions, tutorials, and the documentation provided inside of Mathematica.</p><h2>3 List your 10 authentic questions for inquiry. . .you only need the questions. The answers will come at the end of the project)</h2><p>Does Mathematica have enough built in tools to do this task?<br/>Does my knowledge of C++ transfer to Mathematica?<br/>How long will it take to get competent with Mathematica?<br/>How difficult is it to create functional algorithms in Mathematica?<br/>Are there coding considerations I should be aware of when working with Mathematica?<br/>How difficult of a task have I set for myself?<br/>Are there classes of problems that are more difficult with Mathematica?<br/>Can these problems be adjusted for use in the classroom?<br/>What mathematical fields are covered by this project?<br/>How much does Mathematica cost if I decide to keep using it after this project?</p><h2>4 What will a successful outcome look like (what is your “success criteria”)?</h2><p>I would consider success for this project to be the completion of at least the first 50 problems on the site.</p><h2>5 (Most importantly) Is there an aspect of play and/or making in your project. Is there an opportunity for failure? It is important that you avoid pure knowledge pursuits for this project.</h2><p>I enjoy completing logic puzzles like Sudoku and I have previously been working on some of these problems on this site for fun in my spare time. So I think that this project has an element of play for me.</p><p>I get satisfaction out of solving problems that are difficult, also I like reading over the different methods used by other people after I have completed a problem.</p><p>I’m not sure how much opportunity for failure is presented by this project. I know that even if I don’t finish 50 problems by the end of this course I will eventually finish them. However I would like to reach this goal if I could, even if it’s just as a personal pride thing.</p><h2>6 Which tool are you going to be using for research? (I know there was a request for more clarification on tools. We can do this Monday)</h2><p>I’m going to be using the internet for most of my research on this project.</p><p>While I know some Professors and Computer Science majors at the University who I could talk to about coding these types of problems, I’m rarely on campus this semester so it would be difficult to stop by and ask them for assistance.</p></article>
-
-<hr/>
-
-<article><header>
-<h1><a href="posts/20-project-csusm-credential-program.html">20% Project - CSUSM credential program</a></h1>
-<p>Scribbled <a class="permlink" href="posts/20-project-csusm-credential-program.html"><time datetime="2015-02-16">Monday, February 16th, 2015</time></a>&nbsp;&middot;&nbsp;<a class="pdf" href="posts/20-project-csusm-credential-program.pdf">PDF</a>&nbsp;&middot;&nbsp;<a class="source-link" href="posts/20-project-csusm-credential-program.pollen.html">&loz;&nbsp;Pollen&nbsp;source</a></p></header>
-
-<p>For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.</p><p>I’ve been able to solve around 10 of the problems on <a href="https://projecteuler.net/">Project Euler</a> using the coding skills that I already know and some Combinatoric trick however, I have come to recognize that to move any further I am going to need to learn how to actually write complex computer code utilizing arrays and date structures. I haven’t settled on a specific language to learn for this project, however I would like to finish the first 100 problems on the site by the end of the semester.</p><p>I find that many of the problems I have already solved have a range of possilble solutions ranging from brute force to elegent mathematic proofs. I feel that going through these problems will give me a greater appreciation for the diverse methods students use to solve mathematical problems in my class. Understanding that a problem can have more than one valid solution and being able to articulate how different solution methods can arrive at the same answer is an important skill that we need as teachers. Hopefully this project will assist me in recognizing and articulating that to students.</p></article>
 
         <footer class="main">
             <ul>

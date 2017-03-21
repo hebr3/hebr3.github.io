@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CS211-Lab7</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>CS211-Lab7</h1>
+                <p>Scribbled <a href="/posts\cs211-lab7.html" class="permlink"><time datetime="2017-03-05">Sunday, March 5th, 2017</time></a>
+
+                &middot;&nbsp;<a class="pdf" href="cs211-lab7.pdf">PDF</a>&nbsp;
+                &middot;&nbsp;<a href="/posts\cs211-lab7.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
+                <ul>
+                <li><a href="/topics.html#CS211">#CS211</a></li><li><a href="/topics.html#C++">#C++</a></li></ul>
+            </header>
+
+<p>I thought I would try a different approach to completing the assignment this week. Usually I modify the example problems and templates to fit the needs of the program.</p><p>This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.</p><h2>Lab 7</h2><p>The purpose of this lab is to practice working with constants, static attributes, and friend functions.</p><p>In this lab, you will design a <em>Student</em> class which has the following private attributes:</p><ul>string name;</ul><ul>const long studentID;</ul><h2>Version 1</h2><p>I start with a constructor, setter, and getter for the required class. I test to make sure that all three are being called properly in main.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; endl;
+
+    student1.setName("steve");
+
+    cout &lt;&lt; student1.getName() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    private:
+        string name;
+    public:
+        Student();
+        string getName() const;
+        void setName();
+ };
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+Student::Student() {
+    name = "Unknown";
+}
+
+string Student::getName() const {
+    return name;
+}
+
+void Student::setName(string n) {
+    name = n;
+}</code></pre></div></div><h2>Version 2</h2><p>Since the basic skeleton of the program was running I expanded the class to include studentID, major, classification, units, and tuition. My main.cpp is also expanded to test all of the variables added to the class.</p><p>Note: I had some issues with this step. You need to remember to declare constant member values outside of the {} brackets of the constructor.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; endl;
+
+    student1.setName("steve");
+    student1.setMajor("MATH");
+    student1.setClassification("graduate");
+    student1.setUnits(8);
+    student1.setTuition(1000.50);
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; endl;
+
+    Student student2 = Student("Julia Robertson", "MATH", "undergraduate", 15);
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+ };
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+// Constructor functions
+Student::Student() {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(0) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}</code></pre></div></div><h2>Version 3</h2><p>I now add the totalNumofStudents and nextStudentID values to the class. I also add the destructor to the class sense the value it deals with has been added.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    Student student1;
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    student1.setName("steve");
+    student1.setMajor("MATH");
+    student1.setClassification("graduate");
+    student1.setUnits(8);
+    student1.setTuition(1000.50);
+
+    cout &lt;&lt; student1.getName() &lt;&lt; " "
+         &lt;&lt; student1.getID() &lt;&lt; " "
+         &lt;&lt; student1.getMajor() &lt;&lt; " "
+         &lt;&lt; student1.getClassification() &lt;&lt; " "
+         &lt;&lt; student1.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    Student student2 = Student("Julia Robertson", "MATH", "undergraduate", 15);
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    student1.~Student();
+
+    cout &lt;&lt; student2.getName() &lt;&lt; " "
+         &lt;&lt; student2.getID() &lt;&lt; " "
+         &lt;&lt; student2.getMajor() &lt;&lt; " "
+         &lt;&lt; student2.getClassification() &lt;&lt; " "
+         &lt;&lt; student2.getUnits() &lt;&lt; " "
+         &lt;&lt; student1.getTotalNumofStudents() &lt;&lt; " "
+         &lt;&lt; student1.getNextStudentID() &lt;&lt; endl;
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    static int totalNumofStudents;
+    static long nextStudentID;
+
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+        ~Student();
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+        int getTotalNumofStudents() const;
+        long getNextStudentID() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+};
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+int Student::totalNumofStudents = 0;
+long Student::nextStudentID = 10000;
+
+// Constructor functions
+Student::Student() : studentID(nextStudentID) {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(nextStudentID) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+Student::~Student() {
+    totalNumofStudents--;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+int Student::getTotalNumofStudents() const {
+    return totalNumofStudents;
+}
+long Student::getNextStudentID() const {
+    return nextStudentID;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}</code></pre></div></div><h2>Version 4</h2><p>Next I add the printStudent, setData, and setTuition functions to finish off the assignment.  I also clean up the files to align with the specs given in the written assignment.</p><div class="filebox"><div class="filename" decode="exclude">main.cpp</div><div class="highlight"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void setTuition(Student &amp;stu) {
+    if (stu.classification == "graduate")
+        stu.tuition = stu.units * 1000;
+    else
+        stu.tuition = stu.units * 700;
+}
+
+int main() {
+    Student student1;
+    student1.printStudent();
+
+    Student student2 = Student("unknown", "PHYS", "graduate", 0);
+    student2.setData(); // "Julia Robertson", "MATH", "undergraduate", 15
+
+    setTuition(student2);
+    student2.printStudent();
+
+    return 0;
+}</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.h</div><div class="highlight"><pre><code>#ifndef STDUENT_H
+#define STUDENT_H
+#include &lt;string&gt;
+using namespace std;
+
+clast Student {
+    static int totalNumofStudents;
+    static long nextStudentID;
+
+    friend void setTuition(Students&amp;);
+
+    private:
+        string name;
+        const long studentID;
+        string major;
+        string classification;
+        int units;
+        float tuition;
+    public:
+        Student();
+        Student(string, string, string, int);
+        ~Student();
+
+        string getName() const;
+        long getId() const;
+        string getMajor() const;
+        string getClassification() const;
+        int getUnits() const;
+        float getTuition() const;
+        int getTotalNumofStudents() const;
+        long getNextStudentID() const;
+
+        void setName();
+        void setMajor(string);
+        void setClassification(string);
+        void setUnits(int);
+        void setTuition(float);
+};
+#endif</code></pre></div></div><div class="filebox"><div class="filename" decode="exclude">Student.cpp</div><div class="highlight"><pre><code>#include "Student.h"
+#include &lt;string&gt;
+using namespace std;
+
+int Student::totalNumofStudents = 0;
+long Student::nextStudentID = 10000;
+
+// Constructor functions
+Student::Student() {
+    name = "Unknown";
+    major = "CS";
+    classification = "undergraduate";
+    units = 12;
+    tuition = 0;
+}
+Student::Student(string theName, string theMajor, string theClassification, int theUnits) : studentID(0) {
+        name = theName;
+        major = theMajor;
+        classification = theClassification;
+        units = theUnits;
+        tuition = 0;
+}
+Student::~Student() {
+    totalNumofStudents--;
+}
+
+// Getter functions
+string Student::getName() const {
+        return name;
+}
+long Student::getID() const {
+        return studentID;
+}
+string Student::getMajor() const {
+        return major;
+}
+string Student::getClassification() const {
+        return classification;
+}
+int Student::getUnits() const {
+        return units;
+}
+float Student::getTuition() const {
+        return tuition;
+}
+int Student::getTotalNumofStudents() const {
+    return totalNumofStudents;
+}
+long Student::getNextStudentID() const {
+    return nextStudentID;
+}
+
+void Student:printStudent() const {
+    cout &lt;&lt; "Student name:   " &lt;&lt; name &lt;&lt; endl
+         &lt;&lt; "Student id:     " &lt;&lt; studentID &lt;&lt; endl
+         &lt;&lt; "Student major:  " &lt;&lt; major &lt;&lt; endl
+         &lt;&lt; "Student class:  " &lt;&lt; classification &lt;&lt; endl
+         &lt;&lt; "Student units:  " &lt;&lt; units &lt;&lt; endl
+         &lt;&lt; "Tuition:        " &lt;&lt; tuition &lt;&lt; endl;
+}
+
+// Setter functions
+void Student::setName(string n) {
+        name = n;
+}
+void Student::setMajor(string m) {
+        major = m;
+}
+void Student::setClassification(string c) {
+        classification = c;
+}
+void Student::setUnits(int u) {
+        units = u;
+}
+void Student::setTuition(float t) {
+        tuition = t;
+}
+
+void Student::setData() {
+    string n, m, c; 		// Name, Major, and Classification
+    int u;			// Units
+    cout &lt;&lt; "Please enter the students name: ";
+    getline(cin, n);
+    name = n;
+    cout &lt;&lt; "Please enter the students major: ";
+    cin &gt;&gt; m;
+    major = m;
+    cout &lt;&lt; "Please enter the students classification: ";
+    cin &gt;&gt; c;
+    classification = c;
+    cout &lt;&lt; "Please enter the students units: ";
+    cin &gt;&gt; u;
+    units = u;
+}</code></pre></div></div>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

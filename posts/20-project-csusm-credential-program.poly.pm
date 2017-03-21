@@ -2,7 +2,7 @@
 
 ◊(define-meta title "20% Project - CSUSM credential program")
 ◊(define-meta published "2015-02-16")
-◊(define-meta topics "Teaching Credential, 20% Project")
+◊(define-meta topics "Teaching Credential,20% Project")
 
 For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.
 

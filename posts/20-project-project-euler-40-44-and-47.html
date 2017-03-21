@@ -12,6 +12,9 @@
                 <script type="text/x-mathjax-config">
                   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
                 </script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -32,7 +35,7 @@
                 &middot;&nbsp;<a class="pdf" href="20-project-project-euler-40-44-and-47.pdf">PDF</a>&nbsp;
                 &middot;&nbsp;<a href="/posts\20-project-project-euler-40-44-and-47.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
                 <ul>
-                <li><a href="/topics.html#Teaching Credential">#Teaching Credential</a></li><li><a href="/topics.html# 20% Project"># 20% Project</a></li><li><a href="/topics.html# Project Euler"># Project Euler</a></li></ul>
+                <li><a href="/topics.html#Teaching Credential">#Teaching Credential</a></li><li><a href="/topics.html#20% Project">#20% Project</a></li><li><a href="/topics.html#Project Euler">#Project Euler</a></li></ul>
             </header>
 
 <figure><img src="/posts/img/ProjectEuler29a.png" alt=""/><figcaption></figcaption></figure><p><a href="https://projecteuler.net/problem=29">Project Euler</a></p><p>Like the last problem I find it’s informative to start out with an inelegant solution and try to find an elegant one at the end.</p><p>We start by generating an array of the form <mathjax>$a^b$</mathjax> from <b>a</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax> and <b>b</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29b.png" alt=""/><figcaption></figcaption></figure><p><b>Problem 47</b></p><p>The first two consective numbers to have two distince prime factors are:</p><p><mathjax>$14=2×7$</mathjax><br/><mathjax>$15=3×5$</mathjax></p><p>The first three consective numbers to have three distinct prime factors are:</p><p><mathjax>$644=2^2×7×23$</mathjax><br/><mathjax>$644=2^2×7×23$</mathjax><br/><mathjax>$644=2^2×7×23$</mathjax></p><p>Find the first four consective numbers to have four distinct prime factors. What is the first of these numbers?</p><div class="listing-filename">&#128196; Mathematica</div><pre class="code">prob47 = Flatten[Table[Length[FactorInteger[n]], {n, 1, 200000}]];

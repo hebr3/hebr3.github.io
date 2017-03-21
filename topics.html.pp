@@ -8,18 +8,25 @@
     <head>
         <meta charset="utf-8">
         <meta name="generator" content="Racket ◊(version) + Pollen ◊|pollen:version|">
-        <title>Topics (The Notepad)</title>
+        <title>Topics</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
+		<script type="text/javascript" 
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+		</script>
+                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
-            <p><a href="/" class="home">The Notepad</a>’s full of ballpoint hypertext</p>
+            <p><a href="/" class="home">Henry Brooks</a></p>
             <nav>
                 <ul>
                     <li><a href="/topics.html">Topics</a></li>
-                    <li><a href="/books.html">Books to Read</a></li>
                     <li><a href="/about.html">About</a></li>
-                    <li><a href="/feed.xml" class="rss" title="Subscribe to feed">Use RSS?</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,10 +45,8 @@
         </section>
         <footer class="main">
             <ul>
-                <li><a href="/feed.xml" class="rss" title="Subscribe to feed">RSS</a></li>
-                <li><a href="mailto:comments@thenotepad.org">comments@thenotepad.org</a></li>
-                <li>Source code <a href="https://github.com/otherjoel/thenotepad">on Github</a></li>
-                <li>Valid <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fthenotepad.org%2F">HTML5</a> + CSS</li>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> Github</a></li>
             </ul>
         </footer>
     </body>
