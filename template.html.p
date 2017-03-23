@@ -17,9 +17,6 @@
 		<script type="text/x-mathjax-config">
 		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
 		</script>
-                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -36,9 +33,7 @@
             <header>
                 <h1>◊(select-from-metas 'title here)</h1>
                 <p>◊when/splice[(select-from-metas 'published here)]{Scribbled <a href="/◊(symbol->string here)" class="permlink"><time datetime="◊(select-from-metas 'published here)">◊(pubdate->english (select-from-metas 'published here))</time></a>}
-                ◊when/splice[(select-from-metas 'updated here)]{&middot; <em>Updated <time datetime="◊(select-from-metas 'updated here)">◊(pubdate->english (select-from-metas 'updated here))</time></em>}
-                ◊when/splice[(pdfable? source-file)]{&middot;&nbsp;<a class="pdf" href="◊pdfname[source-file]">PDF</a>&nbsp;}
-                &middot;&nbsp;<a href="/◊|pollen-source-listing|" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
+                ◊when/splice[(select-from-metas 'updated here)]{&middot; <em>Updated <time datetime="◊(select-from-metas 'updated here)">◊(pubdate->english (select-from-metas 'updated here))</time></em>}</p>
                 ◊when/splice[(select-from-metas 'topics here)]{<ul>
                     ◊(map (λ(t-str)(->html `(li (a [[href ,(string-append "/topics.html#" t-str)]] "#" ,t-str))))
                           (string-split (select-from-metas 'topics here) ","))</ul>}

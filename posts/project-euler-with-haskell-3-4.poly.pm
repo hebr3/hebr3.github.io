@@ -1,6 +1,6 @@
 #lang pollen
 
-◊(define-meta title "Project Euler problems 3 and 4, with Haskell")
+◊(define-meta title "Project Euler problem 3 and 4, with Haskell")
 ◊(define-meta published "2015-10-10")
 ◊(define-meta topics "Project Euler,Haskell")
 

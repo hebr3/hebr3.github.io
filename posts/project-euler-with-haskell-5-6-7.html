@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Project Euler problems 5, 6 and 7, with Haskell</title>
+        <title>Project Euler problem 5, 6 and 7, with Haskell</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
                 <script type="text/javascript"
                   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -12,9 +12,6 @@
                 <script type="text/x-mathjax-config">
                   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
                 </script>
-                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad()</script>
     </head>
     <body>
         <header class="main">
@@ -29,47 +26,82 @@
 
         <article>
             <header>
-                <h1>Project Euler problems 5, 6 and 7, with Haskell</h1>
+                <h1>Project Euler problem 5, 6 and 7, with Haskell</h1>
                 <p>Scribbled <a href="/posts\project-euler-with-haskell-5-6-7.html" class="permlink"><time datetime="2015-10-17">Saturday, October 17th, 2015</time></a>
-
-                &middot;&nbsp;<a class="pdf" href="project-euler-with-haskell-5-6-7.pdf">PDF</a>&nbsp;
-                &middot;&nbsp;<a href="/posts\project-euler-with-haskell-5-6-7.pollen.html" class="source-link">&loz;&nbsp;Pollen&nbsp;Source</a></p>
+                </p>
                 <ul>
                 <li><a href="/topics.html#Project Euler">#Project Euler</a></li><li><a href="/topics.html#Haskell">#Haskell</a></li></ul>
             </header>
 
-<h2>Problem 5</h2><p>I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler5.hs</div><div class="highlight"><pre><code>main :: IO ()
-main = do
-    putStrLn "ProjectEuler.net"
+<h2>Problem 5</h2><p>I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler5.hs</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">putStrLn</span> <span class="s">"ProjectEuler.net"</span>
 
-    putStrLn "\nProblem5 - Smallest multiple of the numbers 1-20"
-    print problem5
+    <span class="n">putStrLn</span> <span class="s">"</span><span class="se">\n</span><span class="s">Problem5 - Smallest multiple of the numbers 1-20"</span>
+    <span class="n">print</span> <span class="n">problem5</span>
 
---Smallest multiple of the numbers 1-20
-problem5 = head [x | x &lt;- [1..], mod x 5 == 0, mod x 7 == 0, mod x 9 == 0, mod x 11 == 0, mod x 13 == 0, mod x 16 == 0, mod x 17 == 0,mod x 19 == 0]</code></pre></div></div><p>I was a little suprised that the program didn’t crash considering how large a number it had to count up to. I’m not sure if this says more about the Haskell langauge or modern computers. I do know that Haskell supports Integers that can be as large as the memory space of the computer allows, so I feel like this might be a win for Haskell.</p><p>Solving this without programming is mostly an exercise in taking the prime factorization of the numbers from 1 to 20 and <a href="http://www.wolframalpha.com/input/?i=232792560">combining them</a>.</p><h2>Problem 6</h2><p>Rather straight foward solution to this problem. I am still suprised by how clean the code looks in haskell compared to <code>c++</code>. There is much less <a href="https://en.wikipedia.org/wiki/Boilerplate_code">boilerplate</a> code required to get a solution printed on screen.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler6.hs</div><div class="highlight"><pre><code>main :: IO ()
-main = do
-    putStrLn "ProjectEuler.net"
-    putStrLn "\nProblem6 - Sum sqaure difference for the first 100 natural numbers"
-    print problem6
+<span class="c1">--Smallest multiple of the numbers 1-20</span>
+<span class="nf">problem5</span> <span class="ow">=</span> <span class="n">head</span> <span class="p">[</span><span class="n">x</span> <span class="o">|</span> <span class="n">x</span> <span class="ow">&lt;-</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">],</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">11</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">13</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mod</span> <span class="n">x</span> <span class="mi">17</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span><span class="n">mod</span> <span class="n">x</span> <span class="mi">19</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div></div><p>I was a little suprised that the program didn’t crash considering how large a number it had to count up to. I’m not sure if this says more about the Haskell langauge or modern computers. I do know that Haskell supports Integers that can be as large as the memory space of the computer allows, so I feel like this might be a win for Haskell.</p><p>Solving this without programming is mostly an exercise in taking the prime factorization of the numbers from 1 to 20 and <a href="http://www.wolframalpha.com/input/?i=232792560">combining them</a>.</p><h2>Problem 6</h2><p>Rather straight foward solution to this problem. I am still suprised by how clean the code looks in haskell compared to <code>c++</code>. There is much less <a href="https://en.wikipedia.org/wiki/Boilerplate_code">boilerplate</a> code required to get a solution printed on screen.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler6.hs</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">putStrLn</span> <span class="s">"ProjectEuler.net"</span>
+    <span class="n">putStrLn</span> <span class="s">"</span><span class="se">\n</span><span class="s">Problem6 - Sum sqaure difference for the first 100 natural numbers"</span>
+    <span class="n">print</span> <span class="n">problem6</span>
 
---Sum square difference
-problem6 = sqSum - sumSq
+<span class="c1">--Sum square difference</span>
+<span class="nf">problem6</span> <span class="ow">=</span> <span class="n">sqSum</span> <span class="o">-</span> <span class="n">sumSq</span>
 
-sq x = x * x
+<span class="nf">sq</span> <span class="n">x</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
 
-sqSum = sq (sum [1..100])
-sumSq = sum (map sq [1..100])</code></pre></div></div><h2>Problem 7</h2><p>Another really clean solution using infinite lists.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler7.hs</div><div class="highlight"><pre><code>main :: IO ()
-main = do
-    putStrLn "ProjectEuler.net"
-    putStrLn "\nProblem7 - 10,001th Prime"
-    print problem7
+<span class="nf">sqSum</span> <span class="ow">=</span> <span class="n">sq</span> <span class="p">(</span><span class="n">sum</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">100</span><span class="p">])</span>
+<span class="nf">sumSq</span> <span class="ow">=</span> <span class="n">sum</span> <span class="p">(</span><span class="n">map</span> <span class="n">sq</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">100</span><span class="p">])</span>
+</pre></div>
+</td></tr></tbody></table></div></div><h2>Problem 7</h2><p>Another really clean solution using infinite lists.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler7.hs</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">putStrLn</span> <span class="s">"ProjectEuler.net"</span>
+    <span class="n">putStrLn</span> <span class="s">"</span><span class="se">\n</span><span class="s">Problem7 - 10,001th Prime"</span>
+    <span class="n">print</span> <span class="n">problem7</span>
 
---10001th Prime
-problem7 = primes!!10000 -- index starts at 0
+<span class="c1">--10001th Prime</span>
+<span class="nf">problem7</span> <span class="ow">=</span> <span class="n">primes</span><span class="o">!!</span><span class="mi">10000</span> <span class="c1">-- index starts at 0</span>
 
-primes = 2 : primes'
-    where isPrime (p:ps) n = p*p &gt; n || n `rem` p /= 0 &amp;&amp; isPrime ps n
-          primes' = 3 : filter (isPrime primes') [5,7..]</code></pre></div></div><p><a href="https://projecteuler.net/problem=8">Problem 8</a> from Project Euler is looking like a much more involved problem however, I’m hopeful that I will be able to get it finished this week.</p>
+<span class="nf">primes</span> <span class="ow">=</span> <span class="mi">2</span> <span class="kt">:</span> <span class="n">primes&#39;</span>
+    <span class="kr">where</span> <span class="n">isPrime</span> <span class="p">(</span><span class="n">p</span><span class="kt">:</span><span class="n">ps</span><span class="p">)</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">p</span><span class="o">*</span><span class="n">p</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">||</span> <span class="n">n</span> <span class="p">`</span><span class="n">rem</span><span class="p">`</span> <span class="n">p</span> <span class="o">/=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">isPrime</span> <span class="n">ps</span> <span class="n">n</span>
+          <span class="n">primes&#39;</span> <span class="ow">=</span> <span class="mi">3</span> <span class="kt">:</span> <span class="n">filter</span> <span class="p">(</span><span class="n">isPrime</span> <span class="n">primes&#39;</span><span class="p">)</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="o">..</span><span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div></div><p><a href="https://projecteuler.net/problem=8">Problem 8</a> from Project Euler is looking like a much more involved problem however, I’m hopeful that I will be able to get it finished this week.</p>
         </article>
         <footer class="main">
             <ul>

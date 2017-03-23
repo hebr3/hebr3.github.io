@@ -4,6 +4,13 @@
 ◊(define-meta published "2017-03-05")
 ◊(define-meta topics "CS211,C++")
 
+◊filebox-highlight["untyped-test.rkt" 'racket]{ 
+    #lang racket
+    (require rackunit "untyped-gt.rkt")
+    (check-true (gt 42 41)) ; works
+    (check-exn exn:fail:contract? (λ _ (gt 42.5 41))) ; fails
+}
+
 I thought I would try a different approach to completing the assignment this week. Usually I modify the example problems and templates to fit the needs of the program.
 
 This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.
