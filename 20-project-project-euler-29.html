@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>20% Project - ProjectEuler #29</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>20% Project - ProjectEuler #29</h1>
+                <p>Scribbled <a href="/posts\20-project-project-euler-29.html" class="permlink"><time datetime="2015-04-11">Saturday, April 11th, 2015</time></a>
+                </p>
+                <ul>
+                <li><a href="/topics.html#Teaching Credential">#Teaching Credential</a></li><li><a href="/topics.html#20% Project">#20% Project</a></li><li><a href="/topics.html#Project Euler">#Project Euler</a></li></ul>
+            </header>
+
+<figure><img src="/posts/img/ProjectEuler29a.png" alt=""/><figcaption></figcaption></figure><p><a href="https://projecteuler.net/problem=29">Project Euler</a></p><p>Like the last problem I find it’s informative to start out with an inelegant solution and try to find an elegant one at the end.</p><p>We start by generating an array of the form <mathjax>$a^b$</mathjax> from <b>a</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax> and <b>b</b> = <mathjax>$2$</mathjax> to <mathjax>$100$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29b.png" alt=""/><figcaption></figcaption></figure><p>As expected that got gigantic quickly, however we don’t need to look at all of the data to work with it.</p><p>We can use <b>Flatten</b> to compress the <mathjax>$99×99$</mathjax> array into a single vector <mathjax>$9,801$</mathjax> elements long.<br/>We then use <b>DeleteDuplicates</b> to remove all of the duplicated elements from the vector.<br/>And finish with <b>Length</b> to find the total number of elements left over.</p><figure><img src="/posts/img/ProjectEuler29c.png" alt=""/><figcaption></figcaption></figure><p>And technically we are done. <b>The answer to this ProjectEular problem is <mathjax>$9,183$</mathjax>.</b></p><p>However I think that it’s worth our time to consider why their are only <mathjax>$618$</mathjax> repeated numbers in this list.</p><p>First lets try to account for all of the numbers that are unique.</p><p>There are <mathjax>$25$</mathjax> prime numbers less than <mathjax>$100$</mathjax> and each of these numbers will generate <mathjax>$99$</mathjax> non-duplicated numbers since they will have only one number as their factor. So we have to have at least <mathjax>$25×99=2,475$</mathjax> unique numbers just from the primes under <mathjax>$100$</mathjax>.</p><p>However thinking about it we can also remove the numbers that are composed of primes like <mathjax>$6$</mathjax> and <mathjax>$15$</mathjax>. Observe that since <mathjax>$6=2×3$</mathjax> that <mathjax>$6^2=(2×3)^2=2^2×3^3$</mathjax>, and so on.</p><p>We could try to find the possible permutations of the <mathjax>$25$</mathjax> primes however, there are <mathjax>$2^25$</mathjax> ways that we can combine two pairs of primes and calculating which combinations have values less than <mathjax>$100$</mathjax> is rather time consuming.</p><p>Instead lets consider what numbers we know are going to show up more than once in the table?</p><p>Any number that is a power of a lower number of the list will definitely be a repeated.</p><p>The higher powers of <mathjax>$2$</mathjax> will show up in the powers of <mathjax>$4, 8, 16, 32,$</mathjax> and <mathjax>$64$</mathjax>.</p><p>Below I have generated a truncated list for the <mathjax>$2,4,$</mathjax> and <mathjax>$8$</mathjax> table. We can see that the <mathjax>$4$</mathjax> table repeats every second value on the <mathjax>$2$</mathjax> table and that the <mathjax>$8$</mathjax> table repeats the 3rd value. This corresponds to <mathjax>$4=2^2$</mathjax> and <mathjax>$8=2^3$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29d.png" alt=""/><figcaption></figcaption></figure><p>I created the following two tables in <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> to highlight how the powers of <mathjax>$2$</mathjax> repeat at specific intervals in the <mathjax>$4$</mathjax> and <mathjax>$8$</mathjax> power tables. A similar pattern will occur for the powers of <mathjax>$3, 5,$</mathjax> and <mathjax>$7$</mathjax>.</p><p>Similarly the power table for <mathjax>$6$</mathjax> will be repeated in the power table for <mathjax>$36$</mathjax> and <mathjax>$10$</mathjax> in the power table for <mathjax>$100$</mathjax>.</p><p>The following Matrix and ArrayPlot were generated in Mathematica to show the repeated numbers in the table given above. Observe that <mathjax>$2^6$</mathjax> occurs the most often in this table and is represented in black in the <b>ArrayPlot</b> to signify that it is a larger value.</p><figure><img src="/posts/img/ProjectEuler29e.png" alt=""/><figcaption></figcaption></figure><figure><img src="/posts/img/ProjectEuler29f.png" alt=""/><figcaption></figcaption></figure><p>Expanding the array to include all of the numbers we originally calculated we get the following <b>ArrayPlot</b>. Here we see that most of the values that will have repeats are clustered around the top of the array corresponding to a values between <mathjax>$2$</mathjax> and <mathjax>$10$</mathjax>.</p><figure><img src="/posts/img/ProjectEuler29g.png" alt=""/><figcaption></figcaption></figure><p>The dark band that shows up around the <mathjax>$2/3$</mathjax> mark on the array corresponds to the powers of <mathjax>$2^6$</mathjax>.  As you can see by the following table the values in the <mathjax>$2^6$</mathjax> power table show up repeatedly throughout the array.</p><figure><img src="/posts/img/ProjectEuler29h.png" alt=""/><figcaption></figcaption></figure><p>For reference the number that shows up the most often in the table is <mathjax>$1,152,921,504,606,846,976$</mathjax> or <mathjax>$2^60$</mathjax>. Which makes sense when you remember that <mathjax>$60$</mathjax> has <mathjax>$12$</mathjax> divisors and would thus it will show up in the power table of <mathjax>$2^1, 2^2, 2^3, 2^4, 2^5, 2^6$</mathjax>.</p><p>Also you should notice that in a number of rows the values are high for half of the row and then drop down to 1 for the rest of the array. As an example the power table for <mathjax>$100$</mathjax> is at the bottom of the array window. Note that the first <mathjax>$50$</mathjax> values of this table occur in the <mathjax>$10$</mathjax> power table.</p><figure><img src="/posts/img/ProjectEuler29i.png" alt=""/><figcaption></figcaption></figure><p>It’s not until <mathjax>$100^51$</mathjax> that we get the first value that doesn’t show up in <mathjax>$10$</mathjax> power table.</p><p><b>Conclusion</b></p><p>This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn’t ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.</p><p>Using the above code I found that <mathjax>$280,607$</mathjax> times the second number tested was non-Prime. Since there are only <mathjax>$336,000$</mathjax> entries in the array that means that <mathjax>$83.5%$</mathjax> of the time while generating the original array I could have stopped after calculating the second value.</p><p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
