@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Project Euler problem 8 with Haskell</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>Project Euler problem 8 with Haskell</h1>
+                <p>Scribbled <a href="/posts\project-euler-with-haskell-8.html" class="permlink"><time datetime="2015-10-24">Saturday, October 24th, 2015</time></a>
+                </p>
+                <ul>
+                <li><a href="/topics.html#Project Euler">#Project Euler</a></li><li><a href="/topics.html#Haskell">#Haskell</a></li></ul>
+            </header>
+
+<h2>Problem 8</h2><p>This problem actually wasn’t as bad as I originally thought it would be.</p><div class="filebox"><div class="filename" decode="exclude">ProjectEuler8.hs</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">putStrLn</span> <span class="s">"ProjectEuler.net"</span>
+    <span class="n">putStrLn</span> <span class="s">"Problem8 - Largest product in a series"</span>
+    <span class="n">print</span> <span class="n">problem8</span>
+
+<span class="c1">--Largest product in a series</span>
+<span class="nf">problem8</span> <span class="ow">=</span> <span class="n">maximum</span> <span class="n">listOfProducts</span>
+
+<span class="nf">stringToList</span> <span class="ow">::</span> <span class="kt">String</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
+<span class="nf">stringToList</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="ow">::</span> <span class="p">[</span><span class="kt">Char</span><span class="p">])</span> <span class="n">n</span>
+
+<span class="nf">listOfProducts</span> <span class="ow">=</span> <span class="n">map</span> <span class="n">product</span> <span class="n">groupedInts</span>
+
+<span class="nf">groupedInts</span> <span class="ow">=</span> <span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="p">(</span><span class="n">take</span> <span class="mi">13</span> <span class="p">(</span><span class="n">drop</span> <span class="n">x</span> <span class="n">listOfInts</span><span class="p">)))</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">..</span><span class="p">(</span><span class="mi">1000</span><span class="o">-</span><span class="mi">13</span><span class="p">)]</span>
+
+<span class="nf">listOfInts</span> <span class="ow">=</span> <span class="n">map</span> <span class="p">(</span><span class="n">read</span><span class="ow">::</span><span class="kt">String</span><span class="ow">-&gt;</span><span class="kt">Int</span><span class="p">)</span> <span class="n">listOfStrings</span>
+
+<span class="nf">listOfStrings</span> <span class="ow">=</span> <span class="p">(</span><span class="n">stringToList</span> <span class="n">largeString</span><span class="p">)</span>
+
+<span class="nf">largeString</span> <span class="ow">=</span> <span class="s">"7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"</span>
+</pre></div>
+</td></tr></tbody></table></div></div><p>I’m sure that there are better ways to go about solving this problem. I know that the <code>String</code> data type is stored as a list of <code>Char</code> type, so I should have been able to convert immediately from <code>String</code> to <code>[Int]</code> with a <code>map</code> function. Unfortunately I wasn’t able to get this conversion to work so I had to take extra steps to convert the <code>String</code> to <code>[String]</code>.</p><p>Once I had a list of <code>Int</code> it was rather straight forward to create groups of 13 integers and map <code>product</code> over them.</p>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
