@@ -37,7 +37,7 @@ The key was found
 
 }
 
-◊blockcode[#:filename "Lab1_Program3.cpp"]{
+◊filebox-highlight["Lab1_Program3.cpp" 'c++]{
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -101,7 +101,7 @@ int main()
 }
 }
 
-◊blockcode[#:filename "Lab1_Program2.cpp"]{
+◊filebox-highlight["Lab1_Program2.cpp" 'racket]{
 #lang racket
 
 }

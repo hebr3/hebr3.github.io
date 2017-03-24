@@ -13,8 +13,8 @@ This week I thought figured I would try giving a testing based methodology a try
 The purpose of this lab is to practice working with constants, static attributes, and friend functions.
 
 In this lab, you will design a ◊emph{Student} class which has the following private attributes:
-◊ul{string name;}
-◊ul{const long studentID;}
+◊li{string name;}
+◊li{const long studentID;}
 
 ◊section{Version 1}
 

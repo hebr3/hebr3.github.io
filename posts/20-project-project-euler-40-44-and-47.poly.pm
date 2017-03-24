@@ -35,7 +35,7 @@ The first three consective numbers to have three distinct prime factors are:
 
 Find the first four consective numbers to have four distinct prime factors. What is the first of these numbers?
 
-◊blockcode[#:filename "Mathematica"]{
+◊highlight['Mathematica]{
 prob47 = Flatten[Table[Length[FactorInteger[n]], {n, 1, 200000}]];
 prob47b = Table[Sum[prob47[[a + i]], {i,0,3}], {a, 1, 199997}];
 Position[prob47b, 16]
@@ -53,13 +53,12 @@ It can be seen that ◊${P_4 + P_7 = 22 + 70 = 92 = P_8}. However, their differe
 
 Find the pair of pentagonal numbers, ◊${P_j} and ◊${P_k}, for which their sum and difference are pentagonal and ◊${D = |P_k - P_j|} is minimised; what is the value of D?
 
-◊blockcode[#:filename "Mathematica"]{
-prob44a = Table[m×(m + 1)/2, {m, 1, 100000}];
-prob44b = Table[n×(3×n-1)/2, {n, 1, 100000}];
-prob44c = Table[o×(2×o-1), {o, 1, 100000}];
+◊highlight['Mathematica]{
+prob44a = Table[m*(m + 1)/2, {m, 1, 100000}];
+prob44b = Table[n*(3*n-1)/2, {n, 1, 100000}];
+prob44c = Table[o*(2*o-1), {o, 1, 100000}];
 Intersection[prob44a, prob44b, prob44c]
 }
-
 
 =====================
 
@@ -71,11 +70,11 @@ An irrational decimal fraction is created by concatenating the positive integers
 
 It can be seen that the ◊${12^{th}} digit of the fractional part is 1.
 
-If ◊${d_n} represents the n◊sup{th} digit of the fractional part, find the value of the following expression.
+If ◊${d_n} represents the n◊${^{th}} digit of the fractional part, find the value of the following expression.
 
 ◊${d_1 × d_{10} × d_{100} × d_{1000} × d_{10000} × d_{100000} × d_{1000000}}
 
-◊blockcode[#:filename "Mathematica"]{
+◊highlight['Mathematica]{
 prob40 = Flatten[IntegerDigits[Table[n, {n, 1, 200000}]]];
 Product[prob40[[10^a]], {a, 0, 6}]
 }

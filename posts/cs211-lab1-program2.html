@@ -47,82 +47,154 @@ George             90.00
 Mary               88.33
 Jane               93.00
 ------------------------------
-Overall Average:   89.16</pre><div class="listing-filename">&#128196; Lab1_Program1.cpp</div><pre class="code">#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-#include &lt;iomanip&gt;
-#include &lt;string&gt;
-#include &lt;cmath&gt;
-using namespace std;
+Overall Average:   89.16</pre><div class="filebox"><div class="filename" decode="exclude">Lab1_Program1.cpp</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-void ProcessARow(int, int, int, double&amp;, int&amp;, int&amp;);
-double ProcessOverall(double);
+<span class="kt">void</span> <span class="nf">ProcessARow</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">double</span> <span class="nf">ProcessOverall</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
 
-int main () {
-  // initialize file
-  ifstream inputFile;
-  inputFile.open("data.txt");
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// initialize file</span>
+  <span class="n">ifstream</span> <span class="n">inputFile</span><span class="p">;</span>
+  <span class="n">inputFile</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">);</span>
 
-  // init variables
-  int first, second, third, minimum, maximum;
-  double average,
-         total = 0;
-  string name;
+  <span class="c1">// init variables</span>
+  <span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">average</span><span class="p">,</span>
+         <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
 
-  if (inputFile.is_open()) {
-    cout &lt;&lt; endl;
-    cout &lt;&lt; "Name                Avg    Min    Max" &lt;&lt; endl;
-    cout &lt;&lt; "-------------------------------------" &lt;&lt; endl;
+  <span class="k">if</span> <span class="p">(</span><span class="n">inputFile</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Name                Avg    Min    Max"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"-------------------------------------"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    while (inputFile.good()) {
-      // Pull info off file
-      inputFile &gt;&gt; name &gt;&gt; first &gt;&gt; second &gt;&gt; third;
+    <span class="k">while</span> <span class="p">(</span><span class="n">inputFile</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+      <span class="c1">// Pull info off file</span>
+      <span class="n">inputFile</span> <span class="o">&gt;&gt;</span> <span class="n">name</span> <span class="o">&gt;&gt;</span> <span class="n">first</span> <span class="o">&gt;&gt;</span> <span class="n">second</span> <span class="o">&gt;&gt;</span> <span class="n">third</span><span class="p">;</span>
 
-      // Send values to ProcessARow
-      ProcessARow(first, second, third, average, minimum, maximum);
+      <span class="c1">// Send values to ProcessARow</span>
+      <span class="n">ProcessARow</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">);</span>
 
-      // Add average to total
-      total += average;
+      <span class="c1">// Add average to total</span>
+      <span class="n">total</span> <span class="o">+=</span> <span class="n">average</span><span class="p">;</span>
 
-      // Output average for student
-      cout &lt;&lt; setw(18) &lt;&lt; left &lt;&lt; name
-           &lt;&lt; setprecision(2) &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; right
-           &lt;&lt; average &lt;&lt; "     "
-           &lt;&lt; minimum &lt;&lt; "    "
-           &lt;&lt; setw(3) &lt;&lt; right &lt;&lt; maximum &lt;&lt; endl;
+      <span class="c1">// Output average for student</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">left</span> <span class="o">&lt;&lt;</span> <span class="n">name</span>
+           <span class="o">&lt;&lt;</span> <span class="n">setprecision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">fixed</span> <span class="o">&lt;&lt;</span> <span class="n">showpoint</span> <span class="o">&lt;&lt;</span> <span class="n">right</span>
+           <span class="o">&lt;&lt;</span> <span class="n">average</span> <span class="o">&lt;&lt;</span> <span class="s">"     "</span>
+           <span class="o">&lt;&lt;</span> <span class="n">minimum</span> <span class="o">&lt;&lt;</span> <span class="s">"    "</span>
+           <span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">right</span> <span class="o">&lt;&lt;</span> <span class="n">maximum</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    }
+    <span class="p">}</span>
 
-    // Close the file
-    inputFile.close();
+    <span class="c1">// Close the file</span>
+    <span class="n">inputFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
 
-    cout &lt;&lt; "-------------------------------------" &lt;&lt; endl;
-    cout &lt;&lt; "Overall Average:  " &lt;&lt; ProcessOverall(total) &lt;&lt; endl &lt;&lt; endl;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"-------------------------------------"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Overall Average:  "</span> <span class="o">&lt;&lt;</span> <span class="n">ProcessOverall</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-  }
-  else {
-    cout &lt;&lt; "Unable to open file";
-  }
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Unable to open file"</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  return 0;
-}
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-void ProcessARow(int first, int second, int third, double&amp; avg, int&amp; minimum, int&amp; maximum) {
-  int sum;
-  sum = first + second + third;
-  avg = sum / 3.0;
-  maximum = max(max(first, second), third);
-  minimum = min(min(first, second), third);
-}
+<span class="kt">void</span> <span class="nf">ProcessARow</span><span class="p">(</span><span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">second</span><span class="p">,</span> <span class="kt">int</span> <span class="n">third</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span> <span class="n">avg</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">minimum</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">maximum</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="n">sum</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span> <span class="o">+</span> <span class="n">third</span><span class="p">;</span>
+  <span class="n">avg</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">;</span>
+  <span class="n">maximum</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">),</span> <span class="n">third</span><span class="p">);</span>
+  <span class="n">minimum</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">),</span> <span class="n">third</span><span class="p">);</span>
+<span class="p">}</span>
 
-double ProcessOverall(double avgs) {
-  return avgs / 6.0;
-}</pre><div class="listing-filename">&#128196; Lab1_Program2.cpp</div><pre class="code">#lang racket
-</pre>
+<span class="kt">double</span> <span class="nf">ProcessOverall</span><span class="p">(</span><span class="kt">double</span> <span class="n">avgs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">avgs</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table></div></div><div class="filebox"><div class="filename" decode="exclude">Lab1_Program2.cpp</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="kn">#lang </span><span class="nn">racket</span>
+</pre></div>
+</td></tr></tbody></table></div></div>
         </article>
         <footer class="main">
             <ul>
                 <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
-                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"> <b>Github</b></a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"><b>Github</b></a></li>
             </ul>
         </footer>
     </body>

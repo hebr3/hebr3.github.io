@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CS231-Assignment1</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>CS231-Assignment1</h1>
+                <p>Scribbled <a href="/posts\cs231-test-question.html" class="permlink"><time datetime="2017-03-15">Wednesday, March 15th, 2017</time></a>
+                </p>
+                <ul>
+                <li><a href="/topics.html#CS231">#CS231</a></li><li><a href="/topics.html#Assembly">#Assembly</a></li></ul>
+            </header>
+
+<p>I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked.</p><p>I found that I forgot a lot of little helper functions, like printing spaces between array elements, however I feel that the overall code was correct.</p><p>The design spec for the problem was to create a program that would ask the user to input data into two arrays. You were then supposed to create a third array that was made by adding or subtracting the values of the two initial arrays based on the index number of the element.</p><p><code>C[i] = A[i] - B[i]</code>, if <code>i</code> is odd, else <code>C[i] = A[i] + B[i]</code></p><p>To finish the program off you print the new array.</p><div class="filebox"><div class="filename" decode="exclude">test.asm</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="na">.data</span>
+<span class="nl">A:</span>	<span class="na">.space</span>	<span class="mi">40</span>
+<span class="nl">B:</span>	<span class="na">.space</span>	<span class="mi">40</span>
+<span class="nl">C:</span>	<span class="na">.space</span>	<span class="mi">40</span>
+<span class="nl">space:</span>	<span class="na">.asciiz</span> <span class="s">" "</span>
+<span class="nl">nl:</span>	<span class="na">.asciiz</span> <span class="s">"\n"</span>
+
+<span class="na">.text</span>
+<span class="nl">main:</span>
+        <span class="nf">la</span>	<span class="no">$s0</span><span class="p">,</span> <span class="no">A</span>		<span class="c"># save pointers to A, B, C</span>
+        <span class="nf">la</span>	<span class="no">$s1</span><span class="p">,</span> <span class="no">B</span>
+        <span class="nf">la</span>	<span class="no">$s2</span><span class="p">,</span> <span class="no">C</span>
+
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass pointer to Create</span>
+        <span class="nf">jal</span>	<span class="no">Create</span>
+
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">jal</span>	<span class="no">Create</span>
+
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">add</span>	<span class="no">$a1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">add</span>	<span class="no">$a2</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">jal</span>	<span class="no">Create_Array_C</span>
+
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">jal</span>	<span class="no">Print</span>
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">jal</span>	<span class="no">Print</span>
+        <span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">jal</span>	<span class="no">Print</span>
+
+
+<span class="nl">exit:</span>
+        <span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">10</span>
+        <span class="nf">syscall</span>
+
+<span class="c">#-------</span>
+<span class="nl">Create:</span>
+        <span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>
+
+
+<span class="nl">Create_Loop:</span>
+        <span class="nf">beq</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Create_Done</span>
+        <span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
+        <span class="nf">syscall</span>
+        <span class="nf">add</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>
+
+        <span class="nf">sw</span>	<span class="no">$t2</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
+        <span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span>
+        <span class="nf">j</span>	<span class="no">Create_Loop</span>
+
+<span class="nl">Create_Done:</span>
+        <span class="nf">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#-------</span>
+<span class="nl">Print:</span>
+        <span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>
+
+<span class="nl">Print_Loop:</span>
+        <span class="nf">beq</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Print_Done</span>
+        <span class="nf">lw</span>	<span class="no">$a0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
+        <span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="nf">syscall</span>
+
+        <span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">space</span>
+        <span class="nf">syscall</span>
+
+        <span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span>
+        <span class="nf">j</span>	<span class="no">Print_Loop</span>
+
+<span class="nl">Print_Done:</span>
+        <span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">nl</span>
+        <span class="nf">syscall</span>
+        <span class="nf">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#------</span>
+<span class="nl">Create_Array_C:</span>
+        <span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">add</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$a1</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">add</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$a2</span><span class="p">,</span> <span class="no">$0</span>
+        <span class="nf">li</span>	<span class="no">$t3</span><span class="p">,</span> <span class="mi">4</span>
+
+<span class="nl">Create_Array_C_Loop:</span>
+        <span class="nf">beq</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Create_Array_C_Done</span>
+        <span class="nf">lw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
+        <span class="nf">lw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
+        <span class="nf">sub</span>	<span class="no">$t6</span><span class="p">,</span> <span class="no">$t4</span><span class="p">,</span> <span class="no">$t5</span>
+        <span class="nf">sw</span>	<span class="no">$t6</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
+        <span class="nf">lw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
+        <span class="nf">lw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
+        <span class="nf">add</span>	<span class="no">$t6</span><span class="p">,</span> <span class="no">$t4</span><span class="p">,</span> <span class="no">$t5</span>
+        <span class="nf">sw</span>	<span class="no">$t6</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
+        <span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">8</span>
+        <span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="mi">8</span>
+        <span class="nf">addi</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$t2</span><span class="p">,</span> <span class="mi">8</span>
+        <span class="nf">addi</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="p">-</span><span class="mi">2</span>
+        <span class="nf">j</span>	<span class="no">Create_Array_C_Loop</span>
+
+<span class="nl">Create_Array_C_Done:</span>
+        <span class="nf">jr</span>	<span class="no">$ra</span>
+</pre></div>
+</td></tr></tbody></table></div></div>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"><b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -35,7 +35,7 @@ Jane               93.00
 ------------------------------
 Overall Average:   89.16}
 
-◊blockcode[#:filename "Lab1_Program1.cpp"]{
+◊filebox-highlight["Lab1_Program1.cpp" 'c++]{
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -108,7 +108,7 @@ double ProcessOverall(double avgs) {
 }
 }
 
-◊blockcode[#:filename "Lab1_Program2.cpp"]{
+◊filebox-highlight["Lab1_Program2.cpp" 'racket]{
 #lang racket
 
 }

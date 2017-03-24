@@ -55,7 +55,7 @@ The minimum element of the array is 10
 
 Enter an integer value to search for: True}
 
-◊blockcode[#:filename "Lab1_Program3.cpp"]{
+◊filebox-highlight["Lab1_Program3.cpp" 'c++]{
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -217,7 +217,7 @@ bool KeySearch(int num, int arr[10]) {
 }
 }
 
-◊blockcode[#:filename "Lab1_Program2.cpp"]{
+◊filebox-highlight["Lab1_Program2.cpp" 'racket]{
 #lang racket
 
 }

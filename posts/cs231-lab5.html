@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CS231-Lab4</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>CS231-Lab4</h1>
+                <p>Scribbled <a href="/posts\cs231-lab5.html" class="permlink"><time datetime="2017-02-06">Monday, February 6th, 2017</time></a>
+                </p>
+                <ul>
+                <li><a href="/topics.html#CS231">#CS231</a></li><li><a href="/topics.html#Assembly">#Assembly</a></li></ul>
+            </header>
+
+<div class="filebox"><div class="filename" decode="exclude">Lab5.asm</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="c">## Henry Brooks</span>
+
+                <span class="na">.data</span>
+<span class="nl">arry:</span>		<span class="na">.word</span>		<span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+
+<span class="nl">space:</span>  	<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
+<span class="nl">header1:</span>	<span class="na">.asciiz</span> 	<span class="s">"======================================================================\n"</span>
+<span class="nl">header2:</span>	<span class="na">.asciiz</span> 	<span class="s">"Program Description: \tThis program asks a user how many numbers they\n\t\t\tadd to an array, then returns the array in reverse order\n"</span>
+<span class="nl">header3:</span>	<span class="na">.asciiz</span> 	<span class="s">"Author:              \tHenry Brooks\n"</span>
+<span class="nl">header4:</span>	<span class="na">.asciiz</span> 	<span class="s">"Creation Date:       \t02/06/2017\n"</span>
+<span class="nl">header5:</span>	<span class="na">.asciiz</span> 	<span class="s">"======================================================================\n"</span>
+
+<span class="nl">nl:</span>		<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
+
+<span class="nl">query1:</span>		<span class="na">.asciiz</span>		<span class="s">"Enter the number of elements:\n"</span>
+<span class="nl">query2:</span>		<span class="na">.asciiz</span>		<span class="s">"Enter number "</span>
+<span class="nl">query3:</span>		<span class="na">.asciiz</span>		<span class="s">":\t"</span>
+<span class="nl">badcount1:</span>	<span class="na">.asciiz</span>		<span class="s">"Error array can&#39;t have more than 10 elements, try again!!\n"</span>
+<span class="nl">badcount2:</span>	<span class="na">.asciiz</span>		<span class="s">"Error array can&#39;t have less than 1 element\n"</span>
+<span class="nl">return:</span>		<span class="na">.asciiz</span>		<span class="s">"The content of array in reverse order is:\n"</span>
+
+                <span class="na">.text</span>
+<span class="nl">main:</span>
+<span class="c">################### Print header information</span>
+                <span class="nf">li</span> 			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+                <span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
+                <span class="nf">syscall</span>
+                <span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header2</span>
+                <span class="nf">syscall</span>
+                <span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header3</span>
+                <span class="nf">syscall</span>
+                <span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header4</span>
+                <span class="nf">syscall</span>
+                <span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header5</span>
+                <span class="nf">syscall</span>
+
+<span class="c">################### Print query</span>
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query1</span>
+                <span class="nf">syscall</span>
+
+<span class="nl">main2:</span>
+<span class="c">################### Take user input</span>
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
+                <span class="nf">syscall</span>
+
+<span class="c">################### Check that input is valid</span>
+                <span class="nf">ble</span>			<span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">badInputLo</span>
+                <span class="nf">addi</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">10</span>
+                <span class="nf">bgt</span>			<span class="no">$v0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="no">badInputHi</span>
+
+<span class="c">################## If input is good set $s0 to $v0</span>
+                <span class="nf">addi</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="mi">0</span>		<span class="c"># lengthOfArray</span>
+
+<span class="c">################### Initialize $s1 to 0</span>
+                <span class="nf">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">0</span>		<span class="c"># counter</span>
+                <span class="nf">lw</span>			<span class="no">$t1</span><span class="p">,</span> <span class="no">arry</span>		<span class="c"># pointer</span>
+
+<span class="c">################### Loop to collect inputs from user</span>
+<span class="c">################### if ( count == value) break</span>
+<span class="c">###################   else array[count] = input</span>
+<span class="c">###################        count++</span>
+<span class="c">###################        loop</span>
+
+<span class="nl">read_loop:</span>	<span class="nf">beq</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">exit</span>		<span class="c"># pointer is at end</span>
+
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query2</span>		<span class="c"># load "enter number " message</span>
+                <span class="nf">syscall</span>						<span class="c"># print message</span>
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print intger</span>
+                <span class="nf">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load count</span>
+                <span class="nf">addi</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="mi">1</span>		<span class="c"># increment for printing</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query3</span>		<span class="c"># load ":\t"</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>			<span class="c"># load user input program</span>
+                <span class="nf">syscall</span>						<span class="c"># get user input, (cin)</span>
+
+                <span class="nf">addi</span>			<span class="no">$t7</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="mi">0</span>
+
+                <span class="nf">sw</span>			<span class="no">$t7</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="mi">1</span>
+                <span class="nf">j</span> 			<span class="no">read_loop</span>
+
+
+<span class="c">#################### Loop to read off the elements of the array</span>
+<span class="c">#print_loop:</span>
+<span class="c">#		beq			$t2, $0, end	# check array end</span>
+<span class="c">#</span>
+<span class="c">#		lw			$a0, ($t1)</span>
+<span class="c">#		li			$v0, 1</span>
+<span class="c">#		syscall</span>
+<span class="c">#</span>
+<span class="c">#		li			$v0, 4</span>
+<span class="c">#		syscall</span>
+<span class="c">#</span>
+<span class="c">#		addi			$t2, $t2, -1</span>
+<span class="c">#		addi			$t1, $t1, -4</span>
+<span class="c">#		j	print_loop	# ret</span>
+
+
+<span class="c">#################### User input for count is less than or equal to 0</span>
+<span class="nl">badInputLo:</span>	<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">badcount2</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">j</span>			<span class="no">main2</span>
+
+<span class="c">#################### User input for count is less than or equal to 0</span>
+<span class="nl">badInputHi:</span>	<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">badcount1</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">j</span>			<span class="no">main2</span>
+
+<span class="c">#################### exit from program</span>
+<span class="nl">exit:</span>		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">return</span>		<span class="c"># load answer message</span>
+                <span class="nf">syscall</span>						<span class="c"># print answer message</span>
+
+                <span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
+                <span class="nf">syscall</span>
+
+                <span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+                <span class="nf">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load sum</span>
+                <span class="nf">syscall</span>						<span class="c"># print sum</span>
+</pre></div>
+</td></tr></tbody></table></div></div>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"><b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
