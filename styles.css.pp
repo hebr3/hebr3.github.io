@@ -149,7 +149,7 @@ h2 code, h3 code {
 
 p, ul, ol, pre, table, blockquote {
     margin-top: 0em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -266,7 +266,7 @@ header.main a.home {
 }
 
 nav {
-    padding-bottom: 1.5em;
+    padding-bottom: 0.5em;
 }
 
 nav ul {
@@ -530,8 +530,8 @@ code {
 pre.code, article table {
     font-size: .75em;
     line-height: 1.6em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     width: 100%;
 }
 
