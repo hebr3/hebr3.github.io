@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="gridded">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Memoization in Racket</title>
+        <link rel="stylesheet" href="/styles.css" media="screen">
+                <script type="text/javascript"
+                  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <script type="text/x-mathjax-config">
+                  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+                </script>
+    </head>
+    <body>
+        <header class="main">
+            <p><a href="/index.html" class="home">Henry Brooks</a></p>
+            <nav>
+                <ul>
+                    <li><a href="/topics.html">Topics</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <header>
+                <h1>Memoization in Racket</h1>
+                <p>Scribbled <a href="/posts\racket-memorized-function.html" class="permlink"><time datetime="2017-04-1">Saturday, April 1st, 2017</time></a>
+                </p>
+                <ul>
+                <li><a href="/topics.html#Racket">#Racket</a></li><li><a href="/topics.html#Dynamic Programming">#Dynamic Programming</a></li><li><a href="/topics.html#Memoization">#Memoization</a></li></ul>
+            </header>
+
+<p>After working on <a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"><code>totalOnes</code></a> last week I thought I would explore how I could implement memoization in racket. Working off an example I found <a href="http://rayhightower.com/blog/2014/04/12/recursion-and-memoization/">here</a> I converted the standard definition of the fibonacci equation into an iterated form and a memoization form.</p><div class="filebox"><div class="filename" decode="exclude">Fib</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">fib</span> <span class="n">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond</span> <span class="p">[(</span><span class="nb">=</span> <span class="mi">0</span> <span class="n">n</span><span class="p">)</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="p">[(</span><span class="nb">=</span> <span class="mi">1</span> <span class="n">n</span><span class="p">)</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">fib</span> <span class="p">(</span><span class="nb">-</span> <span class="n">n</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="n">fib</span> <span class="p">(</span><span class="nb">-</span> <span class="n">n</span> <span class="mi">2</span><span class="p">)))]))</span>
+
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">fib2</span> <span class="n">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">fib2-iter</span> <span class="mi">0</span> <span class="mi">1</span> <span class="n">n</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">fib2-iter</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond</span> <span class="p">[(</span><span class="nb">=</span> <span class="n">c</span> <span class="mi">0</span><span class="p">)</span> <span class="n">a</span><span class="p">]</span>
+        <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="n">fib2-iter</span> <span class="n">b</span> <span class="p">(</span><span class="nb">+</span> <span class="n">a</span> <span class="n">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">sub1</span> <span class="n">c</span><span class="p">))]))</span>
+
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">fib3</span> <span class="n">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define</span> <span class="n">cache</span> <span class="p">(</span><span class="nb">make-vector</span> <span class="mi">1000</span> <span class="mi">-1</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">vector-set!</span> <span class="n">cache</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">vector-set!</span> <span class="n">cache</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">mfib</span> <span class="n">i</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">=</span> <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">)</span> <span class="mi">-1</span><span class="p">)</span>
+        <span class="p">(</span><span class="nb">vector-set!</span> <span class="n">cache</span> <span class="n">i</span> <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">mfib</span> <span class="p">(</span><span class="nb">-</span> <span class="n">i</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="n">mfib</span> <span class="p">(</span><span class="nb">-</span> <span class="n">i</span> <span class="mi">2</span><span class="p">))))</span>
+        <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+  <span class="p">(</span><span class="n">mfib</span> <span class="n">n</span><span class="p">))</span>
+
+<span class="c1">;(time (fib 40))</span>
+<span class="p">(</span><span class="k">time</span> <span class="p">(</span><span class="n">fib2</span> <span class="mi">400</span><span class="p">))</span>
+<span class="p">(</span><span class="k">time</span> <span class="p">(</span><span class="n">fib3</span> <span class="mi">400</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table></div></div><p>While the standard Fibonacci formula performed as bad as it always does for large values, I was quite suprised by the speed up generated by the memoization method. Memoization uses almost the exact formula for calculating Fibonacci yet it has a speed up that is even with the iterative version into the 10’s of thousands.</p><p>Unfortunately I was never able to find an iterative version of <code>totalOnes</code> code however, there is still a significant increase in speed associated with converting the equation to use memoization.</p><div class="filebox"><div class="filename" decode="exclude">Fib</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="source"><pre><span></span><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">a000788</span> <span class="n">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond</span> <span class="p">[(</span><span class="nb">=</span> <span class="n">n</span> <span class="mi">0</span><span class="p">)</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="k">let</span> <span class="p">([</span><span class="n">n2</span> <span class="p">(</span><span class="nb">quotient</span> <span class="n">n</span> <span class="mi">2</span><span class="p">)])</span>
+                <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">-</span> <span class="n">n</span> <span class="n">n2</span><span class="p">)</span>
+                   <span class="p">(</span><span class="n">a000788</span> <span class="n">n2</span><span class="p">)</span>
+                   <span class="p">(</span><span class="n">a000788</span> <span class="p">(</span><span class="nb">-</span> <span class="n">n</span> <span class="n">n2</span> <span class="mi">1</span><span class="p">))))]))</span>
+
+<span class="p">(</span><span class="k">time</span> <span class="p">(</span><span class="n">a000788</span> <span class="mi">1000000</span><span class="p">))</span>
+<span class="nb">&gt;</span> <span class="n">cpu</span> <span class="n">time:</span> <span class="mi">78</span> <span class="n">real</span> <span class="n">time:</span> <span class="mi">63</span> <span class="n">gc</span> <span class="n">time:</span> <span class="mi">0</span>
+<span class="nb">&gt;</span> <span class="mi">9884999</span>
+
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">a2</span> <span class="n">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define</span> <span class="n">cache</span> <span class="p">(</span><span class="nb">make-vector</span> <span class="p">(</span><span class="nb">add1</span> <span class="n">n</span><span class="p">)</span> <span class="mi">-1</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">vector-set!</span> <span class="n">cache</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">ma</span> <span class="n">i</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">=</span> <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">)</span> <span class="mi">-1</span><span class="p">)</span>
+        <span class="p">(</span><span class="nb">vector-set!</span> <span class="n">cache</span> <span class="n">i</span> <span class="p">(</span><span class="k">let</span> <span class="p">([</span><span class="n">i2</span> <span class="p">(</span><span class="nb">quotient</span> <span class="n">i</span> <span class="mi">2</span><span class="p">)])</span>
+                               <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">-</span> <span class="n">i</span> <span class="n">i2</span><span class="p">)</span>
+                                  <span class="p">(</span><span class="n">ma</span> <span class="n">i2</span><span class="p">)</span>
+                                  <span class="p">(</span><span class="n">ma</span> <span class="p">(</span><span class="nb">-</span> <span class="n">i</span> <span class="n">i2</span> <span class="mi">1</span><span class="p">)))))</span>
+        <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">vector-ref</span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+  <span class="p">(</span><span class="n">ma</span> <span class="n">n</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">time</span> <span class="p">(</span><span class="n">a2</span> <span class="mi">1000000</span><span class="p">))</span>
+<span class="nb">&gt;</span> <span class="n">cpu</span> <span class="n">time:</span> <span class="mi">16</span> <span class="n">real</span> <span class="n">time:</span> <span class="mi">19</span> <span class="n">gc</span> <span class="n">time:</span> <span class="mi">16</span>
+<span class="nb">&gt;</span> <span class="mi">9884999</span>
+</pre></div>
+</td></tr></tbody></table></div></div>
+        </article>
+        <footer class="main">
+            <ul>
+                <li><a href="mailto:brook057@cougars.csusm.edu">brook057@cougars.csusm.edu</a></li>
+                <li>Source code on <a href="https://github.com/hebr3/hebr3.github.io"><b>Github</b></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
