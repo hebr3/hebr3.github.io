@@ -2,7 +2,7 @@
 
 ◊(define-meta title "CodeFights - totalOnes")
 ◊(define-meta published "2017-03-30")
-◊(define-meta topics "CodeFights,Haskell,C++,Dynamic Programming,Memoization")
+◊(define-meta topics "CodeFights, Haskell, C++, Dynamic Programming, Memoization")
 
 ◊(require scribble-math)
 ◊(use-mathjax)

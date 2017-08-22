@@ -2,7 +2,7 @@
 <html lang="en" class="gridded">
     <head>
         <meta charset="utf-8">
-        <meta name="generator" content="Racket 6.8 + Pollen 1.1.1266.881">
+        <meta name="generator" content="Racket 6.10 + Pollen 1.2.1405.591">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CodeFights - totalOnes</title>
         <link rel="stylesheet" href="/styles.css" media="screen">
@@ -27,10 +27,10 @@
         <article>
             <header>
                 <h1>CodeFights - totalOnes</h1>
-                <p>Scribbled <a href="/posts\codefights-memorized-function.html" class="permlink"><time datetime="2017-03-30">Thursday, March 30th, 2017</time></a>
+                <p>Scribbled <a href="/posts/codefights-memorized-function.html" class="permlink"><time datetime="2017-03-30">Thursday, March 30th, 2017</time></a>
                 </p>
                 <ul>
-                <li><a href="/topics.html#CodeFights">#CodeFights</a></li><li><a href="/topics.html#Haskell">#Haskell</a></li><li><a href="/topics.html#C++">#C++</a></li><li><a href="/topics.html#Dynamic Programming">#Dynamic Programming</a></li><li><a href="/topics.html#Memoization">#Memoization</a></li></ul>
+                <li><a href="/topics.html#CodeFights">#CodeFights</a></li><li><a href="/topics.html# Haskell"># Haskell</a></li><li><a href="/topics.html# C++"># C++</a></li><li><a href="/topics.html# Dynamic Programming"># Dynamic Programming</a></li><li><a href="/topics.html# Memoization"># Memoization</a></li></ul>
             </header>
 
 <p>I’ve been working through algorithm challenges on <a href="https://codefights.com/">Code Fights</a> and I found a problem that forced me to learn some new techniques. Specifically I had to utilize <a href="https://en.wikipedia.org/wiki/Memoization">memoization</a> to speed up a <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</a> problem. I have included the description  of the challenge below.</p><h2><a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS">Description </a></h2><p>Given a positive integer <code>k</code>, calculate the total number of <code>1</code>s in the binary representations of all the numbers from <code>1</code> to <code>k</code>, inclusive.</p><p>Example</p><p>For <code>k = 5</code>, the output should be<br/><code>totalOnes(k) = 7</code>.</p><p>1<mathjax>$_{10}$</mathjax> = 1<mathjax>$_2$</mathjax> =&gt; 1<br/>2<mathjax>$_{10}$</mathjax> = 10<mathjax>$_2$</mathjax> =&gt; 1<br/>3<mathjax>$_{10}$</mathjax> = 11<mathjax>$_2$</mathjax> =&gt; 2<br/>4<mathjax>$_{10}$</mathjax> = 100<mathjax>$_2$</mathjax> =&gt; 1<br/>5<mathjax>$_{10}$</mathjax> = 101<mathjax>$_2$</mathjax> =&gt; 2<br/>Thus, the answer is <code>1 + 1 + 2 + 1 + 2 = 7</code>.</p><h2>Version 1</h2><p>Initially I came at this problem utilizing a strictly brute force approach. I generated a list from <code>1 to n</code> and then mapped a function that converted <code>Integer -&gt; Binary -&gt; String</code>. Then I used concat to flatten the list <code>[String] -&gt; String</code>. Finally I filtered the <code>0</code>s out of the <code>String</code> and took the <code>length</code> of the list.</p><div class="filebox"><div class="filename" decode="exclude">totalOnes</div><div class="highlight"><table class="sourcetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1

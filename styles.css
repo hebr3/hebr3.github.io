@@ -852,9 +852,9 @@ font-feature-settings: 'kern' 1;
 
 
 h3.dept {
-    
-    margin-left: 0rem;
-    width: 35rem;
+    
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
     display: block;
     font-family: SourceSansPro-Bold, Cooper Black, Cooper Std, Rockwell Extra Bold, sans-serif;
@@ -870,9 +870,9 @@ font-feature-settings: 'c2sc' 1;
 }
 
 h1 {
-    
-    margin-left: 0rem;
-    width: 35rem;
+    
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
     font-family: SourceSansPro-Regular;
     -moz-font-feature-settings: 'ss04=1';
@@ -890,9 +890,9 @@ font-feature-settings: 'ss04' 1;
 }
 
 div.bigimage {
-    
-    margin-left: 0rem;
-    width: 35rem;
+    
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
     
     width: 39rem;
@@ -901,9 +901,9 @@ div.bigimage {
 }
 
 p {
-  
-    margin-left: 0rem;
-    width: 35rem;
+  
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
   font-size: 1rem;
   margin-bottom: 0.8rem;
@@ -934,9 +934,9 @@ transition-duration: 0.2s;
 
 
 h3.subhead {
-  
-    margin-left: 0rem;
-    width: 35rem;
+  
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
   -moz-font-feature-settings: 'ss04=1', 'c2sc=1';
 -moz-font-feature-settings: 'ss04' 1, 'c2sc' 1;
@@ -957,9 +957,9 @@ h3.foldable:after {
 }
 
 div.payload {
-  
-    margin-left: 0rem;
-    width: 35rem;
+  
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
 }
 
@@ -974,9 +974,9 @@ em, .defined-term {
 }
 
 .highlight {
-    
-    margin-left: 0rem;
-    width: 35rem;
+    
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
     background: #fcfcfc;
     padding: 0.5rem;
@@ -986,9 +986,9 @@ em, .defined-term {
 }
 
 div.filename {
-  
-    margin-left: 0rem;
-    width: 35rem;
+  
+    margin-left: 0rem;
+    width: 35rem;
     margin-right: 0rem;
   padding-bottom: 0.1rem;
   padding-top: 0.1rem;
