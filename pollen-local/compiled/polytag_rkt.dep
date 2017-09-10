@@ -1,1 +1,0 @@
-("6.10" ("bf8ae36a0eb717247a9e135519ba2793203b13f5" . "9faee15e4abca072a817e5f4053d3a415146f456") (collects #"pollen" #"setup.rkt") (collects #"pollen" #"tag.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"syntax.rkt") (collects #"syntax" #"parse.rkt") (indirect collects #"syntax" #"parse" #"private" #"parse-aux.rkt"))
