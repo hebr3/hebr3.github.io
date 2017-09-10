@@ -1,6 +1,7 @@
     Title: Memoization in Racket
     Date: 2017-04-01T00:00:00
     Tags: Racket, Dynamic Programming, Memoization
+    Authors: Henry Brooks
 
 After working on [totalOnes](https://codefights.com/challenge/DgH5cQEgpfu82oBQS) last week I thought I would explore how I could implement memoization in racket. Working off an example I found [here](http://rayhightower.com/blog/2014/04/12/recursion-and-memoization/) I converted the standard definition of the fibonacci equation into an iterated form and a memoization form.
 

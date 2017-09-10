@@ -1,6 +1,7 @@
     Title: Case Study - With Big Data Comes Big Responsibility
     Date: 2017-09-09T00:00:00
     Tags: Case Study, Cybersecurity, MIS522
+    Authors: Henry Brooks
 
 ## Week 2 Case Study
 [With Big Data Comes Big Responsibility](https://hbr.org/2014/11/with-big-data-comes-big-responsibility)

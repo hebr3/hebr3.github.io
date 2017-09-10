@@ -1,5 +1,5 @@
+http://www.example.com/2017/03/codefights-totalones.html
+http://www.example.com/2017/04/memoization-in-racket.html
 http://www.example.com/2017/09/case-study-with-big-data-comes-big-responsibility.html
 http://www.example.com/2017/08/codefights-teamfinder.html
-http://www.example.com/2017/04/memoization-in-racket.html
-http://www.example.com/2017/03/codefights-totalones.html
 http://www.example.com/About.html

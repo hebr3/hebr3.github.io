@@ -1,6 +1,7 @@
     Title: CodeFights - teamFinder
     Date: 2017-08-17T00:00:00
     Tags: CodeFights, Dynamic Programming, Memoization, Python
+    Authors: Henry Brooks
 
 I have been working through problems from [codefights](https://codefights.com) and I found another problem that required [memoization](https://en.wikipedia.org/wiki/Memoization) to complete so I thought I would write up my process solving this problem.
 
