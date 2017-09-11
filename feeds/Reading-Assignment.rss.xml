@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>My Blog: Posts tagged 'Reading Assignment'</title>
+  <description>My Blog: Posts tagged 'Reading Assignment'</description>
+  <link>http://www.example.com/tags/Reading-Assignment.html</link>
+  <lastBuildDate>Sun, 10 Sep 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Sun, 10 Sep 2017 07:00:00 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
+   <link>http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=Reading-Assignment&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-09-mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure-html</guid>
+   <pubDate>Sun, 10 Sep 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h3 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h3&gt;
+
+&lt;h4 id="can-we-make-operating-systems-reliable-and-secure"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/h4&gt;
+
+&lt;p&gt;I feel that the author did a very good job of explaining the issues with current OS design and highlighting how a microkernel can address those issues. I have actually seen a lot of these same issues before when I was looking into Erlang programming. A design goal for Erlang software is fault recovery and tolerance. Erlang is designed for telecommunications work so it initially had the same requirements for uptime and recovery that the author is looking for. However Erlang is a general purpose language and the author wants to bring these concepts into the kernel arena.&lt;/p&gt;
+
+&lt;p&gt;I honestly think that it would be worthwhile for many companies to consider transferring to a microkernel model for their business products. While many small IoT devices run their own dedicated kernel, some are running a version of Linux or Windows 10 IoT. These OSes are overkill for many products and as the article stated, it opens up the product to many more security vulnerabilities than it should. As a specific example we know for the last black hat that many voting machines are actually run on applications running on top of Windows systems. These are the perfect example of a system where there should be clear boundaries between permissions.&lt;/p&gt;
+
+&lt;p&gt;The major issue I see with most companies implementing better security through a microkernel is legacy software. Legacy systems make up a significant portion of code that is currently being run. There are countless stories of programmers being tasked with maintenance or transition of these systems. The business side of the cost benefit analysis is weighted more in favor of fixing issues in the short term. The outlay of resources required to transition a decent sized application to a microkernel isn�t economically feasible for many companies. Related to this is that since no one is really doing this type of work finding people who can is more difficult and costly that it should be.&lt;/p&gt;
+
+&lt;p&gt;Overall I agree with the desire to move more systems to a secure microkernel OS, I just recognize that there are major roadblocks that must be addressed on the business side of the equation.&lt;/p&gt;</description></item></channel></rss>

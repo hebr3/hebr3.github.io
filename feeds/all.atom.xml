@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: My Blog</title>
+ <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
+ <link href="http://www.example.com/index.html" />
+ <id>urn:http-www-example-com:-index-html</id>
+ <updated>2017-09-11T07:00:00Z</updated>
+ <entry>
+  <title type="text">MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy-html</id>
+  <published>2017-09-11T07:00:00Z</published>
+  <updated>2017-09-11T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h2 id="week-4-case-study"&gt;Week 4 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://journals.sagepub.com/doi/abs/10.2307/41166154"&gt;Management&amp;rsquo;s Role in Information Security in a Cyber Economy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure-html</id>
+  <published>2017-09-10T07:00:00Z</published>
+  <updated>2017-09-10T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h3 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h3&gt;
+
+&lt;h4 id="can-we-make-operating-systems-reliable-and-secure"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/h4&gt;
+
+&lt;p&gt;I feel that the author did a very good job of explaining the issues with current OS design and highlighting how a microkernel can address those issues. I have actually seen a lot of these same issues before when I was looking into Erlang programming. A design goal for Erlang software is fault recovery and tolerance. Erlang is designed for telecommunications work so it initially had the same requirements for uptime and recovery that the author is looking for. However Erlang is a general purpose language and the author wants to bring these concepts into the kernel arena.&lt;/p&gt;
+
+&lt;p&gt;I honestly think that it would be worthwhile for many companies to consider transferring to a microkernel model for their business products. While many small IoT devices run their own dedicated kernel, some are running a version of Linux or Windows 10 IoT. These OSes are overkill for many products and as the article stated, it opens up the product to many more security vulnerabilities than it should. As a specific example we know for the last black hat that many voting machines are actually run on applications running on top of Windows systems. These are the perfect example of a system where there should be clear boundaries between permissions.&lt;/p&gt;
+
+&lt;p&gt;The major issue I see with most companies implementing better security through a microkernel is legacy software. Legacy systems make up a significant portion of code that is currently being run. There are countless stories of programmers being tasked with maintenance or transition of these systems. The business side of the cost benefit analysis is weighted more in favor of fixing issues in the short term. The outlay of resources required to transition a decent sized application to a microkernel isn�t economically feasible for many companies. Related to this is that since no one is really doing this type of work finding people who can is more difficult and costly that it should be.&lt;/p&gt;
+
+&lt;p&gt;Overall I agree with the desire to move more systems to a secure microkernel OS, I just recognize that there are major roadblocks that must be addressed on the business side of the equation.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">CodeFights - teamFinder</title>
+  <link rel="alternate" href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-08-codefights-teamfinder-html</id>
+  <published>2017-08-17T07:00:00Z</published>
+  <updated>2017-08-17T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I have been working through problems from &lt;a href="https://codefights.com"&gt;codefights&lt;/a&gt; and I found another problem that required &lt;a href="https://en.wikipedia.org/wiki/Memoization"&gt;memoization&lt;/a&gt; to complete so I thought I would write up my process solving this problem.&lt;/p&gt;&lt;a href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Memoization in Racket</title>
+  <link rel="alternate" href="http://www.example.com/2017/04/memoization-in-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-04-memoization-in-racket-html</id>
+  <published>2017-04-01T07:00:00Z</published>
+  <updated>2017-04-01T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;After working on &lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;totalOnes&lt;/a&gt; last week I thought I would explore how I could implement memoization in racket. Working off an example I found &lt;a href="http://rayhightower.com/blog/2014/04/12/recursion-and-memoization/"&gt;here&lt;/a&gt; I converted the standard definition of the fibonacci equation into an iterated form and a memoization form.&lt;/p&gt;&lt;a href="http://www.example.com/2017/04/memoization-in-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CodeFights - totalOnes</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-codefights-totalones-html</id>
+  <published>2017-03-30T07:00:00Z</published>
+  <updated>2017-03-30T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
+
+&lt;h3 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Given a positive integer &lt;code&gt;k&lt;/code&gt;, calculate the total number of &lt;code&gt;1&lt;/code&gt;s in the binary representations of all the numbers from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;k&lt;/code&gt;, inclusive.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Assignment1</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-cs231-assignment1-html</id>
+  <published>2017-03-15T07:00:00Z</published>
+  <updated>2017-03-15T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS211 Lab7</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/cs211-lab7.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-cs211-lab7-html</id>
+  <published>2017-03-05T08:00:00Z</published>
+  <updated>2017-03-05T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I thought I would try a different approach to completing the assignment this week. Usually I modify the example problems and templates to fit the needs of the program.&lt;/p&gt;
+
+&lt;p&gt;This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs211-lab7.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Assignment1</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-cs231-assignment1-html</id>
+  <published>2017-03-02T08:00:00Z</published>
+  <updated>2017-03-02T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.&lt;/p&gt;
+
+&lt;p&gt;This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn&amp;rsquo;t required to do any outside the box thinking here, just put the peices together correctly.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Lab4</title>
+  <link rel="alternate" href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-02-cs231-lab4-html</id>
+  <published>2017-02-06T08:00:00Z</published>
+  <updated>2017-02-06T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Lab4</title>
+  <link rel="alternate" href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-02-cs231-lab4-html</id>
+  <published>2017-02-06T08:00:00Z</published>
+  <updated>2017-02-06T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;This asm program takes a list of numbers from the user and returns the sum of those numbers.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Labs</title>
+  <link rel="alternate" href="http://www.example.com/2017/02/cs231-labs.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-02-cs231-labs-html</id>
+  <published>2017-02-03T08:00:00Z</published>
+  <updated>2017-02-03T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I am currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS231&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; which covers assembly programming for the &lt;a href="https://en.wikipedia.org/wiki/MIPS_instruction_set"&gt;MIPS&lt;/a&gt; architecture.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-labs.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS211 Lab2 in Racket</title>
+  <link rel="alternate" href="http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-02-cs211-lab2-in-racket-html</id>
+  <published>2017-02-03T08:00:00Z</published>
+  <updated>2017-02-03T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;The purpose of this lab is to practice working with vectors.&lt;/p&gt;
+
+&lt;p&gt;Write a program that reads an unknown number of integers from a data file called &amp;ldquo;data.txt&amp;rdquo; into a vector of integers named V. V is initially empty and grows as the user reads data from file.&lt;/p&gt;
+
+&lt;p&gt;Once done copying data into vector V, you need to print the contents of V and perform some other tasks on the vector as described below.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS211 Lab1 Program3 in Racket</title>
+  <link rel="alternate" href="http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-01-cs211-lab1-program3-in-racket-html</id>
+  <published>2017-01-30T08:00:00Z</published>
+  <updated>2017-01-30T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h4 id="program-3"&gt;Program 3&lt;/h4&gt;
+
+&lt;p&gt;Write a program with several functions that perform the following tasks:&lt;/p&gt;
+
+&lt;p&gt;a. Read the following 10 integer numbers from the file data.txt into array A.  10 15 27 89 90 95 27 13 99 33  Call function ReadArray that reads numbers from the file data.txt into an array.&lt;/p&gt;
+
+&lt;p&gt;b. Copy array A into array B in reverse order. Call function ReverseArray that copies an array into another array in reverse order&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS211 Lab1 Program2 in Racket</title>
+  <link rel="alternate" href="http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-01-cs211-lab1-program2-in-racket-html</id>
+  <published>2017-01-27T08:00:00Z</published>
+  <updated>2017-01-27T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h4 id="program-2"&gt;Program 2&lt;/h4&gt;
+
+&lt;p&gt;Write a program that reads test scores of students in a programming class from an input file, data.txt, and calculates the minimum, maximum, average test score for each student as well as the overall average score for the class. Each row of the file contains student name (no spaces), and 3 scores for test 1, test 2, and test 3, respectively.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS211 Lab1 Program1 in Racket</title>
+  <link rel="alternate" href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-01-cs211-lab1-program1-in-racket-html</id>
+  <published>2017-01-25T08:00:00Z</published>
+  <updated>2017-01-25T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;m currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS211&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; and I thought it would be interesting to try re-writing the labs in &lt;a href="https://racket-lang.org"&gt;Racket&lt;/a&gt; after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

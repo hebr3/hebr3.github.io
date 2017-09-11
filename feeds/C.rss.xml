@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>My Blog: Posts tagged 'C++'</title>
+  <description>My Blog: Posts tagged 'C++'</description>
+  <link>http://www.example.com/tags/C.html</link>
+  <lastBuildDate>Thu, 30 Mar 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Thu, 30 Mar 2017 07:00:00 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>CodeFights - totalOnes</title>
+   <link>http://www.example.com/2017/03/codefights-totalones.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-03-codefights-totalones-html</guid>
+   <pubDate>Thu, 30 Mar 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
+
+&lt;h3 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Given a positive integer &lt;code&gt;k&lt;/code&gt;, calculate the total number of &lt;code&gt;1&lt;/code&gt;s in the binary representations of all the numbers from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;k&lt;/code&gt;, inclusive.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>CS211 Lab7</title>
+   <link>http://www.example.com/2017/03/cs211-lab7.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-03-cs211-lab7-html</guid>
+   <pubDate>Sun, 05 Mar 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;I thought I would try a different approach to completing the assignment this week. Usually I modify the example problems and templates to fit the needs of the program.&lt;/p&gt;
+
+&lt;p&gt;This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs211-lab7.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>CS211 Lab2 in Racket</title>
+   <link>http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-02-cs211-lab2-in-racket-html</guid>
+   <pubDate>Fri, 03 Feb 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;The purpose of this lab is to practice working with vectors.&lt;/p&gt;
+
+&lt;p&gt;Write a program that reads an unknown number of integers from a data file called &amp;ldquo;data.txt&amp;rdquo; into a vector of integers named V. V is initially empty and grows as the user reads data from file.&lt;/p&gt;
+
+&lt;p&gt;Once done copying data into vector V, you need to print the contents of V and perform some other tasks on the vector as described below.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>CS211 Lab1 Program3 in Racket</title>
+   <link>http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-01-cs211-lab1-program3-in-racket-html</guid>
+   <pubDate>Mon, 30 Jan 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h4 id="program-3"&gt;Program 3&lt;/h4&gt;
+
+&lt;p&gt;Write a program with several functions that perform the following tasks:&lt;/p&gt;
+
+&lt;p&gt;a. Read the following 10 integer numbers from the file data.txt into array A.  10 15 27 89 90 95 27 13 99 33  Call function ReadArray that reads numbers from the file data.txt into an array.&lt;/p&gt;
+
+&lt;p&gt;b. Copy array A into array B in reverse order. Call function ReverseArray that copies an array into another array in reverse order&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>CS211 Lab1 Program2 in Racket</title>
+   <link>http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-01-cs211-lab1-program2-in-racket-html</guid>
+   <pubDate>Fri, 27 Jan 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h4 id="program-2"&gt;Program 2&lt;/h4&gt;
+
+&lt;p&gt;Write a program that reads test scores of students in a programming class from an input file, data.txt, and calculates the minimum, maximum, average test score for each student as well as the overall average score for the class. Each row of the file contains student name (no spaces), and 3 scores for test 1, test 2, and test 3, respectively.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>CS211 Lab1 Program1 in Racket</title>
+   <link>http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=C&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-01-cs211-lab1-program1-in-racket-html</guid>
+   <pubDate>Wed, 25 Jan 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;m currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS211&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; and I thought it would be interesting to try re-writing the labs in &lt;a href="https://racket-lang.org"&gt;Racket&lt;/a&gt; after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=C&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>

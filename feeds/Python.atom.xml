@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: Posts tagged 'Python'</title>
+ <link rel="self" href="http://www.example.com/feeds/Python.atom.xml" />
+ <link href="http://www.example.com/tags/Python.html" />
+ <id>urn:http-www-example-com:-tags-Python-html</id>
+ <updated>2017-08-17T07:00:00Z</updated>
+ <entry>
+  <title type="text">CodeFights - teamFinder</title>
+  <link rel="alternate" href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Python&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-08-codefights-teamfinder-html</id>
+  <published>2017-08-17T07:00:00Z</published>
+  <updated>2017-08-17T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I have been working through problems from &lt;a href="https://codefights.com"&gt;codefights&lt;/a&gt; and I found another problem that required &lt;a href="https://en.wikipedia.org/wiki/Memoization"&gt;memoization&lt;/a&gt; to complete so I thought I would write up my process solving this problem.&lt;/p&gt;&lt;a href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Python&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
