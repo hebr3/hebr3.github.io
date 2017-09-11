@@ -1,5 +1,15 @@
+http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html
+http://www.example.com/2017/02/cs231-labs.html
+http://www.example.com/2017/03/cs211-lab7.html
+http://www.example.com/2017/03/cs231-assignment1.html
+http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html
 http://www.example.com/2017/03/codefights-totalones.html
-http://www.example.com/2017/04/memoization-in-racket.html
-http://www.example.com/2017/09/case-study-with-big-data-comes-big-responsibility.html
+http://www.example.com/2017/02/cs231-lab4.html
+http://www.example.com/2017/02/cs211-lab2-in-racket.html
 http://www.example.com/2017/08/codefights-teamfinder.html
+http://www.example.com/2017/03/cs231-assignment1.html
+http://www.example.com/2017/04/memoization-in-racket.html
+http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html
+http://www.example.com/2017/02/cs231-lab4.html
+http://www.example.com/2017/09/case-study-with-big-data-comes-big-responsibility.html
 http://www.example.com/About.html
