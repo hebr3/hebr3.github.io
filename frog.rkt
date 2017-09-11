@@ -6,7 +6,7 @@
   (-> any)
   (current-scheme/host "http://www.example.com")
   (current-title "My Blog")
-  (current-author "The Unknown Author"))
+  (current-author "Henry Brooks"))
 
 ;; Called once per post and non-post page, on the contents.
 (define/contract (enhance-body xs)

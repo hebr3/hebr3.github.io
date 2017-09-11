@@ -1,6 +1,6 @@
     Title: MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy
     Date: 2017-09-11T00:00:00
-    Tags: Case Study, Cybersecurity, MIS522
+    Tags: Case Study, Cybersecurity, MIS522, DRAFT
     Authors: Henry Brooks
 	
 ## Week 4 Case Study

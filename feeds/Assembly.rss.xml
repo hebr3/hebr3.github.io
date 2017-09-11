@@ -16,6 +16,16 @@
    <description>
 &lt;p&gt;I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
+   <title>ASM-DSL</title>
+   <link>http://www.example.com/2017/03/asm-dsl.html?utm_source=Assembly&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-03-asm-dsl-html</guid>
+   <pubDate>Sat, 11 Mar 2017 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;I have been thinking about all of the boilerplate code that I keep writing in my assembly class and I decide to start looking into creating a simple &lt;a href="https://en.wikipedia.org/wiki/Domain-specific_language"&gt;DSL&lt;/a&gt; to assist with my code writing.&lt;/p&gt;
+
+&lt;p&gt;Mostly I am looking to simplify code blocks that have easy &lt;code&gt;c++&lt;/code&gt; analogs. Specifically &lt;code&gt;cin&lt;/code&gt;, &lt;code&gt;cout&lt;/code&gt;, and assignment (&lt;code&gt;=&lt;/code&gt;).&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/asm-dsl.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
    <title>CS231 Assignment1</title>
    <link>http://www.example.com/2017/03/cs231-assignment1.html?utm_source=Assembly&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:http-www-example-com:-2017-03-cs231-assignment1-html</guid>
@@ -32,7 +42,7 @@
    <pubDate>Mon, 06 Feb 2017 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;This asm program takes a list of numbers from the user and returns the sum of those numbers.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>CS231 Lab4</title>
    <link>http://www.example.com/2017/02/cs231-lab4.html?utm_source=Assembly&amp;utm_medium=RSS</link>
@@ -40,7 +50,7 @@
    <pubDate>Mon, 06 Feb 2017 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;This asm program takes a list of numbers from the user and returns the sum of those numbers.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Assembly&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>CS231 Labs</title>
    <link>http://www.example.com/2017/02/cs231-labs.html?utm_source=Assembly&amp;utm_medium=RSS</link>

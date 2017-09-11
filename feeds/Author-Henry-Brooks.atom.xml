@@ -4,21 +4,7 @@
  <link rel="self" href="http://www.example.com/feeds/Author-Henry-Brooks.atom.xml" />
  <link href="http://www.example.com/tags/Author-Henry-Brooks.html" />
  <id>urn:http-www-example-com:-tags-Author-Henry-Brooks-html</id>
- <updated>2017-09-11T07:00:00Z</updated>
- <entry>
-  <title type="text">MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
-  <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2017-09-mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy-html</id>
-  <published>2017-09-11T07:00:00Z</published>
-  <updated>2017-09-11T07:00:00Z</updated>
-  <author>
-   <name>Henry Brooks</name></author>
-  <content type="html">
-&lt;h2 id="week-4-case-study"&gt;Week 4 Case Study&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://journals.sagepub.com/doi/abs/10.2307/41166154"&gt;Management&amp;rsquo;s Role in Information Security in a Cyber Economy&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;</content></entry>
+ <updated>2017-09-10T07:00:00Z</updated>
  <entry>
   <title type="text">MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
   <link rel="alternate" href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
@@ -30,15 +16,21 @@
   <content type="html">
 &lt;h3 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h3&gt;
 
-&lt;h4 id="can-we-make-operating-systems-reliable-and-secure"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">MIS522 Case Study 1 - With Big Data Comes Big Responsibility</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mis522-case-study-1-with-big-data-comes-big-responsibility-html</id>
+  <published>2017-09-09T07:00:00Z</published>
+  <updated>2017-09-09T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h2 id="week-2-case-study"&gt;Week 2 Case Study&lt;/h2&gt;
 
-&lt;p&gt;I feel that the author did a very good job of explaining the issues with current OS design and highlighting how a microkernel can address those issues. I have actually seen a lot of these same issues before when I was looking into Erlang programming. A design goal for Erlang software is fault recovery and tolerance. Erlang is designed for telecommunications work so it initially had the same requirements for uptime and recovery that the author is looking for. However Erlang is a general purpose language and the author wants to bring these concepts into the kernel arena.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hbr.org/2014/11/with-big-data-comes-big-responsibility"&gt;With Big Data Comes Big Responsibility&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I honestly think that it would be worthwhile for many companies to consider transferring to a microkernel model for their business products. While many small IoT devices run their own dedicated kernel, some are running a version of Linux or Windows 10 IoT. These OSes are overkill for many products and as the article stated, it opens up the product to many more security vulnerabilities than it should. As a specific example we know for the last black hat that many voting machines are actually run on applications running on top of Windows systems. These are the perfect example of a system where there should be clear boundaries between permissions.&lt;/p&gt;
-
-&lt;p&gt;The major issue I see with most companies implementing better security through a microkernel is legacy software. Legacy systems make up a significant portion of code that is currently being run. There are countless stories of programmers being tasked with maintenance or transition of these systems. The business side of the cost benefit analysis is weighted more in favor of fixing issues in the short term. The outlay of resources required to transition a decent sized application to a microkernel isn�t economically feasible for many companies. Related to this is that since no one is really doing this type of work finding people who can is more difficult and costly that it should be.&lt;/p&gt;
-
-&lt;p&gt;Overall I agree with the desire to move more systems to a secure microkernel OS, I just recognize that there are major roadblocks that must be addressed on the business side of the equation.&lt;/p&gt;</content></entry>
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CodeFights - teamFinder</title>
   <link rel="alternate" href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
@@ -84,6 +76,18 @@
   <content type="html">
 &lt;p&gt;I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
+  <title type="text">ASM-DSL</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/asm-dsl.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-asm-dsl-html</id>
+  <published>2017-03-11T08:00:00Z</published>
+  <updated>2017-03-11T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I have been thinking about all of the boilerplate code that I keep writing in my assembly class and I decide to start looking into creating a simple &lt;a href="https://en.wikipedia.org/wiki/Domain-specific_language"&gt;DSL&lt;/a&gt; to assist with my code writing.&lt;/p&gt;
+
+&lt;p&gt;Mostly I am looking to simplify code blocks that have easy &lt;code&gt;c++&lt;/code&gt; analogs. Specifically &lt;code&gt;cin&lt;/code&gt;, &lt;code&gt;cout&lt;/code&gt;, and assignment (&lt;code&gt;=&lt;/code&gt;).&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/asm-dsl.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
   <title type="text">CS211 Lab7</title>
   <link rel="alternate" href="http://www.example.com/2017/03/cs211-lab7.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
   <id>urn:http-www-example-com:-2017-03-cs211-lab7-html</id>
@@ -116,7 +120,7 @@
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;p&gt;This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;This asm program takes a list of numbers from the user and returns the sum of those numbers.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CS231 Lab4</title>
   <link rel="alternate" href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
@@ -126,17 +130,7 @@
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;p&gt;This asm program takes a list of numbers from the user and returns the sum of those numbers.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
- <entry>
-  <title type="text">CS231 Labs</title>
-  <link rel="alternate" href="http://www.example.com/2017/02/cs231-labs.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2017-02-cs231-labs-html</id>
-  <published>2017-02-03T08:00:00Z</published>
-  <updated>2017-02-03T08:00:00Z</updated>
-  <author>
-   <name>Henry Brooks</name></author>
-  <content type="html">
-&lt;p&gt;I am currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS231&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; which covers assembly programming for the &lt;a href="https://en.wikipedia.org/wiki/MIPS_instruction_set"&gt;MIPS&lt;/a&gt; architecture.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-labs.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-lab4.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CS211 Lab2 in Racket</title>
   <link rel="alternate" href="http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
@@ -151,6 +145,16 @@
 &lt;p&gt;Write a program that reads an unknown number of integers from a data file called &amp;ldquo;data.txt&amp;rdquo; into a vector of integers named V. V is initially empty and grows as the user reads data from file.&lt;/p&gt;
 
 &lt;p&gt;Once done copying data into vector V, you need to print the contents of V and perform some other tasks on the vector as described below.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs211-lab2-in-racket.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">CS231 Labs</title>
+  <link rel="alternate" href="http://www.example.com/2017/02/cs231-labs.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-02-cs231-labs-html</id>
+  <published>2017-02-03T08:00:00Z</published>
+  <updated>2017-02-03T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I am currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS231&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; which covers assembly programming for the &lt;a href="https://en.wikipedia.org/wiki/MIPS_instruction_set"&gt;MIPS&lt;/a&gt; architecture.&lt;/p&gt;&lt;a href="http://www.example.com/2017/02/cs231-labs.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CS211 Lab1 Program3 in Racket</title>
   <link rel="alternate" href="http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
@@ -188,4 +192,194 @@
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;p&gt;I&amp;rsquo;m currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS211&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; and I thought it would be interesting to try re-writing the labs in &lt;a href="https://racket-lang.org"&gt;Racket&lt;/a&gt; after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
+&lt;p&gt;I&amp;rsquo;m currently taking &lt;a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf"&gt;CS211&lt;/a&gt; at &lt;a href="https://www.csusm.edu/"&gt;CSUSM&lt;/a&gt; and I thought it would be interesting to try re-writing the labs in &lt;a href="https://racket-lang.org"&gt;Racket&lt;/a&gt; after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler problem 13 and 14, with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-11-project-euler-problem-13-and-14-with-haskell-html</id>
+  <published>2015-11-14T08:00:00Z</published>
+  <updated>2015-11-14T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h3 id="problem-13"&gt;Problem 13&lt;/h3&gt;
+
+&lt;p&gt;Another really straight forward problem using infinite lists.&lt;/p&gt;&lt;a href="http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler problem 9 and 10, with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/10/project-euler-problem-9-and-10-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-10-project-euler-problem-9-and-10-with-haskell-html</id>
+  <published>2015-10-31T07:00:00Z</published>
+  <updated>2015-10-31T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h3 id="problem-9"&gt;Problem 9&lt;/h3&gt;
+
+&lt;p&gt;I went through a number of different versions of this program before I was happy with the answer.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-9-and-10-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler problem 8 with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/10/project-euler-problem-8-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-10-project-euler-problem-8-with-haskell-html</id>
+  <published>2015-10-24T07:00:00Z</published>
+  <updated>2015-10-24T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h3 id="problem-8"&gt;Problem 8&lt;/h3&gt;
+
+&lt;p&gt;This problem actually wasn&amp;rsquo;t as bad as I originally thought it would be.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-8-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler problem 5, 6 and 7, with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/10/project-euler-problem-5-6-and-7-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-10-project-euler-problem-5-6-and-7-with-haskell-html</id>
+  <published>2015-10-17T07:00:00Z</published>
+  <updated>2015-10-17T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h3 id="problem-5"&gt;Problem 5&lt;/h3&gt;
+
+&lt;p&gt;I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-5-6-and-7-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler problem 3 and 4, with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-10-project-euler-problem-3-and-4-with-haskell-html</id>
+  <published>2015-10-10T07:00:00Z</published>
+  <updated>2015-10-10T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I have been looking into Haskell more this week and I thought I would continue on with this project for the time being.&lt;/p&gt;
+
+&lt;h3 id="problem-3"&gt;Problem 3&lt;/h3&gt;
+
+&lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Project Euler with Haskell</title>
+  <link rel="alternate" href="http://www.example.com/2015/10/project-euler-with-haskell.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-10-project-euler-with-haskell-html</id>
+  <published>2015-10-03T07:00:00Z</published>
+  <updated>2015-10-03T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;Teaching Algebra A has been more of a slog then I was expecting and I&amp;rsquo;ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the haskell programming language.&lt;/p&gt;
+
+&lt;p&gt;Looking over the Haskell syntax I see a lot of design decisions that align with my mathematic background. I feel that the list comprehensions and mapping functions for lists have a strong mathematical foundation and I think that I will be able to pick up the language quickly.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to try to work through all of the Project Euler problems I completed with Mathematic last year and see if the process is easier or at least clearer this time around.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Daily Desmos - 24 April</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/daily-desmos-24-april.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-daily-desmos-24-april-html</id>
+  <published>2015-04-24T07:00:00Z</published>
+  <updated>2015-04-24T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;div class="figure"&gt;&lt;img src="/img/dd-24apr-a.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Daily Desmos - 24 April - Exploration</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/daily-desmos-24-april-exploration.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-daily-desmos-24-april-exploration-html</id>
+  <published>2015-04-24T07:00:00Z</published>
+  <updated>2015-04-24T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;&lt;a href="http://http://dailydesmos.com/"&gt;Daily Desmos&lt;/a&gt; posted two different examples of warping graphs on April 24. As an experiment I combined both graphs into one to see what they would look like.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/warping-hyperbola-e.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april-exploration.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Daily Desmos - 24 April - Advanced Hyperbola</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-daily-desmos-24-april-advanced-hyperbola-html</id>
+  <published>2015-04-24T07:00:00Z</published>
+  <updated>2015-04-24T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;div class="figure"&gt;&lt;img src="/img/dd-24apr-adv-a.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project - ProjectEuler #40, 44, and 47</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/20-project-projecteuler-40-44-and-47.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-20-project-projecteuler-40-44-and-47-html</id>
+  <published>2015-04-15T07:00:00Z</published>
+  <updated>2015-04-15T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-40-44-and-47.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project - Witch of Agnesi</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-20-project-witch-of-agnesi-html</id>
+  <published>2015-04-12T07:00:00Z</published>
+  <updated>2015-04-12T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I was helping a student in AVID with calculus homework when I confronted with the following problem.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/witcha.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project - ProjectEuler #29</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/20-project-projecteuler-29.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-20-project-projecteuler-29-html</id>
+  <published>2015-04-11T07:00:00Z</published>
+  <updated>2015-04-11T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-29.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project - ProjectEuler #27</title>
+  <link rel="alternate" href="http://www.example.com/2015/04/20-project-projecteuler-27.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-04-20-project-projecteuler-27-html</id>
+  <published>2015-04-11T07:00:00Z</published>
+  <updated>2015-04-11T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;Euler discovered the remarkable quadratic formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;n^2 + n + 41&lt;/code&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-27.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project Update</title>
+  <link rel="alternate" href="http://www.example.com/2015/02/20-project-update.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-02-20-project-update-html</id>
+  <published>2015-02-20T08:00:00Z</published>
+  <updated>2015-02-20T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;Considering Prof. Heil&amp;rsquo;s email I have complied a list of the criteria for my 20% Project.&lt;/p&gt;
+
+&lt;p&gt;For my 20% Project I&amp;rsquo;m going to be learning to write code in &lt;a href="https://www.wolfram.com/mathematica/"&gt;Mathematica&lt;/a&gt; to find solutions for the problems posted on Project Euler.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project-update.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project - CSUSM credential program</title>
+  <link rel="alternate" href="http://www.example.com/2015/02/20-project-csusm-credential-program.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-02-20-project-csusm-credential-program-html</id>
+  <published>2015-02-16T08:00:00Z</published>
+  <updated>2015-02-16T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project-csusm-credential-program.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">20% Project</title>
+  <link rel="alternate" href="http://www.example.com/2015/02/20-project.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2015-02-20-project-html</id>
+  <published>2015-02-16T08:00:00Z</published>
+  <updated>2015-02-16T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C+ during college and I want to expand that knowledge.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

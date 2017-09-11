@@ -4,18 +4,18 @@
  <link rel="self" href="http://www.example.com/feeds/Case-Study.atom.xml" />
  <link href="http://www.example.com/tags/Case-Study.html" />
  <id>urn:http-www-example-com:-tags-Case-Study-html</id>
- <updated>2017-09-11T07:00:00Z</updated>
+ <updated>2017-09-09T07:00:00Z</updated>
  <entry>
-  <title type="text">MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
-  <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=Case-Study&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2017-09-mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy-html</id>
-  <published>2017-09-11T07:00:00Z</published>
-  <updated>2017-09-11T07:00:00Z</updated>
+  <title type="text">MIS522 Case Study 1 - With Big Data Comes Big Responsibility</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Case-Study&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mis522-case-study-1-with-big-data-comes-big-responsibility-html</id>
+  <published>2017-09-09T07:00:00Z</published>
+  <updated>2017-09-09T07:00:00Z</updated>
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;h2 id="week-4-case-study"&gt;Week 4 Case Study&lt;/h2&gt;
+&lt;h2 id="week-2-case-study"&gt;Week 2 Case Study&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="http://journals.sagepub.com/doi/abs/10.2307/41166154"&gt;Management&amp;rsquo;s Role in Information Security in a Cyber Economy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hbr.org/2014/11/with-big-data-comes-big-responsibility"&gt;With Big Data Comes Big Responsibility&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Case-Study&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
