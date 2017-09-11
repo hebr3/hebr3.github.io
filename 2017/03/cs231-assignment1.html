@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>CS231 Assignment1</title>
+    <meta name="description" content="This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.  This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn't required...">
+    <meta name="author"      content="The Unknown Author">
+    <meta name="keywords"    content="CS231, Assembly, Author: Henry Brooks">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/2017/03/cs231-assignment1.html">
+    <link rel="next" href="/2017/02/cs231-lab4.html">
+    <link rel="prev" href="/2017/03/cs211-lab7.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Henry Brooks</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Assembly.html">Assembly</a></li>
+
+<li><a href="/tags/Author-Henry-Brooks.html">Author: Henry Brooks</a></li>
+
+<li><a href="/tags/C.html">C++</a></li>
+
+<li><a href="/tags/Case-Study.html">Case Study</a></li>
+
+<li><a href="/tags/CodeFights.html">CodeFights</a></li>
+
+<li><a href="/tags/CS211.html">CS211</a></li>
+
+<li><a href="/tags/CS231.html">CS231</a></li>
+
+<li><a href="/tags/Cybersecurity.html">Cybersecurity</a></li>
+
+<li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/MCS511.html">MCS511</a></li>
+
+<li><a href="/tags/Memoization.html">Memoization</a></li>
+
+<li><a href="/tags/MIS522.html">MIS522</a></li>
+
+<li><a href="/tags/Python.html">Python</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Reading-Assignment.html">Reading Assignment</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>CS231 Assignment1</h1>
+    <p class='date-and-tags'>
+<time datetime="2017-03-02" pubdate="true">2017-03-02</time> :: <span class="tags"><a href="/tags/CS231.html">CS231</a>, <a href="/tags/Assembly.html">Assembly</a></span></p>
+    <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
+  </header>
+
+<p>This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.</p>
+
+<p>This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn&rsquo;t required to do any outside the box thinking here, just put the peices together correctly.</p>
+<!-- more-->
+
+<p>◊filebox-highlight[&ldquo;Lab5.asm&rdquo; &rsquo;asm]{ #Henry Brooks #CS231 Assignment1 .data array: .word 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 str0: .asciiz &ldquo;Please enter the array length: &rdquo; goodMsg: .asciiz " is a good value in checkNumPositive\n" badMsg: .asciiz " is a bad value in checkNumPositive\n" errorMsg: .asciiz &ldquo;Invalid array length\n&rdquo; invalidMsg: .asciiz &ldquo;Invalid array value\n&rdquo; space: .asciiz " " newline: .asciiz "\n"</p>
+
+<p>.text begin:  la $a0, str0  li $v0, 4  syscall</p>
+
+<pre><code>jal	readNum		# input passed back in $v1
+add	$s0, $v1, $0	# $s0 = arraySize
+
+add	$a0, $s0, $0	# pass arraySize in $a0 to veriftySize
+jal	verifySize
+add	$t0, $v1, $0	# get 1 or 0 back from verifySize
+
+beq	$t0, $0, begin
+
+add	$a0, $s0, $0	# pass arraySize to createArray in $a0
+jal	createArray
+
+add	$a0, $s0, $0	# pass arraySize to printArray in $a0
+jal	printArray
+
+
+add	$a0, $s0, $0	# pass arraySize to reverseArray in $a0
+jal	reverseArray
+
+
+add	$a0, $s0, $0	# pass arraySize to printArray in $a0
+jal	printArray
+</code></pre>
+
+<p>exit:  li $v0, 10  syscall</p>
+
+<h1 id="-int-readnum-returns-and-int">&mdash;&mdash;&mdash;&mdash; int readNum(), returns and int</h1>
+
+<p>readNum:  li $v0, 5  syscall  add $v1, $v0, $0 # pass input back in $v1  jr $ra</p>
+
+<h1 id="-int-verifysizeint-arraysize-returns-0-or-1">&mdash;&mdash;&mdash;&mdash; int verifySize(int arraySize), returns 0 or 1</h1>
+
+<p>verifySize:  add $t0, $a0, $0 # save passed arg (arraySize) to $t0</p>
+
+<pre><code>li	$t1, 20
+bgt	$t0, $t1, verifySizeBad
+ble	$t0, $0, verifySizeBad
+
+li	$v1, 1			# pass 1 back to main in $v1
+jr	$ra
+</code></pre>
+
+<p>verifySizeBad:  la $a0, errorMsg  li $v0, 4  syscall</p>
+
+<pre><code>li	$v1, 0			# pass 0 back to main in $v1
+jr	$ra</code></pre>
+
+<h1 id="-void-createarrayint-arraysize-returns-nothing">&mdash;&mdash;&mdash;&mdash; void createArray(int arraySize), returns nothing</h1>
+
+<p>createArray:  add $s1, $a0, $0 # save passed arg (arraySize) to $s1  sw $ra, 0($sp) # save current $ra to stack</p>
+
+<pre><code>li	$s2, 0			# counter
+la	$s3, array		# create pointer to array[0]
+</code></pre>
+
+<p>createArrayLoop: # arraySize &lt; counter  beq $s1, $s2, createArrayDone</p>
+
+<pre><code>jal	readNum			# int readNum(), returns int in $v1
+add	$s4, $v1, $0	# save arrayEntry to $s4</code></pre>
+
+<h1 id="--int-checknumpositivearrayentry-returns-0-or-1">&mdash;&mdash;- int checkNumPositive(arrayEntry), returns 0 or 1</h1>
+
+<p>add $a0, $s4, $0 # pass arrayEntry to checkNumPositive  jal checkNumPositive  add $t0, $v1, $0 # save return value to $t4, either 0 or 1</p>
+
+<pre><code>beq	$t0, $0, createArrayBad</code></pre>
+
+<h1 id="--int-divisibleby3arrayentry-returns-0-or-1">&mdash;&mdash;- int divisibleBy3(arrayEntry), returns 0 or 1</h1>
+
+<p>add $a0, $s4, $0 # pass arrayEntry to divisibleBy3  jal divisibleBy3  add $t0, $v1, $0 # save return value to $t4, either 0 or 1</p>
+
+<pre><code>beq	$t0, $0, createArrayBad</code></pre>
+
+<h1 id="--if-both-tests-pass-then-save-to-the-array-and-increment-the-counters">&mdash;&mdash;- if both tests pass then save to the array and increment the counters</h1>
+
+<p>sw $s4, 0($s3)</p>
+
+<pre><code>addi	$s3, $s3, 4	# pointer++
+addi	$s2, $s2, 1	# counter--
+j	createArrayLoop
+</code></pre>
+
+<p>createArrayDone:   lw $ra, 0($sp) # load old $ra from stack  jr $ra</p>
+
+<p>createArrayBad:  la $a0, invalidMsg  li $v0, 4  syscall</p>
+
+<pre><code>j	createArrayLoop</code></pre>
+
+<h1 id="-void-reversearrayint-arraysize-returns-nothing">&mdash;&mdash;&mdash;&mdash; void reverseArray(int arraySize), returns nothing</h1>
+
+<p>reverseArray:  add $t0, $a0, $0 # save passed arg (arraySize) to $t0</p>
+
+<pre><code>li		$t1, 4		# set $t1 = 4
+mult	$t0, $t1	# length * 4
+mflo	$t1			# set $t1 = length * 4
+
+la	$t2, array	# set pointer to start of the array
+la	$t3, array
+add	$t3, $t3, $t1
+addi	$t3, $t3, -4	# set pointer to end of the array</code></pre>
+
+<p>reverseArraySwap:  bgt $t2, $t3, reverseArrayDone  lw $t4, 0($t2)  lw $t5, 0($t3)  sw $t5, 0($t2)  sw $t4, 0($t3)</p>
+
+<pre><code>addi	$t2, $t2, 4
+addi	$t3, $t3, -4
+j	reverseArraySwap</code></pre>
+
+<p>reverseArrayDone:  jr $ra</p>
+
+<h1 id="-void-printarrayint-arraysize-returns-nothing">&mdash;&mdash;&mdash;&mdash; void printArray(int arraySize), returns nothing</h1>
+
+<p>printArray:  add $t0, $a0, $0 # save passed arg (arraySize) to $t0  la $t1, array</p>
+
+<p>printArrayLoop:  beq $t0, $0, printArrayDone  lw $a0, 0($t1)  li $v0, 1  syscall</p>
+
+<pre><code>li	$v0, 4
+la	$a0, space
+syscall
+
+addi	$t1, $t1, 4
+addi	$t0, $t0, -1
+j	printArrayLoop
+</code></pre>
+
+<p>printArrayDone:  li $v0, 4  la $a0, newline  syscall  jr $ra</p>
+
+<h1 id="-int-divisibleby3int-arrayentry--returns-0-or-1">&mdash;&mdash;&mdash;&mdash; int divisibleBy3(int arrayEntry) , returns 0 or 1</h1>
+
+<p>divisibleBy3:  add $t0, $a0, $0 # save passed arg (arrayEntry) to $t0</p>
+
+<pre><code>li	$t1, 3
+div	$t0, $t1
+mfhi	$t3
+
+bne	$t3, $0, divisibleBy3Bad
+
+li	$v1, 1			# pass 1 back to main in $v1
+jr	$ra</code></pre>
+
+<p>divisibleBy3Bad:  li $v1, 0 # pass 0 back to main in $v1  jr $ra</p>
+
+<h1 id="-int-checknumpositiveint-arrayentry--return-0-or-1">&mdash;&mdash;&mdash;&mdash; int checkNumPositive(int arrayEntry) , return 0 or 1</h1>
+
+<p>checkNumPositive:  add $t0, $a0, $0 # save passed arg (arrayEntry) to $t0</p>
+
+<pre><code>blt	$t0, $0, checkNumPositiveBad
+
+li	$v1, 1			# pass 1 back to main in $v1
+jr	$ra</code></pre>
+
+<p>checkNumPositiveBad:  li $v1, 0 # pass 0 back to main in $v1  jr $ra }</p>
+  <footer>
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2017/03/cs211-lab7.html">&larr; <em>CS211 Lab7</em></a>
+    </li>
+    <li class="next">
+      <a href="/2017/02/cs231-lab4.html"><em>CS231 Lab4</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <ul>
+            <li><em>Copyright 2014-2017 by Henry Brooks </em>.</li>
+        </ul>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

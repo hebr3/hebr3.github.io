@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>CS211 Lab1 Program1 in Racket</title>
+    <meta name="description" content="I'm currently taking CS211 at CSUSM and I thought it would be interesting to try re-writing the labs in Racket after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand...">
+    <meta name="author"      content="The Unknown Author">
+    <meta name="keywords"    content="CS211, Racket, C++, Author: Henry Brooks">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html">
+
+    <link rel="prev" href="/2017/01/cs211-lab1-program2-in-racket.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Henry Brooks</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Assembly.html">Assembly</a></li>
+
+<li><a href="/tags/Author-Henry-Brooks.html">Author: Henry Brooks</a></li>
+
+<li><a href="/tags/C.html">C++</a></li>
+
+<li><a href="/tags/Case-Study.html">Case Study</a></li>
+
+<li><a href="/tags/CodeFights.html">CodeFights</a></li>
+
+<li><a href="/tags/CS211.html">CS211</a></li>
+
+<li><a href="/tags/CS231.html">CS231</a></li>
+
+<li><a href="/tags/Cybersecurity.html">Cybersecurity</a></li>
+
+<li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/MCS511.html">MCS511</a></li>
+
+<li><a href="/tags/Memoization.html">Memoization</a></li>
+
+<li><a href="/tags/MIS522.html">MIS522</a></li>
+
+<li><a href="/tags/Python.html">Python</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Reading-Assignment.html">Reading Assignment</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>CS211 Lab1 Program1 in Racket</h1>
+    <p class='date-and-tags'>
+<time datetime="2017-01-25" pubdate="true">2017-01-25</time> :: <span class="tags"><a href="/tags/CS211.html">CS211</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/C.html">C++</a></span></p>
+    <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
+  </header>
+
+<p>I&rsquo;m currently taking <a href="https://www.csusm.edu/assessment/portfolios/cs/bs/2012_14/cs_course_info.pdf">CS211</a> at <a href="https://www.csusm.edu/">CSUSM</a> and I thought it would be interesting to try re-writing the labs in <a href="https://racket-lang.org">Racket</a> after I submit the work in class. I figure that trying to solve the same problem with two different languages might help me to better understand the material and give me another excuse to keep messing around with Racket.</p>
+<!-- more-->
+
+<h4 id="program-1">Program 1</h4>
+
+<p>Your favorite shoe store is having a sale – all pairs of shoes are <code>35%</code> off! Write a program that reads shoe prices in stock at the local store from an input file, shoe.txt. Each row in the file contains a shoe serial number and price. Calculate the sale price of every pair of shoes, and what the final cost of the shoes is when the sales tax is applied to the discounted price. The calculated data must be saved in an output file, shoeSale.txt.</p>
+
+<p>You MUST use a named constant for both the tax rate (<code>8.5%</code>) and discount rate (<code>35%</code>). Since the results displayed are monetary values, your output must be displayed with two decimal places of precision. Be sure decimals “line up” when you output the information.</p>
+
+<p><code>shoe.txt</code></p>
+
+<pre><code>234019 75.00
+234490 124.99
+347269 50.00
+239801 149.99
+487241 99.99
+982111 175.00}</code></pre>
+
+<p><code>shoeSale.txt</code></p>
+
+<pre><code>234019 52.89
+234490 88.15
+347269 35.26
+239801 105.78
+487241 70.51
+982111 123.41}</code></pre>
+
+<p><code>Lab1_Program1.cpp</code></p>
+
+<div class="brush: c++">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// init constants</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="n">TAX_RATE</span> <span class="o">=</span> <span class="mf">0.085</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="n">DISCOUNT_RATE</span> <span class="o">=</span> <span class="mf">0.35</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// initialize files</span>
+  <span class="n">ifstream</span> <span class="n">inputFile</span><span class="p">;</span>
+  <span class="n">inputFile</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">"shoe.txt"</span><span class="p">);</span>
+
+  <span class="n">ofstream</span> <span class="n">outputFile</span><span class="p">;</span>
+  <span class="n">outputFile</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">"shoeSales.txt"</span><span class="p">);</span>
+
+  <span class="c1">// init variables</span>
+  <span class="kt">int</span> <span class="n">serialNumber</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">price</span><span class="p">,</span>
+         <span class="n">discount</span><span class="p">,</span>
+	 <span class="n">discountedPrice</span><span class="p">,</span>
+	 <span class="n">saleTax</span><span class="p">,</span>
+	 <span class="k">final</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">inputFile</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">inputFile</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+      <span class="c1">// Pull info off file</span>
+      <span class="n">inputFile</span> <span class="o">&gt;&gt;</span> <span class="n">serialNumber</span> <span class="o">&gt;&gt;</span> <span class="n">price</span><span class="p">;</span>
+
+      <span class="c1">// Convert price to final price</span>
+      <span class="n">discount</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">DISCOUNT_RATE</span><span class="p">;</span>
+      <span class="n">discountedPrice</span> <span class="o">=</span> <span class="n">price</span> <span class="o">-</span> <span class="n">discount</span><span class="p">;</span>
+      <span class="n">saleTax</span> <span class="o">=</span> <span class="n">discountedPrice</span> <span class="o">*</span> <span class="n">TAX_RATE</span><span class="p">;</span>
+      <span class="k">final</span> <span class="o">=</span> <span class="n">discountedPrice</span> <span class="o">+</span> <span class="n">saleTax</span><span class="p">;</span>
+
+      <span class="c1">// Output final serialNumber and price to file</span>
+      <span class="n">outputFile</span> <span class="o">&lt;&lt;</span> <span class="n">serialNumber</span>
+                 <span class="o">&lt;&lt;</span> <span class="n">setw</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">setprecision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                 <span class="o">&lt;&lt;</span> <span class="n">fixed</span> <span class="o">&lt;&lt;</span> <span class="n">showpoint</span> <span class="o">&lt;&lt;</span> <span class="n">right</span> 
+                 <span class="o">&lt;&lt;</span> <span class="k">final</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Close the file</span>
+    <span class="n">outputFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Unable to open file"</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p><code>Lab1_Program2.rkt</code></p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="kn">#lang </span><span class="nn">racket</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">TAX_RATE</span> <span class="mf">0.085</span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">DISCOUNT_RATE</span> <span class="mf">0.35</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">inputFile</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/file-ports.html#(def._((lib._racket/private/base..rkt)._open-input-file))" style="color: inherit">open-input-file</a></span> <span class="s2">"shoe.txt"</span><span class="p">))</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">outputFile</span>
+  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/file-ports.html#(def._((lib._racket/private/base..rkt)._open-output-file))" style="color: inherit">open-output-file</a></span> <span class="s2">"shoeSales.txt"</span>
+                    <span class="kd">#:exists</span> <span class="o">'</span><span class="ss">replace</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+  <footer>
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2017/01/cs211-lab1-program2-in-racket.html">&larr; <em>CS211 Lab1 Program2 in Racket</em></a>
+    </li>
+
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <ul>
+            <li><em>Copyright 2014-2017 by Henry Brooks </em>.</li>
+        </ul>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
