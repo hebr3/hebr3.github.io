@@ -18,12 +18,12 @@ If there are no such pairs, return an empty array.
 
 Some of your friends are true Pokemon masters, and have hundreds of thousands of Pokemon. Make sure to help them find their Pokemon fast too!
 
-Example
-For `pokemonList = [4, 3, 2, 3, 4]` and `maxPower = 6`,
-the output should be
-`teamFinder(pokemonList, maxPower) = [0, 2]`.
-The pairs that add up to `maxPower` are:
-`(4, 2), (3, 3), (2, 4)`.
+##### Example
+
+For `pokemonList = [4, 3, 2, 3, 4]` and `maxPower = 6`, the output should be `teamFinder(pokemonList, maxPower) = [0, 2]`.
+
+The pairs that add up to `maxPower` are: `(4, 2), (3, 3), (2, 4)`.
+
 The pair that gets completed first is `(4, 2)` whose indices are `[0, 2]`.
 
 ### Version 1
