@@ -85,6 +85,8 @@
 
 <li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
 
+<li><a href="/tags/hackerrank.html">hackerrank</a></li>
+
 <li><a href="/tags/Haskell.html">Haskell</a></li>
 
 <li><a href="/tags/MCS511.html">MCS511</a></li>
@@ -144,7 +146,7 @@
 
 <p>Some of your friends are true Pokemon masters, and have hundreds of thousands of Pokemon. Make sure to help them find their Pokemon fast too!</p>
 
-<h5 id="example">Example</h5>
+<h2 id="example">Example</h2>
 
 <p>For <code>pokemonList = [4, 3, 2, 3, 4]</code> and <code>maxPower = 6</code>, the output should be <code>teamFinder(pokemonList, maxPower) = [0, 2]</code>.</p>
 
@@ -152,7 +154,7 @@
 
 <p>The pair that gets completed first is <code>(4, 2)</code> whose indices are <code>[0, 2]</code>.</p>
 
-<h3 id="version-1">Version 1</h3>
+<h2 id="version-1">Version 1</h2>
 
 <p>I initially worked through the problem with racket to get an idea of how it should work and to check the test cases. Initially I wrote the program to recursively check all pairs starting with the first.</p>
 
@@ -218,7 +220,7 @@
 
 <p>Unfortunately this ended up failing on test 3 and after reading the comments I found that the test actually checks based on the second element of the pair. Specifically, before you check a new pokemon in the list you must have checked all pairs of pokemon made with pokemon before it in the list.</p>
 
-<h3 id="version-2">Version 2</h3>
+<h2 id="version-2">Version 2</h2>
 
 <div class="brush: racket">
  <table class="sourcetable">
@@ -282,7 +284,7 @@
 
 <p>It took me a couple minutes to rewrite the program to use <code>nextIndex</code> as the pivot but that was mostly due to some trial and error problems.</p>
 
-<h3 id="version-3">Version 3</h3>
+<h2 id="version-3">Version 3</h2>
 
 <p>Currently my solution is running in <strong>O(n^2)</strong> however, looking over the comments I know that the solution needs to be close to <strong>O(n)</strong>.</p>
 

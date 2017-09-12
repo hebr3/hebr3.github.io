@@ -11,7 +11,8 @@ I'm going to try to work through all of the Project Euler problems I completed w
 
 <!-- more -->
 
-### Problem 1
+Problem 1
+---
 
 This problem, and it's solution, really highlight why I wanted to try my hand at learning Haskell. The list comprehension syntax I use in this solution are nearly identical to the mathematical notation I would use to discribe this problems solution mathematically. We create a set of natural numbers less than `1000` that are congruent to `0 mod 3` or `5`, then we `sum` the elements of the set. **S** = `{x | x ∈ ℕ, x < 1000, x ≡ 0 mod 3 ⋁ x ≡  0 mod 5}`, `sum S`
 
@@ -38,7 +39,8 @@ Still the solution works well and I feel that it matches how I would approach th
 ` \sum_{j=0}^{\left\lfloor\frac{999}{5}\right\rfloor} 5j -`
 ` \sum_{k=0}^{\left\lfloor\frac{999}{15}\right\rfloor} 15k`
 
-### Problem 2
+Problem 2
+---
 
 I didn't use the standard Haskell version of the Fibonacci equation for this problem.
 

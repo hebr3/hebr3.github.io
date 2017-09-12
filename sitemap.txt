@@ -1,4 +1,5 @@
 http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html
+http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html
 http://www.example.com/2015/10/project-euler-problem-5-6-and-7-with-haskell.html
 http://www.example.com/2015/04/20-project-witch-of-agnesi.html
 http://www.example.com/2015/10/project-euler-problem-9-and-10-with-haskell.html
@@ -31,4 +32,5 @@ http://www.example.com/2015/10/project-euler-with-haskell.html
 http://www.example.com/2015/04/20-project-projecteuler-27.html
 http://www.example.com/2017/03/codefights-totalones.html
 http://www.example.com/2015/02/20-project.html
+http://www.example.com/Resume.html
 http://www.example.com/About.html

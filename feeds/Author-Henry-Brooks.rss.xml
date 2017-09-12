@@ -4,9 +4,17 @@
   <title>My Blog: Posts tagged 'Author: Henry Brooks'</title>
   <description>My Blog: Posts tagged 'Author: Henry Brooks'</description>
   <link>http://www.example.com/tags/Author-Henry-Brooks.html</link>
-  <lastBuildDate>Sun, 10 Sep 2017 07:00:00 UT</lastBuildDate>
-  <pubDate>Sun, 10 Sep 2017 07:00:00 UT</pubDate>
+  <lastBuildDate>Tue, 12 Sep 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Tue, 12 Sep 2017 07:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>hackerrank - Climbing the Leaderboard</title>
+   <link>http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Author-Henry-Brooks&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-09-hackerrank-climbing-the-leaderboard-html</guid>
+   <pubDate>Tue, 12 Sep 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming technics to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
    <link>http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=Author-Henry-Brooks&amp;utm_medium=RSS</link>
@@ -14,7 +22,7 @@
    <pubDate>Sun, 10 Sep 2017 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h3&gt;
+&lt;h2 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -28,7 +36,7 @@
 
 &lt;p&gt;&lt;a href="https://hbr.org/2014/11/with-big-data-comes-big-responsibility"&gt;With Big Data Comes Big Responsibility&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the current and future usage of smart devices and the collection of personal data. I will be using &lt;a href="https://en.wikipedia.org/wiki/Self-determination_theory"&gt;Self-determination theory&lt;/a&gt; (SDT) as a lens to view this topic.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>CodeFights - teamFinder</title>
    <link>http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Author-Henry-Brooks&amp;utm_medium=RSS</link>
@@ -54,7 +62,7 @@
    <description>
 &lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
 
-&lt;h3 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Given a positive integer &lt;code&gt;k&lt;/code&gt;, calculate the total number of &lt;code&gt;1&lt;/code&gt;s in the binary representations of all the numbers from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;k&lt;/code&gt;, inclusive.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -138,7 +146,7 @@
    <pubDate>Mon, 30 Jan 2017 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h4 id="program-3"&gt;Program 3&lt;/h4&gt;
+&lt;h2 id="program-3"&gt;Program 3&lt;/h2&gt;
 
 &lt;p&gt;Write a program with several functions that perform the following tasks:&lt;/p&gt;
 
@@ -152,7 +160,7 @@
    <pubDate>Fri, 27 Jan 2017 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h4 id="program-2"&gt;Program 2&lt;/h4&gt;
+&lt;h2 id="program-2"&gt;Program 2&lt;/h2&gt;
 
 &lt;p&gt;Write a program that reads test scores of students in a programming class from an input file, data.txt, and calculates the minimum, maximum, average test score for each student as well as the overall average score for the class. Each row of the file contains student name (no spaces), and 3 scores for test 1, test 2, and test 3, respectively.&lt;/p&gt;&lt;a href="http://www.example.com/2017/01/cs211-lab1-program2-in-racket.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -170,7 +178,7 @@
    <pubDate>Sat, 14 Nov 2015 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-13"&gt;Problem 13&lt;/h3&gt;
+&lt;h2 id="problem-13"&gt;Problem 13&lt;/h2&gt;
 
 &lt;p&gt;Another really straight forward problem using infinite lists.&lt;/p&gt;&lt;a href="http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -180,7 +188,7 @@
    <pubDate>Sat, 31 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-9"&gt;Problem 9&lt;/h3&gt;
+&lt;h2 id="problem-9"&gt;Problem 9&lt;/h2&gt;
 
 &lt;p&gt;I went through a number of different versions of this program before I was happy with the answer.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-9-and-10-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -190,7 +198,7 @@
    <pubDate>Sat, 24 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-8"&gt;Problem 8&lt;/h3&gt;
+&lt;h2 id="problem-8"&gt;Problem 8&lt;/h2&gt;
 
 &lt;p&gt;This problem actually wasn&amp;rsquo;t as bad as I originally thought it would be.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-8-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -200,7 +208,7 @@
    <pubDate>Sat, 17 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-5"&gt;Problem 5&lt;/h3&gt;
+&lt;h2 id="problem-5"&gt;Problem 5&lt;/h2&gt;
 
 &lt;p&gt;I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-5-6-and-7-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -212,7 +220,7 @@
    <description>
 &lt;p&gt;I have been looking into Haskell more this week and I thought I would continue on with this project for the time being.&lt;/p&gt;
 
-&lt;h3 id="problem-3"&gt;Problem 3&lt;/h3&gt;
+&lt;h2 id="problem-3"&gt;Problem 3&lt;/h2&gt;
 
 &lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>

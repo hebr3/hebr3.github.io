@@ -70,7 +70,8 @@ Also you should notice that in a number of rows the values are high for half of 
 
 It's not until `100^51` that we get the first value that doesn't show up in `10` power table.
 
-#### Conclusion
+Conclusion
+---
 
 This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn't ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.
 

@@ -5,12 +5,15 @@
 
 I've been working through algorithm challenges on ["https://codefights.com/"]("Code Fights") and I found a problem that forced me to learn some new techniques. Specifically I had to utilize ["https://en.wikipedia.org/wiki/Memoization"]("memoization") to speed up a ["https://en.wikipedia.org/wiki/Dynamic_programming"]("dynamic programming") problem. I have included the description  of the challenge below.
 
-### [Description](https://codefights.com/challenge/DgH5cQEgpfu82oBQS)
+[Description](https://codefights.com/challenge/DgH5cQEgpfu82oBQS)
+---
+
 Given a positive integer `k`, calculate the total number of `1`s in the binary representations of all the numbers from `1` to `k`, inclusive.
 
 <!-- more -->
 
-### Example
+Example
+---
 
 For `k = 5`, the output should be `totalOnes(k) = 7`.
 
@@ -26,7 +29,9 @@ For `k = 5`, the output should be `totalOnes(k) = 7`.
 
 Thus, the answer is `1 + 1 + 2 + 1 + 2 = 7`.
 
-## Version 1
+Version 1
+---
+
 Initially I came at this problem utilizing a strictly brute force approach. I generated a list from `1 to n` and then mapped a function that converted `Integer -> Binary -> String`. Then I used concat to flatten the list `[String] -> String`. Finally I filtered the `0`s out of the `String` and took the `length` of the list.
 
 ```haskell
@@ -45,7 +50,9 @@ If I was given `k = 2^31 - 1` I would have to compute each `Int -> String` in `1
 
 At this point it was obvious that I needed to look for an equation that would either compute the value of `k` directly or that would generate a value near `k`.
 
-## Version 2
+Version 2
+---
+
 To get a clue for where I needed to go next I generated the values for `totalOnes` for `k <- [1..10]`. This gave me `1,2,4,5,7,9,12,13,15,17` which I was able to plug into the [oeis sequence encyclopedia](https://oeis.org/A000788). I was first shown this site while working on my B.S. and I have found it useful working on a number of algorithm problems.
 
 They have a recursive formula for calculating the `totalOnes`
@@ -105,7 +112,9 @@ long long totalOnes(int k) {
 
 This version was able to pass the first hidden test however, it failed on the second.
 
-## Version 3
+Version 3
+---
+
 I had effectively maxxed out the speed for directly calculating the value of `k` at this point. The next speed up came when I found another equation on the oeis site for calculating specific values of `k`.
 
 ```haskell

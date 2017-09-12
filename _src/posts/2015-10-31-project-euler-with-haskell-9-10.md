@@ -3,7 +3,8 @@
     Tags: Project Euler, Haskell
     Authors: Henry Brooks
 
-### Problem 9
+Problem 9
+---
 
 I went through a number of different versions of this program before I was happy with the answer. 
 
@@ -23,7 +24,8 @@ problem9 = head triplet
 triplet = [a*b*(1000-a-b) | a <- [1..1000], b <- [a..(1000-a)], a^2 + b^2 == (1000-a-b)^2]
 ```
 
-### Problem 10
+Problem 10
+---
 
 Another really straight forward problem using infinite lists.
 

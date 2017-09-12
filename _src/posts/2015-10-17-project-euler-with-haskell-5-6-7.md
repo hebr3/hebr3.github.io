@@ -3,7 +3,8 @@
     Tags: Project Euler,Haskell
     Authors: Henry Brooks
 
-### Problem 5
+Problem 5
+---
 
 I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.
 
@@ -27,7 +28,8 @@ I was a little suprised that the program didn't crash considering how large a nu
 
 Solving this without programming is mostly an exercise in taking the prime factorization of the numbers from `1` to `20` and [combining them](http://www.wolframalpha.com/input/?i=232792560).
 
-### Problem 6
+Problem 6
+---
 
 Rather straight foward solution to this problem. I am still suprised by how clean the code looks in `haskell` compared to `c++`. There is much less [boilerplate](link://https.en.wikipedia/org/wiki_Boilerplate) code required to get a solution printed on screen.
 
@@ -49,7 +51,8 @@ sqSum = sq (sum [1..100])
 sumSq = sum (map sq [1..100]) 
 ```
 
-### Problem 7
+Problem 7
+---
 
 Another really clean solution using infinite lists.
 

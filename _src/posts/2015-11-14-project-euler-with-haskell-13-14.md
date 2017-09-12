@@ -3,7 +3,8 @@
     Tags: Project Euler,Haskell
     Authors: Henry Brooks
 
-### Problem 13
+Problem 13
+---
 
 Another really straight forward problem using infinite lists.
 
@@ -122,7 +123,8 @@ nums = [37107287533902102798797998220837590246510135740250,
         53503534226472524250874054075591789781264330331690]
 ```
 
-### Problem 14
+Problem 14
+---
 
 This one actually runs much quicker than I expected it to.
 

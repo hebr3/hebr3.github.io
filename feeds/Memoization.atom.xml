@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.example.com/feeds/Memoization.atom.xml" />
  <link href="http://www.example.com/tags/Memoization.html" />
  <id>urn:http-www-example-com:-tags-Memoization-html</id>
- <updated>2017-08-17T07:00:00Z</updated>
+ <updated>2017-09-12T07:00:00Z</updated>
+ <entry>
+  <title type="text">hackerrank - Climbing the Leaderboard</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Memoization&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-hackerrank-climbing-the-leaderboard-html</id>
+  <published>2017-09-12T07:00:00Z</published>
+  <updated>2017-09-12T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming technics to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Memoization&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CodeFights - teamFinder</title>
   <link rel="alternate" href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Memoization&amp;utm_medium=Atom" />
@@ -36,6 +46,6 @@
   <content type="html">
 &lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
 
-&lt;h3 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Given a positive integer &lt;code&gt;k&lt;/code&gt;, calculate the total number of &lt;code&gt;1&lt;/code&gt;s in the binary representations of all the numbers from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;k&lt;/code&gt;, inclusive.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=Memoization&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

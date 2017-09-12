@@ -67,6 +67,8 @@
 
 <li><a href="/tags/C.html">C++</a></li>
 
+<li><a href="/tags/Case-Study.html">Case Study</a></li>
+
 <li><a href="/tags/CodeFights.html">CodeFights</a></li>
 
 <li><a href="/tags/CS211.html">CS211</a></li>
@@ -83,11 +85,15 @@
 
 <li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
 
+<li><a href="/tags/hackerrank.html">hackerrank</a></li>
+
 <li><a href="/tags/Haskell.html">Haskell</a></li>
 
 <li><a href="/tags/MCS511.html">MCS511</a></li>
 
 <li><a href="/tags/Memoization.html">Memoization</a></li>
+
+<li><a href="/tags/MIS522.html">MIS522</a></li>
 
 <li><a href="/tags/Project-Euler.html">Project Euler</a></li>
 
@@ -132,13 +138,13 @@
 <p>This week I thought figured I would try giving a testing based methodology a try. Specifically I wanted to incrementally build the program up by compiling and testing as I built it from scratch.</p>
 <!-- more-->
 
-<h4 id="lab-7">Lab 7</h4>
+<h2 id="lab-7">Lab 7</h2>
 
 <p>The purpose of this lab is to practice working with constants, static attributes, and friend functions.</p>
 
 <p>In this lab, you will design a <code>Student</code> class which has the following private attributes: * string name; * const long studentID;</p>
 
-<h4 id="version-1">Version 1</h4>
+<h2 id="version-1">Version 1</h2>
 
 <p>I start with a constructor, setter, and getter for the required class. I test to make sure that all three are being called properly in main.</p>
 
@@ -241,7 +247,8 @@ string Student::getName() const {
 
 void Student::setName(string n) {
     name = n;
-}</code><code>#### Version 2
+}</code><code>Version 2
+---
 
 Since the basic skeleton of the program was running I expanded the class to include studentID, major, classification, units, and tuition. My main.cpp is also expanded to test all of the variables added to the class.
 
@@ -366,7 +373,8 @@ void Student::setUnits(int u) {
 }
 void Student::setTuition(float t) {
 	tuition = t;
-}</code><code>#### Version 3
+}</code><code>Version 3
+---
 
 I now add the totalNumofStudents and nextStudentID values to the class. I also add the destructor to the class sense the value it deals with has been added.</code>main.cpp<code></code><code>c++
 #include &lt;iostream&gt;
@@ -523,7 +531,8 @@ void Student::setUnits(int u) {
 }
 void Student::setTuition(float t) {
 	tuition = t;
-}</code><code>#### Version 4
+}</code><code>Version 4
+---
 
 Next I add the printStudent, setData, and setTuition functions to finish off the assignment.  I also clean up the files to align with the specs given in the written assignment.</code>main.cpp<code></code><code>c++
 #include &lt;iostream&gt;

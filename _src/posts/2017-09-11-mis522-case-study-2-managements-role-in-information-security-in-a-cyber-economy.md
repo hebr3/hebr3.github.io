@@ -3,7 +3,8 @@
     Tags: Case Study, Cybersecurity, MIS522, DRAFT
     Authors: Henry Brooks
 	
-## Week 4 Case Study
+Week 4 Case Study
+---
 
 [Management's Role in Information Security in a Cyber Economy](http://journals.sagepub.com/doi/abs/10.2307/41166154)
 

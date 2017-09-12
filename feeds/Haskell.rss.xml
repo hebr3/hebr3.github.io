@@ -16,7 +16,7 @@
    <description>
 &lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
 
-&lt;h3 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Given a positive integer &lt;code&gt;k&lt;/code&gt;, calculate the total number of &lt;code&gt;1&lt;/code&gt;s in the binary representations of all the numbers from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;k&lt;/code&gt;, inclusive.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/codefights-totalones.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -26,7 +26,7 @@
    <pubDate>Sat, 14 Nov 2015 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-13"&gt;Problem 13&lt;/h3&gt;
+&lt;h2 id="problem-13"&gt;Problem 13&lt;/h2&gt;
 
 &lt;p&gt;Another really straight forward problem using infinite lists.&lt;/p&gt;&lt;a href="http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -36,7 +36,7 @@
    <pubDate>Sat, 07 Nov 2015 08:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-11"&gt;Problem 11&lt;/h3&gt;
+&lt;h2 id="problem-11"&gt;Problem 11&lt;/h2&gt;
 
 &lt;p&gt;Not the cleanest implementation of this program however, it does work.&lt;/p&gt;&lt;a href="http://www.example.com/2015/11/project-euler-problem-9-and-10-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -46,7 +46,7 @@
    <pubDate>Sat, 31 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-9"&gt;Problem 9&lt;/h3&gt;
+&lt;h2 id="problem-9"&gt;Problem 9&lt;/h2&gt;
 
 &lt;p&gt;I went through a number of different versions of this program before I was happy with the answer.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-9-and-10-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -56,7 +56,7 @@
    <pubDate>Sat, 24 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-8"&gt;Problem 8&lt;/h3&gt;
+&lt;h2 id="problem-8"&gt;Problem 8&lt;/h2&gt;
 
 &lt;p&gt;This problem actually wasn&amp;rsquo;t as bad as I originally thought it would be.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-8-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -66,7 +66,7 @@
    <pubDate>Sat, 17 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;h3 id="problem-5"&gt;Problem 5&lt;/h3&gt;
+&lt;h2 id="problem-5"&gt;Problem 5&lt;/h2&gt;
 
 &lt;p&gt;I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-5-6-and-7-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
@@ -78,7 +78,7 @@
    <description>
 &lt;p&gt;I have been looking into Haskell more this week and I thought I would continue on with this project for the time being.&lt;/p&gt;
 
-&lt;h3 id="problem-3"&gt;Problem 3&lt;/h3&gt;
+&lt;h2 id="problem-3"&gt;Problem 3&lt;/h2&gt;
 
 &lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>

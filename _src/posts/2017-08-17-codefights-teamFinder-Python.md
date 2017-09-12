@@ -18,7 +18,8 @@ If there are no such pairs, return an empty array.
 
 Some of your friends are true Pokemon masters, and have hundreds of thousands of Pokemon. Make sure to help them find their Pokemon fast too!
 
-##### Example
+Example
+---
 
 For `pokemonList = [4, 3, 2, 3, 4]` and `maxPower = 6`, the output should be `teamFinder(pokemonList, maxPower) = [0, 2]`.
 
@@ -26,7 +27,9 @@ The pairs that add up to `maxPower` are: `(4, 2), (3, 3), (2, 4)`.
 
 The pair that gets completed first is `(4, 2)` whose indices are `[0, 2]`.
 
-### Version 1
+Version 1
+---
+
 I initially worked through the problem with racket to get an idea of how it should work and to check the test cases. Initially I wrote the program to recursively check all pairs starting with the first.
 
 ```racket
@@ -58,7 +61,9 @@ I initially worked through the problem with racket to get an idea of how it shou
 
 Unfortunately this ended up failing on test 3 and after reading the comments I found that the test actually checks based on the second element of the pair. Specifically, before you check a new pokemon in the list you must have checked all pairs of pokemon made with pokemon before it in the list.
 
-### Version 2
+Version 2
+---
+
 
 ```racket
 (define (teamFinder pokemonList maxPower)
@@ -89,7 +94,8 @@ Unfortunately this ended up failing on test 3 and after reading the comments I f
 
 It took me a couple minutes to rewrite the program to use `nextIndex` as the pivot but that was mostly due to some trial and error problems.
 
-### Version 3
+Version 3
+---
 
 Currently my solution is running in **O(n^2)** however, looking over the comments I know that the solution needs to be close to **O(n)**.
 

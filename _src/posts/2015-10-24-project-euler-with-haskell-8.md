@@ -3,7 +3,8 @@
     Tags: Project Euler, Haskell
     Authors: Henry Brooks
 
-### Problem 8
+Problem 8
+---
 
 This problem actually wasn't as bad as I originally thought it would be.
 

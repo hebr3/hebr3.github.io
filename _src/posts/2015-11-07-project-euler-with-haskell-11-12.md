@@ -2,7 +2,8 @@
     Date: 2015-11-07T00:00:00
     Tags: Project Euler, Haskell
 
-### Problem 11
+Problem 11
+---
 
 Not the cleanest implementation of this program however, it does work.
 
@@ -46,7 +47,8 @@ grid = [[08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77,
         [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]]
 ```
 
-### Problem 12
+Problem 12
+---
 
 Another really straight forward problem using infinite lists.
 

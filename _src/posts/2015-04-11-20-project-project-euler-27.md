@@ -106,7 +106,8 @@ Using both methods together the entire process of generating the `1999×168` arr
 
 I haven't looked into it, but I suspect that I could similarly shave a couple of seconds off of the total running time by finding some trick for picking a values.
 
-#### Conclusion
+Conclusion
+---
 
 I started by creating a rather inelegant method for finding the number of consecutive primes generated on a `1999×1999` matrix. This method took `21` minutes and `14` seconds.
 

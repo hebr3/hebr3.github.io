@@ -3,7 +3,8 @@
     Tags: Reading Assignment, Cybersecurity, MCS511
     Authors: Henry Brooks
 
-### Reading Assignment 1
+Reading Assignment 1
+---
 
 [Can We Make Operating Systems Reliable and Secure?](https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf)
 
