@@ -5,7 +5,7 @@
 @; The first non-blank text lines MUST be these 3, the post meta-data:
 
 Title: A Scribble Post
-Date: 2013-06-19T00:00:00
+Date: 2018-06-19T00:00:00
 Tags: Racket, blogging
 
 @; If you want links to online docs, `require` the module(s) using

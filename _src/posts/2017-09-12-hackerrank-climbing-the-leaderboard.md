@@ -16,7 +16,7 @@ Alice is playing an arcade game and wants to climb to the top of the leaderboard
 
 * Players who have equal scores receive the same ranking number, and the next player(s) receive the immediately following ranking number.
 
-For example, four players have the scores 100, 90, 90, and 80. Those players will have ranks 1, 2, 2, and 3, respectively.
+For example, four players have the scores `100`, `90`, `90`, and `80`. Those players will have ranks `1`, `2`, `2`, and `3`, respectively.
 
 When Alice starts playing, there are already `n` people on the leaderboard. The score of each player `i` is denoted by `s_i`. Alice plays for `m` levels, and we denote her total score after passing each level `j` as `alice_j`. After completing each level, Alice wants to know her current rank.
 
@@ -43,15 +43,21 @@ I began by creating functions that would read the list and determine location wh
           [(< (caar L) i)
            (cdar L)]
           [else
-           (index i (cdr L))]))
+           (place i (cdr L))]))
   (for ([i M])
     (displayln (place i N**))))
+
+> cpu time: 10740 real time: 10756 gc time: 12
+> cpu time: 11304 real time: 11100 gc time: 16
+> cpu time: 10700 real time: 10701 gc time: 4
 ```
 
 Version 2
 ---
 
-I initially attempted to speed the execution time of the funtion up by cleaning up the place funtion. While I was able to remove a clause from the condition, the function was still taking `O(n^2)` time. I actually recieved a better speed up by realizing that I didn't need to sort the list of scores as they were given in descreasing order.
+My initial attempt at increasing the speed of the funtion was to cleaning up the `place` funtion, specifically the conditional statement with it's 4 branches. While I was able to remove a clause from the condition and increased the execution speed by a factor of 2, the `place` function was still taking `O(n^2)` time.
+
+I also recieved a small improvement in the speed of the program by rereading the discription and realizing that I didn't need to sort the list of scores as they are given in descreasing order. However this improvement wasn't significant and my testing showed that it only increased the performance by approximately `3%`.
 
 ```racket
 (let* ([n (read)]
@@ -69,10 +75,16 @@ I initially attempted to speed the execution time of the funtion up by cleaning 
       [else (place n (cdr l))]))
   (for ([i M])
     (displayln (place i N**))))
+
+> cpu time: 5588 real time: 5589 gc time: 0
+> cpu time: 5676 real time: 5673 gc time: 8
+> cpu time: 5808 real time: 5815 gc time: 12
 ```
 
 Version 3
 ---
+
+After reading some of the comments on the problem I decided to refactor the `place` function to take advantage of [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) concepts. Specifically, to cache intermediate results so that the program would run in `O(n)` time.
 
 ```racket
 (let* ([n (read)]
@@ -96,6 +108,7 @@ Version 3
 
 Version 4
 ---
+
 
 ```python
 #!/bin/python3

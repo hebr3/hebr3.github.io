@@ -28,6 +28,7 @@ http://www.example.com/2017/02/cs231-labs.html
 http://www.example.com/2017/02/cs231-lab4.html
 http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html
 http://www.example.com/2015/11/project-euler-problem-9-and-10-with-haskell.html
+http://www.example.com/2017/09/sql-queries-in-prolog.html
 http://www.example.com/2015/10/project-euler-with-haskell.html
 http://www.example.com/2015/04/20-project-projecteuler-27.html
 http://www.example.com/2017/03/codefights-totalones.html

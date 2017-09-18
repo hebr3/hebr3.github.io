@@ -4,9 +4,19 @@
   <title>My Blog: Posts tagged 'Author: Henry Brooks'</title>
   <description>My Blog: Posts tagged 'Author: Henry Brooks'</description>
   <link>http://www.example.com/tags/Author-Henry-Brooks.html</link>
-  <lastBuildDate>Tue, 12 Sep 2017 07:00:00 UT</lastBuildDate>
-  <pubDate>Tue, 12 Sep 2017 07:00:00 UT</pubDate>
+  <lastBuildDate>Sat, 16 Sep 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Sat, 16 Sep 2017 07:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>SQL queries in Prolog</title>
+   <link>http://www.example.com/2017/09/sql-queries-in-prolog.html?utm_source=Author-Henry-Brooks&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-09-sql-queries-in-prolog-html</guid>
+   <pubDate>Sat, 16 Sep 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;This post will be looking at solving &lt;a href="https://en.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; problems with &lt;a href="https://en.wikipedia.org/wiki/Prolog"&gt;Prolog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have been intrigued by Prolog for a while now because of its roots in first-order logic. I have been going through tutorials and examples looking for a way to leverage logic programming as a DSL in personal projects. I feel that Prolog could be used as a substitute for a more fully featured database languages in small projects.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/sql-queries-in-prolog.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>hackerrank - Climbing the Leaderboard</title>
    <link>http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Author-Henry-Brooks&amp;utm_medium=RSS</link>
