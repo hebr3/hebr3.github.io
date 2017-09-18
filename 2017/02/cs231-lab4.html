@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <title>CS231 Lab4</title>
-    <meta name="description" content="This asm program for the MIPS processor takes an array of numbers and returns it in reverse order....">
+    <meta name="description" content="This asm program takes a list of numbers from the user and returns the sum of those numbers....">
     <meta name="author"      content="Henry Brooks">
     <meta name="keywords"    content="CS231, Assembly, Author: Henry Brooks">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.example.com/2017/02/cs231-lab4.html">
-    <link rel="next" href="/2017/02/cs211-lab2-in-racket.html">
-    <link rel="prev" href="/2017/02/cs231-lab4.html">
+    <link rel="next" href="/2017/02/cs231-lab4.html">
+    <link rel="prev" href="/2017/03/cs231-assignment1.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -65,8 +65,6 @@
 
 <li><a href="/tags/Author-Henry-Brooks.html">Author: Henry Brooks</a></li>
 
-<li><a href="/tags/blogging.html">blogging</a></li>
-
 <li><a href="/tags/C.html">C++</a></li>
 
 <li><a href="/tags/Case-Study.html">Case Study</a></li>
@@ -99,11 +97,15 @@
 
 <li><a href="/tags/Project-Euler.html">Project Euler</a></li>
 
+<li><a href="/tags/Prolog.html">Prolog</a></li>
+
 <li><a href="/tags/Python.html">Python</a></li>
 
 <li><a href="/tags/Racket.html">Racket</a></li>
 
 <li><a href="/tags/Reading-Assignment.html">Reading Assignment</a></li>
+
+<li><a href="/tags/SQL.html">SQL</a></li>
 
 <li><a href="/tags/Teaching-Credential.html">Teaching Credential</a></li>
               </ul>
@@ -135,7 +137,7 @@
     <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
   </header>
 
-<p>This asm program for the MIPS processor takes an array of numbers and returns it in reverse order.</p>
+<p>This asm program takes a list of numbers from the user and returns the sum of those numbers.</p>
 <!-- more-->
 
 <div class="brush: asm">
@@ -282,29 +284,216 @@
 136
 137
 138
-139</pre></div></td>
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251</pre></div></td>
     <td class="code">
      <div class="source">
       <pre><span></span><span class="c">## Henry Brooks</span>
+<span class="c">## CS231 Lab4 sum numbers</span>
 
 		<span class="na">.data</span>
-<span class="nl">arry:</span>		<span class="na">.word</span>		<span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="nl">space:</span>  	<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
+<span class="nl">header1:</span>	<span class="na">.asciiz</span> 	<span class="s">"===============================================================================\n"</span>
+<span class="nl">header2:</span>	<span class="na">.asciiz</span> 	<span class="s">"Program Description: This program asks a user how many numbers they want to sum\n"</span>
+<span class="nl">header3:</span>	<span class="na">.asciiz</span> 	<span class="s">"Author:              Henry Brooks\n"</span>
+<span class="nl">header4:</span>	<span class="na">.asciiz</span> 	<span class="s">"Creation Date:       02/06/2017\n"</span>
+<span class="nl">header5:</span>	<span class="na">.asciiz</span> 	<span class="s">"===============================================================================\n"</span>
 
+<span class="nl">nl:</span>		<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
+
+<span class="nl">query:</span>		<span class="na">.asciiz</span>		<span class="s">"How many numbers would you like to add together? "</span>
+<span class="nl">answer:</span>		<span class="na">.asciiz</span>		<span class="s">"The sum of the numbers is "</span>
+		<span class="na">.text</span>
+<span class="nl">main:</span>
+<span class="c">################### Print header information</span>
+		<span class="nf">li</span> 			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
+		<span class="nf">syscall</span>
+		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header2</span>
+		<span class="nf">syscall</span>
+		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header3</span>
+		<span class="nf">syscall</span>
+		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header4</span>
+		<span class="nf">syscall</span>
+		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header5</span>
+		<span class="nf">syscall</span>
+		
+<span class="c">################### Print query</span>
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query</span>
+		<span class="nf">syscall</span>
+		
+<span class="c">################### Take number of values the user wants to sum</span>
+<span class="c">################### and save it to $s0</span>
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
+		<span class="nf">syscall</span>
+		
+		<span class="nf">add</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>
+
+<span class="c">################### Initialize $s2 to 0 , sum = 0</span>
+		<span class="nf">add</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">$0</span>
+
+<span class="c">################### Loop to collect inputs from user</span>
+<span class="c">################### if ( count == value) break</span>
+<span class="c">###################   else sum += input</span>
+<span class="c">###################        count++</span>
+<span class="c">###################        loop</span>
+
+<span class="nl">loop:</span>		<span class="nf">beq</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">exit</span>
+		
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
+		<span class="nf">syscall</span>
+		
+		<span class="nf">add</span>			<span class="no">$s2</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$v0</span>		<span class="c"># $s2 += $v0 , sum += input</span>
+		<span class="no">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="mi">1</span>		<span class="c"># $s1++ , count++</span>
+		<span class="no">j</span> <span class="no">loop</span>
+
+
+<span class="nl">exit:</span>		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">answer</span>
+		<span class="nf">syscall</span>
+		
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>
+		<span class="nf">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>
+		<span class="nf">syscall</span>
+
+<span class="err">}</span>
+
+<span class="err">◊</span><span class="nf">filebox-highlight</span><span class="p">[</span><span class="err">"</span><span class="no">Lab4b.asm</span><span class="err">"</span> <span class="err">&#39;</span><span class="no">asm</span><span class="p">]</span><span class="err">{</span>
+<span class="c">## Henry Brooks</span>
+<span class="c">## CS231 Lab4 divisiblity</span>
+
+		<span class="na">.data</span>
 <span class="nl">space:</span>  	<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
 <span class="nl">header1:</span>	<span class="na">.asciiz</span> 	<span class="s">"======================================================================\n"</span>
-<span class="nl">header2:</span>	<span class="na">.asciiz</span> 	<span class="s">"Program Description: \tThis program asks a user how many numbers they\n\t\t\tadd to an array, then returns the array in reverse order\n"</span>
+<span class="nl">header2:</span>	<span class="na">.asciiz</span> 	<span class="s">"Program Description: \tThis program asks a user how many numbers they\n\t\t\twant to find that are divisible by 6\n"</span>
 <span class="nl">header3:</span>	<span class="na">.asciiz</span> 	<span class="s">"Author:              \tHenry Brooks\n"</span>
 <span class="nl">header4:</span>	<span class="na">.asciiz</span> 	<span class="s">"Creation Date:       \t02/06/2017\n"</span>
 <span class="nl">header5:</span>	<span class="na">.asciiz</span> 	<span class="s">"======================================================================\n"</span>
 
 <span class="nl">nl:</span>		<span class="na">.asciiz</span> 	<span class="s">"\n"</span>
 
-<span class="nl">query1:</span>		<span class="na">.asciiz</span>		<span class="s">"Enter the number of elements:\n"</span>
-<span class="nl">query2:</span>		<span class="na">.asciiz</span>		<span class="s">"Enter number "</span>
-<span class="nl">query3:</span>		<span class="na">.asciiz</span>		<span class="s">":\t"</span>
-<span class="nl">badcount1:</span>	<span class="na">.asciiz</span>		<span class="s">"Error array can&#39;t have more than 10 elements, try again!!\n"</span>
-<span class="nl">badcount2:</span>	<span class="na">.asciiz</span>		<span class="s">"Error array can&#39;t have less than 1 element\n"</span>
-<span class="nl">return:</span>		<span class="na">.asciiz</span>		<span class="s">"The content of array in reverse order is:\n"</span>
+<span class="nl">query1:</span>		<span class="na">.asciiz</span>		<span class="s">"How many positive numbers that are divisable by 6 do you want to add?\n"</span>
+<span class="nl">query2:</span>		<span class="na">.asciiz</span>		<span class="s">"Enter a number: "</span>
+<span class="nl">badcount:</span>	<span class="na">.asciiz</span>		<span class="s">"Invalid number\nPlease enter a number greater than zero\n"</span>
+<span class="nl">arrow:</span>		<span class="na">.asciiz</span>		<span class="s">"==&gt; "</span>
+<span class="nl">good:</span>		<span class="na">.asciiz</span>		<span class="s">" is divisible by 6\n"</span>
+<span class="nl">bad:</span>		<span class="na">.asciiz</span>		<span class="s">" is not divisible by 6. Enter another number.\n"</span>
+<span class="nl">error1:</span>		<span class="na">.asciiz</span>		<span class="s">"**** ERROR: "</span>
+<span class="nl">error2:</span>		<span class="na">.asciiz</span>		<span class="s">" is not in the range of 1 to 100. Enter another number.\n"</span>
+<span class="nl">error3:</span>		<span class="na">.asciiz</span>		<span class="s">" is not a positive number. Enter another number.\n"</span>
+<span class="nl">answer:</span>		<span class="na">.asciiz</span>		<span class="s">"The sum of the positive numbers between 1 and 100 that are divisible by 6, is: "</span>
 
 		<span class="na">.text</span>
 <span class="nl">main:</span>
@@ -321,107 +510,144 @@
 		<span class="nf">la</span> 			<span class="no">$a0</span><span class="p">,</span> <span class="no">header5</span>
 		<span class="nf">syscall</span>
 
+<span class="nl">main2:</span>
 <span class="c">################### Print query</span>
 		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
 		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query1</span>
 		<span class="nf">syscall</span>
-
-<span class="nl">main2:</span>
+		
 <span class="c">################### Take user input</span>
 		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
 		<span class="nf">syscall</span>
 
 <span class="c">################### Check that input is valid</span>
-		<span class="nf">ble</span>			<span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">badInputLo</span>
-		<span class="nf">addi</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">10</span>
-		<span class="nf">bgt</span>			<span class="no">$v0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="no">badInputHi</span>			
+		<span class="nf">ble</span>			<span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">badinput</span>			
 
-<span class="c">################## If input is good set $s0 to $v0</span>
-		<span class="no">addi</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="mi">0</span>		<span class="c"># lengthOfArray</span>
+<span class="c">################## If input is good set $s0 to $v0	</span>
+		<span class="no">add</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>
 
-<span class="c">################### Initialize $s1 to 0</span>
-		<span class="nf">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">0</span>		<span class="c"># counter</span>
-		<span class="no">lw</span>			<span class="no">$t1</span><span class="p">,</span> <span class="no">arry</span>		<span class="c"># pointer</span>
-		
+<span class="c">################### Initialize $s2 to 0 and $s1 to 0, sum = 0, count = 0</span>
+		<span class="nf">add</span>			<span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">$0</span>
+		<span class="nf">add</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">$0</span>
+
 <span class="c">################### Loop to collect inputs from user</span>
 <span class="c">################### if ( count == value) break</span>
-<span class="c">###################   else array[count] = input</span>
+<span class="c">###################   else sum += input</span>
 <span class="c">###################        count++</span>
 <span class="c">###################        loop</span>
 
-<span class="nl">read_loop:</span>	<span class="nf">beq</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">exit</span>		<span class="c"># pointer is at end</span>
+<span class="nl">loop:</span>		<span class="nf">beq</span>			<span class="no">$s0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">exit</span>		<span class="c"># s0 = total, s1 = count</span>
 		
-
 		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
-		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query2</span>		<span class="c"># load "enter number " message</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query2</span>		<span class="c"># load "enter number:" message</span>
 		<span class="no">syscall</span>						<span class="c"># print message</span>
 		
-		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print intger</span>
-		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load count</span>
-		<span class="no">addi</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="mi">1</span>		<span class="c"># increment for printing</span>
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>			<span class="c"># load user input program</span>
+		<span class="no">syscall</span>						<span class="c"># get user input, (cin)</span>
+		
+		<span class="no">add</span>			<span class="no">$s3</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># save input to save3 register</span>
+		
+		<span class="no">beq</span>			<span class="no">$s3</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">gt100</span>		<span class="c"># run if input is zero</span>
+		
+		<span class="no">blt</span>			<span class="no">$s3</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">ltzero</span>		<span class="c"># run if input is less than 0</span>
+		
+		<span class="no">addi</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">100</span>		<span class="c"># make t0 = 100</span>
+		<span class="no">blt</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$s3</span><span class="p">,</span> <span class="no">gt100</span>		<span class="c"># run if input is greater than 100</span>
+		
+		<span class="no">addi</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="mi">6</span>		<span class="c"># make t0 = 6 </span>
+		<span class="no">div</span>			<span class="no">$s3</span><span class="p">,</span> <span class="no">$t0</span>		<span class="c"># divide input by 6</span>
+		<span class="no">mfhi</span>			<span class="no">$t0</span>			<span class="c"># move remainder of input/6 to t0</span>
+		<span class="no">bne</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">notdiv</span>		<span class="c"># run if not divisible by 6</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">arrow</span>		<span class="c"># load arrow string</span>
+		<span class="no">syscall</span>
+		
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s3</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load user input into arg0</span>
 		<span class="no">syscall</span>
 		
 		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
-		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">query3</span>		<span class="c"># load ":\t"</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">good</span>		<span class="c"># load divisiblity good message</span>
 		<span class="no">syscall</span>
 		
-		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>			<span class="c"># load user input program</span>
-		<span class="no">syscall</span>						<span class="c"># get user input, (cin)</span>
-		
-		<span class="no">addi</span>			<span class="no">$t7</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="mi">0</span>
-		
-		<span class="nf">sw</span>			<span class="no">$t7</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
-		
-		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>
-		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
-		<span class="nf">syscall</span>	
-		
-		<span class="no">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="mi">1</span>
-		<span class="nf">j</span> 			<span class="no">read_loop</span>		
-		
-
-<span class="c">#################### Loop to read off the elements of the array</span>
-<span class="c">#print_loop:</span>
-<span class="c">#		beq			$t2, $0, end	# check array end</span>
-<span class="c">#	</span>
-<span class="c">#		lw			$a0, ($t1)</span>
-<span class="c">#		li			$v0, 1</span>
-<span class="c">#		syscall</span>
-<span class="c">#	</span>
-<span class="c">#		li			$v0, 4</span>
-<span class="c">#		syscall</span>
-<span class="c">#	</span>
-<span class="c">#		addi			$t2, $t2, -1</span>
-<span class="c">#		addi			$t1, $t1, -4</span>
-<span class="c">#		j	print_loop	# ret</span>
-
+		<span class="nf">add</span>			<span class="no">$s2</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$s3</span>		<span class="c"># $s2 += $v0 , sum += input</span>
+		<span class="no">addi</span>			<span class="no">$s1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="mi">1</span>		<span class="c"># $s1++ , count++</span>
+		<span class="no">j</span> <span class="no">loop</span>
 
 <span class="c">#################### User input for count is less than or equal to 0</span>
-<span class="nl">badInputLo:</span>	<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
-		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">badcount2</span>
+<span class="nl">badinput:</span>	<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">badcount</span>
 		<span class="nf">syscall</span>
 		
 		<span class="nf">j</span>			<span class="no">main2</span>
 
-<span class="c">#################### User input for count is less than or equal to 0</span>
-<span class="nl">badInputHi:</span>	<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
-		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">badcount1</span>
-		<span class="nf">syscall</span>
+<span class="c">##################### input is less than 0</span>
+<span class="nl">ltzero:</span>		<span class="nf">add</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># send input to temp</span>
 		
-		<span class="nf">j</span>			<span class="no">main2</span>
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">arrow</span>		<span class="c"># load arrow string</span>
+		<span class="no">syscall</span>						<span class="c"># print string</span>
 		
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">error1</span>		<span class="c"># load error header</span>
+		<span class="no">syscall</span>						<span class="c"># print error header</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load temp into arg0</span>
+		<span class="no">syscall</span>						<span class="c"># print temp</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">error3</span>		<span class="c"># load less than zero message</span>
+		<span class="no">syscall</span>						<span class="c"># print message</span>
+		
+		<span class="no">j</span>			<span class="no">loop</span>			<span class="c"># return to loop</span>
+
+<span class="c">#################### input is greater than 100</span>
+<span class="nl">gt100:</span>		<span class="nf">add</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># send input to temp</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">arrow</span>		<span class="c"># load arrow string</span>
+		<span class="no">syscall</span>						<span class="c"># print string</span>
+		
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">error1</span>		<span class="c"># load error header</span>
+		<span class="no">syscall</span>						<span class="c"># print error header</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load temp into arg0</span>
+		<span class="no">syscall</span>						<span class="c"># print temp</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">error2</span>		<span class="c"># load less than zero message</span>
+		<span class="no">syscall</span>						<span class="c"># print message</span>
+		
+		<span class="no">j</span>			<span class="no">loop</span>			<span class="c"># return to loop</span>
+
+<span class="c">#################### input is not divisible by 6</span>
+<span class="nl">notdiv:</span>		<span class="nf">add</span>			<span class="no">$t0</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># send input to temp</span>
+
+		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">arrow</span>		<span class="c"># load arrow string</span>
+		<span class="no">syscall</span>
+		
+		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">error1</span>		<span class="c"># load error header</span>
+		<span class="no">syscall</span>						<span class="c"># print error header</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load temp into arg0</span>
+		<span class="no">syscall</span>						<span class="c"># print temp</span>
+		
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">bad</span>		<span class="c"># load not divisible message</span>
+		<span class="no">syscall</span>
+		
+		<span class="nf">j</span>			<span class="no">loop</span>
+
 <span class="c">#################### exit from program</span>
 <span class="nl">exit:</span>		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>			<span class="c"># load print string</span>
-		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
-		<span class="nf">syscall</span>
-		
-		<span class="nf">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">return</span>		<span class="c"># load answer message</span>
+		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">answer</span>		<span class="c"># load answer message</span>
 		<span class="no">syscall</span>						<span class="c"># print answer message</span>
 		
-		<span class="no">la</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">header1</span>
-		<span class="nf">syscall</span>
-		
-		<span class="nf">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
+		<span class="no">li</span>			<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># load print int</span>
 		<span class="no">add</span>			<span class="no">$a0</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>		<span class="c"># load sum</span>
 		<span class="no">syscall</span>						<span class="c"># print sum</span>
 </pre></div>
@@ -430,10 +656,10 @@
   <footer>
     <ul class="pager">
     <li class="previous">
-      <a href="/2017/02/cs231-lab4.html">&larr; <em>CS231 Lab4</em></a>
+      <a href="/2017/03/cs231-assignment1.html">&larr; <em>CS231 Assignment1</em></a>
     </li>
     <li class="next">
-      <a href="/2017/02/cs211-lab2-in-racket.html"><em>CS211 Lab2 in Racket</em> &rarr;</a>
+      <a href="/2017/02/cs231-lab4.html"><em>CS231 Lab4</em> &rarr;</a>
     </li>
     </ul>
   </footer>

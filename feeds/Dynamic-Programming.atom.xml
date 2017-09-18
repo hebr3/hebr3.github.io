@@ -14,7 +14,7 @@
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming technics to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Dynamic-Programming&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="https://www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming technics to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=Dynamic-Programming&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">CodeFights - teamFinder</title>
   <link rel="alternate" href="http://www.example.com/2017/08/codefights-teamfinder.html?utm_source=Dynamic-Programming&amp;utm_medium=Atom" />

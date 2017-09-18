@@ -3,7 +3,7 @@
     Tags: hackerrank, Dynamic Programming, Memoization, Racket
     Authors: Henry Brooks
 
-While working through the algorithm problem sets available at [hackerrank](www.hackerrank.com) I found another problem that required Dynamic Programming technics to solve completely. [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) requires an `O(n)` solution to complete the activity before it times out.
+While working through the algorithm problem sets available at [hackerrank](https://www.hackerrank.com) I found another problem that required Dynamic Programming technics to solve completely. [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) requires an `O(n)` solution to complete the activity before it times out.
 
 <!-- more -->
 
@@ -109,6 +109,9 @@ After reading some of the comments on the problem I decided to refactor the `pla
 Version 4
 ---
 
+I could never get my racket version to run in `O(n)` time. Writing imprerative code has always been dificult for me in racket.
+
+I was able to create some python code that was able to run in `O(n)` time though. It uses a simple while condition inside of a for loop. In a worse case senerio this code runs in `O(n+m)` time. 
 
 ```python
 #!/bin/python3
@@ -121,14 +124,15 @@ scores = [int(scores_temp) for scores_temp in input().strip().split(' ')]
 m = int(input().strip())
 alice = [int(alice_temp) for alice_temp in input().strip().split(' ')]
 # your code goes here
-
-scores2 = sorted(list(set(scores)))
+scores = sorted(list(set(scores)))
 
 index = 0
 
-for s in alice:
-    while (index < len(scores2) and s >= scores2[index]):
-        index = index + 1
-    print(n - index - 1)
-```
+n = len(scores)
 
+for a in alice:
+    while (index < n and a >= scores[index]):
+        index += 1
+    print(n + 1 - index)
+
+```
