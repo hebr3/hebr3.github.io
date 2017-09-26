@@ -11,7 +11,7 @@
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.example.com/2017/09/sql-queries-in-prolog.html">
     <link rel="next" href="/2017/09/hackerrank-climbing-the-leaderboard.html">
-
+    <link rel="prev" href="/2017/09/fibonacci-in-prolog.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -145,8 +145,6 @@
 <p>I have found that most developers I have talked to have never really dug into Prolog as a language. More than one person has state that they consider Prolog to be a toy language only good for proving who your ancestor is. Personally I wish that my computer programming courses had touched on the language more.</p>
 
 <p>Below you will find the code needed to create a simple database in both SQL and Prolog.</p>
-
-<details><summary>Database setup - SQL</summary>
 
 <h4 id="sql">SQL</h4>
 
@@ -444,10 +442,6 @@
 </td></tr></tbody></table>
 </div>
 
-</details>
-
-<details><summary>Database setup - Prolog</summary>
-
 <h4 id="prolog">Prolog</h4>
 
 <div class="brush: Prolog">
@@ -578,9 +572,7 @@
 </td></tr></tbody></table>
 </div>
 
-</details>
-
-<details><summary>List all customers</summary>
+<h2 id="list-all-customers">List all customers</h2>
 
 <h4 id="sql">SQL</h4>
 
@@ -648,9 +640,7 @@ customer(13, 'Heritage Furnishings', '66789 College Ave.', 'Carlisle', 'PA', '17
 customer(14, 'Kaneohe Homes', '112 Kiowai St.', 'Kaneohe', 'HI', '96744').
 customer(15, 'Mountain Scenes', '4132 Main Street', 'Ogden', 'UT', '84403').</code></pre>
 
-</details>
-
-<details><summary>List customers by name</summary>
+<h2 id="list-customers-by-name">List customers by name</h2>
 
 <h4 id="sql">SQL</h4>
 
@@ -688,9 +678,7 @@ customer(15, 'Mountain Scenes', '4132 Main Street', 'Ogden', 'UT', '84403').</co
 10|Seminole Interiors|2400 Rocky Point Dr.|Seminole|FL|34646
 2|Value Furniture|15145 S.W. 17th St.|Plano|TX|75094</code></pre>
 
-</details>
-
-<details><summary>List customers based on location</summary>
+<h2 id="list-customers-based-on-location">List customers based on location</h2>
 
 <h4 id="sql">SQL</h4>
 
@@ -740,9 +728,7 @@ customer(15, 'Mountain Scenes', '4132 Main Street', 'Ogden', 'UT', '84403').</co
 
 <pre><code>List = [[1, 'Contemporary Casuals', '1355 S Hines Blvd', 'Gainesville', 'FL', '32601'], [9, 'M and H Casual Furniture', '3709 First Street', 'Clearwater', 'FL', '34620'], [10, 'Seminole Interiors', '2400 Rocky Point Dr.', 'Seminole', 'FL', '34646']]</code></pre>
 
-</details>
-
-<details><summary>List customers who made purchases in October</summary>
+<h2 id="list-customers-who-made-purchases-in-october">List customers who made purchases in October</h2>
 
 <h4 id="sql">SQL</h4>
 
@@ -804,12 +790,11 @@ Battle Creek Furniture|30/Oct/00</code></pre>
 </div>
 
 <pre><code>List = [['Contemporary Casuals', '21/Oct/00'], ['Value Furniture', '24/Oct/00'], ['Home Furnishings', '24/Oct/00'], ['Impressions', '22/Oct/00'], ['Calfornia Classics', '21/Oct/00'], ['American Euro Lifestyles', '27/Oct/00'], ['Battle Creek Furniture', '30/Oct/00'], ['Mountain Scenes', '22/Oct/00']]</code></pre>
-
-</details>
-
   <footer>
     <ul class="pager">
-
+    <li class="previous">
+      <a href="/2017/09/fibonacci-in-prolog.html">&larr; <em>Fibonacci in Prolog</em></a>
+    </li>
     <li class="next">
       <a href="/2017/09/hackerrank-climbing-the-leaderboard.html"><em>hackerrank - Climbing the Leaderboard</em> &rarr;</a>
     </li>

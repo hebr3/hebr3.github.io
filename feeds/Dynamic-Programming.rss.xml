@@ -38,7 +38,7 @@
    <pubDate>Thu, 30 Mar 2017 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on [&amp;ldquo;https://codefights.com/&amp;rdquo;](&amp;ldquo;Code Fights&amp;rdquo;) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="&amp;quot;memoization&amp;quot;"&gt;&amp;ldquo;https://en.wikipedia.org/wiki/Memoization&amp;rdquo;&lt;/a&gt; to speed up a [&amp;ldquo;https://en.wikipedia.org/wiki/Dynamic_programming&amp;rdquo;](&amp;ldquo;dynamic programming&amp;rdquo;) problem. I have included the description of the challenge below.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been working through algorithm challenges on &lt;a href="https://codefights.com/"&gt;Code Fights&lt;/a&gt; and I found a problem that forced me to learn some new techniques. Specifically I had to utilize &lt;a href="https://en.wikipedia.org/wiki/Memoization"&gt;memoization&lt;/a&gt; to speed up a &lt;a href="https://en.wikipedia.org/wiki/Dynamic_programming"&gt;dynamic programming&lt;/a&gt; problem. I have included the description of the challenge below.&lt;/p&gt;
 
 &lt;h2 id="httpscodefightscomchallengedgh5cqegpfu82obqsdescription"&gt;&lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;Description&lt;/a&gt;&lt;/h2&gt;
 

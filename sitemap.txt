@@ -16,6 +16,7 @@ http://www.example.com/2015/04/daily-desmos-24-april-exploration.html
 http://www.example.com/2015/04/20-project-projecteuler-40-44-and-47.html
 http://www.example.com/2015/04/20-project-projecteuler-29.html
 http://www.example.com/2015/02/20-project-update.html
+http://www.example.com/2017/09/fibonacci-in-prolog.html
 http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html
 http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html
 http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html
@@ -31,6 +32,7 @@ http://www.example.com/2015/11/project-euler-problem-9-and-10-with-haskell.html
 http://www.example.com/2017/09/sql-queries-in-prolog.html
 http://www.example.com/2015/10/project-euler-with-haskell.html
 http://www.example.com/2015/04/20-project-projecteuler-27.html
+http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html
 http://www.example.com/2017/03/codefights-totalones.html
 http://www.example.com/2015/02/20-project.html
 http://www.example.com/Resume.html

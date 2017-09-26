@@ -3,7 +3,7 @@
     Tags: CodeFights, Haskell, C++, Dynamic Programming, Memoization
     Authors: Henry Brooks
 
-I've been working through algorithm challenges on ["https://codefights.com/"]("Code Fights") and I found a problem that forced me to learn some new techniques. Specifically I had to utilize ["https://en.wikipedia.org/wiki/Memoization"]("memoization") to speed up a ["https://en.wikipedia.org/wiki/Dynamic_programming"]("dynamic programming") problem. I have included the description  of the challenge below.
+I've been working through algorithm challenges on [Code Fights](https://codefights.com/) and I found a problem that forced me to learn some new techniques. Specifically I had to utilize [memoization](https://en.wikipedia.org/wiki/Memoization) to speed up a [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) problem. I have included the description  of the challenge below.
 
 [Description](https://codefights.com/challenge/DgH5cQEgpfu82oBQS)
 ---
