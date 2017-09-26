@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <title>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
-    <meta name="description" content="Reading Assignment 1:  Can We Make Operating Systems Reliable and Secure?...">
+    <meta name="description" content="Reading Assignment 2:  Enclaves for Operation System Protection...">
     <meta name="author"      content="Henry Brooks">
     <meta name="keywords"    content="Reading Assignment, Cybersecurity, MCS511, Author: Henry Brooks">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html">
-    <link rel="next" href="/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html">
-    <link rel="prev" href="/2017/09/hackerrank-climbing-the-leaderboard.html">
+    <link rel="next" href="/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html">
+    <link rel="prev" href="/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -137,25 +137,25 @@
     <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
   </header>
 
-<h2 id="reading-assignment-1">Reading Assignment 1</h2>
+<h2 id="reading-assignment-2">Reading Assignment 2</h2>
 
-<p><a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf">Can We Make Operating Systems Reliable and Secure?</a></p>
+<p><a href="http://ieeexplore.ieee.org/document/7490626/">Enclaves for Operation System Protection</a></p>
 <!-- more-->
 
-<p>I feel that the author did a very good job of explaining the issues with current OS design and highlighting how a microkernel can address those issues. I have actually seen a lot of these same issues before when I was looking into Erlang programming. A design goal for Erlang software is fault recovery and tolerance. Erlang is designed for telecommunications work so it initially had the same requirements for uptime and recovery that the author is looking for. However Erlang is a general purpose language and the author wants to bring these concepts into the kernel arena.</p>
+<p>I feel that the authors were successful in presenting enclaves as an important element of a security framework. They presented the pros and cons of utilizing enclaves as part of an os security design. They also highlighted different attacks that would have been stopped or at least partially mitigated through the use of enclaving system processes.</p>
 
-<p>I honestly think that it would be worthwhile for many companies to consider transferring to a microkernel model for their business products. While many small IoT devices run their own dedicated kernel, some are running a version of Linux or Windows 10 IoT. These OSes are overkill for many products and as the article stated, it opens up the product to many more security vulnerabilities than it should. As a specific example we know for the last black hat that many voting machines are actually run on applications running on top of Windows systems. These are the perfect example of a system where there should be clear boundaries between permissions.</p>
+<p>I first learned about this type of software in relation to web browsers. Years ago Chrome and Firefox started heavily marketing their browsers for having sandboxed tabs. At the time I was happy to have tabs that wouldn’t cause cascading crashes however, I can now see how enclaving different browser sessions could definitely improve security. Earlier this year it was shown that malicious coders could use the autocomplete function of chrome to retrieve more information through the api than the user was shown on the web page. I feel that proper enclaving of the user data and the api would have mitigated that problem.</p>
 
-<p>The major issue I see with most companies implementing better security through a microkernel is legacy software. Legacy systems make up a significant portion of code that is currently being run. There are countless stories of programmers being tasked with maintenance or transition of these systems. The business side of the cost benefit analysis is weighted more in favor of fixing issues in the short term. The outlay of resources required to transition a decent sized application to a microkernel isn&rsquo;t economically feasible for many companies. Related to this is that since no one is really doing this type of work finding people who can is more difficult and costly that it should be.</p>
+<p>Concerning the operating system, I have experience running virtual machines and dual booting my own computers. I understand the benefits of having an abstraction layer to ensure that tests and processes run on one system do not damage another. I hadn’t really considered the benefits of enclaving system processes until I read this paper. Considering my experience coding for the JVM and other interpreted languages I feel like the benefits of having a secure sandbox should have been more apparent to me.</p>
 
-<p>Overall I agree with the desire to move more systems to a secure microkernel OS, I just recognize that there are major roadblocks that must be addressed on the business side of the equation.</p>
+<p>Overall I think the authors are correct in their assessment of the use of enclaves to secure operating system processes. IEEE now suggests that most systems move towards two factor authentication and I feel like a strong argument can be made to include enclaving as another layer of system protection. While it can’t stop all attacks it definitely increases the difficulty of attacking the system and makes it easier for other defenses to identify malicious activity.</p>
   <footer>
     <ul class="pager">
     <li class="previous">
-      <a href="/2017/09/hackerrank-climbing-the-leaderboard.html">&larr; <em>hackerrank - Climbing the Leaderboard</em></a>
+      <a href="/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html">&larr; <em>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</em></a>
     </li>
     <li class="next">
-      <a href="/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html"><em>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</em> &rarr;</a>
+      <a href="/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html"><em>MIS522 Case Study 1 - With Big Data Comes Big Responsibility</em> &rarr;</a>
     </li>
     </ul>
   </footer>
@@ -168,9 +168,7 @@
         by <a href="https://github.com/greghendershott/frog">Frog</a>,
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <ul>
-            <li><em>Copyright 2014-2017 by Henry Brooks </em>.</li>
-        </ul>
+        <p><em>Copyright 2014-2017 by Henry Brooks </em> &#183; <a href="mailto:brook057@cougars.csusm.edu"><em>brook057@cougars.csusm.edu</em></a></p>
       </footer>
     </div>
     <!-- </body> JS -->
