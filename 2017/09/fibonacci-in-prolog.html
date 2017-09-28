@@ -305,7 +305,7 @@ fibs(15, 987).</code></pre>
      <div class="source">
       <pre><span></span><span class="nf">get_time</span><span class="p">(</span><span class="nv">T1</span><span class="p">),</span><span class="nf">fib</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="k">_</span><span class="p">),</span><span class="nf">get_time</span><span class="p">(</span><span class="nv">T2</span><span class="p">),</span> <span class="nv">T3</span> <span class="o">is</span> <span class="nv">T2</span> <span class="o">-</span> <span class="nv">T1</span><span class="p">,</span> <span class="nf">write</span><span class="p">(</span><span class="nv">T3</span><span class="p">).</span>
 
-<span class="o">&gt;</span> <span class="mf">0.17243337631225586</span>
+<span class="o">&gt;</span> <span class="mf">0.05961465835571289</span>
 </pre></div>
 </td></tr></tbody></table>
 </div>
@@ -326,25 +326,41 @@ fibs(15, 987).</code></pre>
  8
  9
 10
-11</pre></div></td>
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td>
     <td class="code">
      <div class="source">
       <pre><span></span><span class="kn">#lang </span><span class="nn">racket</span>
 
 <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="p">(</span><span class="n">fib</span> <span class="n">n</span><span class="p">)</span>
-  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="p">(</span><span class="n">iter</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span><span class="p">)</span>
-    <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((lib._racket/private/letstx-scheme..rkt)._cond))" style="color: inherit">cond</a></span> <span class="p">[(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/number-types.html#(def._((quote._~23~25kernel)._zero~3f))" style="color: inherit">zero?</a></span> <span class="n">c</span><span class="p">)</span> <span class="n">a</span><span class="p">]</span>
-          <span class="p">[</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((lib._racket/private/letstx-scheme..rkt)._else))" style="color: inherit">else</a></span> <span class="p">(</span><span class="n">iter</span> <span class="n">b</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._+))" style="color: inherit">+</a></span> <span class="n">a</span> <span class="n">b</span><span class="p">)</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._sub1))" style="color: inherit">sub1</a></span> <span class="n">c</span><span class="p">))]))</span>
-  <span class="p">(</span><span class="n">iter</span> <span class="mi">0</span> <span class="mi">1</span> <span class="n">n</span><span class="p">))</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">cache</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._make-vector))" style="color: inherit">make-vector</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._add1))" style="color: inherit">add1</a></span> <span class="n">n</span><span class="p">)</span> <span class="mi">-1</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-set!))" style="color: inherit">vector-set!</a></span> <span class="n">cache</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-set!))" style="color: inherit">vector-set!</a></span> <span class="n">cache</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="p">(</span><span class="n">mfib</span> <span class="n">i</span><span class="p">)</span>
+    <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3d))" style="color: inherit">=</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span> <span class="n">cache</span> <span class="n">i</span><span class="p">)</span> <span class="mi">-1</span><span class="p">)</span>
+        <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-set!))" style="color: inherit">vector-set!</a></span> <span class="n">cache</span> <span class="n">i</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._+))" style="color: inherit">+</a></span> <span class="p">(</span><span class="n">mfib</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit">-</a></span> <span class="n">i</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="n">mfib</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit">-</a></span> <span class="n">i</span> <span class="mi">2</span><span class="p">))))</span>
+        <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span> <span class="n">cache</span> <span class="n">i</span><span class="p">))</span>
+  <span class="p">(</span><span class="n">mfib</span> <span class="n">n</span><span class="p">))</span>
 
-<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/time.html#(form._((lib._racket/private/more-scheme..rkt)._time))" style="color: inherit">time</a></span> <span class="p">(</span><span class="n">fib</span> <span class="mi">10000</span><span class="p">))</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">T1</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-inexact-milliseconds))" style="color: inherit">current-inexact-milliseconds</a></span><span class="p">))</span>
+<span class="p">(</span><span class="n">fib</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="n">T2</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-inexact-milliseconds))" style="color: inherit">current-inexact-milliseconds</a></span><span class="p">))</span>
+<span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit">-</a></span> <span class="n">T2</span> <span class="n">T1</span><span class="p">)</span>
 
-<span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="n">cpu</span> <span class="n">time:</span> <span class="mi">8</span> <span class="n">real</span> <span class="n">time:</span> <span class="mi">8</span> <span class="n">gc</span> <span class="n">time:</span> <span class="mi">8</span>
+<span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="mf">5.401123046875</span>
 </pre></div>
 </td></tr></tbody></table>
 </div>
 
-<p>Prolog ended up taking a little more than twice the time taken by <code>Racket</code> to calculate the same value. Considering that <code>Racket</code> wasn&rsquo;t creating a database of fib values that could be used again later I think the difference is actually remarkable.</p>
+<p><code>Racket</code> is calculating it&rsquo;s time in milliseconds so the comparison is actually around <code>5.9</code> to <code>5.4</code>. With these numbers it seems like <code>Prolog</code> ended up taking a around the same time that <code>Racket</code> took to calculate <code>fib(10000)</code>. Considering that <code>Prolog</code> isn&rsquo;t normally considered a numerical language I think that these results are impressive. I will definitely be looking for ways to test <code>Prolog</code> with more <code>memoization</code> problems.</p>
 
 <h3 id="note">Note</h3>
 
@@ -434,9 +450,7 @@ fibs(15, 987).</code></pre>
         by <a href="https://github.com/greghendershott/frog">Frog</a>,
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <ul>
-            <li><em>Copyright 2014-2017 by Henry Brooks </em>.</li>
-        </ul>
+        <p><em>Copyright 2014-2017 by Henry Brooks </em> &#183; <a href="mailto:brook057@cougars.csusm.edu"><em>brook057@cougars.csusm.edu</em></a></p>
       </footer>
     </div>
     <!-- </body> JS -->

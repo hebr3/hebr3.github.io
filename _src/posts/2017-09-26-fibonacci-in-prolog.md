@@ -100,24 +100,32 @@ I ended up timing `fib(10000)` to compare to `Racket`.
 ```prolog
 get_time(T1),fib(10000,_),get_time(T2), T3 is T2 - T1, write(T3).
 
-> 0.17243337631225586
+> 0.05961465835571289
 ```
 
 ```racket
 #lang racket
 
 (define (fib n)
-  (define (iter a b c)
-    (cond [(zero? c) a]
-          [else (iter b (+ a b) (sub1 c))]))
-  (iter 0 1 n))
+  (define cache (make-vector (add1 n) -1))
+  (vector-set! cache 0 0)
+  (vector-set! cache 1 1)
+  (define (mfib i)
+    (if (= (vector-ref cache i) -1)
+        (vector-set! cache i (+ (mfib (- i 1)) (mfib (- i 2))))
+        (vector-ref cache i))
+    (vector-ref cache i))
+  (mfib n))
 
-(time (fib 10000))
+(define T1 (current-inexact-milliseconds))
+(fib 10000)
+(define T2 (current-inexact-milliseconds))
+(- T2 T1)
 
-> cpu time: 8 real time: 8 gc time: 8
+> 5.401123046875
 ```
 
-Prolog ended up taking a little more than twice the time taken by `Racket` to calculate the same value. Considering that `Racket` wasn't creating a database of fib values that could be used again later I think the difference is actually remarkable.
+`Racket` is calculating it's time in milliseconds so the comparison is actually around `5.9` to `5.4`. With these numbers it seems like `Prolog` ended up taking a around the same time that `Racket` took to calculate `fib(10000)`. Considering that `Prolog` isn't normally considered a numerical language I think that these results are impressive. I will definitely be looking for ways to test `Prolog` with more `memoization` problems.
 
 
 ### Note
