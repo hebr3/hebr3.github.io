@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <title>Fibonacci in Prolog</title>
-    <meta name="description" content="I was looking over Exercise 11.3 at Learn Prolog Now and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the fibonacci equation....">
+    <meta name="description" content="I was looking over Exercise 11.3 at Learn Prolog Now and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the Fibonacci equation....">
     <meta name="author"      content="Henry Brooks">
     <meta name="keywords"    content="Prolog, Memoization, Author: Henry Brooks">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.example.com/2017/09/fibonacci-in-prolog.html">
     <link rel="next" href="/2017/09/sql-queries-in-prolog.html">
-
+    <link rel="prev" href="/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -137,7 +137,7 @@
     <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
   </header>
 
-<p>I was looking over <a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;pageid=lpn-htmlse50">Exercise 11.3</a> at <a href="http://www.learnprolognow.org">Learn Prolog Now</a> and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the fibonacci equation.</p>
+<p>I was looking over <a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;pageid=lpn-htmlse50">Exercise 11.3</a> at <a href="http://www.learnprolognow.org">Learn Prolog Now</a> and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the Fibonacci equation.</p>
 <!-- more-->
 
 <p>The sigma problem asks you to create a <code>sigmares(N,S)</code> result for every <code>sigma(N,S)</code> and <code>assert</code> this value to the database.</p>
@@ -207,7 +207,7 @@ sigmares(8, 36).
 sigmares(9, 45).
 sigmares(10, 55).</code></pre>
 
-<p>To solve the fibonacci problem I modified the code to match the fibonacci equations structure.</p>
+<p>To solve the Fibonacci problem I modified the code to match the Fibonacci equations structure.</p>
 
 <div class="brush: prolog">
  <table class="sourcetable">
@@ -288,7 +288,7 @@ fibs(13, 377).
 fibs(14, 610).
 fibs(15, 987).</code></pre>
 
-<p>I was actually really suprised at how quickly the program ran given that I never really consider <code>Prolog</code> for numerical calculations.</p>
+<p>I was actually really surprised at how quickly the program ran given that I never really consider <code>Prolog</code> for numerical calculations.</p>
 
 <p>I ended up timing <code>fib(10000)</code> to compare to <code>Racket</code>.</p>
 
@@ -435,7 +435,9 @@ fibs(15, 987).</code></pre>
 <p>The difference without <code>memoization</code> was effectively an order of magnitude. This really highlights for me the importance of <code>memoization</code> for <code>Prolog</code> programs.</p>
   <footer>
     <ul class="pager">
-
+    <li class="previous">
+      <a href="/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html">&larr; <em>MIS522 Case Study 2 - Management&rsquo;s Role in Information Security in a Cyber Economy</em></a>
+    </li>
     <li class="next">
       <a href="/2017/09/sql-queries-in-prolog.html"><em>SQL queries in Prolog</em> &rarr;</a>
     </li>

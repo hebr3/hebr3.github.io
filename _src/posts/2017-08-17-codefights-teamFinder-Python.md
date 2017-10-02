@@ -59,7 +59,7 @@ I initially worked through the problem with racket to get an idea of how it shou
 (printf "[0, 1]")
 ```
 
-Unfortunately this ended up failing on test 3 and after reading the comments I found that the test actually checks based on the second element of the pair. Specifically, before you check a new pokemon in the list you must have checked all pairs of pokemon made with pokemon before it in the list.
+Unfortunately this ended up failing on test 3 and after reading the comments I found that the test actually checks based on the second element of the pair. Specifically, before you check a new Pokemon in the list you must have checked all pairs of Pokemon made with Pokemon before it in the list.
 
 Version 2
 ---

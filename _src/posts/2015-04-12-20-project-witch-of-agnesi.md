@@ -9,13 +9,13 @@ I was helping a student in AVID with calculus homework when I confronted with th
 
 <!-- more -->
 
-I worked on it for probably 3 minutes before I called it and asked WolframAlpha for help. The response
+I worked on it for probably 3 minutes before I called it and asked [WolframAlpha](https://www.wolframalpha.com/) for help. The response
 
 ![2](/img/witchb.png)
 
-Once I saw the arctan I remembered that this was a trig identity listed in the back of the book and that you needed to be memorize it. In the 2 years since Calc 3 I haven't used it so I forgot this one.
+Once I saw the arc-tan I remembered that this was a trig identity listed in the back of the book and that you needed to be memorize it. In the 2 years since Calc 3 I haven't used it so I forgot this one.
 
-Since I have more mathematical knowledge at my disposile now than I did in during Calc 3 I thought I would dig around for a bit and try to remember why this specific identity related to the unit circle.
+Since I have more mathematical knowledge at my disposable now than I did in during Calc 3 I thought I would dig around for a bit and try to remember why this specific identity related to the unit circle.
 
 What I found was the [Witch of Angensi](https://en.wikipedia.org/wiki/Witch_of_Agnesi). Having seen the curve and animation on the wiki page, I decided to try and recreate the model shown on wikipedia with Desmos.
 

@@ -73,7 +73,7 @@ a n
     where n2 = div n 2
 ```
 
-This formula is faster than the `Int -> Binary -> String` code I was using before however, it introduced a recursive element that branches similar to fibonacci. Looking for ways to speed up the recursive function I found comments suggesting that I take a dynamic programming approach to the problem and start memoizating the function.
+This formula is faster than the `Int -> Binary -> String` code I was using before however, it introduced a recursive element that branches similar to Fibonacci. Looking for ways to speed up the recursive function I found comments suggesting that I take a dynamic programming approach to the problem and start memoizating the function.
 
 Since I couldn't find a good method for memoization with Haskell I switched over to `C++` at this point.
 

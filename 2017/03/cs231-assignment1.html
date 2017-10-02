@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <title>CS231 Assignment1</title>
-    <meta name="description" content="I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked....">
+    <meta name="description" content="This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.  This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn't required...">
     <meta name="author"      content="Henry Brooks">
     <meta name="keywords"    content="CS231, Assembly, Author: Henry Brooks">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.example.com/2017/03/cs231-assignment1.html">
-    <link rel="next" href="/2017/03/asm-dsl.html">
-    <link rel="prev" href="/2017/03/codefights-totalones.html">
+    <link rel="next" href="/2017/02/cs231-lab4.html">
+    <link rel="prev" href="/2017/03/cs211-lab7.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -133,20 +133,16 @@
   <header>
     <h1>CS231 Assignment1</h1>
     <p class='date-and-tags'>
-<time datetime="2017-03-15" pubdate="true">2017-03-15</time> :: <span class="tags"><a href="/tags/CS231.html">CS231</a>, <a href="/tags/Assembly.html">Assembly</a></span></p>
+<time datetime="2017-03-02" pubdate="true">2017-03-02</time> :: <span class="tags"><a href="/tags/CS231.html">CS231</a>, <a href="/tags/Assembly.html">Assembly</a></span></p>
     <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
   </header>
 
-<p>I just took a test where I was asked to hand write the code for the following program. As soon as I got out of class I coded up my work to make sure that it worked.</p>
+<p>This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.</p>
+
+<p>This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn&rsquo;t required to do any outside the box thinking here, just put the pieces together correctly.</p>
 <!-- more-->
 
-<p>I found that I forgot a lot of little helper functions, like printing spaces between array elements, however I feel that the overall code was correct.</p>
-
-<p>The design spec for the problem was to create a program that would ask the user to input data into two arrays. You were then supposed to create a third array that was made by adding or subtracting the values of the two initial arrays based on the index number of the element.</p>
-
-<p><code>C[i] = A[i] - B[i]</code>, if <code>i</code> is odd, else <code>C[i] = A[i] + B[i]</code></p>
-
-<p>To finish the program off you print the new array.</p>
+<p><code>Lab5.asm</code></p>
 
 <div class="brush: asm">
  <table class="sourcetable">
@@ -259,73 +255,253 @@
 103
 104
 105
-106</pre></div></td>
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</pre></div></td>
     <td class="code">
      <div class="source">
-      <pre><span></span><span class="na">.data</span>
-<span class="nl">A:</span>	<span class="na">.space</span>	<span class="mi">40</span>
-<span class="nl">B:</span>	<span class="na">.space</span>	<span class="mi">40</span>
-<span class="nl">C:</span>	<span class="na">.space</span>	<span class="mi">40</span>
-<span class="nl">space:</span>	<span class="na">.asciiz</span> <span class="s">" "</span>
-<span class="nl">nl:</span>	<span class="na">.asciiz</span> <span class="s">"\n"</span>
+      <pre><span></span><span class="c">#Henry Brooks</span>
+<span class="c">#CS231 Assignment1</span>
+<span class="na">.data</span>
+<span class="nl">array:</span>		<span class="na">.word</span>	<span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span>
+<span class="nl">str0:</span>		<span class="na">.asciiz</span>	<span class="s">"Please enter the array length: "</span>
+<span class="nl">goodMsg:</span>	<span class="na">.asciiz</span>	<span class="s">" is a good value in checkNumPositive\n"</span>
+<span class="nl">badMsg:</span>		<span class="na">.asciiz</span> <span class="s">" is a bad value in checkNumPositive\n"</span>
+<span class="nl">errorMsg:</span>	<span class="na">.asciiz</span>	<span class="s">"Invalid array length\n"</span>
+<span class="nl">invalidMsg:</span>	<span class="na">.asciiz</span>	<span class="s">"Invalid array value\n"</span>
+<span class="nl">space:</span>		<span class="na">.asciiz</span> <span class="s">" "</span>
+<span class="nl">newline:</span>	<span class="na">.asciiz</span> <span class="s">"\n"</span>
 
 <span class="na">.text</span>
-<span class="nl">main:</span>
-	<span class="nf">la</span>	<span class="no">$s0</span><span class="p">,</span> <span class="no">A</span>		<span class="c"># save pointers to A, B, C</span>
-	<span class="no">la</span>	<span class="no">$s1</span><span class="p">,</span> <span class="no">B</span>
-	<span class="nf">la</span>	<span class="no">$s2</span><span class="p">,</span> <span class="no">C</span>
-
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass pointer to Create</span>
-	<span class="no">jal</span>	<span class="no">Create</span>
-
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">jal</span>	<span class="no">Create</span>
+<span class="nl">begin:</span>
+	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">str0</span>
+	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="nf">syscall</span>
 	
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">add</span>	<span class="no">$a1</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">add</span>	<span class="no">$a2</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">jal</span>	<span class="no">Create_Array_C</span>
+	<span class="nf">jal</span>	<span class="no">readNum</span>		<span class="c"># input passed back in $v1</span>
+	<span class="no">add</span>	<span class="no">$s0</span><span class="p">,</span> <span class="no">$v1</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># $s0 = arraySize</span>
 	
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">jal</span>	<span class="no">Print</span>
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s1</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">jal</span>	<span class="no">Print</span>
-	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">jal</span>	<span class="no">Print</span>
+	<span class="no">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arraySize in $a0 to veriftySize</span>
+	<span class="no">jal</span>	<span class="no">verifySize</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$v1</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># get 1 or 0 back from verifySize</span>
 	
+	<span class="no">beq</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">begin</span>
+	
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arraySize to createArray in $a0</span>
+	<span class="no">jal</span>	<span class="no">createArray</span>
+	
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arraySize to printArray in $a0</span>
+	<span class="no">jal</span>	<span class="no">printArray</span>
+	
+	
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arraySize to reverseArray in $a0</span>
+	<span class="no">jal</span>	<span class="no">reverseArray</span>
+	
+	
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arraySize to printArray in $a0</span>
+	<span class="no">jal</span>	<span class="no">printArray</span>
 	
 <span class="nl">exit:</span>
 	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">10</span>
 	<span class="nf">syscall</span>
-	
-<span class="c">#-------</span>
-<span class="nl">Create:</span>
-	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>
 
-	
-<span class="nl">Create_Loop:</span>
-	<span class="nf">beq</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Create_Done</span>
+<span class="c">#----------- int readNum(), returns and int</span>
+<span class="nl">readNum:</span>
 	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">5</span>
 	<span class="nf">syscall</span>
-	<span class="nf">add</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>
+	<span class="nf">add</span>	<span class="no">$v1</span><span class="p">,</span> <span class="no">$v0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass input back in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#----------- int verifySize(int arraySize), returns 0 or 1</span>
+<span class="nl">verifySize:</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arraySize) to $t0</span>
+	
+	<span class="no">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">20</span>
+	<span class="nf">bgt</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="no">verifySizeBad</span>
+	<span class="nf">ble</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">verifySizeBad</span>
+	
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># pass 1 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+	
+<span class="nl">verifySizeBad:</span>
+	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">errorMsg</span>
+	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="nf">syscall</span>
+	
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">0</span>			<span class="c"># pass 0 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#----------- void createArray(int arraySize), returns nothing</span>
+<span class="nl">createArray:</span>
+	<span class="nf">add</span>	<span class="no">$s1</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arraySize) to $s1</span>
+	<span class="no">sw</span>	<span class="no">$ra</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$sp</span><span class="p">)</span>		<span class="c"># save current $ra to stack</span>
+	
+	<span class="no">li</span>	<span class="no">$s2</span><span class="p">,</span> <span class="mi">0</span>			<span class="c"># counter</span>
+	<span class="no">la</span>	<span class="no">$s3</span><span class="p">,</span> <span class="no">array</span>		<span class="c"># create pointer to array[0]</span>
+	
+<span class="no">createArrayLoop</span><span class="p">:</span>		<span class="c"># arraySize &lt; counter</span>
+	<span class="no">beq</span>	<span class="no">$s1</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="no">createArrayDone</span>	
+	
+	<span class="no">jal</span>	<span class="no">readNum</span>			<span class="c"># int readNum(), returns int in $v1</span>
+	<span class="no">add</span>	<span class="no">$s4</span><span class="p">,</span> <span class="no">$v1</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save arrayEntry to $s4</span>
+
+<span class="c">#------- int checkNumPositive(arrayEntry), returns 0 or 1	</span>
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s4</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arrayEntry to checkNumPositive</span>
+	<span class="no">jal</span>	<span class="no">checkNumPositive</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$v1</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save return value to $t4, either 0 or 1</span>
+	
+	<span class="no">beq</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">createArrayBad</span>
+
+<span class="c">#------- int divisibleBy3(arrayEntry), returns 0 or 1	</span>
+	<span class="nf">add</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">$s4</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># pass arrayEntry to divisibleBy3</span>
+	<span class="no">jal</span>	<span class="no">divisibleBy3</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$v1</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save return value to $t4, either 0 or 1</span>
+	
+	<span class="no">beq</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">createArrayBad</span>
+
+<span class="c">#------- if both tests pass then save to the array and increment the counters</span>
+	<span class="nf">sw</span>	<span class="no">$s4</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$s3</span><span class="p">)</span>
+	
+	<span class="nf">addi</span>	<span class="no">$s3</span><span class="p">,</span> <span class="no">$s3</span><span class="p">,</span> <span class="mi">4</span>	<span class="c"># pointer++</span>
+	<span class="no">addi</span>	<span class="no">$s2</span><span class="p">,</span> <span class="no">$s2</span><span class="p">,</span> <span class="mi">1</span>	<span class="c"># counter--</span>
+	<span class="no">j</span>	<span class="no">createArrayLoop</span>
+	
+<span class="nl">createArrayDone:</span>	
+	<span class="nf">lw</span>	<span class="no">$ra</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$sp</span><span class="p">)</span>	<span class="c"># load old $ra from stack</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="nl">createArrayBad:</span>
+	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">invalidMsg</span>
+	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="nf">syscall</span>
+	
+	<span class="nf">j</span>	<span class="no">createArrayLoop</span>
+
+<span class="c">#----------- void reverseArray(int arraySize), returns nothing</span>
+<span class="nl">reverseArray:</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arraySize) to $t0</span>
+	
+	<span class="no">li</span>		<span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>		<span class="c"># set $t1 = 4</span>
+	<span class="no">mult</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t1</span>	<span class="c"># length * 4</span>
+	<span class="no">mflo</span>	<span class="no">$t1</span>			<span class="c"># set $t1 = length * 4</span>
+	
+	<span class="no">la</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">array</span>	<span class="c"># set pointer to start of the array</span>
+	<span class="no">la</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">array</span>
+	<span class="nf">add</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="no">$t1</span>
+	<span class="nf">addi</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="p">-</span><span class="mi">4</span>	<span class="c"># set pointer to end of the array</span>
+
+<span class="nl">reverseArraySwap:</span>
+	<span class="nf">bgt</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="no">reverseArrayDone</span>
+	<span class="nf">lw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
+	<span class="nf">lw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t3</span><span class="p">)</span>
+	<span class="nf">sw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
+	<span class="nf">sw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t3</span><span class="p">)</span>
 		
-	<span class="nf">sw</span>	<span class="no">$t2</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
-	<span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">4</span>
-	<span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span>
-	<span class="nf">j</span>	<span class="no">Create_Loop</span>
-	
-<span class="nl">Create_Done:</span>
+	<span class="nf">addi</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$t2</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="nf">addi</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="p">-</span><span class="mi">4</span>
+	<span class="nf">j</span>	<span class="no">reverseArraySwap</span>
+
+<span class="nl">reverseArrayDone:</span>
 	<span class="nf">jr</span>	<span class="no">$ra</span>
-	
-<span class="c">#-------</span>
-<span class="nl">Print:</span>
-	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>
-	
-<span class="nl">Print_Loop:</span>
-	<span class="nf">beq</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Print_Done</span>
-	<span class="nf">lw</span>	<span class="no">$a0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
+
+<span class="c">#----------- void printArray(int arraySize), returns nothing</span>
+<span class="nl">printArray:</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arraySize) to $t0</span>
+	<span class="no">la</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">array</span>
+
+<span class="nl">printArrayLoop:</span>
+	<span class="nf">beq</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">printArrayDone</span>
+	<span class="nf">lw</span>	<span class="no">$a0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
 	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">1</span>
 	<span class="nf">syscall</span>
 	
@@ -333,51 +509,55 @@
 	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">space</span>
 	<span class="nf">syscall</span>
 	
-	<span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">4</span>
-	<span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span>
-	<span class="nf">j</span>	<span class="no">Print_Loop</span>
+	<span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span>
+	<span class="nf">j</span>	<span class="no">printArrayLoop</span>
 	
-<span class="nl">Print_Done:</span>
+<span class="nl">printArrayDone:</span>
 	<span class="nf">li</span>	<span class="no">$v0</span><span class="p">,</span> <span class="mi">4</span>
-	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">nl</span>
+	<span class="nf">la</span>	<span class="no">$a0</span><span class="p">,</span> <span class="no">newline</span>
 	<span class="nf">syscall</span>
 	<span class="nf">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#----------- int divisibleBy3(int arrayEntry) , returns 0 or 1</span>
+<span class="nl">divisibleBy3:</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arrayEntry) to $t0</span>
 	
-<span class="c">#------</span>
-<span class="nl">Create_Array_C:</span>
-	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">add</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$a1</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">add</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$a2</span><span class="p">,</span> <span class="no">$0</span>
-	<span class="nf">li</span>	<span class="no">$t3</span><span class="p">,</span> <span class="mi">4</span>
+	<span class="no">li</span>	<span class="no">$t1</span><span class="p">,</span> <span class="mi">3</span>
+	<span class="nf">div</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t1</span>
+	<span class="nf">mfhi</span>	<span class="no">$t3</span>
 	
-<span class="nl">Create_Array_C_Loop:</span>
-	<span class="nf">beq</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">Create_Array_C_Done</span>
-	<span class="nf">lw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
-	<span class="nf">lw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
-	<span class="nf">sub</span>	<span class="no">$t6</span><span class="p">,</span> <span class="no">$t4</span><span class="p">,</span> <span class="no">$t5</span>
-	<span class="nf">sw</span>	<span class="no">$t6</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
-	<span class="nf">lw</span>	<span class="no">$t4</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t0</span><span class="p">)</span>
-	<span class="nf">lw</span>	<span class="no">$t5</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t1</span><span class="p">)</span>
-	<span class="nf">add</span>	<span class="no">$t6</span><span class="p">,</span> <span class="no">$t4</span><span class="p">,</span> <span class="no">$t5</span>
-	<span class="nf">sw</span>	<span class="no">$t6</span><span class="p">,</span> <span class="mi">4</span><span class="p">(</span><span class="no">$t2</span><span class="p">)</span>
-	<span class="nf">addi</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$t0</span><span class="p">,</span> <span class="mi">8</span>
-	<span class="nf">addi</span>	<span class="no">$t1</span><span class="p">,</span> <span class="no">$t1</span><span class="p">,</span> <span class="mi">8</span>
-	<span class="nf">addi</span>	<span class="no">$t2</span><span class="p">,</span> <span class="no">$t2</span><span class="p">,</span> <span class="mi">8</span>
-	<span class="nf">addi</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$t3</span><span class="p">,</span> <span class="p">-</span><span class="mi">2</span>
-	<span class="nf">j</span>	<span class="no">Create_Array_C_Loop</span>
-		
-<span class="nl">Create_Array_C_Done:</span>
-	<span class="nf">jr</span>	<span class="no">$ra</span>
+	<span class="nf">bne</span>	<span class="no">$t3</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">divisibleBy3Bad</span>
+	
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># pass 1 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="nl">divisibleBy3Bad:</span>
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">0</span>			<span class="c"># pass 0 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="c">#----------- int checkNumPositive(int arrayEntry) , return 0 or 1</span>
+<span class="nl">checkNumPositive:</span>
+	<span class="nf">add</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$a0</span><span class="p">,</span> <span class="no">$0</span>	<span class="c"># save passed arg (arrayEntry) to $t0</span>
+	
+	<span class="no">blt</span>	<span class="no">$t0</span><span class="p">,</span> <span class="no">$0</span><span class="p">,</span> <span class="no">checkNumPositiveBad</span>
+	
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">1</span>			<span class="c"># pass 1 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
+
+<span class="nl">checkNumPositiveBad:</span>
+	<span class="nf">li</span>	<span class="no">$v1</span><span class="p">,</span> <span class="mi">0</span>			<span class="c"># pass 0 back to main in $v1</span>
+	<span class="no">jr</span>	<span class="no">$ra</span>
 </pre></div>
 </td></tr></tbody></table>
 </div>
   <footer>
     <ul class="pager">
     <li class="previous">
-      <a href="/2017/03/codefights-totalones.html">&larr; <em>CodeFights - totalOnes</em></a>
+      <a href="/2017/03/cs211-lab7.html">&larr; <em>CS211 Lab7</em></a>
     </li>
     <li class="next">
-      <a href="/2017/03/asm-dsl.html"><em>ASM-DSL</em> &rarr;</a>
+      <a href="/2017/02/cs231-lab4.html"><em>CS231 Lab4</em> &rarr;</a>
     </li>
     </ul>
   </footer>

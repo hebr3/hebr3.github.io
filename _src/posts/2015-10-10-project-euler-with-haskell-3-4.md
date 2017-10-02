@@ -8,7 +8,7 @@ I have been looking into Haskell more this week and I thought I would continue o
 Problem 3
 ---
 
-I was finally able to use an infinite list in one of my programs. I'm honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.
+I was finally able to use an infinite list in one of my programs. I'm honestly surprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.
 
 <!-- more -->
 
@@ -45,7 +45,7 @@ factors n = [x | x <- (takeWhile (< (floor_sqrt_int n)) primes), mod n x == 0]
 Problem 4
 ---
 
-Unfortunately Haskell doesn't seem to have a builtin function [IntegerDigits](https://reference.wolfram.com/language/ref/IntegerDigits.html) like [Mathematica](http://www.wolfram.com/mathematica/) does.
+Unfortunately Haskell doesn't seem to have a built-in function [IntegerDigits](https://reference.wolfram.com/language/ref/IntegerDigits.html) like [Mathematica](http://www.wolfram.com/mathematica/) does.
 
 Luckily I was able to find a decent solution for breaking an integer up into its component digits. From there the actual functions are rather straight forward.
 
@@ -54,7 +54,7 @@ Luckily I was able to find a decent solution for breaking an integer up into its
 ```haskell
 main :: IO ()
 main = do
-    putStrLn "ProjectEuler.net"    
+    putStrLn "ProjectEuler.net"
     putStrLn "\nProblem4 - Largest palindrome made from the product of two 3-digit numbers"
     print problem4
 

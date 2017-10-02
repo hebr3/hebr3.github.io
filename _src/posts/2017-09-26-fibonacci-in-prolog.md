@@ -3,7 +3,7 @@
     Tags: Prolog, Memoization
     Authors: Henry Brooks
 
-I was looking over [Exercise 11.3](http://www.learnprolognow.org/lpnpage.php?pagetype=html&pageid=lpn-htmlse50) at [Learn Prolog Now](http://www.learnprolognow.org) and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the fibonacci equation.
+I was looking over [Exercise 11.3](http://www.learnprolognow.org/lpnpage.php?pagetype=html&pageid=lpn-htmlse50) at [Learn Prolog Now](http://www.learnprolognow.org) and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the Fibonacci equation.
 
 <!-- more -->
 
@@ -45,7 +45,7 @@ sigmares(9, 45).
 sigmares(10, 55).
 ```
 
-To solve the fibonacci problem I modified the code to match the fibonacci equations structure.
+To solve the Fibonacci problem I modified the code to match the Fibonacci equations structure.
 
 ```prolog
 :- dynamic fib/2.
@@ -93,7 +93,7 @@ fibs(14, 610).
 fibs(15, 987).
 ```
 
-I was actually really suprised at how quickly the program ran given that I never really consider `Prolog` for numerical calculations.
+I was actually really surprised at how quickly the program ran given that I never really consider `Prolog` for numerical calculations.
 
 I ended up timing `fib(10000)` to compare to `Racket`.
 

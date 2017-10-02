@@ -4,9 +4,21 @@
   <title>My Blog: My Blog</title>
   <description>My Blog: My Blog</description>
   <link>http://www.example.com/index.html</link>
-  <lastBuildDate>Tue, 26 Sep 2017 07:00:00 UT</lastBuildDate>
-  <pubDate>Tue, 26 Sep 2017 07:00:00 UT</pubDate>
+  <lastBuildDate>Sun, 01 Oct 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Sun, 01 Oct 2017 07:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
+   <link>http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-10-mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy-html</guid>
+   <pubDate>Sun, 01 Oct 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h2 id="week-4-case-study"&gt;Week 4 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://journals.sagepub.com/doi/abs/10.2307/41166154"&gt;Management&amp;rsquo;s Role in Information Security in a Cyber Economy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the California Management Review concerning the role of management in the cyber security stance of an organization.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>Fibonacci in Prolog</title>
    <link>http://www.example.com/2017/09/fibonacci-in-prolog.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -14,7 +26,7 @@
    <pubDate>Tue, 26 Sep 2017 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;I was looking over &lt;a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;amp;pageid=lpn-htmlse50"&gt;Exercise 11.3&lt;/a&gt; at &lt;a href="http://www.learnprolognow.org"&gt;Learn Prolog Now&lt;/a&gt; and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the fibonacci equation.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/fibonacci-in-prolog.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;I was looking over &lt;a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;amp;pageid=lpn-htmlse50"&gt;Exercise 11.3&lt;/a&gt; at &lt;a href="http://www.learnprolognow.org"&gt;Learn Prolog Now&lt;/a&gt; and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the Fibonacci equation.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/fibonacci-in-prolog.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>SQL queries in Prolog</title>
    <link>http://www.example.com/2017/09/sql-queries-in-prolog.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -26,13 +38,13 @@
 
 &lt;p&gt;I have been intrigued by Prolog for a while now because of its roots in first-order logic. I have been going through tutorials and examples looking for a way to leverage logic programming as a DSL in personal projects. I feel that Prolog could be used as a substitute for a more fully featured database languages in small projects.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/sql-queries-in-prolog.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
-   <title>hackerrank - Climbing the Leaderboard</title>
-   <link>http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=all&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2017-09-hackerrank-climbing-the-leaderboard-html</guid>
+   <title>Hacker Rank - Climbing the Leaderboard</title>
+   <link>http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-09-hacker-rank-climbing-the-leaderboard-html</guid>
    <pubDate>Tue, 12 Sep 2017 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="https://www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming technics to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hackerrank-climbing-the-leaderboard.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="https://www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming techniques to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
    <link>http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -80,7 +92,7 @@
    <pubDate>Sat, 01 Apr 2017 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;After working on &lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;totalOnes&lt;/a&gt; last week I thought I would explore how I could implement memoization in racket. Working off an example I found &lt;a href="http://rayhightower.com/blog/2014/04/12/recursion-and-memoization/"&gt;here&lt;/a&gt; I converted the standard definition of the fibonacci equation into an iterated form and a memoization form.&lt;/p&gt;&lt;a href="http://www.example.com/2017/04/memoization-in-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;After working on &lt;a href="https://codefights.com/challenge/DgH5cQEgpfu82oBQS"&gt;totalOnes&lt;/a&gt; last week I thought I would explore how I could implement memoization in racket. Working off an example I found &lt;a href="http://rayhightower.com/blog/2014/04/12/recursion-and-memoization/"&gt;here&lt;/a&gt; I converted the standard definition of the Fibonacci equation into an iterated form and a memoization form.&lt;/p&gt;&lt;a href="http://www.example.com/2017/04/memoization-in-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>CodeFights - totalOnes</title>
    <link>http://www.example.com/2017/03/codefights-totalones.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -130,7 +142,7 @@
    <description>
 &lt;p&gt;This was a rather complicated problem that mostly tested our ability to think through the procedure clearly and cover edge cases.&lt;/p&gt;
 
-&lt;p&gt;This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn&amp;rsquo;t required to do any outside the box thinking here, just put the peices together correctly.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;This was a rather long assignment to type up however, the instructions made the requirements rather clear. I wasn&amp;rsquo;t required to do any outside the box thinking here, just put the pieces together correctly.&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/cs231-assignment1.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>CS231 Lab4</title>
    <link>http://www.example.com/2017/02/cs231-lab4.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -260,7 +272,7 @@
 
 &lt;h2 id="problem-3"&gt;Problem 3&lt;/h2&gt;
 
-&lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly surprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>Project Euler with Haskell</title>
    <link>http://www.example.com/2015/10/project-euler-with-haskell.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -268,7 +280,7 @@
    <pubDate>Sat, 03 Oct 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
-&lt;p&gt;Teaching Algebra A has been more of a slog then I was expecting and I&amp;rsquo;ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the haskell programming language.&lt;/p&gt;
+&lt;p&gt;Teaching Algebra A has been more of a slog then I was expecting and I&amp;rsquo;ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the Haskell programming language.&lt;/p&gt;
 
 &lt;p&gt;Looking over the Haskell syntax I see a lot of design decisions that align with my mathematic background. I feel that the list comprehensions and mapping functions for lists have a strong mathematical foundation and I think that I will be able to pick up the language quickly.&lt;/p&gt;
 
@@ -303,14 +315,14 @@
 &lt;div class="figure"&gt;&lt;img src="/img/dd-24apr-adv-a.gif" alt="1" /&gt;
  &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
-   <title>20% Project - ProjectEuler #40, 44, and 47</title>
-   <link>http://www.example.com/2015/04/20-project-projecteuler-40-44-and-47.html?utm_source=all&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-projecteuler-40-44-and-47-html</guid>
+   <title>20% Project - Project Euler #40, 44, and 47</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-40-44-and-47.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-40-44-and-47-html</guid>
    <pubDate>Wed, 15 Apr 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
 &lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
- &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-40-44-and-47.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-40-44-and-47.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>20% Project - Witch of Agnesi</title>
    <link>http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=all&amp;utm_medium=RSS</link>
@@ -323,24 +335,24 @@
 &lt;div class="figure"&gt;&lt;img src="/img/witcha.png" alt="1" /&gt;
  &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
-   <title>20% Project - ProjectEuler #29</title>
-   <link>http://www.example.com/2015/04/20-project-projecteuler-29.html?utm_source=all&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-projecteuler-29-html</guid>
+   <title>20% Project - Project Euler #29</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-29.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-29-html</guid>
    <pubDate>Sat, 11 Apr 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
 &lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
- &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-29.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-29.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
-   <title>20% Project - ProjectEuler #27</title>
-   <link>http://www.example.com/2015/04/20-project-projecteuler-27.html?utm_source=all&amp;utm_medium=RSS</link>
-   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-projecteuler-27-html</guid>
+   <title>20% Project - Project Euler #27</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-27.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-27-html</guid>
    <pubDate>Sat, 11 Apr 2015 07:00:00 UT</pubDate>
    <author>Henry Brooks</author>
    <description>
 &lt;p&gt;Euler discovered the remarkable quadratic formula:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;n^2 + n + 41&lt;/code&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2015/04/20-project-projecteuler-27.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;&lt;code&gt;n^2 + n + 41&lt;/code&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-27.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>20% Project Update</title>
    <link>http://www.example.com/2015/02/20-project-update.html?utm_source=all&amp;utm_medium=RSS</link>

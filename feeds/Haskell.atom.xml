@@ -92,7 +92,7 @@
 
 &lt;h2 id="problem-3"&gt;Problem 3&lt;/h2&gt;
 
-&lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly suprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;I was finally able to use an infinite list in one of my programs. I&amp;rsquo;m honestly surprised that the code for this problem comes together this cleanly. Thinking about how I would complete this problem with an eager language and a non-infinite list I can only image the complexity of the code would increase considerably.&lt;/p&gt;&lt;a href="http://www.example.com/2015/10/project-euler-problem-3-and-4-with-haskell.html?utm_source=Haskell&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Project Euler with Haskell</title>
   <link rel="alternate" href="http://www.example.com/2015/10/project-euler-with-haskell.html?utm_source=Haskell&amp;utm_medium=Atom" />
@@ -102,7 +102,7 @@
   <author>
    <name>Henry Brooks</name></author>
   <content type="html">
-&lt;p&gt;Teaching Algebra A has been more of a slog then I was expecting and I&amp;rsquo;ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the haskell programming language.&lt;/p&gt;
+&lt;p&gt;Teaching Algebra A has been more of a slog then I was expecting and I&amp;rsquo;ve been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the Haskell programming language.&lt;/p&gt;
 
 &lt;p&gt;Looking over the Haskell syntax I see a lot of design decisions that align with my mathematic background. I feel that the list comprehensions and mapping functions for lists have a strong mathematical foundation and I think that I will be able to pick up the language quickly.&lt;/p&gt;
 

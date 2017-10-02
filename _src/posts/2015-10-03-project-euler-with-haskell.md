@@ -3,7 +3,7 @@
     Tags: Project Euler, Haskell
     Authors: Henry Brooks
 
-Teaching Algebra A has been more of a slog then I was expecting and I've been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the haskell programming language.
+Teaching Algebra A has been more of a slog then I was expecting and I've been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the Haskell programming language.
 
 Looking over the Haskell syntax I see a lot of design decisions that align with my mathematic background. I feel that the list comprehensions and mapping functions for lists have a strong mathematical foundation and I think that I will be able to pick up the language quickly.
 
@@ -14,7 +14,7 @@ I'm going to try to work through all of the Project Euler problems I completed w
 Problem 1
 ---
 
-This problem, and it's solution, really highlight why I wanted to try my hand at learning Haskell. The list comprehension syntax I use in this solution are nearly identical to the mathematical notation I would use to discribe this problems solution mathematically. We create a set of natural numbers less than `1000` that are congruent to `0 mod 3` or `5`, then we `sum` the elements of the set. **S** = `{x | x ∈ ℕ, x < 1000, x ≡ 0 mod 3 ⋁ x ≡  0 mod 5}`, `sum S`
+This problem, and it's solution, really highlight why I wanted to try my hand at learning Haskell. The list comprehension syntax I use in this solution are nearly identical to the mathematical notation I would use to describe this problems solution mathematically. We create a set of natural numbers less than `1000` that are congruent to `0 mod 3` or `5`, then we `sum` the elements of the set. **S** = `{x | x ∈ ℕ, x < 1000, x ≡ 0 mod 3 ⋁ x ≡  0 mod 5}`, `sum S`
 
 `ProjectEuler1.hs`
 
@@ -33,7 +33,7 @@ My solution ends up using the `x<-[1..999]` instead of `x<-[1..], x < 1000` beca
 
 Still the solution works well and I feel that it matches how I would approach this problem from a math perspective if I was doing this problem on paper.
 
-**Caveat**: I know this problem can also be solved using [sums](https://www.wolframalpha.com/input/?i=(sum+3i+from+i%3D0+to+(999%2F3))+%2B+(sum+5j+from+j%3D0+to+(999%2F5))+-+(sum+15k+from+k%3D0+to+(999%2F15))) by modifing the equation for [partial sums](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF#Partial_sums).
+**Caveat**: I know this problem can also be solved using [sums](https://www.wolframalpha.com/input/?i=(sum+3i+from+i%3D0+to+(999%2F3))+%2B+(sum+5j+from+j%3D0+to+(999%2F5))+-+(sum+15k+from+k%3D0+to+(999%2F15))) by modifying the equation for [partial sums](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF#Partial_sums).
 
 `\sum_{i=0}^{\left\lfloor\frac{999}{3}\right\rfloor} 3i +`
 ` \sum_{j=0}^{\left\lfloor\frac{999}{5}\right\rfloor} 5j -`
@@ -52,7 +52,7 @@ fib n = fib (n-1) + fib (n-2)}
 
 This version will blow up in space and time complexity for large values of `n` and is generally less efficient.
 
-I instead went with an [iterative version](https://www.ics.uci.edu/~eppstein/161/960109.html) of fibonacci that takes n steps to calcuate `fib n`.
+I instead went with an [iterative version](https://www.ics.uci.edu/~eppstein/161/960109.html) of Fibonacci that takes n steps to calculate `fib n`.
 
 There are some other versions of Fibonacci that bring the space and time complexity down further using recurrent patterns however, I felt like this code was good enough for my purposes here.
 

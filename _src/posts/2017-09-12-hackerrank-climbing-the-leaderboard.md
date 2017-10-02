@@ -1,9 +1,9 @@
-    Title: hackerrank - Climbing the Leaderboard
+    Title: Hacker Rank - Climbing the Leaderboard
     Date: 2017-09-12T00:00:00
     Tags: hackerrank, Dynamic Programming, Memoization, Racket
     Authors: Henry Brooks
 
-While working through the algorithm problem sets available at [hackerrank](https://www.hackerrank.com) I found another problem that required Dynamic Programming technics to solve completely. [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) requires an `O(n)` solution to complete the activity before it times out.
+While working through the algorithm problem sets available at [hackerrank](https://www.hackerrank.com) I found another problem that required Dynamic Programming techniques to solve completely. [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) requires an `O(n)` solution to complete the activity before it times out.
 
 <!-- more -->
 
