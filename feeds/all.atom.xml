@@ -30,6 +30,18 @@
   <content type="html">
 &lt;p&gt;I was looking over &lt;a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;amp;pageid=lpn-htmlse50"&gt;Exercise 11.3&lt;/a&gt; at &lt;a href="http://www.learnprolognow.org"&gt;Learn Prolog Now&lt;/a&gt; and realized that the problem actually implements memoization to calculate its result. I thought I would try modifying the problem to see if it could be used to solve the Fibonacci equation.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/fibonacci-in-prolog.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
+  <title type="text">MCS511 Reading Assignment 2 - Enclaves for Operation System Protection</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mcs511-reading-assignment-2-enclaves-for-operation-system-protection.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mcs511-reading-assignment-2-enclaves-for-operation-system-protection-html</id>
+  <published>2017-09-25T07:00:00Z</published>
+  <updated>2017-09-25T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h2 id="reading-assignment-2"&gt;Reading Assignment 2&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/7490626/"&gt;Enclaves for Operation System Protection&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs511-reading-assignment-2-enclaves-for-operation-system-protection.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
   <title type="text">SQL queries in Prolog</title>
   <link rel="alternate" href="http://www.example.com/2017/09/sql-queries-in-prolog.html?utm_source=all&amp;utm_medium=Atom" />
   <id>urn:http-www-example-com:-2017-09-sql-queries-in-prolog-html</id>
@@ -52,9 +64,9 @@
   <content type="html">
 &lt;p&gt;While working through the algorithm problem sets available at &lt;a href="https://www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming techniques to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
-  <title type="text">MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
-  <link rel="alternate" href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2017-09-mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure-html</id>
+  <title type="text">MCS511 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/mcs511-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-mcs511-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure-html</id>
   <published>2017-09-10T07:00:00Z</published>
   <updated>2017-09-10T07:00:00Z</updated>
   <author>
@@ -62,19 +74,7 @@
   <content type="html">
 &lt;h2 id="reading-assignment-1"&gt;Reading Assignment 1&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
- <entry>
-  <title type="text">MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
-  <link rel="alternate" href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2017-09-mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure-html</id>
-  <published>2017-09-10T07:00:00Z</published>
-  <updated>2017-09-10T07:00:00Z</updated>
-  <author>
-   <name>Henry Brooks</name></author>
-  <content type="html">
-&lt;h2 id="reading-assignment-2"&gt;Reading Assignment 2&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/7490626/"&gt;Enclaves for Operation System Protection&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;&lt;a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf"&gt;Can We Make Operating Systems Reliable and Secure?&lt;/a&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/mcs511-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">MIS522 Case Study 1 - With Big Data Comes Big Responsibility</title>
   <link rel="alternate" href="http://www.example.com/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html?utm_source=all&amp;utm_medium=Atom" />

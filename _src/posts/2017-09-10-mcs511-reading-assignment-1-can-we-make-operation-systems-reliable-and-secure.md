@@ -1,4 +1,4 @@
-    Title: MCS521 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?
+    Title: MCS511 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?
     Date: 2017-09-10T00:00:00
     Tags: Reading Assignment, Cybersecurity, MCS511
     Authors: Henry Brooks

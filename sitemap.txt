@@ -28,12 +28,12 @@ http://www.example.com/2015/02/20-project-csusm-credential-program.html
 http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html
 http://www.example.com/2017/02/cs231-labs.html
 http://www.example.com/2017/02/cs231-lab4.html
-http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html
+http://www.example.com/2017/09/mcs511-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html
 http://www.example.com/2015/11/project-euler-problem-9-and-10-with-haskell.html
 http://www.example.com/2017/09/sql-queries-in-prolog.html
 http://www.example.com/2015/10/project-euler-with-haskell.html
 http://www.example.com/2015/04/20-project-project-euler-27.html
-http://www.example.com/2017/09/mcs521-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html
+http://www.example.com/2017/09/mcs511-reading-assignment-2-enclaves-for-operation-system-protection.html
 http://www.example.com/2017/03/codefights-totalones.html
 http://www.example.com/2015/02/20-project.html
 http://www.example.com/Resume.html
