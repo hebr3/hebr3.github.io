@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>20% Project - Project Euler #29</title>
+    <meta name="description" content="1...">
+    <meta name="author"      content="Henry Brooks">
+    <meta name="keywords"    content="Teaching Credential, 20% Project, Project Euler, Author: Henry Brooks">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/2015/04/20-project-project-euler-29.html">
+    <link rel="next" href="/2015/04/20-project-project-euler-27.html">
+    <link rel="prev" href="/2015/04/20-project-witch-of-agnesi.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Henry Brooks</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/20-Project.html">20% Project</a></li>
+
+<li><a href="/tags/Assembly.html">Assembly</a></li>
+
+<li><a href="/tags/Author-Henry-Brooks.html">Author: Henry Brooks</a></li>
+
+<li><a href="/tags/C.html">C++</a></li>
+
+<li><a href="/tags/Case-Study.html">Case Study</a></li>
+
+<li><a href="/tags/CodeFights.html">CodeFights</a></li>
+
+<li><a href="/tags/CS211.html">CS211</a></li>
+
+<li><a href="/tags/CS231.html">CS231</a></li>
+
+<li><a href="/tags/Cybersecurity.html">Cybersecurity</a></li>
+
+<li><a href="/tags/Daily-Desmos.html">Daily Desmos</a></li>
+
+<li><a href="/tags/Desmos.html">Desmos</a></li>
+
+<li><a href="/tags/DSL.html">DSL</a></li>
+
+<li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
+
+<li><a href="/tags/hackerrank.html">hackerrank</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/MCS511.html">MCS511</a></li>
+
+<li><a href="/tags/Memoization.html">Memoization</a></li>
+
+<li><a href="/tags/MIS522.html">MIS522</a></li>
+
+<li><a href="/tags/Project-Euler.html">Project Euler</a></li>
+
+<li><a href="/tags/Prolog.html">Prolog</a></li>
+
+<li><a href="/tags/Python.html">Python</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Reading-Assignment.html">Reading Assignment</a></li>
+
+<li><a href="/tags/SQL.html">SQL</a></li>
+
+<li><a href="/tags/Teaching-Credential.html">Teaching Credential</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>20% Project - Project Euler #29</h1>
+    <p class='date-and-tags'>
+<time datetime="2015-04-11" pubdate="true">2015-04-11</time> :: <span class="tags"><a href="/tags/Teaching-Credential.html">Teaching Credential</a>, <a href="/tags/20-Project.html">20% Project</a>, <a href="/tags/Project-Euler.html">Project Euler</a></span></p>
+    <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
+  </header>
+
+<div class="figure"><img src="/img/ProjectEuler29a.png" alt="1" />
+ <p class="caption">1</p></div>
+<!-- more-->
+
+<p><a href="https://projecteuler.net/problem=29">Project Euler</a></p>
+
+<p>Like the last problem I find it&rsquo;s informative to start out with an inelegant solution and try to find an elegant one at the end.</p>
+
+<p>We start by generating an array of the form <code>a^b</code> from <code>a = 2</code> to <code>100</code> and <code>b = 2</code> to <code>100</code>.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29b.png" alt="2" />
+ <p class="caption">2</p></div>
+
+<p>As expected that got gigantic quickly, however we don&rsquo;t need to look at all of the data to work with it.</p>
+
+<p>We can use <strong>Flatten</strong> to compress the <code>99×99</code> array into a single vector <code>9,801</code> elements long. We then use <strong>DeleteDuplicates</strong> to remove all of the duplicated elements from the vector. And finish with <strong>Length</strong> to find the total number of elements left over.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29c.png" alt="3" />
+ <p class="caption">3</p></div>
+
+<p>And technically we are done. <strong>The answer to this ProjectEular problem is <code>9,183</code>.</strong></p>
+
+<p>However I think that it&rsquo;s worth our time to consider why their are only <code>618</code> repeated numbers in this list.</p>
+
+<p>First lets try to account for all of the numbers that are unique.</p>
+
+<p>There are <code>25</code> prime numbers less than <code>100</code> and each of these numbers will generate <code>99</code> non-duplicated numbers since they will have only one number as their factor. So we have to have at least <code>25×99=2,475</code> unique numbers just from the primes under <code>100</code>.</p>
+
+<p>However thinking about it we can also remove the numbers that are composed of primes like <code>6</code> and <code>15</code>. Observe that since <code>6=2×3</code> that <code>6^2=(2×3)^2=2^2×3^3</code>, and so on.</p>
+
+<p>We could try to find the possible permutations of the <code>25</code> primes however, there are <code>2^25</code> ways that we can combine two pairs of primes and calculating which combinations have values less than <code>100</code> is rather time consuming.</p>
+
+<p>Instead lets consider what numbers we know are going to show up more than once in the table?</p>
+
+<p>Any number that is a power of a lower number of the list will definitely be a repeated.</p>
+
+<p>The higher powers of <code>2</code> will show up in the powers of <code>4, 8, 16, 32,</code> and <code>64</code>.</p>
+
+<p>Below I have generated a truncated list for the <code>2,4,</code> and <code>8</code> table. We can see that the <code>4</code> table repeats every second value on the <code>2</code> table and that the <code>8</code> table repeats the 3rd value. This corresponds to <code>4=2^2</code> and <code>8=2^3</code>.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29d.png" alt="4" />
+ <p class="caption">4</p></div>
+
+<p>I created the following two tables in <a href="https://en.wikipedia.org/wiki/LaTeX">Latex</a> to highlight how the powers of <code>2</code> repeat at specific intervals in the <code>4</code> and <code>8</code> power tables. A similar pattern will occur for the powers of <code>3, 5,</code> and <code>7</code>.</p>
+
+<p>Similarly the power table for <code>6</code> will be repeated in the power table for <code>36</code> and <code>10</code> in the power table for <code>100</code>.</p>
+
+<p>The following Matrix and ArrayPlot were generated in Mathematica to show the repeated numbers in the table given above. Observe that <code>2^6</code> occurs the most often in this table and is represented in black in the <strong>ArrayPlot</strong> to signify that it is a larger value.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29e.png" alt="5" />
+ <p class="caption">5</p></div>
+
+<div class="figure"><img src="/img/ProjectEuler29f.png" alt="6" />
+ <p class="caption">6</p></div>
+
+<p>Expanding the array to include all of the numbers we originally calculated we get the following <strong>ArrayPlot</strong>. Here we see that most of the values that will have repeats are clustered around the top of the array corresponding to a values between <code>2</code> and <code>10</code>.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29g.png" alt="7" />
+ <p class="caption">7</p></div>
+
+<p>The dark band that shows up around the <code>2/3</code> mark on the array corresponds to the powers of <code>2^6</code>. As you can see by the following table the values in the <code>2^6</code> power table show up repeatedly throughout the array.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29h.png" alt="8" />
+ <p class="caption">8</p></div>
+
+<p>For reference the number that shows up the most often in the table is <code>1,152,921,504,606,846,976</code> or <code>2^60</code>. Which makes sense when you remember that <code>60</code> has <code>12</code> divisors and would thus it will show up in the power table of <code>2^1, 2^2, 2^3, 2^4, 2^5, 2^6</code>.</p>
+
+<p>Also you should notice that in a number of rows the values are high for half of the row and then drop down to 1 for the rest of the array. As an example the power table for <code>100</code> is at the bottom of the array window. Note that the first <code>50</code> values of this table occur in the <code>10</code> power table.</p>
+
+<div class="figure"><img src="/img/ProjectEuler29i.png" alt="9" />
+ <p class="caption">9</p></div>
+
+<p>It&rsquo;s not until <code>100^51</code> that we get the first value that doesn&rsquo;t show up in <code>10</code> power table.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This problem is mechanically simple to calculate with a computer but is calculable by hand given time and planning. I wouldn&rsquo;t ask students to do the full table by hand but I feel that you could probably have an interesting discussion with students concerning this material.</p>
+
+<p>Using the above code I found that <code>280,607</code> times the second number tested was non-Prime. Since there are only <code>336,000</code> entries in the array that means that <code>83.5%</code> of the time while generating the original array I could have stopped after calculating the second value.</p>
+
+<p>This was a longer write up than I originally expected, but it was a rather involved problem that benefited greatly from optimization.</p>
+  <footer>
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2015/04/20-project-witch-of-agnesi.html">&larr; <em>20% Project - Witch of Agnesi</em></a>
+    </li>
+    <li class="next">
+      <a href="/2015/04/20-project-project-euler-27.html"><em>20% Project - Project Euler #27</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>Copyright 2014-2017 by Henry Brooks </em> &#183; <a href="mailto:brook057@cougars.csusm.edu"><em>brook057@cougars.csusm.edu</em></a></p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>MCS511 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</title>
+    <meta name="description" content="Reading Assignment 1:  Can We Make Operating Systems Reliable and Secure?...">
+    <meta name="author"      content="Henry Brooks">
+    <meta name="keywords"    content="Reading Assignment, Cybersecurity, MCS511, Author: Henry Brooks">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/2017/09/mcs511-reading-assignment-1-can-we-make-operating-systems-reliable-and-secure.html">
+    <link rel="next" href="/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html">
+    <link rel="prev" href="/2017/09/hacker-rank-climbing-the-leaderboard.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Henry Brooks</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/20-Project.html">20% Project</a></li>
+
+<li><a href="/tags/Assembly.html">Assembly</a></li>
+
+<li><a href="/tags/Author-Henry-Brooks.html">Author: Henry Brooks</a></li>
+
+<li><a href="/tags/C.html">C++</a></li>
+
+<li><a href="/tags/Case-Study.html">Case Study</a></li>
+
+<li><a href="/tags/CodeFights.html">CodeFights</a></li>
+
+<li><a href="/tags/CS211.html">CS211</a></li>
+
+<li><a href="/tags/CS231.html">CS231</a></li>
+
+<li><a href="/tags/Cybersecurity.html">Cybersecurity</a></li>
+
+<li><a href="/tags/Daily-Desmos.html">Daily Desmos</a></li>
+
+<li><a href="/tags/Desmos.html">Desmos</a></li>
+
+<li><a href="/tags/DSL.html">DSL</a></li>
+
+<li><a href="/tags/Dynamic-Programming.html">Dynamic Programming</a></li>
+
+<li><a href="/tags/hackerrank.html">hackerrank</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/MCS511.html">MCS511</a></li>
+
+<li><a href="/tags/Memoization.html">Memoization</a></li>
+
+<li><a href="/tags/MIS522.html">MIS522</a></li>
+
+<li><a href="/tags/Project-Euler.html">Project Euler</a></li>
+
+<li><a href="/tags/Prolog.html">Prolog</a></li>
+
+<li><a href="/tags/Python.html">Python</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Reading-Assignment.html">Reading Assignment</a></li>
+
+<li><a href="/tags/SQL.html">SQL</a></li>
+
+<li><a href="/tags/Teaching-Credential.html">Teaching Credential</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>MCS511 Reading Assignment 1 - Can We Make Operating Systems Reliable and Secure?</h1>
+    <p class='date-and-tags'>
+<time datetime="2017-09-10" pubdate="true">2017-09-10</time> :: <span class="tags"><a href="/tags/Reading-Assignment.html">Reading Assignment</a>, <a href="/tags/Cybersecurity.html">Cybersecurity</a>, <a href="/tags/MCS511.html">MCS511</a></span></p>
+    <p class='authors'>By: <span class="authors"><a href="/tags/Author-Henry-Brooks.html">Henry Brooks</a></span></p>
+  </header>
+
+<h2 id="reading-assignment-1">Reading Assignment 1</h2>
+
+<p><a href="https://pdfs.semanticscholar.org/ee0c/f2be3c502575886abe01765f2e26f0a92713.pdf">Can We Make Operating Systems Reliable and Secure?</a></p>
+<!-- more-->
+
+<p>I feel that the author did a very good job of explaining the issues with current OS design and highlighting how a micro-kernel can address those issues. I have actually seen a lot of these same issues before when I was looking into Erlang programming. A design goal for Erlang software is fault recovery and tolerance. Erlang is designed for telecommunications work so it initially had the same requirements for uptime and recovery that the author is looking for. However Erlang is a general purpose language and the author wants to bring these concepts into the kernel arena.</p>
+
+<p>I honestly think that it would be worthwhile for many companies to consider transferring to a micro-kernel model for their business products. While many small IoT devices run their own dedicated kernel, some are running a version of Linux or Windows 10 IoT. These OSes are overkill for many products and as the article stated, it opens up the product to many more security vulnerabilities than it should. As a specific example we know for the last black hat that many voting machines are actually run on applications running on top of Windows systems. These are the perfect example of a system where there should be clear boundaries between permissions.</p>
+
+<p>The major issue I see with most companies implementing better security through a micro-kernel is legacy software. Legacy systems make up a significant portion of code that is currently being run. There are countless stories of programmers being tasked with maintenance or transition of these systems. The business side of the cost benefit analysis is weighted more in favor of fixing issues in the short term. The outlay of resources required to transition a decent sized application to a micro-kernel isn&rsquo;t economically feasible for many companies. Related to this is that since no one is really doing this type of work finding people who can is more difficult and costly that it should be.</p>
+
+<p>Overall I agree with the desire to move more systems to a secure micro-kernel OS, I just recognize that there are major roadblocks that must be addressed on the business side of the equation.</p>
+  <footer>
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2017/09/hacker-rank-climbing-the-leaderboard.html">&larr; <em>Hacker Rank - Climbing the Leaderboard</em></a>
+    </li>
+    <li class="next">
+      <a href="/2017/09/mis522-case-study-1-with-big-data-comes-big-responsibility.html"><em>MIS522 Case Study 1 - With Big Data Comes Big Responsibility</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>Copyright 2014-2017 by Henry Brooks </em> &#183; <a href="mailto:brook057@cougars.csusm.edu"><em>brook057@cougars.csusm.edu</em></a></p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
