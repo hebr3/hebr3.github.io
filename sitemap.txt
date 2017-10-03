@@ -21,6 +21,7 @@ http://www.example.com/2017/01/cs211-lab1-program3-in-racket.html
 http://www.example.com/2015/11/project-euler-problem-13-and-14-with-haskell.html
 http://www.example.com/2017/01/cs211-lab1-program1-in-racket.html
 http://www.example.com/2017/03/asm-dsl.html
+http://www.example.com/2017/10/dynamic-programming-of-recursive-functions-in-prolog.html
 http://www.example.com/2015/10/project-euler-problem-8-with-haskell.html
 http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html
 http://www.example.com/2017/03/cs231-assignment1.html
