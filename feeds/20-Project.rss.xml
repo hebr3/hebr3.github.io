@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>My Blog: Posts tagged '20% Project'</title>
+  <description>My Blog: Posts tagged '20% Project'</description>
+  <link>http://www.example.com/tags/20-Project.html</link>
+  <lastBuildDate>Fri, 24 Apr 2015 07:00:00 UT</lastBuildDate>
+  <pubDate>Fri, 24 Apr 2015 07:00:00 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Daily Desmos - 24 April</title>
+   <link>http://www.example.com/2015/04/daily-desmos-24-april.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-daily-desmos-24-april-html</guid>
+   <pubDate>Fri, 24 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;div class="figure"&gt;&lt;img src="/img/dd-24apr-a.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Daily Desmos - 24 April - Exploration</title>
+   <link>http://www.example.com/2015/04/daily-desmos-24-april-exploration.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-daily-desmos-24-april-exploration-html</guid>
+   <pubDate>Fri, 24 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;&lt;a href="http://http://dailydesmos.com/"&gt;Daily Desmos&lt;/a&gt; posted two different examples of warping graphs on April 24. As an experiment I combined both graphs into one to see what they would look like.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/warping-hyperbola-e.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april-exploration.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Daily Desmos - 24 April - Advanced Hyperbola</title>
+   <link>http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-daily-desmos-24-april-advanced-hyperbola-html</guid>
+   <pubDate>Fri, 24 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;div class="figure"&gt;&lt;img src="/img/dd-24apr-adv-a.gif" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/daily-desmos-24-april-advanced-hyperbola.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project - Project Euler #40, 44, and 47</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-40-44-and-47.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-40-44-and-47-html</guid>
+   <pubDate>Wed, 15 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-40-44-and-47.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project - Witch of Agnesi</title>
+   <link>http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-witch-of-agnesi-html</guid>
+   <pubDate>Sun, 12 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;I was helping a student in AVID with calculus homework when I confronted with the following problem.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/witcha.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-witch-of-agnesi.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project - Project Euler #29</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-29.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-29-html</guid>
+   <pubDate>Sat, 11 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;div class="figure"&gt;&lt;img src="/img/ProjectEuler29a.png" alt="1" /&gt;
+ &lt;p class="caption"&gt;1&lt;/p&gt;&lt;/div&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-29.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project - Project Euler #27</title>
+   <link>http://www.example.com/2015/04/20-project-project-euler-27.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-04-20-project-project-euler-27-html</guid>
+   <pubDate>Sat, 11 Apr 2015 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;Euler discovered the remarkable quadratic formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;n^2 + n + 41&lt;/code&gt;&lt;/p&gt;&lt;a href="http://www.example.com/2015/04/20-project-project-euler-27.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project Update</title>
+   <link>http://www.example.com/2015/02/20-project-update.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-02-20-project-update-html</guid>
+   <pubDate>Fri, 20 Feb 2015 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;Considering Prof. Heil&amp;rsquo;s email I have complied a list of the criteria for my 20% Project.&lt;/p&gt;
+
+&lt;p&gt;For my 20% Project I&amp;rsquo;m going to be learning to write code in &lt;a href="https://www.wolfram.com/mathematica/"&gt;Mathematica&lt;/a&gt; to find solutions for the problems posted on Project Euler.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project-update.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project - CSUSM credential program</title>
+   <link>http://www.example.com/2015/02/20-project-csusm-credential-program.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-02-20-project-csusm-credential-program-html</guid>
+   <pubDate>Mon, 16 Feb 2015 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project-csusm-credential-program.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>20% Project</title>
+   <link>http://www.example.com/2015/02/20-project.html?utm_source=20-Project&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2015-02-20-project-html</guid>
+   <pubDate>Mon, 16 Feb 2015 08:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C+ during college and I want to expand that knowledge.&lt;/p&gt;&lt;a href="http://www.example.com/2015/02/20-project.html?utm_source=20-Project&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>

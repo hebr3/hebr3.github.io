@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.example.com/feeds/Author-Henry-Brooks.atom.xml" />
  <link href="http://www.example.com/tags/Author-Henry-Brooks.html" />
  <id>urn:http-www-example-com:-tags-Author-Henry-Brooks-html</id>
- <updated>2017-10-01T07:00:00Z</updated>
+ <updated>2017-10-03T07:00:00Z</updated>
+ <entry>
+  <title type="text">Dynamic programming of recursive functions in Prolog</title>
+  <link rel="alternate" href="http://www.example.com/2017/10/dynamic-programming-of-recursive-functions-in-prolog.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-10-dynamic-programming-of-recursive-functions-in-prolog-html</id>
+  <published>2017-10-03T07:00:00Z</published>
+  <updated>2017-10-03T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;Last week I was able to successfully implementing &lt;code&gt;Fibonacci&lt;/code&gt; with &lt;a href="https://en.wikipedia.org/wiki/Memoization"&gt;memoization&lt;/a&gt; in &lt;code&gt;Prolog&lt;/code&gt;. This time I thought I would try the &lt;a href="https://en.wikipedia.org/wiki/Collatz_conjecture"&gt;Hailstone&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Ackermann_function"&gt;Ackermann&lt;/a&gt; formulas to see if all recursive functions can benefit from &lt;code&gt;memoization&lt;/code&gt;.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/dynamic-programming-of-recursive-functions-in-prolog.html?utm_source=Author-Henry-Brooks&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
   <link rel="alternate" href="http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=Author-Henry-Brooks&amp;utm_medium=Atom" />

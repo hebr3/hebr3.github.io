@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: Posts tagged 'DSL'</title>
+ <link rel="self" href="http://www.example.com/feeds/DSL.atom.xml" />
+ <link href="http://www.example.com/tags/DSL.html" />
+ <id>urn:http-www-example-com:-tags-DSL-html</id>
+ <updated>2017-03-11T08:00:00Z</updated>
+ <entry>
+  <title type="text">ASM-DSL</title>
+  <link rel="alternate" href="http://www.example.com/2017/03/asm-dsl.html?utm_source=DSL&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-03-asm-dsl-html</id>
+  <published>2017-03-11T08:00:00Z</published>
+  <updated>2017-03-11T08:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;I have been thinking about all of the boilerplate code that I keep writing in my assembly class and I decide to start looking into creating a simple &lt;a href="https://en.wikipedia.org/wiki/Domain-specific_language"&gt;DSL&lt;/a&gt; to assist with my code writing.&lt;/p&gt;
+
+&lt;p&gt;Mostly I am looking to simplify code blocks that have easy &lt;code&gt;c++&lt;/code&gt; analogs. Specifically &lt;code&gt;cin&lt;/code&gt;, &lt;code&gt;cout&lt;/code&gt;, and assignment (&lt;code&gt;=&lt;/code&gt;).&lt;/p&gt;&lt;a href="http://www.example.com/2017/03/asm-dsl.html?utm_source=DSL&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

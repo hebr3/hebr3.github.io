@@ -4,9 +4,17 @@
   <title>My Blog: My Blog</title>
   <description>My Blog: My Blog</description>
   <link>http://www.example.com/index.html</link>
-  <lastBuildDate>Sun, 01 Oct 2017 07:00:00 UT</lastBuildDate>
-  <pubDate>Sun, 01 Oct 2017 07:00:00 UT</pubDate>
+  <lastBuildDate>Tue, 03 Oct 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Tue, 03 Oct 2017 07:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Dynamic programming of recursive functions in Prolog</title>
+   <link>http://www.example.com/2017/10/dynamic-programming-of-recursive-functions-in-prolog.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-10-dynamic-programming-of-recursive-functions-in-prolog-html</guid>
+   <pubDate>Tue, 03 Oct 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;p&gt;Last week I was able to successfully implementing &lt;code&gt;Fibonacci&lt;/code&gt; with &lt;a href="https://en.wikipedia.org/wiki/Memoization"&gt;memoization&lt;/a&gt; in &lt;code&gt;Prolog&lt;/code&gt;. This time I thought I would try the &lt;a href="https://en.wikipedia.org/wiki/Collatz_conjecture"&gt;Hailstone&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Ackermann_function"&gt;Ackermann&lt;/a&gt; formulas to see if all recursive functions can benefit from &lt;code&gt;memoization&lt;/code&gt;.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/dynamic-programming-of-recursive-functions-in-prolog.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
    <link>http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=all&amp;utm_medium=RSS</link>

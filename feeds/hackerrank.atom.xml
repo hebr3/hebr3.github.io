@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: Posts tagged 'hackerrank'</title>
+ <link rel="self" href="http://www.example.com/feeds/hackerrank.atom.xml" />
+ <link href="http://www.example.com/tags/hackerrank.html" />
+ <id>urn:http-www-example-com:-tags-hackerrank-html</id>
+ <updated>2017-09-12T07:00:00Z</updated>
+ <entry>
+  <title type="text">Hacker Rank - Climbing the Leaderboard</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=hackerrank&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-hacker-rank-climbing-the-leaderboard-html</id>
+  <published>2017-09-12T07:00:00Z</published>
+  <updated>2017-09-12T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;While working through the algorithm problem sets available at &lt;a href="https://www.hackerrank.com"&gt;hackerrank&lt;/a&gt; I found another problem that required Dynamic Programming techniques to solve completely. &lt;a href="https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem"&gt;Climbing the Leaderboard&lt;/a&gt; requires an &lt;code&gt;O(n)&lt;/code&gt; solution to complete the activity before it times out.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=hackerrank&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
