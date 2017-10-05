@@ -10,6 +10,8 @@ Last week I was able to successfully implementing `Fibonacci` with [memoization]
 Hailstone
 ---
 
+By itself the `Hailstone` function is not recursive however, trying to calculate the longest `Hailstone Sequence` is a highly recursive task.
+
 I coded up this first `memoized` version of the `Hailstone` formula rather quickly by modifying the `Fibonacci` code from last week.
 
 ```prolog
@@ -81,29 +83,74 @@ hailstone2(N,[N|S]) :-
     hailstone2(N1, S),
     assert(hailstone2_(N,[N|S])).
 
-main(Number,Hailstone1,Hailstone2):-
+longestHailstoneSequence1(M, Seq, Len) :-
+    longesthailstone1(M, 1, 1, Seq, Len).
+
+longesthailstone1(1, Cn, Cl, Mn, Ml):-
+    Mn = Cn,
+	  Ml = Cl.
+longesthailstone1(N, _, Cl, Mn, Ml) :-
+    hailstone1(N, X),
+    length(X, L),
+    Cl < L,
+    N1 is N-1,
+    longesthailstone1(N1, N, L, Mn, Ml).
+longesthailstone1(N, Cn, Cl, Mn, Ml) :-
+    N1 is N-1,
+    longesthailstone1(N1, Cn, Cl, Mn, Ml).
+
+longestHailstoneSequence2(M, Seq, Len) :-
+    longesthailstone2(M, 1, 1, Seq, Len).
+
+longesthailstone2(1, Cn, Cl, Mn, Ml):-
+    Mn = Cn,
+    Ml = Cl.
+longesthailstone2(N, _, Cl, Mn, Ml) :-
+    hailstone2(N, X),
+    length(X, L),
+    Cl < L,
+    N1 is N-1,
+    longesthailstone2(N1, N, L, Mn, Ml).
+longesthailstone2(N, Cn, Cl, Mn, Ml) :-
+    N1 is N-1,
+    longesthailstone2(N1, Cn, Cl, Mn, Ml).
+
+
+main(Max,LongestHailstone1,Hailstone1,LongestHailstone2,Hailstone2):-
     get_time(T1),
-    hailstone1(Number,X),
+    longestHailstoneSequence1(Max,_,LongestHailstone1),
     get_time(T2),
-    hailstone2(Number,_Y),
+    longestHailstoneSequence2(Max,_,LongestHailstone2),
     get_time(T3),
     Hailstone1 is T2 - T1,
     Hailstone2 is T3 - T2.
 ```
 
-I tested both versions against the longest `hailstone` sequence less than a `1,000,000`.
+I tested both versions to find the longest length less than `1,000,000`.
 
 ```prolog
-?- main(837799, Hailstone1, Hailstone2).
-Hailstone1 = 0.0008769035339355469,
-Hailstone2 = 0.008591413497924805 
+?- main(1000000,RegularLength,RegularTime,MemoizedLength,MemoizedTime).
+RegularLength = MemoizedLength, MemoizedLength = 525,
+RegularTime = 45.83147144317627,
+MemoizedTime = 13.176789045333862 .
 ```
 
-And looking at the results it seems that `memoization` sped up the calculation by around a factor of `10`. If we use `listing` we can see that `hailstone` will save a lot of time in future calculations.
+And loo.king at the results it seems that `memoization` sped up the calculation by around a factor of `3`. Running the calculation again gives further evidence to the time saved through `memoization` techniques.
 
 ```prolog
-?- hailstone2(19,L).
-L = [19, 58, 29, 88, 44, 22, 11, 34, 17|...] .
+?- main(1000000,RegularLength,RegularTime,MemoizedLength,MemoizedTime).
+RegularLength = MemoizedLength, MemoizedLength = 525,
+RegularTime = 45.660714626312256,
+MemoizedTime = 1.4994690418243408 .
+```
+
+Running `main` again with a smaller value also gives us a chance to look at how `Prolog` is storing the values.
+
+```prolog
+?- main(25,RegularLength,RegularTime,MemoizedLength,MemoizedTime).
+RegularLength = MemoizedLength, MemoizedLength = 24,
+RegularTime = 0.0004966259002685547,
+MemoizedTime = 0.00028586387634277344 .
 
 ?- listing.
 
@@ -128,7 +175,32 @@ hailstone2_(88, [88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2,
 hailstone2_(29, [29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
 hailstone2_(58, [58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
 hailstone2_(19, [19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(38, [38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(76, [76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(25, [25, 76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(3, [3, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(6, [6, 3, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(12, [12, 6, 3, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(24, [24, 12, 6, 3, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(80, [80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(160, [160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(53, [53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(106, [106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(35, [35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(70, [70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(23, [23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(32, [32, 16, 8, 4, 2, 1]).
+hailstone2_(64, [64, 32, 16, 8, 4, 2, 1]).
+hailstone2_(21, [21, 64, 32, 16, 8, 4, 2, 1]).
+hailstone2_(7, [7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(14, [14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(28, [28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(9, [9, 28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(18, [18, 9, 28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(46, [46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
+hailstone2_(15, [15, 46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1]).
 ```
+
 
 Ackermann
 ---
