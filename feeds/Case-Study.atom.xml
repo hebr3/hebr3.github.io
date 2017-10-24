@@ -4,7 +4,35 @@
  <link rel="self" href="http://www.example.com/feeds/Case-Study.atom.xml" />
  <link href="http://www.example.com/tags/Case-Study.html" />
  <id>urn:http-www-example-com:-tags-Case-Study-html</id>
- <updated>2017-10-01T07:00:00Z</updated>
+ <updated>2017-10-15T07:00:00Z</updated>
+ <entry>
+  <title type="text">MIS522 Case Study 4 - Cybersecurity's Human Factor: Lessons from the Pentagon</title>
+  <link rel="alternate" href="http://www.example.com/2017/10/mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon.html?utm_source=Case-Study&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-10-mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon-html</id>
+  <published>2017-10-15T07:00:00Z</published>
+  <updated>2017-10-15T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h2 id="week-7-case-study"&gt;Week 7 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://hbr.org/2015/09/cybersecuritys-human-factor-lessons-from-the-pentagon"&gt;Cybersecurity’s Human Factor: Lessons from the Pentagon&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning how to transition a business to have a security mindset. Specifically, how to implement security measures and practices across the whole of a business.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon.html?utm_source=Case-Study&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">MIS522 Case Study 3 - The Vulnerability Economy</title>
+  <link rel="alternate" href="http://www.example.com/2017/10/mis522-case-study-3-the-vulnerability-economy.html?utm_source=Case-Study&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-10-mis522-case-study-3-the-vulnerability-economy-html</id>
+  <published>2017-10-08T07:00:00Z</published>
+  <updated>2017-10-08T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;h2 id="week-5-case-study"&gt;Week 5 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://case.hks.harvard.edu/the-vulnerability-economy-zero-days-cybersecurity-and-public-policy/"&gt;The Vulnerability Economy: Zero-Days, Cybersecurity, and Public Policy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the Zero-Day vulnerabilities.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/mis522-case-study-3-the-vulnerability-economy.html?utm_source=Case-Study&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
   <link rel="alternate" href="http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=Case-Study&amp;utm_medium=Atom" />

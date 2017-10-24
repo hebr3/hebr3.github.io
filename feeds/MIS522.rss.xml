@@ -4,9 +4,62 @@
   <title>My Blog: Posts tagged 'MIS522'</title>
   <description>My Blog: Posts tagged 'MIS522'</description>
   <link>http://www.example.com/tags/MIS522.html</link>
-  <lastBuildDate>Sun, 01 Oct 2017 07:00:00 UT</lastBuildDate>
-  <pubDate>Sun, 01 Oct 2017 07:00:00 UT</pubDate>
+  <lastBuildDate>Sun, 15 Oct 2017 07:00:00 UT</lastBuildDate>
+  <pubDate>Sun, 15 Oct 2017 07:00:00 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>MIS522 Case Study 4 - Cybersecurity's Human Factor: Lessons from the Pentagon</title>
+   <link>http://www.example.com/2017/10/mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon.html?utm_source=MIS522&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-10-mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon-html</guid>
+   <pubDate>Sun, 15 Oct 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h2 id="week-7-case-study"&gt;Week 7 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://hbr.org/2015/09/cybersecuritys-human-factor-lessons-from-the-pentagon"&gt;Cybersecurity’s Human Factor: Lessons from the Pentagon&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning how to transition a business to have a security mindset. Specifically, how to implement security measures and practices across the whole of a business.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/mis522-case-study-4-cybersecurity-s-human-factor-lessons-from-the-pentagon.html?utm_source=MIS522&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>MIS522 Case Study 3 - The Vulnerability Economy</title>
+   <link>http://www.example.com/2017/10/mis522-case-study-3-the-vulnerability-economy.html?utm_source=MIS522&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-10-mis522-case-study-3-the-vulnerability-economy-html</guid>
+   <pubDate>Sun, 08 Oct 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h2 id="week-5-case-study"&gt;Week 5 Case Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://case.hks.harvard.edu/the-vulnerability-economy-zero-days-cybersecurity-and-public-policy/"&gt;The Vulnerability Economy: Zero-Days, Cybersecurity, and Public Policy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This weeks case study examines an article from the Harvard Business Review concerning the Zero-Day vulnerabilities.&lt;/p&gt;&lt;a href="http://www.example.com/2017/10/mis522-case-study-3-the-vulnerability-economy.html?utm_source=MIS522&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>MIS522 - Rish Assessment</title>
+   <link>http://www.example.com/2017/10/mis522-rish-assessment.html?utm_source=MIS522&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:http-www-example-com:-2017-10-mis522-rish-assessment-html</guid>
+   <pubDate>Tue, 03 Oct 2017 07:00:00 UT</pubDate>
+   <author>Henry Brooks</author>
+   <description>
+&lt;h2 id="risk-assessment"&gt;Risk Assessment&lt;/h2&gt;
+
+&lt;p&gt;This weeks we went over Risk Assessments guidelines posted by &lt;a href="https://www.fedramp.gov/"&gt;The Federal Risk and Authorization Management Program&lt;/a&gt;(fedRAMP) and we were asked to use their &lt;a href="https://www.fedramp.gov/resources/templates-2016/"&gt;Security Assessment Report Template&lt;/a&gt; to model as risk assessment for the university.&lt;/p&gt;
+
+&lt;p&gt;fedRAMP lists 3 categories for the origination of threats&lt;/p&gt;
+
+&lt;p&gt;
+ &lt;style type="text/css"&gt;.tg {border-collapse:collapse;border-spacing:0;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg .tg-s6z2{text-align:center}&lt;/style&gt;&lt;/p&gt;
+
+&lt;table class="tg"&gt;
+ &lt;tr&gt;
+  &lt;th class="tg-031e"&gt;Threat Origination Category&lt;/th&gt; 
+  &lt;th class="tg-s6z2"&gt;Type Identifier&lt;/th&gt;&lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td class="tg-031e"&gt;Threat launched purposefully&lt;/td&gt; 
+  &lt;td class="tg-s6z2"&gt;P&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td class="tg-031e"&gt;Threats created by unintentional human or machine error&lt;/td&gt; 
+  &lt;td class="tg-s6z2"&gt;U&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td class="tg-031e"&gt;Threats caused by environmental agents or disruptions&lt;/td&gt; 
+  &lt;td class="tg-s6z2"&gt;E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;a href="http://www.example.com/2017/10/mis522-rish-assessment.html?utm_source=MIS522&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>MIS522 Case Study 2 - Management's Role in Information Security in a Cyber Economy</title>
    <link>http://www.example.com/2017/10/mis522-case-study-2-management-s-role-in-information-security-in-a-cyber-economy.html?utm_source=MIS522&amp;utm_medium=RSS</link>

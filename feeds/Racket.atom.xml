@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.example.com/feeds/Racket.atom.xml" />
  <link href="http://www.example.com/tags/Racket.html" />
  <id>urn:http-www-example-com:-tags-Racket-html</id>
- <updated>2017-09-12T07:00:00Z</updated>
+ <updated>2017-09-26T07:00:00Z</updated>
+ <entry>
+  <title type="text">Linear Regression in Racket - hackerrank - 10 Days of Statistics - Day 8</title>
+  <link rel="alternate" href="http://www.example.com/2017/09/linear-regression-in-racket-hackerrank-10-days-of-statistics-day-8.html?utm_source=Racket&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2017-09-linear-regression-in-racket-hackerrank-10-days-of-statistics-day-8-html</id>
+  <published>2017-09-26T07:00:00Z</published>
+  <updated>2017-09-26T07:00:00Z</updated>
+  <author>
+   <name>Henry Brooks</name></author>
+  <content type="html">
+&lt;p&gt;Hackerrank is currently running a 10 Day challenge to introduce people to Statistical methods and computations. &lt;a href="https://www.hackerrank.com/challenges/s10-least-square-regression-line/problem"&gt;Today&amp;rsquo;s problem&lt;/a&gt; asks you to compute the &lt;a href="https://en.wikipedia.org/wiki/Linear_least_squares_(mathematics)"&gt;Least Square Regression Line&lt;/a&gt; for a series of 5 points. I decided to roll my own implementation of the formulas in Racket as a practice problem.&lt;/p&gt;&lt;a href="http://www.example.com/2017/09/linear-regression-in-racket-hackerrank-10-days-of-statistics-day-8.html?utm_source=Racket&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Hacker Rank - Climbing the Leaderboard</title>
   <link rel="alternate" href="http://www.example.com/2017/09/hacker-rank-climbing-the-leaderboard.html?utm_source=Racket&amp;utm_medium=Atom" />
