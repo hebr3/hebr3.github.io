@@ -5,13 +5,13 @@ date: 2015-10-17T00:00:00
 categories: Project Euler,Haskell
 ---
 
-Problem 5
+[Problem 5][problem5]
 ---
 
 I have solved similar questions during math test so I went with a purely brute force solution to this problem as I wanted to test how long it would take to complete.
 
 
-<figcaption>`ProjectEuler5.hs`</figcaption>
+<figcaption>ProjectEuler5.hs</figcaption>
 {% highlight haskell %}
 main :: IO ()
 main = do
@@ -28,12 +28,12 @@ I was a little surprised that the program didn't crash considering how large a n
 
 Solving this without programming is mostly an exercise in taking the prime factorization of the numbers from `1` to `20` and [combining them](http://www.wolframalpha.com/input/?i=232792560).
 
-Problem 6
+[Problem 6][problem6]
 ---
 
 Rather straight forward solution to this problem. I am still surprised by how clean the code looks in `haskell` compared to `c++`. There is much less [boilerplate](link://https.en.wikipedia/org/wiki_Boilerplate) code required to get a solution printed on screen.
 
-<figcaption>`ProjectEuler6.hs`</figcaption>
+<figcaption>ProjectEuler6.hs</figcaption>
 {% highlight haskell %}
 main :: IO ()
 main = do
@@ -50,12 +50,12 @@ sqSum = sq (sum [1..100])
 sumSq = sum (map sq [1..100])
 {% endhighlight %}
 
-Problem 7
+[Problem 7][problem7]
 ---
 
 Another really clean solution using infinite lists.
 
-<figcaption>`ProjectEuler7.hs`</figcaption>
+<figcaption>ProjectEuler7.hs</figcaption>
 {% highlight haskell %}
 main :: IO ()
 main = do
@@ -72,4 +72,9 @@ primes = 2 : primes'
 {% endhighlight %}
 
 
-[Problem 8](https://projecteuler.net/problem=8) from Project Euler is looking like a much more involved problem however, I'm hopeful that I will be able to get it finished this week.
+[Problem 8][problem8] from Project Euler is looking like a much more involved problem however, I'm hopeful that I will be able to get it finished this week.
+
+[problem5]: https://projecteuler.net/problem=5
+[problem6]: https://projecteuler.net/problem=6
+[problem7]: https://projecteuler.net/problem=7
+[problem8]: https://projecteuler.net/problem=8
