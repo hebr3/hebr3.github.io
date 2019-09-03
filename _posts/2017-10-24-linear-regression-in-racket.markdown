@@ -1,17 +1,23 @@
 ---
 layout: post
-Title: Linear Regression in Racket - hackerrank - 10 Days of Statistics - Day 8 
+Title: Linear Regression in Racket - hackerrank - 10 Days of Statistics - Day 8
 Date: 2017-09-26T00:00:00
 Tags: Racket, Statistics
-Authors: Henry Brooks
+mathjax: true
 ---
 
 Hackerrank is currently running a 10 Day challenge to introduce people to Statistical methods and computations. [Today's problem](https://www.hackerrank.com/challenges/s10-least-square-regression-line/problem) asks you to compute the [Least Square Regression Line](https://en.wikipedia.org/wiki/Linear_least_squares_(mathematics)) for a series of 5 points. I decided to roll my own implementation of the formulas in Racket as a practice problem.
 
-<!-- more -->
-
 The actual coding wasn't that bad for this problem. The `let*` sections seem a little long however, if you look at the actual equation they are rather straight forward translations.
-![1](/img/least-square-regression-equations.gif)
+
+$$
+\begin{align}
+b & = \frac{ n \sum x_iy_i - \left ( \sum x_i \right ) \left ( \sum y_i \right ) }
+{ n \sum \left ( x^2_i \right ) - \left ( \sum \left ( x^2_i \right ) \right ) }
+\\
+a & = \bar y - b \bar x
+\end{align}
+$$
 
 ```racket
 #lang racket

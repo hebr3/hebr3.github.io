@@ -3,13 +3,14 @@ layout: post
 title: 20% Project - Witch of Agnesi
 date: 2015-04-12T00:00:00
 tags: 20% Project, Desmos
+mathjax: true
 ---
 
 I was helping a student in AVID with calculus homework when I confronted with the following problem.
 
-![1](/img/witcha.png)
-
-<!-- more -->
+$$
+\int_0^\infty \frac{250}{x^2+25}dx
+$$
 
 I worked on it for probably 3 minutes before I called it and asked [WolframAlpha](https://www.wolframalpha.com/) for help. The response
 
