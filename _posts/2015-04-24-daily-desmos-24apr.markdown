@@ -1,7 +1,9 @@
-    Title: Daily Desmos - 24 April
-    Date: 2015-04-24T00:00:00
-    Tags: Daily Desmos, 20% Project, Desmos
-    Authors: Henry Brooks
+---
+layout: post
+title: Daily Desmos - 24 April
+date: 2015-04-24T00:00:00
+tags: Daily Desmos, 20% Project, Desmos
+---
 
 ![1](/img/dd-24apr-a.gif)
 

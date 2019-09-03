@@ -1,9 +1,11 @@
-    Title: 20% Project - CSUSM credential program
-    Date: 2015-02-16T00:00:00
-    Tags: Teaching Credential, 20% Project
-    Authors: Henry Brooks
+---
+layout: post
+title: 20% Project
+Date: 2015-02-16T00:00:00
+Tags: 20% Project
+---
 
-For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C++ during college and I want to expand that knowledge.
+For my 20% Project I am thinking about expanding my coding skills. I took a basic computer programming class with C+ during college and I want to expand that knowledge.
 
 <!-- more -->
 

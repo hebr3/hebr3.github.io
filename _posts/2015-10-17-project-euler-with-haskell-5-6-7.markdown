@@ -1,9 +1,8 @@
 ---
-    layout: post
-    title: Project Euler problem 5, 6 and 7, with Haskell
-    date: 2015-10-17T00:00:00
-    categories: Project Euler,Haskell
-    authors: Henry Brooks
+layout: post
+title: Project Euler problem 5, 6 and 7, with Haskell
+date: 2015-10-17T00:00:00
+categories: Project Euler,Haskell
 ---
 
 Problem 5
@@ -17,7 +16,7 @@ I have solved similar questions during math test so I went with a purely brute f
 main :: IO ()
 main = do
     putStrLn "ProjectEuler.net"
-    
+
     putStrLn "\nProblem5 - Smallest multiple of the numbers 1-20"
     print problem5
 
@@ -48,7 +47,7 @@ problem6 = sqSum - sumSq
 sq x = x * x
 
 sqSum = sq (sum [1..100])
-sumSq = sum (map sq [1..100]) 
+sumSq = sum (map sq [1..100])
 {% endhighlight %}
 
 Problem 7

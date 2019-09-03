@@ -1,7 +1,9 @@
-    Title: 20% Project - Project Euler #29
-    Date: 2015-04-11T00:00:00
-    Tags: Teaching Credential, 20% Project, Project Euler
-    Authors: Henry Brooks
+---
+layout: post
+title: 20% Project - Project Euler #29
+date: 2015-04-11T00:00:00
+tags: Teaching Credential, 20% Project, Project Euler
+---
 
 ![1](/img/ProjectEuler29a.png)
 

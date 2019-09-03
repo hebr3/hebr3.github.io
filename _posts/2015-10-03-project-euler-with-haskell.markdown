@@ -1,7 +1,9 @@
-    Title: Project Euler with Haskell
-    Date: 2015-10-03T00:00:00
-    Tags: Project Euler, Haskell
-    Authors: Henry Brooks
+---
+layout: post
+title: Project Euler with Haskell
+date: 2015-10-03T00:00:00
+tags: Project Euler, Haskell
+---
 
 Teaching Algebra A has been more of a slog then I was expecting and I've been feeling like I need to stretch myself before I get bogged down in teaching this year. I enjoyed working on Project Euler problems last year and while looking over the site again I stumbled over the Haskell programming language.
 
@@ -23,7 +25,7 @@ main :: IO ()
 main = do
     putStrLn "ProjectEuler.net"
     putStrLn "Problem1 - Sum of the natural numbers below 1000 that are multiplies of 3 or 5"
-    print problem1 
+    print problem1
 
 --Sum of the natural numbers below 1000 that are multiplies of 3 or 5
 problem1 = sum [x | x <- [1..999], mod x 3 == 0 || mod x 5 == 0]
@@ -62,10 +64,10 @@ There are some other versions of Fibonacci that bring the space and time complex
 main :: IO ()
 main = do
     putStrLn "ProjectEuler.net"
-    
+
     putStrLn "\nProblem2 - Sum of the even Fibonacci numbers less than 4,000,000"
     print problem2
-    
+
 --Sum of the even Fibonacci numbers less than 4,000,000
 problem2 = sum [fib x | x <- [1..100], mod (fib x) 2 == 0, (fib x) < 4000000]
 

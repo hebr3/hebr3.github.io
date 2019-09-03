@@ -1,9 +1,11 @@
-    Title: Project Euler problem 3 and 4, with Haskell
-    Date: 2015-10-10T00:00:00
-    Tags: Project Euler, Haskell
-    Authors: Henry Brooks
+---
+layout: post
+title: Project Euler problem 3 and 4, with Haskell
+date: 2015-10-10T00:00:00
+tags: Project Euler, Haskell
+---
 
-I have been looking into Haskell more this week and I thought I would continue on with this project for the time being. 
+I have been looking into Haskell more this week and I thought I would continue on with this project for the time being.
 
 Problem 3
 ---
@@ -24,7 +26,7 @@ The code I have right now is nearly identical to the mathematical notation I wou
 main :: IO ()
 main = do
     putStrLn "ProjectEuler.net"
-    
+
     putStrLn "\nProblem3 - Largest prime factor of 600851475143"
     print problem3
 

@@ -1,8 +1,9 @@
-    Title: Daily Desmos - 24 April - Exploration
-    Date: 2015-04-24T00:00:00
-    Tags: Daily Desmos, 20% Project, Desmos
-    Authors: Henry Brooks
-
+---
+layout: post
+title: Daily Desmos - 24 April - Exploration
+date: 2015-04-24T00:00:00
+tags: Daily Desmos, 20% Project, Desmos
+---
 
 [Daily Desmos](http://http://dailydesmos.com/) posted two different examples of warping graphs on April 24. As an experiment I combined both graphs into one to see what they would look like.
 

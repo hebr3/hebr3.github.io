@@ -3,8 +3,8 @@ layout: post
 title: Project Euler problem 8 with Haskell
 tate: 2015-10-24T00:00:00
 tags: Project Euler, Haskell
-authors: Henry Brooks
 ---
+
 [Problem 8][problem8]
 ---
 
@@ -18,7 +18,7 @@ main = do
     putStrLn "ProjectEuler.net"
     putStrLn "Problem8 - Largest product in a series"
     print problem8
-    
+
 --Largest product in a series
 problem8 = maximum listOfProducts
 

@@ -1,7 +1,9 @@
-    Title: 20% Project - Witch of Agnesi
-    Date: 2015-04-12T00:00:00
-    Tags: 20% Project, Desmos
-    Authors: Henry Brooks
+---
+layout: post
+title: 20% Project - Witch of Agnesi
+date: 2015-04-12T00:00:00
+tags: 20% Project, Desmos
+---
 
 I was helping a student in AVID with calculus homework when I confronted with the following problem.
 
